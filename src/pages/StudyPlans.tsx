@@ -51,15 +51,50 @@ const StudyPlans: React.FC = () => {
     filterPlans();
   }, [plans, searchQuery, difficultyFilter]);
 
-  const loadPlans = async () => {
+  const loadPlans = async (forceRefresh = false) => {
     setLoading(true);
     try {
+      // Try to load from cache first
+      if (!forceRefresh) {
+        const cachedPlans = localStorage.getItem('cached_study_plans');
+        const cacheTimestamp = localStorage.getItem('cached_study_plans_timestamp');
+        
+        if (cachedPlans && cacheTimestamp) {
+          const cacheAge = Date.now() - parseInt(cacheTimestamp);
+          const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+          
+          if (cacheAge < CACHE_DURATION) {
+            // Use cached data
+            const parsedPlans = JSON.parse(cachedPlans);
+            setPlans(parsedPlans);
+            setLoading(false);
+            console.log(`Loaded ${parsedPlans.length} plans from cache (${Math.round(cacheAge / 1000)}s old)`);
+            return;
+          }
+        }
+      }
+      
+      // Fetch from Firebase
       const fetchedPlans = await getAllStudyPlans();
+      
+      // Cache the results
+      localStorage.setItem('cached_study_plans', JSON.stringify(fetchedPlans));
+      localStorage.setItem('cached_study_plans_timestamp', Date.now().toString());
+      
       setPlans(fetchedPlans);
-      toast.success(`Loaded ${fetchedPlans.length} study plans`);
+      toast.success(`Loaded ${fetchedPlans.length} study plans from Firebase`);
     } catch (error) {
       console.error('Error loading plans:', error);
-      toast.error('Failed to load study plans');
+      
+      // Try to use stale cache as fallback
+      const cachedPlans = localStorage.getItem('cached_study_plans');
+      if (cachedPlans) {
+        const parsedPlans = JSON.parse(cachedPlans);
+        setPlans(parsedPlans);
+        toast.error('Failed to load from Firebase. Using cached data.');
+      } else {
+        toast.error('Failed to load study plans');
+      }
     } finally {
       setLoading(false);
     }
@@ -98,7 +133,7 @@ const StudyPlans: React.FC = () => {
 
     setSyncing(true);
     try {
-      await loadPlans();
+      await loadPlans(true); // Force refresh from Firebase
       toast.success('Synced successfully from Firebase');
     } catch (error) {
       toast.error('Failed to sync from Firebase');
@@ -123,7 +158,12 @@ const StudyPlans: React.FC = () => {
       const edits = getAllEdits();
       await batchSaveStudyPlans(edits);
       clearEdits();
-      await loadPlans();
+      
+      // Invalidate cache and reload from Firebase
+      localStorage.removeItem('cached_study_plans');
+      localStorage.removeItem('cached_study_plans_timestamp');
+      await loadPlans(true);
+      
       toast.success(`Successfully uploaded ${edits.length} study plans`);
     } catch (error) {
       console.error('Error uploading changes:', error);
