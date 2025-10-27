@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import {
   Box,
@@ -12,14 +12,17 @@ import {
   ListItemIcon,
   ListItemText,
   IconButton,
-  Badge
+  Badge,
+  useTheme,
+  useMediaQuery
 } from '@mui/material';
 import {
   Dashboard as DashboardIcon,
   MenuBook as MenuBookIcon,
   People as PeopleIcon,
   Analytics as AnalyticsIcon,
-  Logout as LogoutIcon
+  Logout as LogoutIcon,
+  Menu as MenuIcon
 } from '@mui/icons-material';
 import { useAuth } from '../hooks/useAuth';
 import { useLocalEdits } from '../hooks/useLocalStorage';
@@ -36,6 +39,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
   const { signOut, userProfile } = useAuth();
   const { editCount } = useLocalEdits();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
 
   const menuItems = [
     { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
@@ -54,28 +64,109 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     }
   };
 
+  const handleMenuItemClick = (path: string) => {
+    navigate(path);
+    if (isMobile) {
+      setMobileOpen(false);
+    }
+  };
+
+  const drawer = (
+    <>
+      <Toolbar />
+      <Box sx={{ overflow: 'auto' }}>
+        <List>
+          {menuItems.map((item) => (
+            <ListItem key={item.text} disablePadding>
+              <ListItemButton
+                selected={location.pathname === item.path}
+                onClick={() => handleMenuItemClick(item.path)}
+              >
+                <ListItemIcon>
+                  {item.badge ? (
+                    <Badge badgeContent={item.badge} color="error">
+                      {item.icon}
+                    </Badge>
+                  ) : (
+                    item.icon
+                  )}
+                </ListItemIcon>
+                <ListItemText primary={item.text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Box>
+    </>
+  );
+
   return (
     <Box sx={{ display: 'flex' }}>
       <AppBar
         position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{ 
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          width: '100%'
+        }}
       >
         <Toolbar>
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-            Study Planner Admin Portal
+          {isMobile && (
+            <IconButton
+              color="inherit"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
+          )}
+          <Typography 
+            variant="h6" 
+            noWrap 
+            component="div" 
+            sx={{ 
+              flexGrow: 1,
+              fontSize: { xs: '1rem', sm: '1.25rem' },
+              fontWeight: 600
+            }}
+          >
+            {isMobile ? 'Study Planner' : 'Study Planner Admin Portal'}
           </Typography>
-          <Typography variant="body2" sx={{ mr: 2 }}>
-            {userProfile?.displayName || userProfile?.email}
-          </Typography>
+          {!isMobile && (
+            <Typography variant="body2" sx={{ mr: 2, display: { xs: 'none', sm: 'block' } }}>
+              {userProfile?.displayName || userProfile?.email}
+            </Typography>
+          )}
           <IconButton color="inherit" onClick={handleSignOut}>
             <LogoutIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
 
+      {/* Mobile drawer */}
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile
+        }}
+        sx={{
+          display: { xs: 'block', md: 'none' },
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
+            boxSizing: 'border-box'
+          }
+        }}
+      >
+        {drawer}
+      </Drawer>
+
+      {/* Desktop drawer */}
       <Drawer
         variant="permanent"
         sx={{
+          display: { xs: 'none', md: 'block' },
           width: drawerWidth,
           flexShrink: 0,
           '& .MuiDrawer-paper': {
@@ -84,38 +175,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           }
         }}
       >
-        <Toolbar />
-        <Box sx={{ overflow: 'auto' }}>
-          <List>
-            {menuItems.map((item) => (
-              <ListItem key={item.text} disablePadding>
-                <ListItemButton
-                  selected={location.pathname === item.path}
-                  onClick={() => navigate(item.path)}
-                >
-                  <ListItemIcon>
-                    {item.badge ? (
-                      <Badge badgeContent={item.badge} color="error">
-                        {item.icon}
-                      </Badge>
-                    ) : (
-                      item.icon
-                    )}
-                  </ListItemIcon>
-                  <ListItemText primary={item.text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-        </Box>
+        {drawer}
       </Drawer>
 
       <Box
         component="main"
         sx={{
           flexGrow: 1,
-          p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` }
+          p: { xs: 2, sm: 3 },
+          width: { xs: '100%', md: `calc(100% - ${drawerWidth}px)` }
         }}
       >
         <Toolbar />

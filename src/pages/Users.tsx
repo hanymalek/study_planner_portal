@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import {
   Container,
   Typography,
@@ -53,10 +53,16 @@ const Users: React.FC = () => {
   const [newUserPassword, setNewUserPassword] = useState('');
   const [newUserRole, setNewUserRole] = useState<UserRole>('STUDENT' as UserRole);
   const [addingUser, setAddingUser] = useState(false);
+  const hasLoadedRef = useRef(false);
 
   useEffect(() => {
-    loadUsers();
-  }, []);
+    // Prevent double-loading in React StrictMode
+    if (!hasLoadedRef.current) {
+      hasLoadedRef.current = true;
+      loadUsers();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Only run once on mount
 
   useEffect(() => {
     filterUsers();
@@ -197,19 +203,37 @@ const Users: React.FC = () => {
   }
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" sx={{ px: { xs: 1, sm: 2, md: 3 } }}>
       {/* Header */}
-      <Box sx={{ mb: 4 }}>
-        <Typography variant="h4" gutterBottom>
+      <Box sx={{ 
+        mb: { xs: 2, sm: 4 },
+        pt: { xs: 1, sm: 2 }
+      }}>
+        <Typography 
+          variant="h4" 
+          gutterBottom 
+          sx={{ 
+            fontSize: { xs: '1.75rem', sm: '2.125rem' },
+            fontWeight: 600,
+            color: 'text.primary'
+          }}
+        >
           User Management
         </Typography>
-        <Typography variant="body1" color="text.secondary">
+        <Typography 
+          variant="body1" 
+          color="text.secondary" 
+          sx={{ 
+            display: { xs: 'none', sm: 'block' },
+            fontSize: { xs: '0.875rem', sm: '1rem' }
+          }}
+        >
           Manage student and admin accounts
         </Typography>
       </Box>
 
       {/* Action Bar */}
-      <Stack direction="row" spacing={2} sx={{ mb: 3 }}>
+      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mb: 3 }}>
         <TextField
           placeholder="Search users..."
           value={searchQuery}
@@ -228,47 +252,62 @@ const Users: React.FC = () => {
           variant="outlined"
           startIcon={<RefreshIcon />}
           onClick={loadUsers}
+          size="small"
+          sx={{ 
+            minWidth: { xs: 'auto', sm: 'fit-content' },
+            width: { xs: '100%', sm: 'auto' }
+          }}
         >
-          Refresh
+          <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' } }}>Refresh</Box>
+          <Box component="span" sx={{ display: { xs: 'inline', sm: 'none' } }}>Refresh</Box>
         </Button>
         <Button
           variant="contained"
           startIcon={<AddIcon />}
           onClick={() => setAddDialogOpen(true)}
+          size="small"
+          sx={{ 
+            minWidth: { xs: 'auto', sm: 'fit-content' },
+            width: { xs: '100%', sm: 'auto' }
+          }}
         >
-          Add User
+          <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' } }}>Add User</Box>
+          <Box component="span" sx={{ display: { xs: 'inline', sm: 'none' } }}>Add User</Box>
         </Button>
       </Stack>
 
       {/* Stats */}
       <Box sx={{ mb: 3 }}>
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', gap: 1 }}>
           <Chip 
             label={`Total Users: ${users.length}`} 
             color="primary" 
             variant="outlined"
+            size="small"
           />
           <Chip 
             label={`Students: ${users.filter(u => u.role === 'STUDENT').length}`} 
             color="primary"
+            size="small"
           />
           <Chip 
             label={`Admins: ${users.filter(u => u.role === 'ADMIN').length}`} 
             color="error"
+            size="small"
           />
         </Stack>
       </Box>
 
       {/* Users Table */}
-      <TableContainer component={Paper}>
-        <Table>
+      <TableContainer component={Paper} sx={{ overflowX: 'auto' }}>
+        <Table size="small">
           <TableHead>
             <TableRow>
-              <TableCell>Name</TableCell>
-              <TableCell>Email</TableCell>
+              <TableCell sx={{ display: { xs: 'table-cell', sm: 'table-cell' } }}>Name</TableCell>
+              <TableCell sx={{ display: { xs: 'none', sm: 'table-cell' } }}>Email</TableCell>
               <TableCell>Role</TableCell>
-              <TableCell>Active Schedule</TableCell>
-              <TableCell>Created</TableCell>
+              <TableCell sx={{ display: { xs: 'none', md: 'table-cell' } }}>Active Schedule</TableCell>
+              <TableCell sx={{ display: { xs: 'none', md: 'table-cell' } }}>Created</TableCell>
               <TableCell align="right">Actions</TableCell>
             </TableRow>
           </TableHead>
@@ -284,8 +323,15 @@ const Users: React.FC = () => {
             ) : (
               filteredUsers.map((user) => (
                 <TableRow key={user.id} hover>
-                  <TableCell>{user.displayName}</TableCell>
-                  <TableCell>{user.email}</TableCell>
+                  <TableCell>
+                    <Box>
+                      <Typography variant="body2" fontWeight="medium">{user.displayName}</Typography>
+                      <Typography variant="caption" color="text.secondary" sx={{ display: { xs: 'block', sm: 'none' } }}>
+                        {user.email}
+                      </Typography>
+                    </Box>
+                  </TableCell>
+                  <TableCell sx={{ display: { xs: 'none', sm: 'table-cell' } }}>{user.email}</TableCell>
                   <TableCell>
                     <Chip 
                       label={user.role} 
@@ -293,35 +339,39 @@ const Users: React.FC = () => {
                       color={getRoleColor(user.role)}
                     />
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{ display: { xs: 'none', md: 'table-cell' } }}>
                     {user.activeScheduleId ? (
                       <Chip label="Active" size="small" color="success" variant="outlined" />
                     ) : (
                       <Chip label="None" size="small" variant="outlined" />
                     )}
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{ display: { xs: 'none', md: 'table-cell' } }}>
                     {new Date(user.createdAt).toLocaleDateString()}
                   </TableCell>
                   <TableCell align="right">
-                    <IconButton
-                      size="small"
-                      onClick={() => {
-                        setSelectedUser(user);
-                        setEditDialogOpen(true);
-                      }}
-                      title="Edit role"
-                    >
-                      <EditIcon fontSize="small" />
-                    </IconButton>
-                    <IconButton
-                      size="small"
-                      color="error"
-                      onClick={() => handleDeleteUser(user.id)}
-                      title="Delete user"
-                    >
-                      <DeleteIcon fontSize="small" />
-                    </IconButton>
+                    <Box sx={{ display: 'flex', gap: 0.5, justifyContent: 'flex-end' }}>
+                      <IconButton
+                        size="small"
+                        onClick={() => {
+                          setSelectedUser(user);
+                          setEditDialogOpen(true);
+                        }}
+                        title="Edit role"
+                        sx={{ p: { xs: 0.5, sm: 1 } }}
+                      >
+                        <EditIcon fontSize="small" />
+                      </IconButton>
+                      <IconButton
+                        size="small"
+                        color="error"
+                        onClick={() => handleDeleteUser(user.id)}
+                        title="Delete user"
+                        sx={{ p: { xs: 0.5, sm: 1 } }}
+                      >
+                        <DeleteIcon fontSize="small" />
+                      </IconButton>
+                    </Box>
                   </TableCell>
                 </TableRow>
               ))

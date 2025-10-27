@@ -87,12 +87,29 @@ const Dashboard: React.FC = () => {
 
   return (
     <Container maxWidth="lg">
-      <Typography variant="h4" gutterBottom>
-        Dashboard
-      </Typography>
-      <Typography variant="body1" color="text.secondary" paragraph>
-        Overview of your study planner system
-      </Typography>
+      <Box sx={{ 
+        mb: 4,
+        pt: { xs: 1, sm: 2 }
+      }}>
+        <Typography 
+          variant="h4" 
+          gutterBottom
+          sx={{ 
+            fontWeight: 600,
+            fontSize: { xs: '1.75rem', sm: '2.125rem' },
+            color: 'text.primary'
+          }}
+        >
+          Dashboard
+        </Typography>
+        <Typography 
+          variant="body1" 
+          color="text.secondary"
+          sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}
+        >
+          Overview of your study planner system
+        </Typography>
+      </Box>
 
       <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} sx={{ mt: 2 }}>
         <Box sx={{ flex: 1 }}>

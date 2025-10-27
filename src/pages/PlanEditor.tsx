@@ -160,21 +160,22 @@ const PlanEditor: React.FC = () => {
   }
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" sx={{ px: { xs: 1, sm: 2, md: 3 } }}>
       {/* Header */}
-      <Box sx={{ mb: 4 }}>
+      <Box sx={{ mb: { xs: 2, sm: 4 } }}>
         <Button
           startIcon={<ArrowBackIcon />}
           onClick={() => navigate('/plans')}
           sx={{ mb: 2 }}
+          size="small"
         >
-          Back to Study Plans
+          Back
         </Button>
         
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h5" gutterBottom sx={{ fontSize: { xs: '1.25rem', sm: '1.5rem', md: '2rem' } }}>
           {planId === 'new' ? 'Create New Study Plan' : 'Edit Study Plan'}
         </Typography>
-        <Typography variant="body1" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" sx={{ display: { xs: 'none', sm: 'block' } }}>
           {planId === 'new' 
             ? 'Create a new study plan with chapters, lessons, and videos'
             : 'Edit the study plan structure and content'}
@@ -182,11 +183,11 @@ const PlanEditor: React.FC = () => {
       </Box>
 
       {/* Basic Information */}
-      <Paper sx={{ p: 3, mb: 3 }}>
-        <Typography variant="h6" gutterBottom>
+      <Paper sx={{ p: { xs: 2, sm: 3 }, mb: { xs: 2, sm: 3 } }}>
+        <Typography variant="h6" gutterBottom sx={{ fontSize: { xs: '1.1rem', sm: '1.25rem' } }}>
           Basic Information
         </Typography>
-        <Divider sx={{ mb: 3 }} />
+        <Divider sx={{ mb: { xs: 2, sm: 3 } }} />
         
         <Stack spacing={3}>
           <TextField
@@ -242,20 +243,21 @@ const PlanEditor: React.FC = () => {
       </Paper>
 
       {/* Chapters Section */}
-      <Paper sx={{ p: 3, mb: 3 }}>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-          <Typography variant="h6">
+      <Paper sx={{ p: { xs: 2, sm: 3 }, mb: { xs: 2, sm: 3 } }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2, flexWrap: 'wrap', gap: 1 }}>
+          <Typography variant="h6" sx={{ fontSize: { xs: '1.1rem', sm: '1.25rem' } }}>
             Chapters ({plan.chapters.length})
           </Typography>
           <Button
             variant="contained"
             startIcon={<AddIcon />}
             onClick={handleAddChapter}
+            size="small"
           >
-            Add Chapter
+            {plan.chapters.length === 0 ? 'Add Chapter' : 'Add'}
           </Button>
         </Box>
-        <Divider sx={{ mb: 3 }} />
+        <Divider sx={{ mb: { xs: 2, sm: 3 } }} />
         
         {plan.chapters.length === 0 ? (
           <Alert severity="info">
@@ -280,19 +282,33 @@ const PlanEditor: React.FC = () => {
       </Paper>
 
       {/* Action Buttons */}
-      <Box sx={{ display: 'flex', gap: 2, mb: 4 }}>
+      <Box sx={{ 
+        display: 'flex', 
+        gap: 2, 
+        mb: 4, 
+        flexDirection: { xs: 'column', sm: 'row' },
+        position: { xs: 'sticky', sm: 'static' },
+        bottom: { xs: 0, sm: 'auto' },
+        backgroundColor: { xs: 'background.paper', sm: 'transparent' },
+        p: { xs: 2, sm: 0 },
+        mx: { xs: -1, sm: 0 },
+        boxShadow: { xs: '0 -2px 10px rgba(0,0,0,0.1)', sm: 'none' },
+        zIndex: { xs: 10, sm: 'auto' }
+      }}>
         <Button
           variant="contained"
-          size="large"
+          size="medium"
           startIcon={<SaveIcon />}
           onClick={handleSave}
+          fullWidth
         >
           Save Locally
         </Button>
         <Button
           variant="outlined"
-          size="large"
+          size="medium"
           onClick={() => navigate('/plans')}
+          fullWidth
         >
           Cancel
         </Button>

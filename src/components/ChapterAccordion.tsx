@@ -95,10 +95,33 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
   };
 
   return (
-    <Accordion expanded={expanded} onChange={() => setExpanded(!expanded)}>
-      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', gap: 2 }}>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+    <Accordion 
+      expanded={expanded} 
+      onChange={() => setExpanded(!expanded)}
+      sx={{ 
+        '&:before': { display: 'none' },
+        boxShadow: 1,
+        mb: 1
+      }}
+    >
+      <AccordionSummary 
+        expandIcon={<ExpandMoreIcon />}
+        sx={{ 
+          minHeight: { xs: 56, sm: 64 },
+          '& .MuiAccordionSummary-content': {
+            my: { xs: 1, sm: 1.5 }
+          }
+        }}
+      >
+        <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', gap: { xs: 1, sm: 2 }, flexWrap: 'wrap' }}>
+          <Typography 
+            variant="h6" 
+            sx={{ 
+              flexGrow: 1, 
+              fontSize: { xs: '0.95rem', sm: '1.1rem' },
+              minWidth: { xs: '100%', sm: 'auto' }
+            }}
+          >
             Chapter {chapterIndex + 1}: {chapter.name || 'Untitled Chapter'}
           </Typography>
           <Chip 
@@ -107,12 +130,13 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
             color="primary"
             variant="outlined"
           />
-          <Box onClick={(e) => e.stopPropagation()}>
+          <Box onClick={(e) => e.stopPropagation()} sx={{ display: 'flex', gap: 0.5 }}>
             <IconButton
               size="small"
               onClick={() => onMove('up')}
               disabled={isFirst}
               title="Move up"
+              sx={{ p: { xs: 0.5, sm: 1 } }}
             >
               <ArrowUpwardIcon fontSize="small" />
             </IconButton>
@@ -121,6 +145,7 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
               onClick={() => onMove('down')}
               disabled={isLast}
               title="Move down"
+              sx={{ p: { xs: 0.5, sm: 1 } }}
             >
               <ArrowDownwardIcon fontSize="small" />
             </IconButton>
@@ -129,6 +154,7 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
               color="error"
               onClick={onDelete}
               title="Delete chapter"
+              sx={{ p: { xs: 0.5, sm: 1 } }}
             >
               <DeleteIcon fontSize="small" />
             </IconButton>
@@ -136,8 +162,8 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
         </Box>
       </AccordionSummary>
       
-      <AccordionDetails>
-        <Stack spacing={3}>
+      <AccordionDetails sx={{ px: { xs: 1, sm: 2 }, py: { xs: 2, sm: 3 } }}>
+        <Stack spacing={{ xs: 2, sm: 3 }}>
           {/* Chapter Details */}
           <TextField
             label="Chapter Name"
@@ -146,6 +172,7 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
             value={chapter.name}
             onChange={(e) => onUpdate({ ...chapter, name: e.target.value })}
             placeholder="e.g., Introduction to Mechanics"
+            size="small"
           />
           
           <TextField
@@ -156,12 +183,13 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
             value={chapter.description}
             onChange={(e) => onUpdate({ ...chapter, description: e.target.value })}
             placeholder="Brief description of this chapter..."
+            size="small"
           />
 
           {/* Lessons Section */}
           <Box>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-              <Typography variant="subtitle1" fontWeight="bold">
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2, flexWrap: 'wrap', gap: 1 }}>
+              <Typography variant="subtitle1" fontWeight="bold" sx={{ fontSize: { xs: '0.9rem', sm: '1rem' } }}>
                 Lessons ({chapter.lessons.length})
               </Typography>
               <Button
@@ -170,7 +198,7 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
                 startIcon={<AddIcon />}
                 onClick={handleAddLesson}
               >
-                Add Lesson
+                {chapter.lessons.length === 0 ? 'Add Lesson' : 'Add'}
               </Button>
             </Box>
             

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Container,
@@ -42,65 +42,71 @@ const StudyPlans: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState<string>('ALL');
   const [importDialogOpen, setImportDialogOpen] = useState(false);
+  const hasLoadedRef = useRef(false);
 
   useEffect(() => {
-    loadPlans();
-  }, []);
+    // Prevent double-loading in React StrictMode
+    if (!hasLoadedRef.current) {
+      hasLoadedRef.current = true;
+      loadPlans();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Only run once on mount
 
   useEffect(() => {
     filterPlans();
   }, [plans, searchQuery, difficultyFilter]);
 
-  const loadPlans = async (forceRefresh = false) => {
-    setLoading(true);
-    try {
-      // Try to load from cache first
-      if (!forceRefresh) {
-        const cachedPlans = localStorage.getItem('cached_study_plans');
-        const cacheTimestamp = localStorage.getItem('cached_study_plans_timestamp');
-        
-        if (cachedPlans && cacheTimestamp) {
-          const cacheAge = Date.now() - parseInt(cacheTimestamp);
-          const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+    const loadPlans = async (forceRefresh = false) => {
+      setLoading(true);
+      try {
+        // Try to load from cache first
+        if (!forceRefresh) {
+          const cachedPlans = localStorage.getItem('cached_study_plans');
+          const cacheTimestamp = localStorage.getItem('cached_study_plans_timestamp');
           
-          if (cacheAge < CACHE_DURATION) {
-            // Use cached data
-            const parsedPlans = JSON.parse(cachedPlans);
-            setPlans(parsedPlans);
-            setLoading(false);
-            const ageInSeconds = Math.round(cacheAge / 1000);
-            toast.success(`Loaded ${parsedPlans.length} study plans from cache (${ageInSeconds}s old)`);
-            console.log(`Loaded ${parsedPlans.length} plans from cache (${ageInSeconds}s old)`);
-            return;
+          if (cachedPlans && cacheTimestamp) {
+            const cacheAge = Date.now() - parseInt(cacheTimestamp);
+            const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+            
+            if (cacheAge < CACHE_DURATION) {
+              // Use cached data
+              const parsedPlans = JSON.parse(cachedPlans);
+              setPlans(parsedPlans);
+              setLoading(false);
+              const ageInSeconds = Math.round(cacheAge / 1000);
+              toast.success(`Loaded ${parsedPlans.length} study plans from cache (${ageInSeconds}s old)`);
+              console.log(`Loaded ${parsedPlans.length} plans from cache (${ageInSeconds}s old)`);
+              return;
+            }
           }
         }
+        
+        // Fetch from Firebase
+        const fetchedPlans = await getAllStudyPlans();
+        
+        // Cache the results
+        localStorage.setItem('cached_study_plans', JSON.stringify(fetchedPlans));
+        localStorage.setItem('cached_study_plans_timestamp', Date.now().toString());
+        
+        setPlans(fetchedPlans);
+        toast.success(`Loaded ${fetchedPlans.length} study plans from Firebase`);
+      } catch (error) {
+        console.error('Error loading plans:', error);
+        
+        // Try to use stale cache as fallback
+        const cachedPlans = localStorage.getItem('cached_study_plans');
+        if (cachedPlans) {
+          const parsedPlans = JSON.parse(cachedPlans);
+          setPlans(parsedPlans);
+          toast.error('Failed to load from Firebase. Using cached data.');
+        } else {
+          toast.error('Failed to load study plans');
+        }
+      } finally {
+        setLoading(false);
       }
-      
-      // Fetch from Firebase
-      const fetchedPlans = await getAllStudyPlans();
-      
-      // Cache the results
-      localStorage.setItem('cached_study_plans', JSON.stringify(fetchedPlans));
-      localStorage.setItem('cached_study_plans_timestamp', Date.now().toString());
-      
-      setPlans(fetchedPlans);
-      toast.success(`Loaded ${fetchedPlans.length} study plans from Firebase`);
-    } catch (error) {
-      console.error('Error loading plans:', error);
-      
-      // Try to use stale cache as fallback
-      const cachedPlans = localStorage.getItem('cached_study_plans');
-      if (cachedPlans) {
-        const parsedPlans = JSON.parse(cachedPlans);
-        setPlans(parsedPlans);
-        toast.error('Failed to load from Firebase. Using cached data.');
-      } else {
-        toast.error('Failed to load study plans');
-      }
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
 
   const filterPlans = () => {
     let filtered = [...plans];
@@ -202,50 +208,103 @@ const StudyPlans: React.FC = () => {
 
   return (
     <Container maxWidth="lg">
-      <Box sx={{ mb: 4 }}>
-        <Typography variant="h4" gutterBottom>
+      <Box sx={{ 
+        mb: 4,
+        pt: { xs: 1, sm: 2 }
+      }}>
+        <Typography 
+          variant="h4" 
+          gutterBottom
+          sx={{ 
+            fontWeight: 600,
+            fontSize: { xs: '1.75rem', sm: '2.125rem' },
+            color: 'text.primary'
+          }}
+        >
           Study Plans
         </Typography>
-        <Typography variant="body1" color="text.secondary">
+        <Typography 
+          variant="body1" 
+          color="text.secondary"
+          sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}
+        >
           Manage curriculum structure for all subjects
         </Typography>
       </Box>
 
-      {/* Action Buttons */}
-      <Stack direction="row" spacing={2} sx={{ mb: 3 }}>
-        <Button
-          variant="outlined"
-          startIcon={syncing ? <CircularProgress size={20} /> : <CloudDownloadIcon />}
-          onClick={handleSyncFromFirebase}
-          disabled={syncing}
-        >
-          Sync from Firebase
-        </Button>
-        <Button
-          variant="contained"
-          color="success"
-          startIcon={uploading ? <CircularProgress size={20} /> : <CloudUploadIcon />}
-          onClick={handleUploadChanges}
-          disabled={!hasUnsavedChanges || uploading}
-        >
-          Upload Changes {hasUnsavedChanges && `(${editCount})`}
-        </Button>
-        <Button
-          variant="outlined"
-          startIcon={<FileUploadIcon />}
-          onClick={() => setImportDialogOpen(true)}
-        >
-          Import JSON
-        </Button>
-        <Box sx={{ flexGrow: 1 }} />
-        <Button
-          variant="contained"
-          startIcon={<AddIcon />}
-          onClick={handleCreateNew}
-        >
-          New Plan
-        </Button>
-      </Stack>
+            {/* Action Buttons */}
+            <Stack 
+              direction={{ xs: 'column', sm: 'row' }} 
+              spacing={2} 
+              sx={{ 
+                mb: 3,
+                flexWrap: 'wrap'
+              }}
+            >
+              <Button
+                variant="outlined"
+                startIcon={syncing ? <CircularProgress size={20} /> : <CloudDownloadIcon />}
+                onClick={handleSyncFromFirebase}
+                disabled={syncing}
+                size="small"
+                sx={{ 
+                  whiteSpace: 'nowrap',
+                  minWidth: { xs: 'auto', sm: 'fit-content' },
+                  width: { xs: '100%', sm: 'auto' }
+                }}
+              >
+                <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' } }}>Sync from Firebase</Box>
+                <Box component="span" sx={{ display: { xs: 'inline', sm: 'none' } }}>Sync</Box>
+              </Button>
+              <Button
+                variant="contained"
+                color="success"
+                startIcon={uploading ? <CircularProgress size={20} /> : <CloudUploadIcon />}
+                onClick={handleUploadChanges}
+                disabled={!hasUnsavedChanges || uploading}
+                size="small"
+                sx={{ 
+                  whiteSpace: 'nowrap',
+                  minWidth: { xs: 'auto', sm: 'fit-content' },
+                  width: { xs: '100%', sm: 'auto' }
+                }}
+              >
+                <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' } }}>
+                  Upload Changes {hasUnsavedChanges && `(${editCount})`}
+                </Box>
+                <Box component="span" sx={{ display: { xs: 'inline', sm: 'none' } }}>
+                  Upload {hasUnsavedChanges && `(${editCount})`}
+                </Box>
+              </Button>
+              <Button
+                variant="outlined"
+                startIcon={<FileUploadIcon />}
+                onClick={() => setImportDialogOpen(true)}
+                size="small"
+                sx={{ 
+                  whiteSpace: 'nowrap',
+                  minWidth: { xs: 'auto', sm: 'fit-content' },
+                  width: { xs: '100%', sm: 'auto' }
+                }}
+              >
+                <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' } }}>Import JSON</Box>
+                <Box component="span" sx={{ display: { xs: 'inline', sm: 'none' } }}>Import</Box>
+              </Button>
+              <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }} />
+              <Button
+                variant="contained"
+                startIcon={<AddIcon />}
+                onClick={handleCreateNew}
+                size="small"
+                sx={{ 
+                  whiteSpace: 'nowrap',
+                  minWidth: { xs: 'auto', sm: 'fit-content' },
+                  width: { xs: '100%', sm: 'auto' }
+                }}
+              >
+                New Plan
+              </Button>
+            </Stack>
 
       {/* Unsaved Changes Alert */}
       {hasUnsavedChanges && (
