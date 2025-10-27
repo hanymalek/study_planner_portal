@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Paper,
   TextField,
@@ -6,7 +6,13 @@ import {
   Stack,
   Box,
   MenuItem,
-  Typography
+  Typography,
+  Button,
+  CircularProgress,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions
 } from '@mui/material';
 import {
   Delete as DeleteIcon,
@@ -14,9 +20,13 @@ import {
   ArrowDownward as ArrowDownwardIcon,
   YouTube as YouTubeIcon,
   VideoLibrary as VideoLibraryIcon,
-  Link as LinkIcon
+  Link as LinkIcon,
+  Edit as EditIcon,
+  CloudDownload as CloudDownloadIcon
 } from '@mui/icons-material';
 import type { VideoResource, VideoType, VideoCategory } from '../types';
+import { fetchYouTubeVideoInfo, formatDuration, detectVideoType } from '../services/youtube';
+import toast from 'react-hot-toast';
 
 interface VideoEditorProps {
   video: VideoResource;
@@ -37,29 +47,70 @@ const VideoEditor: React.FC<VideoEditorProps> = ({
   onDelete,
   onMove
 }) => {
+  const [loading, setLoading] = useState(false);
+
   const getVideoTypeIcon = (type: VideoType) => {
     switch (type) {
       case 'YOUTUBE':
-        return <YouTubeIcon fontSize="small" />;
-      case 'LOCAL':
-        return <VideoLibraryIcon fontSize="small" />;
+        return <YouTubeIcon fontSize="small" color="error" />;
       case 'URL':
-        return <LinkIcon fontSize="small" />;
+        return <LinkIcon fontSize="small" color="primary" />;
       default:
         return <VideoLibraryIcon fontSize="small" />;
     }
   };
 
-  const getResourceUrlPlaceholder = (type: VideoType) => {
+  const getVideoTypeLabel = (type: VideoType) => {
     switch (type) {
       case 'YOUTUBE':
-        return 'YouTube video ID (e.g., dQw4w9WgXcQ)';
-      case 'LOCAL':
-        return 'Local file path (e.g., /videos/lesson1.mp4)';
+        return 'YouTube Video';
       case 'URL':
-        return 'Direct video URL (e.g., https://example.com/video.mp4)';
+        return 'Direct Video URL';
       default:
-        return 'Video resource identifier';
+        return 'Unknown';
+    }
+  };
+
+  const handleResourceUrlChange = (url: string) => {
+    const detectedType = detectVideoType(url);
+    onUpdate({
+      ...video,
+      resourceUrl: url,
+      type: detectedType as VideoType
+    });
+  };
+
+  const handleFetchYouTubeInfo = async () => {
+    if (!video.resourceUrl.trim()) {
+      toast.error('Please enter a YouTube URL or video ID');
+      return;
+    }
+
+    if (video.type !== 'YOUTUBE') {
+      toast.error('Fetch Info is only available for YouTube videos');
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const info = await fetchYouTubeVideoInfo(video.resourceUrl);
+      
+      // Update video with fetched information
+      onUpdate({
+        ...video,
+        title: info.title,
+        resourceUrl: info.videoId,
+        thumbnailUrl: info.thumbnailUrl,
+        durationSeconds: info.durationSeconds,
+        type: 'YOUTUBE' as VideoType
+      });
+
+      toast.success(`Fetched: ${info.title} (${formatDuration(info.durationSeconds)})`);
+    } catch (error) {
+      console.error('Error fetching YouTube info:', error);
+      toast.error(error instanceof Error ? error.message : 'Failed to fetch video info');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -106,7 +157,48 @@ const VideoEditor: React.FC<VideoEditorProps> = ({
           </IconButton>
         </Box>
 
-        {/* Video fields */}
+        {/* Resource URL with Fetch Button */}
+        <Box>
+          <Stack 
+            direction={{ xs: 'column', sm: 'row' }} 
+            spacing={1} 
+            alignItems={{ xs: 'stretch', sm: 'flex-start' }}
+          >
+            <TextField
+              label="Resource URL / ID"
+              fullWidth
+              required
+              value={video.resourceUrl}
+              onChange={(e) => handleResourceUrlChange(e.target.value)}
+              placeholder="YouTube URL, video ID, or direct video URL"
+              size="small"
+              helperText={
+                video.type === 'YOUTUBE' 
+                  ? 'Paste YouTube URL or video ID, then click "Fetch Info"' 
+                  : 'Enter the complete URL to the video file (.mp4, .mkv, etc.)'
+              }
+            />
+            {video.type === 'YOUTUBE' && (
+              <Button
+                variant="contained"
+                size="small"
+                onClick={handleFetchYouTubeInfo}
+                disabled={loading || !video.resourceUrl}
+                startIcon={loading ? <CircularProgress size={16} /> : <CloudDownloadIcon />}
+                sx={{ 
+                  mt: { xs: 0, sm: 0.5 },
+                  minWidth: { xs: '100%', sm: 100 },
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0
+                }}
+              >
+                {loading ? 'Loading...' : 'Fetch'}
+              </Button>
+            )}
+          </Stack>
+        </Box>
+
+        {/* Video Title */}
         <TextField
           label="Video Title"
           fullWidth
@@ -117,27 +209,15 @@ const VideoEditor: React.FC<VideoEditorProps> = ({
           size="small"
         />
 
+        {/* Category and Duration */}
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-          <TextField
-            select
-            label="Video Type"
-            value={video.type}
-            onChange={(e) => onUpdate({ ...video, type: e.target.value as VideoType })}
-            size="small"
-            sx={{ minWidth: 150 }}
-          >
-            <MenuItem value="YOUTUBE">YouTube</MenuItem>
-            <MenuItem value="LOCAL">Local File</MenuItem>
-            <MenuItem value="URL">Direct URL</MenuItem>
-          </TextField>
-
           <TextField
             select
             label="Category"
             value={video.category}
             onChange={(e) => onUpdate({ ...video, category: e.target.value as VideoCategory })}
             size="small"
-            sx={{ minWidth: 150 }}
+            fullWidth
           >
             <MenuItem value="LESSON">Lesson</MenuItem>
             <MenuItem value="PRACTICE">Practice</MenuItem>
@@ -151,27 +231,11 @@ const VideoEditor: React.FC<VideoEditorProps> = ({
             value={video.durationSeconds}
             onChange={(e) => onUpdate({ ...video, durationSeconds: parseInt(e.target.value) || 0 })}
             size="small"
-            sx={{ maxWidth: 150 }}
+            fullWidth
           />
         </Stack>
 
-        <TextField
-          label="Resource URL / ID"
-          fullWidth
-          required
-          value={video.resourceUrl}
-          onChange={(e) => onUpdate({ ...video, resourceUrl: e.target.value })}
-          placeholder={getResourceUrlPlaceholder(video.type)}
-          size="small"
-          helperText={
-            video.type === 'YOUTUBE' 
-              ? 'Enter only the video ID, not the full URL' 
-              : video.type === 'LOCAL'
-              ? 'Enter the path relative to the app\'s video directory'
-              : 'Enter the complete URL to the video file'
-          }
-        />
-
+        {/* Thumbnail URL */}
         <TextField
           label="Thumbnail URL (optional)"
           fullWidth
@@ -179,8 +243,27 @@ const VideoEditor: React.FC<VideoEditorProps> = ({
           onChange={(e) => onUpdate({ ...video, thumbnailUrl: e.target.value || undefined })}
           placeholder="https://example.com/thumbnail.jpg"
           size="small"
-          helperText="Leave empty to use default thumbnail"
+          helperText="Leave empty to use default thumbnail (auto-filled for YouTube)"
         />
+
+        {/* Video Type Info (Read-only) */}
+        <Box
+          sx={{
+            p: 1.5,
+            backgroundColor: 'action.hover',
+            borderRadius: 1,
+            border: '1px solid',
+            borderColor: 'divider',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 1
+          }}
+        >
+          {getVideoTypeIcon(video.type)}
+          <Typography variant="body2" color="text.secondary">
+            <strong>Detected Type:</strong> {getVideoTypeLabel(video.type)}
+          </Typography>
+        </Box>
       </Stack>
     </Paper>
   );
