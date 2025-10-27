@@ -105,6 +105,7 @@ A modern web-based admin interface for managing study plans in the Study Planner
 ## 📖 Documentation
 
 - **[Firebase Configuration Guide](./FIREBASE_CONFIG.md)** - Set up Firebase project and environment variables
+- **[Vercel Deployment Guide](./VERCEL_DEPLOYMENT.md)** - Deploy to Vercel in minutes
 - **[Local Edits Workflow](./LOCAL_EDITS_GUIDE.md)** - How to use the local-first editing system
 - **[Build Configuration](./BUILD_CONFIGURATION.md)** - Vite configuration and optimization details
 - **[Setup Complete Guide](./SETUP_COMPLETE.md)** - Comprehensive setup walkthrough
@@ -182,6 +183,18 @@ Only users with `ADMIN` role can access the portal.
 
 ## 🚢 Deployment
 
+### Vercel (Recommended) ⚡
+
+**Easiest and fastest deployment option!**
+
+1. Push your code to GitHub (✅ Already done!)
+2. Go to [vercel.com](https://vercel.com) and sign in with GitHub
+3. Click "Import Project" and select `study_planner_portal`
+4. Add your Firebase environment variables
+5. Click "Deploy" - Done in 2 minutes! 🎉
+
+**See [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md) for detailed step-by-step guide.**
+
 ### Firebase Hosting
 
 1. Install Firebase CLI:
@@ -208,9 +221,10 @@ Only users with `ADMIN` role can access the portal.
 ### Other Platforms
 
 The `dist/` folder can be deployed to:
-- Vercel
+- ✅ **Vercel** (Recommended - see guide above)
 - Netlify
 - GitHub Pages
+- Cloudflare Pages
 - Any static hosting service
 
 ## 🐛 Troubleshooting
