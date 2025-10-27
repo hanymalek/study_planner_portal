@@ -1,128 +1,253 @@
-# Study Planner Admin Portal
+# 📚 Study Planner Admin Portal
 
-Web-based admin interface for managing study plans and users.
+A modern web-based admin interface for managing study plans in the Study Planner system. Built with React, TypeScript, and Firebase.
 
-## 🚀 Quick Start
+[![React](https://img.shields.io/badge/React-18.3-blue.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
+[![Firebase](https://img.shields.io/badge/Firebase-12.4-orange.svg)](https://firebase.google.com/)
+[![Material-UI](https://img.shields.io/badge/MUI-7.3-blue.svg)](https://mui.com/)
 
-### 1. Install Dependencies
+## ✨ Features
 
-```bash
-npm install
-```
+### 📋 Study Plan Management
+- ✅ Create, edit, and organize comprehensive study plans
+- ✅ Hierarchical structure: Plans → Chapters → Lessons → Videos
+- ✅ Support for multiple video types (YouTube, Local, URL)
+- ✅ Automatic version tracking for updates
+- ✅ Visual indicators for unsaved changes
 
-### 2. Configure Firebase
+### 📥 JSON Import/Export
+- ✅ Bulk import study plans from JSON files
+- ✅ Validation and error reporting
+- ✅ Preview before importing
+- ✅ Sample data included
 
-Create a `.env.local` file in the root directory:
+### 💾 Local-First Editing
+- ✅ Edit plans locally before syncing to Firebase
+- ✅ Visual indicators for unsaved changes (orange borders)
+- ✅ Batch upload to reduce Firebase costs
+- ✅ Undo capability by clearing local edits
 
-```env
-VITE_FIREBASE_API_KEY=your_api_key_here
-VITE_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-VITE_FIREBASE_APP_ID=your_app_id
-```
+### 👥 User Management
+- 🚧 Manage student and admin accounts (coming soon)
+- 🚧 Email-based invitations (coming soon)
+- 🚧 Role assignment (ADMIN/STUDENT) (coming soon)
 
-See `FIREBASE_CONFIG.md` for detailed instructions.
-
-### 3. Run Development Server
-
-```bash
-npm run dev
-```
-
-The app will be available at `http://localhost:5173`
-
-### 4. Build for Production
-
-```bash
-npm run build
-```
-
-## 📋 Features
-
-### ✅ Phase 1 (Completed)
-- Authentication (Admin login)
-- Dashboard with statistics
-- Layout with sidebar navigation
-- Firebase integration
-- Local storage for draft edits
-
-### 🚧 Coming Soon
-- Study Plans management (CRUD)
-- JSON import for bulk creation
-- User management
-- Analytics dashboard
+### 📊 Analytics Dashboard
+- ✅ Basic statistics (total plans, users, students)
+- 🚧 Student progress tracking (coming soon)
+- 🚧 Filter by username (coming soon)
+- 🚧 Completion rates and streaks (coming soon)
 
 ## 🛠️ Tech Stack
 
-- **React 18** with TypeScript
-- **Vite** for fast development
-- **Material-UI (MUI)** for components
-- **Firebase** (Auth + Firestore)
-- **React Router** for navigation
-- **React Hook Form** for forms
-- **React Hot Toast** for notifications
+- **Frontend**: React 18 with TypeScript
+- **UI Library**: Material-UI (MUI) v7
+- **Backend**: Firebase (Authentication & Firestore)
+- **Build Tool**: Vite 7
+- **Routing**: React Router DOM v7
+- **State Management**: Custom hooks + localStorage
+- **Forms**: React Hook Form
+- **Notifications**: React Hot Toast
+- **Charts**: Recharts
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm
+- Firebase project with:
+  - Authentication enabled (Email/Password)
+  - Firestore Database created
+  - Security rules configured
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/hanymalek/study_planner_portal.git
+   cd study_planner_portal
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Firebase**
+   
+   Create a `.env` file in the root directory:
+   ```env
+   VITE_FIREBASE_API_KEY=your_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+   VITE_FIREBASE_PROJECT_ID=your_project_id
+   VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+   VITE_FIREBASE_APP_ID=your_app_id
+   ```
+
+   See [FIREBASE_CONFIG.md](./FIREBASE_CONFIG.md) for detailed setup instructions.
+
+4. **Start development server**
+   ```bash
+   npm run dev
+   ```
+   
+   Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+5. **Build for production**
+   ```bash
+   npm run build
+   ```
+   
+   Output will be in the `dist/` directory.
+
+## 📖 Documentation
+
+- **[Firebase Configuration Guide](./FIREBASE_CONFIG.md)** - Set up Firebase project and environment variables
+- **[Local Edits Workflow](./LOCAL_EDITS_GUIDE.md)** - How to use the local-first editing system
+- **[Build Configuration](./BUILD_CONFIGURATION.md)** - Vite configuration and optimization details
+- **[Setup Complete Guide](./SETUP_COMPLETE.md)** - Comprehensive setup walkthrough
+- **[Study Plans Page Guide](./STUDY_PLANS_PAGE_COMPLETE.md)** - Using the study plans interface
 
 ## 📁 Project Structure
 
 ```
-src/
-├── components/       # Reusable UI components
-│   └── Layout.tsx
-├── pages/           # Page components
-│   ├── Login.tsx
-│   ├── Dashboard.tsx
-│   ├── StudyPlans.tsx (coming soon)
-│   ├── Users.tsx (coming soon)
-│   └── Analytics.tsx (coming soon)
-├── services/        # API and Firebase
-│   ├── firebase.ts
-│   └── api.ts
-├── hooks/           # Custom React hooks
-│   ├── useAuth.tsx
-│   └── useLocalStorage.ts
-├── types/           # TypeScript definitions
-│   └── index.ts
-├── App.tsx          # Main app with routing
-└── main.tsx         # Entry point
+study_planner_portal/
+├── src/
+│   ├── components/          # Reusable UI components
+│   │   ├── Layout.tsx       # Main layout with sidebar
+│   │   ├── StudyPlanCard.tsx
+│   │   └── JsonImportDialog.tsx
+│   ├── hooks/               # Custom React hooks
+│   │   ├── useAuth.tsx      # Authentication context
+│   │   └── useLocalStorage.ts
+│   ├── pages/               # Page components
+│   │   ├── Login.tsx
+│   │   ├── Dashboard.tsx
+│   │   └── StudyPlans.tsx
+│   ├── services/            # API and Firebase services
+│   │   ├── firebase.ts      # Firebase initialization
+│   │   └── api.ts           # Firestore operations
+│   └── types/               # TypeScript type definitions
+│       └── index.ts
+├── public/                  # Static assets
+├── dist/                    # Production build output
+├── vite.config.ts          # Vite configuration
+├── tsconfig.json           # TypeScript configuration
+├── package.json            # Dependencies and scripts
+└── .env                    # Environment variables (not committed)
 ```
+
+## 🎯 Key Workflows
+
+### Import Study Plans
+1. Click "Import JSON" button
+2. Upload or paste JSON content
+3. Review validation warnings
+4. Plans are saved locally (not Firebase yet)
+5. Click "Upload Changes" to sync to Firebase
+
+### Edit Study Plans (Coming Soon)
+1. Navigate to Study Plans page
+2. Click edit icon on a plan card
+3. Make changes in the editor
+4. Changes saved locally automatically
+5. Upload when ready
+
+### Manage Users (Coming Soon)
+1. Navigate to Users page
+2. Add user by email
+3. Assign role (ADMIN/STUDENT)
+4. User receives invitation email
+
+## 🔐 Security
+
+- Firebase Security Rules enforce access control
+- Admin-only write access to study plans
+- Users can only read their own progress
+- Environment variables for sensitive data
+- `.env` file excluded from git
 
 ## 🔐 Authentication
 
 Only users with `ADMIN` role can access the portal.
 
-To create an admin user:
-1. Sign up in the Android app
+**To create an admin user:**
+1. Sign up in the Android app (or use Firebase Console)
 2. Go to Firebase Console → Firestore
 3. Find your user document in the `users` collection
 4. Change the `role` field to `"ADMIN"`
+5. Log in to the portal with your credentials
 
-## 📝 Development Workflow
-
-1. **Sync from Firebase**: Download latest study plans
-2. **Edit Locally**: All changes stored in localStorage
-3. **Upload Changes**: Batch write all edits to Firestore
-4. **Version Auto-Increment**: Versions increment automatically on save
-
-## 🚀 Deployment
+## 🚢 Deployment
 
 ### Firebase Hosting
 
-```bash
-npm run build
-firebase init hosting
-firebase deploy --only hosting
-```
+1. Install Firebase CLI:
+   ```bash
+   npm install -g firebase-tools
+   ```
 
-### Vercel
+2. Login to Firebase:
+   ```bash
+   firebase login
+   ```
 
-```bash
-npm run build
-vercel --prod
-```
+3. Initialize hosting:
+   ```bash
+   firebase init hosting
+   ```
+
+4. Build and deploy:
+   ```bash
+   npm run build
+   firebase deploy --only hosting
+   ```
+
+### Other Platforms
+
+The `dist/` folder can be deployed to:
+- Vercel
+- Netlify
+- GitHub Pages
+- Any static hosting service
+
+## 🐛 Troubleshooting
+
+### Build Warnings
+All MUI "use client" warnings are suppressed in `vite.config.ts`. If you see warnings, ensure the config file exists.
+
+### Firebase Connection Issues
+1. Check `.env` file has correct values
+2. Verify Firebase project is active
+3. Check browser console for errors
+
+### Local Edits Not Persisting
+1. Check browser localStorage permissions
+2. Clear browser cache and try again
+3. Ensure you're not in incognito/private mode
+
+### Upload Changes Button Disabled
+- Import or edit a plan first to enable the button
+- Check for orange borders on plan cards (indicates unsaved changes)
+
+## 🤝 Contributing
+
+This is a private project. For questions or issues, contact the repository owner.
 
 ## 📄 License
 
-Private project for Study Planner system.
+Private - All Rights Reserved
 
+## 🔗 Related Projects
+
+- [Study Planner Android App](https://github.com/hanymalek/StudyPlanner) - Student-facing mobile application
+
+## 📧 Contact
+
+For questions or support, please open an issue on GitHub.
+
+---
+
+**Built with ❤️ using React, TypeScript, and Firebase**
