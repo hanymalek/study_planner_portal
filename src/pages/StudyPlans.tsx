@@ -68,7 +68,9 @@ const StudyPlans: React.FC = () => {
             const parsedPlans = JSON.parse(cachedPlans);
             setPlans(parsedPlans);
             setLoading(false);
-            console.log(`Loaded ${parsedPlans.length} plans from cache (${Math.round(cacheAge / 1000)}s old)`);
+            const ageInSeconds = Math.round(cacheAge / 1000);
+            toast.success(`Loaded ${parsedPlans.length} study plans from cache (${ageInSeconds}s old)`);
+            console.log(`Loaded ${parsedPlans.length} plans from cache (${ageInSeconds}s old)`);
             return;
           }
         }
