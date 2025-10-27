@@ -99,47 +99,85 @@ const LessonAccordion: React.FC<LessonAccordionProps> = ({
         '&:before': { display: 'none' }
       }}
     >
-      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', gap: 2 }}>
-          <Typography variant="subtitle1" sx={{ flexGrow: 1 }}>
+      <AccordionSummary 
+        expandIcon={<ExpandMoreIcon />}
+        sx={{ 
+          minHeight: { xs: 64, sm: 56 },
+          '& .MuiAccordionSummary-content': {
+            my: { xs: 1.5, sm: 1 }
+          }
+        }}
+      >
+        <Box sx={{ 
+          display: 'flex', 
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: { xs: 'flex-start', sm: 'center' }, 
+          width: '100%', 
+          gap: { xs: 0.5, sm: 2 }
+        }}>
+          {/* Title - Full width on mobile */}
+          <Typography 
+            variant="subtitle1" 
+            sx={{ 
+              flexGrow: 1,
+              fontSize: { xs: '0.9rem', sm: '1rem' },
+              width: { xs: '100%', sm: 'auto' },
+              mb: { xs: 0.5, sm: 0 }
+            }}
+          >
             {chapterIndex + 1}.{lessonIndex + 1} {lesson.name || 'Untitled Lesson'}
           </Typography>
-          <Chip 
-            label={`${lesson.videos.length} video${lesson.videos.length !== 1 ? 's' : ''}`} 
-            size="small" 
-            color="secondary"
-            variant="outlined"
-          />
-          <Chip 
-            label={`${lesson.estimatedMinutes} min`} 
-            size="small"
-            variant="outlined"
-          />
-          <Box onClick={(e) => e.stopPropagation()}>
-            <IconButton
-              size="small"
-              onClick={() => onMove('up')}
-              disabled={isFirst}
-              title="Move up"
-            >
-              <ArrowUpwardIcon fontSize="small" />
-            </IconButton>
-            <IconButton
-              size="small"
-              onClick={() => onMove('down')}
-              disabled={isLast}
-              title="Move down"
-            >
-              <ArrowDownwardIcon fontSize="small" />
-            </IconButton>
-            <IconButton
-              size="small"
-              color="error"
-              onClick={onDelete}
-              title="Delete lesson"
-            >
-              <DeleteIcon fontSize="small" />
-            </IconButton>
+          
+          {/* Second line on mobile: Chips + Actions */}
+          <Box sx={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: 1,
+            width: { xs: '100%', sm: 'auto' },
+            justifyContent: { xs: 'space-between', sm: 'flex-end' }
+          }}>
+            <Box sx={{ display: 'flex', gap: 0.5 }}>
+              <Chip 
+                label={`${lesson.videos.length} video${lesson.videos.length !== 1 ? 's' : ''}`} 
+                size="small" 
+                color="secondary"
+                variant="outlined"
+              />
+              <Chip 
+                label={`${lesson.estimatedMinutes} min`} 
+                size="small"
+                variant="outlined"
+              />
+            </Box>
+            <Box onClick={(e) => e.stopPropagation()} sx={{ display: 'flex', gap: 0.5 }}>
+              <IconButton
+                size="small"
+                onClick={() => onMove('up')}
+                disabled={isFirst}
+                title="Move up"
+                sx={{ p: { xs: 0.5, sm: 1 } }}
+              >
+                <ArrowUpwardIcon fontSize="small" />
+              </IconButton>
+              <IconButton
+                size="small"
+                onClick={() => onMove('down')}
+                disabled={isLast}
+                title="Move down"
+                sx={{ p: { xs: 0.5, sm: 1 } }}
+              >
+                <ArrowDownwardIcon fontSize="small" />
+              </IconButton>
+              <IconButton
+                size="small"
+                color="error"
+                onClick={onDelete}
+                title="Delete lesson"
+                sx={{ p: { xs: 0.5, sm: 1 } }}
+              >
+                <DeleteIcon fontSize="small" />
+              </IconButton>
+            </Box>
           </Box>
         </Box>
       </AccordionSummary>

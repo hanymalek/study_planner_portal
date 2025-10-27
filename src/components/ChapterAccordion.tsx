@@ -107,57 +107,75 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
       <AccordionSummary 
         expandIcon={<ExpandMoreIcon />}
         sx={{ 
-          minHeight: { xs: 56, sm: 64 },
+          minHeight: { xs: 64, sm: 64 },
           '& .MuiAccordionSummary-content': {
-            my: { xs: 1, sm: 1.5 }
+            my: { xs: 1.5, sm: 1.5 }
           }
         }}
       >
-        <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', gap: { xs: 1, sm: 2 }, flexWrap: 'wrap' }}>
+        <Box sx={{ 
+          display: 'flex', 
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: { xs: 'flex-start', sm: 'center' }, 
+          width: '100%', 
+          gap: { xs: 0.5, sm: 2 }
+        }}>
+          {/* Title - Full width on mobile */}
           <Typography 
             variant="h6" 
             sx={{ 
               flexGrow: 1, 
               fontSize: { xs: '0.95rem', sm: '1.1rem' },
-              minWidth: { xs: '100%', sm: 'auto' }
+              width: { xs: '100%', sm: 'auto' },
+              mb: { xs: 0.5, sm: 0 }
             }}
           >
             Chapter {chapterIndex + 1}: {chapter.name || 'Untitled Chapter'}
           </Typography>
-          <Chip 
-            label={`${chapter.lessons.length} lesson${chapter.lessons.length !== 1 ? 's' : ''}`} 
-            size="small" 
-            color="primary"
-            variant="outlined"
-          />
-          <Box onClick={(e) => e.stopPropagation()} sx={{ display: 'flex', gap: 0.5 }}>
-            <IconButton
-              size="small"
-              onClick={() => onMove('up')}
-              disabled={isFirst}
-              title="Move up"
-              sx={{ p: { xs: 0.5, sm: 1 } }}
-            >
-              <ArrowUpwardIcon fontSize="small" />
-            </IconButton>
-            <IconButton
-              size="small"
-              onClick={() => onMove('down')}
-              disabled={isLast}
-              title="Move down"
-              sx={{ p: { xs: 0.5, sm: 1 } }}
-            >
-              <ArrowDownwardIcon fontSize="small" />
-            </IconButton>
-            <IconButton
-              size="small"
-              color="error"
-              onClick={onDelete}
-              title="Delete chapter"
-              sx={{ p: { xs: 0.5, sm: 1 } }}
-            >
-              <DeleteIcon fontSize="small" />
-            </IconButton>
+          
+          {/* Second line on mobile: Chip + Actions */}
+          <Box sx={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: 1,
+            width: { xs: '100%', sm: 'auto' },
+            justifyContent: { xs: 'space-between', sm: 'flex-end' }
+          }}>
+            <Chip 
+              label={`${chapter.lessons.length} lesson${chapter.lessons.length !== 1 ? 's' : ''}`} 
+              size="small" 
+              color="primary"
+              variant="outlined"
+            />
+            <Box onClick={(e) => e.stopPropagation()} sx={{ display: 'flex', gap: 0.5 }}>
+              <IconButton
+                size="small"
+                onClick={() => onMove('up')}
+                disabled={isFirst}
+                title="Move up"
+                sx={{ p: { xs: 0.5, sm: 1 } }}
+              >
+                <ArrowUpwardIcon fontSize="small" />
+              </IconButton>
+              <IconButton
+                size="small"
+                onClick={() => onMove('down')}
+                disabled={isLast}
+                title="Move down"
+                sx={{ p: { xs: 0.5, sm: 1 } }}
+              >
+                <ArrowDownwardIcon fontSize="small" />
+              </IconButton>
+              <IconButton
+                size="small"
+                color="error"
+                onClick={onDelete}
+                title="Delete chapter"
+                sx={{ p: { xs: 0.5, sm: 1 } }}
+              >
+                <DeleteIcon fontSize="small" />
+              </IconButton>
+            </Box>
           </Box>
         </Box>
       </AccordionSummary>
