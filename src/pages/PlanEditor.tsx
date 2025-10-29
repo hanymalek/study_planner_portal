@@ -98,6 +98,9 @@ const PlanEditor: React.FC = () => {
     setPlan(updatedPlan);
     
     toast.success('Study plan saved locally! Remember to upload changes.');
+    
+    // Navigate back to plans list
+    navigate('/plans');
   };
 
   const handleAddChapter = () => {

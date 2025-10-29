@@ -39,7 +39,8 @@ export interface Lesson {
   name: string;
   description: string;
   order: number;
-  estimatedMinutes: number;
+  estimatedMinutes: number; // Video watch time
+  practiceMinutes: number; // Practice/exercise time
   videos: VideoResource[];
 }
 

@@ -4,7 +4,7 @@
   "subjectName": "Physics",
   "description": "Basic physics concepts for beginners",
   "examBoardId": "TEST",
-  "difficulty": "BEGINNER",
+  "difficulty": "beginner",
   "version": 1,
   "isDeleted": false,
   "createdAt": 1729900000000,
@@ -22,61 +22,58 @@
           "name": "Newton's Laws of Motion",
           "description": "Understanding Newton's three fundamental laws",
           "order": 1,
-          "estimatedMinutes": 30,
+          "estimatedMinutes": 12,
+          "practiceMinutes": 60,
+          "difficulty": "beginner",
+          "prerequisites": [],
           "videos": [
             {
               "id": "video_001",
               "title": "Introduction to Newton's First Law",
               "type": "YOUTUBE",
-              "resourceUrl": "dQw4w9WgXcQ",
+              "resourceUrl": "0Qw4w9WgXcQ",
               "thumbnailUrl": null,
               "durationSeconds": 300,
               "category": "LESSON"
             },
             {
               "id": "video_002",
-              "title": "Newton's Second Law Explained",
+              "title": "Practice Problems - First Law",
               "type": "YOUTUBE",
-              "resourceUrl": "dQw4w9WgXcQ",
+              "resourceUrl": "1Qw4w9WgXcQ",
               "thumbnailUrl": null,
               "durationSeconds": 420,
-              "category": "LESSON"
-            }
-          ]
-        },
-        {
-          "id": "lesson_002",
-          "name": "Forces and Motion Practice",
-          "description": "Practice problems on forces",
-          "order": 2,
-          "estimatedMinutes": 45,
-          "videos": [
-            {
-              "id": "video_003",
-              "title": "Practice Problem 1",
-              "type": "YOUTUBE",
-              "resourceUrl": "dQw4w9WgXcQ",
-              "thumbnailUrl": null,
-              "durationSeconds": 600,
               "category": "PRACTICE"
             }
           ]
         },
         {
-          "id": "lesson_003",
-          "name": "Forces Quiz",
-          "description": "Test your knowledge of forces",
-          "order": 3,
-          "estimatedMinutes": 20,
+          "id": "lesson_002",
+          "name": "Energy and Work",
+          "description": "Understanding energy and its forms",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 90,
+          "difficulty": "intermediate",
+          "prerequisites": [],
           "videos": [
             {
-              "id": "video_004",
-              "title": "Quiz Instructions",
+              "id": "video_003",
+              "title": "What is Energy?",
               "type": "YOUTUBE",
-              "resourceUrl": "dQw4w9WgXcQ",
+              "resourceUrl": "2Qw4w9WgXcQ",
               "thumbnailUrl": null,
-              "durationSeconds": 180,
-              "category": "QUIZ"
+              "durationSeconds": 600,
+              "category": "LESSON"
+            },
+            {
+              "id": "video_004",
+              "title": "Work-Energy Theorem",
+              "type": "YOUTUBE",
+              "resourceUrl": "3Qw4w9WgXcQ",
+              "thumbnailUrl": null,
+              "durationSeconds": 900,
+              "category": "LESSON"
             }
           ]
         }
@@ -84,24 +81,36 @@
     },
     {
       "id": "chapter_002",
-      "name": "Chapter 2: Energy",
-      "description": "Understanding energy and its forms",
+      "name": "Chapter 2: Thermodynamics",
+      "description": "Understanding heat and temperature",
       "order": 2,
       "lessons": [
         {
-          "id": "lesson_004",
-          "name": "Kinetic and Potential Energy",
-          "description": "Types of mechanical energy",
+          "id": "lesson_003",
+          "name": "Temperature and Heat",
+          "description": "Basic concepts of thermal physics",
           "order": 1,
-          "estimatedMinutes": 35,
+          "estimatedMinutes": 40,
+          "practiceMinutes": 75,
+          "difficulty": "beginner",
+          "prerequisites": [],
           "videos": [
             {
               "id": "video_005",
-              "title": "What is Kinetic Energy?",
+              "title": "What is Temperature?",
               "type": "YOUTUBE",
-              "resourceUrl": "dQw4w9WgXcQ",
+              "resourceUrl": "4Qw4w9WgXcQ",
               "thumbnailUrl": null,
-              "durationSeconds": 360,
+              "durationSeconds": 480,
+              "category": "LESSON"
+            },
+            {
+              "id": "video_006",
+              "title": "Heat Transfer Methods",
+              "type": "YOUTUBE",
+              "resourceUrl": "5Qw4w9WgXcQ",
+              "thumbnailUrl": null,
+              "durationSeconds": 720,
               "category": "LESSON"
             }
           ]
@@ -110,4 +119,3 @@
     }
   ]
 }
-

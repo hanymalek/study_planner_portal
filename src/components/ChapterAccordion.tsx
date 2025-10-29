@@ -50,6 +50,7 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
       description: '',
       order: chapter.lessons.length + 1,
       estimatedMinutes: 30,
+      practiceMinutes: 60,
       videos: []
     };
     

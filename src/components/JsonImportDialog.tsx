@@ -121,6 +121,7 @@ const JsonImportDialog: React.FC<JsonImportDialogProps> = ({ open, onClose, onSu
               description: lesson.description || '',
               order: lesson.order || lessonIndex + 1,
               estimatedMinutes: lesson.estimatedMinutes || 30,
+              practiceMinutes: lesson.practiceMinutes || 60,
               videos: (lesson.videos || []).map((video: any, videoIndex: number) => ({
                 id: video.id || `video_${chapterIndex + 1}_${lessonIndex + 1}_${videoIndex + 1}`,
                 title: video.title || `Video ${videoIndex + 1}`,

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Accordion,
   AccordionSummary,
@@ -45,6 +45,17 @@ const LessonAccordion: React.FC<LessonAccordionProps> = ({
   onMove
 }) => {
   const [expanded, setExpanded] = useState(false);
+
+  // Auto-calculate video minutes based on total video duration
+  useEffect(() => {
+    const totalVideoSeconds = lesson.videos.reduce((sum, video) => sum + (video.durationSeconds || 0), 0);
+    const totalVideoMinutes = Math.ceil(totalVideoSeconds / 60);
+    
+    // Only update if different to avoid infinite loops
+    if (totalVideoMinutes !== lesson.estimatedMinutes) {
+      onUpdate({ ...lesson, estimatedMinutes: totalVideoMinutes });
+    }
+  }, [lesson.videos]); // Only recalculate when videos array changes
 
   const handleAddVideo = () => {
     const newVideo: VideoResource = {
@@ -206,14 +217,35 @@ const LessonAccordion: React.FC<LessonAccordionProps> = ({
             size="small"
           />
 
-          <TextField
-            label="Estimated Duration (minutes)"
-            type="number"
-            value={lesson.estimatedMinutes}
-            onChange={(e) => onUpdate({ ...lesson, estimatedMinutes: parseInt(e.target.value) || 0 })}
-            size="small"
-            sx={{ maxWidth: 250 }}
-          />
+          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+            <TextField
+              label="Video Minutes"
+              type="number"
+              value={lesson.estimatedMinutes}
+              size="small"
+              fullWidth
+              InputProps={{
+                readOnly: true,
+              }}
+              helperText="Auto-calculated from video durations"
+              sx={{
+                '& .MuiInputBase-input': {
+                  backgroundColor: 'action.hover',
+                  cursor: 'not-allowed'
+                }
+              }}
+            />
+            
+            <TextField
+              label="Practice Minutes"
+              type="number"
+              value={lesson.practiceMinutes || 60}
+              onChange={(e) => onUpdate({ ...lesson, practiceMinutes: parseInt(e.target.value) || 60 })}
+              size="small"
+              fullWidth
+              helperText="Exercise/practice time"
+            />
+          </Stack>
 
           {/* Videos Section */}
           <Box>

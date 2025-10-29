@@ -23,7 +23,7 @@ import {
   CloudUpload as CloudUploadIcon,
   FileUpload as FileUploadIcon
 } from '@mui/icons-material';
-import { getAllStudyPlans, batchSaveStudyPlans } from '../services/api';
+import { getAllStudyPlans, batchSaveStudyPlans, deleteStudyPlan } from '../services/api';
 import { useLocalEdits } from '../hooks/useLocalStorage';
 import type { StudyPlan, Difficulty } from '../types';
 import StudyPlanCard from '../components/StudyPlanCard';
@@ -32,7 +32,7 @@ import toast from 'react-hot-toast';
 
 const StudyPlans: React.FC = () => {
   const navigate = useNavigate();
-  const { hasUnsavedChanges, getAllEdits, clearEdits, editCount, hasEdit, addEdit } = useLocalEdits();
+  const { hasUnsavedChanges, getAllEdits, clearEdits, editCount, hasEdit, addEdit, removeEdit } = useLocalEdits();
   
   const [plans, setPlans] = useState<StudyPlan[]>([]);
   const [filteredPlans, setFilteredPlans] = useState<StudyPlan[]>([]);
@@ -57,9 +57,27 @@ const StudyPlans: React.FC = () => {
     filterPlans();
   }, [plans, searchQuery, difficultyFilter]);
 
+    // Helper function to merge Firebase plans with local edits
+    const mergePlansWithLocalEdits = (firebasePlans: StudyPlan[]): StudyPlan[] => {
+      const localEditsData = getAllEdits() as StudyPlan[];
+      
+      // Create a map of Firebase plans by ID
+      const planMap = new Map<string, StudyPlan>();
+      firebasePlans.forEach(plan => planMap.set(plan.id, plan));
+      
+      // Add or update with local edits
+      localEditsData.forEach(editedPlan => {
+        planMap.set(editedPlan.id, editedPlan);
+      });
+      
+      return Array.from(planMap.values());
+    };
+
     const loadPlans = async (forceRefresh = false) => {
       setLoading(true);
       try {
+        let fetchedPlans: StudyPlan[] = [];
+        
         // Try to load from cache first
         if (!forceRefresh) {
           const cachedPlans = localStorage.getItem('cached_study_plans');
@@ -71,26 +89,31 @@ const StudyPlans: React.FC = () => {
             
             if (cacheAge < CACHE_DURATION) {
               // Use cached data
-              const parsedPlans = JSON.parse(cachedPlans);
-              setPlans(parsedPlans);
-              setLoading(false);
+              fetchedPlans = JSON.parse(cachedPlans);
               const ageInSeconds = Math.round(cacheAge / 1000);
-              toast.success(`Loaded ${parsedPlans.length} study plans from cache (${ageInSeconds}s old)`);
-              console.log(`Loaded ${parsedPlans.length} plans from cache (${ageInSeconds}s old)`);
+              console.log(`Loaded ${fetchedPlans.length} plans from cache (${ageInSeconds}s old)`);
+              
+              // Merge with local edits
+              const mergedPlans = mergePlansWithLocalEdits(fetchedPlans);
+              setPlans(mergedPlans);
+              setLoading(false);
+              toast.success(`Loaded ${mergedPlans.length} study plans from cache (${ageInSeconds}s old)`);
               return;
             }
           }
         }
         
         // Fetch from Firebase
-        const fetchedPlans = await getAllStudyPlans();
+        fetchedPlans = await getAllStudyPlans();
         
         // Cache the results
         localStorage.setItem('cached_study_plans', JSON.stringify(fetchedPlans));
         localStorage.setItem('cached_study_plans_timestamp', Date.now().toString());
         
-        setPlans(fetchedPlans);
-        toast.success(`Loaded ${fetchedPlans.length} study plans from Firebase`);
+        // Merge with local edits
+        const mergedPlans = mergePlansWithLocalEdits(fetchedPlans);
+        setPlans(mergedPlans);
+        toast.success(`Loaded ${mergedPlans.length} study plans from Firebase`);
       } catch (error) {
         console.error('Error loading plans:', error);
         
@@ -98,7 +121,8 @@ const StudyPlans: React.FC = () => {
         const cachedPlans = localStorage.getItem('cached_study_plans');
         if (cachedPlans) {
           const parsedPlans = JSON.parse(cachedPlans);
-          setPlans(parsedPlans);
+          const mergedPlans = mergePlansWithLocalEdits(parsedPlans);
+          setPlans(mergedPlans);
           toast.error('Failed to load from Firebase. Using cached data.');
         } else {
           toast.error('Failed to load study plans');
@@ -196,6 +220,53 @@ const StudyPlans: React.FC = () => {
     });
     setPlans((prev) => [...prev, ...importedPlans]);
     toast.success(`Imported ${importedPlans.length} study plans locally. Click "Upload Changes" to save to Firebase.`);
+  };
+
+  const handleDeletePlan = async (planId: string) => {
+    const plan = plans.find(p => p.id === planId);
+    if (!plan) return;
+
+    // Check if this plan exists in Firebase by checking the cache
+    const cachedPlans = localStorage.getItem('cached_study_plans');
+    const firebasePlans = cachedPlans ? JSON.parse(cachedPlans) : [];
+    const existsInFirebase = firebasePlans.some((p: StudyPlan) => p.id === planId);
+    const isLocalOnly = !existsInFirebase && hasEdit(planId);
+
+    const confirm = window.confirm(
+      isLocalOnly
+        ? `Are you sure you want to delete "${plan.name}"?\n\nThis plan has not been uploaded to Firebase yet. It will be permanently removed from your local edits.`
+        : `Are you sure you want to delete "${plan.name}"?\n\nThis will mark the plan as deleted and hide it from students. This action can be undone by an admin if needed.`
+    );
+    if (!confirm) return;
+
+    try {
+      if (isLocalOnly) {
+        // Plan only exists locally - just remove from local edits
+        removeEdit(planId);
+        setPlans(prev => prev.filter(p => p.id !== planId));
+        toast.success(`Removed "${plan.name}" from local edits`);
+      } else {
+        // Plan exists in Firebase - soft delete it
+        await deleteStudyPlan(planId);
+        
+        // Remove from local state
+        setPlans(prev => prev.filter(p => p.id !== planId));
+        
+        // Also remove from local edits if it was being edited
+        if (hasEdit(planId)) {
+          removeEdit(planId);
+        }
+        
+        // Invalidate cache
+        localStorage.removeItem('cached_study_plans');
+        localStorage.removeItem('cached_study_plans_timestamp');
+        
+        toast.success(`Successfully deleted "${plan.name}" from Firebase`);
+      }
+    } catch (error) {
+      console.error('Error deleting plan:', error);
+      toast.error('Failed to delete study plan');
+    }
   };
 
   if (loading) {
@@ -391,10 +462,7 @@ const StudyPlans: React.FC = () => {
               key={plan.id}
               plan={plan}
               onEdit={() => handleEditPlan(plan.id)}
-              onDelete={() => {
-                // TODO: Implement delete
-                toast.error('Delete functionality coming soon');
-              }}
+              onDelete={() => handleDeletePlan(plan.id)}
               hasUnsavedChanges={hasEdit(plan.id)}
             />
           ))}
