@@ -39,9 +39,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setCurrentUser(user);
       
       if (user) {
-        // Fetch user profile from Firestore
+        // Fetch user profile from Firestore (always sync with Firebase on auth state change)
         try {
-          const profile = await getUser(user.uid);
+          const profile = await getUser(user.uid, true);
           setUserProfile(profile);
         } catch (error) {
           console.error('Error fetching user profile:', error);
