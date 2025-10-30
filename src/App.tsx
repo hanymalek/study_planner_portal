@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import StudyPlans from './pages/StudyPlans';
 import PlanEditor from './pages/PlanEditor';
+import PlanDetails from './pages/PlanDetails';
 import Users from './pages/Users';
 
 // Create MUI theme
@@ -65,6 +66,14 @@ const AppRoutes: React.FC = () => {
         element={
           <ProtectedRoute>
             <StudyPlans />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/plans/:planId"
+        element={
+          <ProtectedRoute>
+            <PlanDetails />
           </ProtectedRoute>
         }
       />

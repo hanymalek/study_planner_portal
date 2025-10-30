@@ -60,9 +60,10 @@ const Dashboard: React.FC = () => {
 
   const loadStats = async () => {
     try {
+      // Load from local storage (no Firebase call)
       const [plans, users] = await Promise.all([
-        getAllStudyPlans(),
-        getAllUsers()
+        getAllStudyPlans(false),
+        getAllUsers(false)
       ]);
 
       setStats({

@@ -54,14 +54,15 @@ const PlanEditor: React.FC = () => {
     }
   }, [planId]);
 
-  const loadPlan = async (id: string) => {
+  const loadPlan = (id: string) => {
     setLoading(true);
     try {
-      const fetchedPlan = await getStudyPlan(id);
+      // Load from local storage (instant)
+      const fetchedPlan = getStudyPlan(id);
       if (fetchedPlan) {
         setPlan(fetchedPlan);
       } else {
-        toast.error('Study plan not found');
+        toast.error('Study plan not found in local storage');
         navigate('/plans');
       }
     } catch (error) {

@@ -13,7 +13,8 @@ import {
   Edit as EditIcon,
   Delete as DeleteIcon,
   MenuBook as MenuBookIcon,
-  CloudUpload as CloudUploadIcon
+  CloudUpload as CloudUploadIcon,
+  Visibility as VisibilityIcon
 } from '@mui/icons-material';
 import type { StudyPlan } from '../types';
 
@@ -21,10 +22,11 @@ interface StudyPlanCardProps {
   plan: StudyPlan;
   onEdit: () => void;
   onDelete: () => void;
+  onViewDetails?: () => void;
   hasUnsavedChanges?: boolean;
 }
 
-const StudyPlanCard: React.FC<StudyPlanCardProps> = ({ plan, onEdit, onDelete, hasUnsavedChanges = false }) => {
+const StudyPlanCard: React.FC<StudyPlanCardProps> = ({ plan, onEdit, onDelete, onViewDetails, hasUnsavedChanges = false }) => {
   const totalChapters = plan.chapters.length;
   const totalLessons = plan.chapters.reduce((sum, chapter) => sum + chapter.lessons.length, 0);
   const totalVideos = plan.chapters.reduce(
@@ -121,12 +123,19 @@ const StudyPlanCard: React.FC<StudyPlanCardProps> = ({ plan, onEdit, onDelete, h
       </CardContent>
 
       <CardActions sx={{ justifyContent: 'space-between', px: 2, pb: 2 }}>
-        <Button size="small" startIcon={<EditIcon />} onClick={onEdit}>
-          Edit
-        </Button>
-        <Button size="small" color="error" startIcon={<DeleteIcon />} onClick={onDelete}>
-          Delete
-        </Button>
+        {onViewDetails && (
+          <Button size="small" startIcon={<VisibilityIcon />} onClick={onViewDetails}>
+            View Details
+          </Button>
+        )}
+        <Box sx={{ display: 'flex', gap: 1 }}>
+          <Button size="small" startIcon={<EditIcon />} onClick={onEdit}>
+            Edit
+          </Button>
+          <Button size="small" color="error" startIcon={<DeleteIcon />} onClick={onDelete}>
+            Delete
+          </Button>
+        </Box>
       </CardActions>
     </Card>
   );

@@ -78,55 +78,22 @@ const StudyPlans: React.FC = () => {
       try {
         let fetchedPlans: StudyPlan[] = [];
         
-        // Try to load from cache first
-        if (!forceRefresh) {
-          const cachedPlans = localStorage.getItem('cached_study_plans');
-          const cacheTimestamp = localStorage.getItem('cached_study_plans_timestamp');
-          
-          if (cachedPlans && cacheTimestamp) {
-            const cacheAge = Date.now() - parseInt(cacheTimestamp);
-            const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
-            
-            if (cacheAge < CACHE_DURATION) {
-              // Use cached data
-              fetchedPlans = JSON.parse(cachedPlans);
-              const ageInSeconds = Math.round(cacheAge / 1000);
-              console.log(`Loaded ${fetchedPlans.length} plans from cache (${ageInSeconds}s old)`);
-              
-              // Merge with local edits
-              const mergedPlans = mergePlansWithLocalEdits(fetchedPlans);
-              setPlans(mergedPlans);
-              setLoading(false);
-              toast.success(`Loaded ${mergedPlans.length} study plans from cache (${ageInSeconds}s old)`);
-              return;
-            }
-          }
+        if (forceRefresh) {
+          // Explicitly sync from Firebase
+          fetchedPlans = await getAllStudyPlans(true);
+          toast.success(`Synced ${fetchedPlans.length} study plans from Firebase`);
+        } else {
+          // Load from local storage (instant, no Firebase call)
+          fetchedPlans = await getAllStudyPlans(false);
+          console.log(`Loaded ${fetchedPlans.length} plans from local storage`);
         }
-        
-        // Fetch from Firebase
-        fetchedPlans = await getAllStudyPlans();
-        
-        // Cache the results
-        localStorage.setItem('cached_study_plans', JSON.stringify(fetchedPlans));
-        localStorage.setItem('cached_study_plans_timestamp', Date.now().toString());
         
         // Merge with local edits
         const mergedPlans = mergePlansWithLocalEdits(fetchedPlans);
         setPlans(mergedPlans);
-        toast.success(`Loaded ${mergedPlans.length} study plans from Firebase`);
       } catch (error) {
         console.error('Error loading plans:', error);
-        
-        // Try to use stale cache as fallback
-        const cachedPlans = localStorage.getItem('cached_study_plans');
-        if (cachedPlans) {
-          const parsedPlans = JSON.parse(cachedPlans);
-          const mergedPlans = mergePlansWithLocalEdits(parsedPlans);
-          setPlans(mergedPlans);
-          toast.error('Failed to load from Firebase. Using cached data.');
-        } else {
-          toast.error('Failed to load study plans');
-        }
+        toast.error('Failed to load study plans');
       } finally {
         setLoading(false);
       }
@@ -191,9 +158,7 @@ const StudyPlans: React.FC = () => {
       await batchSaveStudyPlans(edits);
       clearEdits();
       
-      // Invalidate cache and reload from Firebase
-      localStorage.removeItem('cached_study_plans');
-      localStorage.removeItem('cached_study_plans_timestamp');
+      // Reload from Firebase to ensure sync
       await loadPlans(true);
       
       toast.success(`Successfully uploaded ${edits.length} study plans`);
@@ -213,6 +178,10 @@ const StudyPlans: React.FC = () => {
     navigate(`/plans/${planId}/edit`);
   };
 
+  const handleViewDetails = (planId: string) => {
+    navigate(`/plans/${planId}`);
+  };
+
   const handleImportSuccess = (importedPlans: StudyPlan[]) => {
     // Add imported plans to local edits (they need to be uploaded)
     importedPlans.forEach(plan => {
@@ -226,43 +195,29 @@ const StudyPlans: React.FC = () => {
     const plan = plans.find(p => p.id === planId);
     if (!plan) return;
 
-    // Check if this plan exists in Firebase by checking the cache
-    const cachedPlans = localStorage.getItem('cached_study_plans');
-    const firebasePlans = cachedPlans ? JSON.parse(cachedPlans) : [];
-    const existsInFirebase = firebasePlans.some((p: StudyPlan) => p.id === planId);
-    const isLocalOnly = !existsInFirebase && hasEdit(planId);
+    // Check if this is a local-only plan (not in main storage, only in edits)
+    const isLocalOnly = hasEdit(planId);
 
     const confirm = window.confirm(
       isLocalOnly
-        ? `Are you sure you want to delete "${plan.name}"?\n\nThis plan has not been uploaded to Firebase yet. It will be permanently removed from your local edits.`
-        : `Are you sure you want to delete "${plan.name}"?\n\nThis will mark the plan as deleted and hide it from students. This action can be undone by an admin if needed.`
+        ? `Are you sure you want to delete "${plan.name}"?\n\nThis plan has not been uploaded to Firebase yet. It will be permanently removed.`
+        : `Are you sure you want to delete "${plan.name}"?\n\nThis will be deleted locally. Click "Upload Changes" to sync deletion to Firebase.`
     );
     if (!confirm) return;
 
     try {
-      if (isLocalOnly) {
-        // Plan only exists locally - just remove from local edits
+      // Delete locally (always)
+      await deleteStudyPlan(planId, false);
+      
+      // Remove from local state
+      setPlans(prev => prev.filter(p => p.id !== planId));
+      
+      // Also remove from local edits if it was being edited
+      if (hasEdit(planId)) {
         removeEdit(planId);
-        setPlans(prev => prev.filter(p => p.id !== planId));
-        toast.success(`Removed "${plan.name}" from local edits`);
-      } else {
-        // Plan exists in Firebase - soft delete it
-        await deleteStudyPlan(planId);
-        
-        // Remove from local state
-        setPlans(prev => prev.filter(p => p.id !== planId));
-        
-        // Also remove from local edits if it was being edited
-        if (hasEdit(planId)) {
-          removeEdit(planId);
-        }
-        
-        // Invalidate cache
-        localStorage.removeItem('cached_study_plans');
-        localStorage.removeItem('cached_study_plans_timestamp');
-        
-        toast.success(`Successfully deleted "${plan.name}" from Firebase`);
       }
+      
+      toast.success(`Deleted "${plan.name}" locally`);
     } catch (error) {
       console.error('Error deleting plan:', error);
       toast.error('Failed to delete study plan');
@@ -463,6 +418,7 @@ const StudyPlans: React.FC = () => {
               plan={plan}
               onEdit={() => handleEditPlan(plan.id)}
               onDelete={() => handleDeletePlan(plan.id)}
+              onViewDetails={() => handleViewDetails(plan.id)}
               hasUnsavedChanges={hasEdit(plan.id)}
             />
           ))}

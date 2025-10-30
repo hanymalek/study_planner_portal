@@ -68,12 +68,16 @@ const Users: React.FC = () => {
     filterUsers();
   }, [users, searchQuery]);
 
-  const loadUsers = async () => {
+  const loadUsers = async (syncWithFirebase = false) => {
     setLoading(true);
     try {
-      const fetchedUsers = await getAllUsers();
+      const fetchedUsers = await getAllUsers(syncWithFirebase);
       setUsers(fetchedUsers);
-      toast.success(`Loaded ${fetchedUsers.length} users`);
+      if (syncWithFirebase) {
+        toast.success(`Synced ${fetchedUsers.length} users from Firebase`);
+      } else {
+        console.log(`Loaded ${fetchedUsers.length} users from local storage`);
+      }
     } catch (error) {
       console.error('Error loading users:', error);
       toast.error('Failed to load users');
@@ -251,15 +255,15 @@ const Users: React.FC = () => {
         <Button
           variant="outlined"
           startIcon={<RefreshIcon />}
-          onClick={loadUsers}
+          onClick={() => loadUsers(true)}
           size="small"
           sx={{ 
             minWidth: { xs: 'auto', sm: 'fit-content' },
             width: { xs: '100%', sm: 'auto' }
           }}
         >
-          <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' } }}>Refresh</Box>
-          <Box component="span" sx={{ display: { xs: 'inline', sm: 'none' } }}>Refresh</Box>
+          <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' } }}>Sync from Firebase</Box>
+          <Box component="span" sx={{ display: { xs: 'inline', sm: 'none' } }}>Sync</Box>
         </Button>
         <Button
           variant="contained"
