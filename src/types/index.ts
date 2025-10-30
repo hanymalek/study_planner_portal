@@ -102,6 +102,9 @@ export interface LessonCompletion {
   isCompleted: boolean;
   completedAt: number | null;
   completedVideoIds: string[];
+  practicedConfirmed: boolean; // Manual offline practice confirmation
+  difficultyRating: number; // 1-5 skull rating when lesson marked complete
+  difficultyLabel: string; // Catchy phrase for the rating
 }
 
 export interface DailyStats {
