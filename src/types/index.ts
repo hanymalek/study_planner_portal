@@ -52,6 +52,8 @@ export interface Chapter {
   lessons: Lesson[];
 }
 
+export type SyncStatus = 'synced' | 'modified' | 'new';
+
 export interface StudyPlan {
   id: string;
   name: string;
@@ -65,6 +67,9 @@ export interface StudyPlan {
   updatedAt: number;
   createdBy: string;
   chapters: Chapter[];
+  // Local sync metadata (not stored in Firebase)
+  _syncStatus?: SyncStatus;
+  _lastSyncedAt?: number;
 }
 
 export interface User {

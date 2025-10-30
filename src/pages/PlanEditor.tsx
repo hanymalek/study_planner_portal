@@ -18,8 +18,7 @@ import {
   ArrowBack as ArrowBackIcon,
   Add as AddIcon
 } from '@mui/icons-material';
-import { getStudyPlan } from '../services/api';
-import { useLocalEdits } from '../hooks/useLocalStorage';
+import { getStudyPlan, saveStudyPlan } from '../services/api';
 import type { StudyPlan, Difficulty } from '../types';
 import ChapterAccordion from '../components/ChapterAccordion';
 import toast from 'react-hot-toast';
@@ -28,7 +27,6 @@ import { v4 as uuidv4 } from 'uuid';
 const PlanEditor: React.FC = () => {
   const { planId } = useParams<{ planId: string }>();
   const navigate = useNavigate();
-  const { addEdit } = useLocalEdits();
   
   const [loading, setLoading] = useState(!!planId);
   const [plan, setPlan] = useState<StudyPlan>({
@@ -43,6 +41,7 @@ const PlanEditor: React.FC = () => {
     createdAt: Date.now(),
     updatedAt: Date.now(),
     createdBy: 'admin',
+    _syncStatus: 'new',
     chapters: []
   });
 
@@ -74,7 +73,7 @@ const PlanEditor: React.FC = () => {
     }
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     // Validation
     if (!plan.name.trim()) {
       toast.error('Plan name is required');
@@ -89,13 +88,13 @@ const PlanEditor: React.FC = () => {
       return;
     }
 
-    // Save to local edits
+    // Save to storage with sync status
     const updatedPlan: StudyPlan = {
       ...plan,
       updatedAt: Date.now()
     };
     
-    addEdit(updatedPlan.id, updatedPlan);
+    await saveStudyPlan(updatedPlan, true); // markAsModified = true
     setPlan(updatedPlan);
     
     toast.success('Study plan saved locally! Remember to upload changes.');

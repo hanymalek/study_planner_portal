@@ -27,56 +27,115 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
   return [storedValue, setValue] as const;
 }
 
-// Hook for managing local edits of study plans
+// Hook for managing local edits of study plans (now using single storage with sync status)
 export function useLocalEdits() {
-  const [localEdits, setLocalEdits] = useLocalStorage<Record<string, any>>('study_plan_edits', {});
-  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
-
+  const [, setTrigger] = useState(0);
+  
+  // Force re-render when storage changes
+  const forceUpdate = () => setTrigger(prev => prev + 1);
+  
   useEffect(() => {
-    setHasUnsavedChanges(Object.keys(localEdits).length > 0);
-  }, [localEdits]);
+    // Listen for storage changes
+    const handleStorageChange = () => forceUpdate();
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, []);
 
+  // Get all plans from local storage
+  const getAllPlans = (): any[] => {
+    try {
+      const item = window.localStorage.getItem('local_study_plans');
+      return item ? JSON.parse(item) : [];
+    } catch (error) {
+      console.error('Error reading plans from localStorage:', error);
+      return [];
+    }
+  };
+
+  // Save all plans to local storage
+  const savePlans = (plans: any[]) => {
+    try {
+      window.localStorage.setItem('local_study_plans', JSON.stringify(plans));
+      forceUpdate();
+    } catch (error) {
+      console.error('Error saving plans to localStorage:', error);
+    }
+  };
+
+  // Get unsynced plans (new or modified)
+  const getUnsyncedPlans = () => {
+    const allPlans = getAllPlans();
+    return allPlans.filter(plan => 
+      plan._syncStatus === 'new' || plan._syncStatus === 'modified'
+    );
+  };
+
+  // Add or update a plan (marks as new or modified)
   const addEdit = (id: string, data: any) => {
-    setLocalEdits(prev => ({
-      ...prev,
-      [id]: data
-    }));
+    const allPlans = getAllPlans();
+    const index = allPlans.findIndex(p => p.id === id);
+    
+    const updatedPlan = {
+      ...data,
+      _syncStatus: data._syncStatus || (index >= 0 ? 'modified' : 'new')
+    };
+    
+    if (index >= 0) {
+      allPlans[index] = updatedPlan;
+    } else {
+      allPlans.push(updatedPlan);
+    }
+    
+    savePlans(allPlans);
   };
 
+  // Remove a plan from storage
   const removeEdit = (id: string) => {
-    setLocalEdits(prev => {
-      const newEdits = { ...prev };
-      delete newEdits[id];
-      return newEdits;
-    });
+    const allPlans = getAllPlans();
+    const filtered = allPlans.filter(p => p.id !== id);
+    savePlans(filtered);
   };
 
+  // Clear unsynced edits (mark all as synced)
   const clearEdits = () => {
-    setLocalEdits({});
+    const allPlans = getAllPlans();
+    const clearedPlans = allPlans.map(plan => ({
+      ...plan,
+      _syncStatus: 'synced',
+      _lastSyncedAt: Date.now()
+    }));
+    savePlans(clearedPlans);
   };
 
+  // Get a specific plan
   const getEdit = (id: string) => {
-    return localEdits[id];
+    const allPlans = getAllPlans();
+    return allPlans.find(p => p.id === id);
   };
 
+  // Get all unsynced plans
   const getAllEdits = () => {
-    return Object.values(localEdits);
+    return getUnsyncedPlans();
   };
 
+  // Check if a plan has unsaved changes
   const hasEdit = (id: string) => {
-    return id in localEdits;
+    const plan = getEdit(id);
+    return plan?._syncStatus === 'new' || plan?._syncStatus === 'modified';
   };
+
+  const unsyncedPlans = getUnsyncedPlans();
 
   return {
-    localEdits,
-    hasUnsavedChanges,
+    localEdits: unsyncedPlans.reduce((acc, plan) => ({ ...acc, [plan.id]: plan }), {}),
+    hasUnsavedChanges: unsyncedPlans.length > 0,
     addEdit,
     removeEdit,
     clearEdits,
     getEdit,
     getAllEdits,
     hasEdit,
-    editCount: Object.keys(localEdits).length
+    editCount: unsyncedPlans.length
   };
 }
 

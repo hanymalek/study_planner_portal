@@ -23,13 +23,55 @@ const KEYS = {
   STORAGE_VERSION: 'storage_version',
 };
 
+// Migrate from old dual-storage to new single-storage system
+const migrateFromDualStorage = () => {
+  try {
+    const oldEdits = getFromLocalStorage<Record<string, any>>('study_plan_edits');
+    if (oldEdits && Object.keys(oldEdits).length > 0) {
+      console.log('Migrating from old dual-storage system...');
+      
+      const mainPlans = getFromLocalStorage<StudyPlan[]>(KEYS.STUDY_PLANS) || [];
+      const planMap = new Map<string, StudyPlan>();
+      
+      // Add all main plans
+      mainPlans.forEach(plan => planMap.set(plan.id, {
+        ...plan,
+        _syncStatus: 'synced' as const,
+        _lastSyncedAt: plan.updatedAt || Date.now()
+      }));
+      
+      // Add/override with edited plans (mark as modified or new)
+      Object.values(oldEdits).forEach((editedPlan: any) => {
+        const existsInMain = planMap.has(editedPlan.id);
+        planMap.set(editedPlan.id, {
+          ...editedPlan,
+          _syncStatus: existsInMain ? 'modified' as const : 'new' as const
+        });
+      });
+      
+      // Save migrated plans
+      const migratedPlans = Array.from(planMap.values());
+      saveToLocalStorage(KEYS.STUDY_PLANS, migratedPlans);
+      
+      // Remove old edits storage
+      localStorage.removeItem('study_plan_edits');
+      
+      console.log(`Migration complete: ${migratedPlans.length} plans migrated`);
+    }
+  } catch (error) {
+    console.error('Error during storage migration:', error);
+  }
+};
+
 // Initialize or migrate storage version
 const initializeStorage = () => {
   const currentVersion = localStorage.getItem(KEYS.STORAGE_VERSION);
   if (!currentVersion) {
     localStorage.setItem(KEYS.STORAGE_VERSION, STORAGE_VERSION.toString());
   }
-  // Future: Add migration logic here when version changes
+  
+  // Migrate from old system if needed
+  migrateFromDualStorage();
 };
 
 initializeStorage();
@@ -54,20 +96,45 @@ const saveToLocalStorage = <T>(key: string, data: T): void => {
 };
 
 // ===========================
-// STUDY PLANS - LOCAL FIRST
+// STUDY PLANS - SINGLE STORAGE WITH SYNC STATUS
 // ===========================
+
+// Helper to strip sync metadata before sending to Firebase
+const stripSyncMetadata = (plan: StudyPlan): any => {
+  const { _syncStatus, _lastSyncedAt, ...planWithoutMeta } = plan;
+  return planWithoutMeta;
+};
 
 export const getAllStudyPlans = async (syncWithFirebase = false): Promise<StudyPlan[]> => {
   if (syncWithFirebase) {
-    // Explicit Firebase sync
+    // Fetch from Firebase
     const plansRef = collection(db, 'study_plans');
     const q = query(plansRef, where('isDeleted', '==', false));
     const snapshot = await getDocs(q);
-    const plans = snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id } as StudyPlan));
+    const firebasePlans = snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id } as StudyPlan));
     
-    // Save to local storage
-    saveToLocalStorage(KEYS.STUDY_PLANS, plans);
-    return plans;
+    // Get current local plans
+    const localPlans = getFromLocalStorage<StudyPlan[]>(KEYS.STUDY_PLANS) || [];
+    
+    // Merge: Firebase plans take priority, but keep local-only plans
+    const planMap = new Map<string, StudyPlan>();
+    
+    // Add all local plans first
+    localPlans.forEach(plan => planMap.set(plan.id, plan));
+    
+    // Override with Firebase plans and mark as synced
+    const now = Date.now();
+    firebasePlans.forEach(fbPlan => {
+      planMap.set(fbPlan.id, {
+        ...fbPlan,
+        _syncStatus: 'synced',
+        _lastSyncedAt: now
+      });
+    });
+    
+    const mergedPlans = Array.from(planMap.values());
+    saveToLocalStorage(KEYS.STUDY_PLANS, mergedPlans);
+    return mergedPlans;
   }
 
   // Return from local storage
@@ -75,66 +142,83 @@ export const getAllStudyPlans = async (syncWithFirebase = false): Promise<StudyP
   return localPlans || [];
 };
 
-export const getStudyPlan = (id: string, syncWithFirebase = false): StudyPlan | null => {
-  if (syncWithFirebase) {
-    // Not implemented - use getAllStudyPlans(true) then filter
-    console.warn('Firebase sync for single plan not implemented, use getAllStudyPlans(true)');
-  }
-
+export const getStudyPlan = (id: string): StudyPlan | null => {
   const allPlans = getFromLocalStorage<StudyPlan[]>(KEYS.STUDY_PLANS) || [];
   return allPlans.find(p => p.id === id) || null;
 };
 
-export const saveStudyPlan = async (plan: StudyPlan, syncToFirebase = false): Promise<void> => {
-  // Save locally first
+export const saveStudyPlan = async (plan: StudyPlan, markAsModified = true): Promise<void> => {
   const allPlans = getFromLocalStorage<StudyPlan[]>(KEYS.STUDY_PLANS) || [];
   const index = allPlans.findIndex(p => p.id === plan.id);
   
+  const now = Date.now();
+  const updatedPlan: StudyPlan = {
+    ...plan,
+    updatedAt: now,
+    _syncStatus: markAsModified ? (plan._syncStatus === 'new' ? 'new' : 'modified') : plan._syncStatus,
+  };
+  
   if (index >= 0) {
-    allPlans[index] = { ...plan, updatedAt: Date.now() };
+    allPlans[index] = updatedPlan;
   } else {
-    allPlans.push({ ...plan, createdAt: Date.now(), updatedAt: Date.now() });
+    updatedPlan.createdAt = now;
+    updatedPlan._syncStatus = 'new';
+    allPlans.push(updatedPlan);
   }
   
   saveToLocalStorage(KEYS.STUDY_PLANS, allPlans);
-
-  // Only sync to Firebase if explicitly requested
-  if (syncToFirebase) {
-    const docRef = doc(db, 'study_plans', plan.id);
-    await setDoc(docRef, {
-      ...plan,
-      updatedAt: Date.now()
-    });
-  }
 };
 
-export const deleteStudyPlan = async (id: string, syncToFirebase = false): Promise<void> => {
-  // Delete locally
+export const deleteStudyPlan = async (id: string): Promise<void> => {
   const allPlans = getFromLocalStorage<StudyPlan[]>(KEYS.STUDY_PLANS) || [];
   const filtered = allPlans.filter(p => p.id !== id);
   saveToLocalStorage(KEYS.STUDY_PLANS, filtered);
-
-  // Only sync to Firebase if explicitly requested
-  if (syncToFirebase) {
-    const docRef = doc(db, 'study_plans', id);
-    await updateDoc(docRef, {
-      isDeleted: true,
-      updatedAt: Date.now()
-    });
-  }
 };
 
 export const batchSaveStudyPlans = async (plans: StudyPlan[]): Promise<void> => {
-  // Firebase batch upload (used by Upload Changes button)
+  // Upload to Firebase
   const batch = writeBatch(db);
+  const now = Date.now();
+  
   plans.forEach(plan => {
     const docRef = doc(db, 'study_plans', plan.id);
+    const planData = stripSyncMetadata(plan);
     batch.set(docRef, {
-      ...plan,
-      updatedAt: Date.now()
+      ...planData,
+      updatedAt: now
     });
   });
+  
   await batch.commit();
+  
+  // Mark all uploaded plans as synced in local storage
+  const allPlans = getFromLocalStorage<StudyPlan[]>(KEYS.STUDY_PLANS) || [];
+  const uploadedIds = new Set(plans.map(p => p.id));
+  
+  const updatedPlans = allPlans.map(plan => {
+    if (uploadedIds.has(plan.id)) {
+      return {
+        ...plan,
+        _syncStatus: 'synced' as const,
+        _lastSyncedAt: now
+      };
+    }
+    return plan;
+  });
+  
+  saveToLocalStorage(KEYS.STUDY_PLANS, updatedPlans);
+};
+
+// Get all plans that need syncing (new or modified)
+export const getUnsyncedPlans = (): StudyPlan[] => {
+  const allPlans = getFromLocalStorage<StudyPlan[]>(KEYS.STUDY_PLANS) || [];
+  return allPlans.filter(plan => plan._syncStatus === 'new' || plan._syncStatus === 'modified');
+};
+
+// Check if a specific plan has unsaved changes
+export const hasUnsavedChanges = (planId: string): boolean => {
+  const plan = getStudyPlan(planId);
+  return plan?._syncStatus === 'new' || plan?._syncStatus === 'modified';
 };
 
 // ===========================

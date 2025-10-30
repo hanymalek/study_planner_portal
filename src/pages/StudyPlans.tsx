@@ -57,47 +57,29 @@ const StudyPlans: React.FC = () => {
     filterPlans();
   }, [plans, searchQuery, difficultyFilter]);
 
-    // Helper function to merge Firebase plans with local edits
-    const mergePlansWithLocalEdits = (firebasePlans: StudyPlan[]): StudyPlan[] => {
-      const localEditsData = getAllEdits() as StudyPlan[];
+  const loadPlans = async (forceRefresh = false) => {
+    setLoading(true);
+    try {
+      let fetchedPlans: StudyPlan[] = [];
       
-      // Create a map of Firebase plans by ID
-      const planMap = new Map<string, StudyPlan>();
-      firebasePlans.forEach(plan => planMap.set(plan.id, plan));
-      
-      // Add or update with local edits
-      localEditsData.forEach(editedPlan => {
-        planMap.set(editedPlan.id, editedPlan);
-      });
-      
-      return Array.from(planMap.values());
-    };
-
-    const loadPlans = async (forceRefresh = false) => {
-      setLoading(true);
-      try {
-        let fetchedPlans: StudyPlan[] = [];
-        
-        if (forceRefresh) {
-          // Explicitly sync from Firebase
-          fetchedPlans = await getAllStudyPlans(true);
-          toast.success(`Synced ${fetchedPlans.length} study plans from Firebase`);
-        } else {
-          // Load from local storage (instant, no Firebase call)
-          fetchedPlans = await getAllStudyPlans(false);
-          console.log(`Loaded ${fetchedPlans.length} plans from local storage`);
-        }
-        
-        // Merge with local edits
-        const mergedPlans = mergePlansWithLocalEdits(fetchedPlans);
-        setPlans(mergedPlans);
-      } catch (error) {
-        console.error('Error loading plans:', error);
-        toast.error('Failed to load study plans');
-      } finally {
-        setLoading(false);
+      if (forceRefresh) {
+        // Explicitly sync from Firebase
+        fetchedPlans = await getAllStudyPlans(true);
+        toast.success(`Synced ${fetchedPlans.length} study plans from Firebase`);
+      } else {
+        // Load from local storage (instant, no Firebase call)
+        fetchedPlans = await getAllStudyPlans(false);
+        console.log(`Loaded ${fetchedPlans.length} plans from local storage`);
       }
-    };
+      
+      setPlans(fetchedPlans);
+    } catch (error) {
+      console.error('Error loading plans:', error);
+      toast.error('Failed to load study plans');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const filterPlans = () => {
     let filtered = [...plans];
@@ -183,11 +165,12 @@ const StudyPlans: React.FC = () => {
   };
 
   const handleImportSuccess = (importedPlans: StudyPlan[]) => {
-    // Add imported plans to local edits (they need to be uploaded)
+    // Add imported plans to storage with 'new' status
     importedPlans.forEach(plan => {
-      addEdit(plan.id, plan);
+      addEdit(plan.id, { ...plan, _syncStatus: 'new' as const });
     });
-    setPlans((prev) => [...prev, ...importedPlans]);
+    // Reload to show the new plans
+    loadPlans(false);
     toast.success(`Imported ${importedPlans.length} study plans locally. Click "Upload Changes" to save to Firebase.`);
   };
 
@@ -195,27 +178,22 @@ const StudyPlans: React.FC = () => {
     const plan = plans.find(p => p.id === planId);
     if (!plan) return;
 
-    // Check if this is a local-only plan (not in main storage, only in edits)
-    const isLocalOnly = hasEdit(planId);
+    // Check if this is a local-only plan (never synced)
+    const isLocalOnly = plan._syncStatus === 'new';
 
     const confirm = window.confirm(
       isLocalOnly
         ? `Are you sure you want to delete "${plan.name}"?\n\nThis plan has not been uploaded to Firebase yet. It will be permanently removed.`
-        : `Are you sure you want to delete "${plan.name}"?\n\nThis will be deleted locally. Click "Upload Changes" to sync deletion to Firebase.`
+        : `Are you sure you want to delete "${plan.name}"?\n\nThis will be deleted locally. Remember to upload changes to sync to Firebase.`
     );
     if (!confirm) return;
 
     try {
-      // Delete locally (always)
-      await deleteStudyPlan(planId, false);
+      // Delete from storage
+      await deleteStudyPlan(planId);
       
-      // Remove from local state
-      setPlans(prev => prev.filter(p => p.id !== planId));
-      
-      // Also remove from local edits if it was being edited
-      if (hasEdit(planId)) {
-        removeEdit(planId);
-      }
+      // Reload plans to reflect deletion
+      loadPlans(false);
       
       toast.success(`Deleted "${plan.name}" locally`);
     } catch (error) {

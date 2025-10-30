@@ -110,6 +110,7 @@ const JsonImportDialog: React.FC<JsonImportDialogProps> = ({ open, onClose, onSu
           createdAt: Date.now(),
           updatedAt: Date.now(),
           createdBy: 'admin',
+          _syncStatus: 'new' as const,
           chapters: planData.chapters.map((chapter: any, chapterIndex: number) => ({
             id: chapter.id || `chapter_${chapterIndex + 1}`,
             name: chapter.name || `Chapter ${chapterIndex + 1}`,
