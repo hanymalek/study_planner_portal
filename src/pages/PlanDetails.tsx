@@ -19,7 +19,8 @@ import {
   CheckCircle as CheckCircleIcon,
   PlayCircle as PlayCircleIcon,
   Star as StarIcon,
-  FitnessCenter as FitnessCenterIcon
+  FitnessCenter as FitnessCenterIcon,
+  FileDownload as FileDownloadIcon
 } from '@mui/icons-material';
 import { getStudyPlan, getUserProgressForPlan } from '../services/api';
 import { useAuth } from '../hooks/useAuth';
@@ -102,6 +103,69 @@ const PlanDetails: React.FC = () => {
     return Math.round((videoProgress.watchedSeconds / videoProgress.totalSeconds) * 100);
   };
 
+  const handleExportToJSON = async () => {
+    if (!plan) return;
+
+    try {
+      // Clean the plan data by removing local-only metadata
+      const exportData = {
+        ...plan,
+        _syncStatus: undefined,
+        _lastSyncedAt: undefined
+      };
+
+      // Remove undefined properties
+      const cleanedData = JSON.parse(JSON.stringify(exportData));
+
+      // Convert to formatted JSON string
+      const jsonString = JSON.stringify(cleanedData, null, 2);
+      const blob = new Blob([jsonString], { type: 'application/json' });
+
+      // Create a safe filename from the plan ID
+      const sanitizedFilename = `${plan.id}.json`;
+
+      // Try to use File System Access API for native "Save As" dialog
+      if ('showSaveFilePicker' in window) {
+        try {
+          const fileHandle = await (window as any).showSaveFilePicker({
+            suggestedName: sanitizedFilename,
+            types: [{
+              description: 'JSON Files',
+              accept: { 'application/json': ['.json'] }
+            }]
+          });
+
+          const writable = await fileHandle.createWritable();
+          await writable.write(blob);
+          await writable.close();
+
+          // Success - no alert needed for native dialog
+          return;
+        } catch (err: any) {
+          // User cancelled the dialog or API failed
+          if (err.name === 'AbortError') {
+            return; // User cancelled, no error needed
+          }
+          // Fall through to fallback method
+          console.warn('File System Access API failed, using fallback:', err);
+        }
+      }
+
+      // Fallback: Standard download for browsers without File System Access API
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = sanitizedFilename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('Error exporting study plan:', err);
+      setError('Failed to export study plan');
+    }
+  };
+
   if (error || !plan) {
     return (
       <Container maxWidth="lg">
@@ -134,13 +198,22 @@ const PlanDetails: React.FC = () => {
   return (
     <Container maxWidth="lg">
       <Box sx={{ mb: 4, pt: { xs: 1, sm: 2 } }}>
-        <Button
-          startIcon={<ArrowBackIcon />}
-          onClick={() => navigate('/plans')}
-          sx={{ mb: 2 }}
-        >
-          Back to Study Plans
-        </Button>
+        <Box sx={{ display: 'flex', gap: 2, mb: 2, flexWrap: 'wrap' }}>
+          <Button
+            startIcon={<ArrowBackIcon />}
+            onClick={() => navigate('/plans')}
+          >
+            Back to Study Plans
+          </Button>
+          <Button
+            variant="outlined"
+            startIcon={<FileDownloadIcon />}
+            onClick={handleExportToJSON}
+            color="primary"
+          >
+            Export to JSON
+          </Button>
+        </Box>
 
         <Typography
           variant="h4"
