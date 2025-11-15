@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   Accordion,
   AccordionSummary,
@@ -16,7 +16,8 @@ import {
   Delete as DeleteIcon,
   ArrowUpward as ArrowUpwardIcon,
   ArrowDownward as ArrowDownwardIcon,
-  Add as AddIcon
+  Add as AddIcon,
+  Language as LanguageIcon
 } from '@mui/icons-material';
 import type { Lesson, VideoResource } from '../types';
 import { VideoType, VideoCategory } from '../types';
@@ -34,7 +35,7 @@ interface LessonAccordionProps {
   onMove: (direction: 'up' | 'down') => void;
 }
 
-const LessonAccordion: React.FC<LessonAccordionProps> = ({
+const LessonAccordion: React.FC<LessonAccordionProps> = React.memo(({
   lesson,
   lessonIndex,
   chapterIndex,
@@ -48,6 +49,9 @@ const LessonAccordion: React.FC<LessonAccordionProps> = ({
 
   // Auto-calculate video minutes based on total video duration
   useEffect(() => {
+    // Only calculate when expanded to avoid unnecessary updates
+    if (!expanded) return;
+    
     const totalVideoSeconds = lesson.videos.reduce((sum, video) => sum + (video.durationSeconds || 0), 0);
     const totalVideoMinutes = Math.ceil(totalVideoSeconds / 60);
     
@@ -55,9 +59,9 @@ const LessonAccordion: React.FC<LessonAccordionProps> = ({
     if (totalVideoMinutes !== lesson.estimatedMinutes) {
       onUpdate({ ...lesson, estimatedMinutes: totalVideoMinutes });
     }
-  }, [lesson.videos]); // Only recalculate when videos array changes
+  }, [lesson.videos, lesson.estimatedMinutes, expanded, onUpdate, lesson]); // Include all dependencies
 
-  const handleAddVideo = () => {
+  const handleAddVideo = useCallback(() => {
     const newVideo: VideoResource = {
       id: uuidv4(),
       title: `Video ${lesson.videos.length + 1}`,
@@ -72,22 +76,39 @@ const LessonAccordion: React.FC<LessonAccordionProps> = ({
       ...lesson,
       videos: [...lesson.videos, newVideo]
     });
-  };
+  }, [lesson, onUpdate]);
 
-  const handleUpdateVideo = (videoIndex: number, updatedVideo: any) => {
+  const handleAddWebResource = useCallback(() => {
+    const newResource: VideoResource = {
+      id: uuidv4(),
+      title: '', // User will set a custom title
+      type: VideoType.WEB_RESOURCE,
+      resourceUrl: '',
+      thumbnailUrl: undefined,
+      durationSeconds: 0,
+      category: 'LESSON' as VideoCategory // Explicitly set as string enum value
+    };
+    
+    onUpdate({
+      ...lesson,
+      videos: [...lesson.videos, newResource]
+    });
+  }, [lesson, onUpdate]);
+
+  const handleUpdateVideo = useCallback((videoIndex: number, updatedVideo: any) => {
     const newVideos = [...lesson.videos];
     newVideos[videoIndex] = updatedVideo;
     onUpdate({ ...lesson, videos: newVideos });
-  };
+  }, [lesson, onUpdate]);
 
-  const handleDeleteVideo = (videoIndex: number) => {
+  const handleDeleteVideo = useCallback((videoIndex: number) => {
     if (window.confirm('Are you sure you want to delete this video?')) {
       const newVideos = lesson.videos.filter((_, index) => index !== videoIndex);
       onUpdate({ ...lesson, videos: newVideos });
     }
-  };
+  }, [lesson, onUpdate]);
 
-  const handleMoveVideo = (videoIndex: number, direction: 'up' | 'down') => {
+  const handleMoveVideo = useCallback((videoIndex: number, direction: 'up' | 'down') => {
     const newVideos = [...lesson.videos];
     const targetIndex = direction === 'up' ? videoIndex - 1 : videoIndex + 1;
     
@@ -98,7 +119,7 @@ const LessonAccordion: React.FC<LessonAccordionProps> = ({
       [newVideos[targetIndex], newVideos[videoIndex]];
     
     onUpdate({ ...lesson, videos: newVideos });
-  };
+  }, [lesson, onUpdate]);
 
   return (
     <Accordion 
@@ -162,29 +183,32 @@ const LessonAccordion: React.FC<LessonAccordionProps> = ({
             </Box>
             <Box onClick={(e) => e.stopPropagation()} sx={{ display: 'flex', gap: 0.5 }}>
               <IconButton
+                component="div"
                 size="small"
                 onClick={() => onMove('up')}
                 disabled={isFirst}
                 title="Move up"
-                sx={{ p: { xs: 0.5, sm: 1 } }}
+                sx={{ p: { xs: 0.5, sm: 1 }, cursor: isFirst ? 'default' : 'pointer' }}
               >
                 <ArrowUpwardIcon fontSize="small" />
               </IconButton>
               <IconButton
+                component="div"
                 size="small"
                 onClick={() => onMove('down')}
                 disabled={isLast}
                 title="Move down"
-                sx={{ p: { xs: 0.5, sm: 1 } }}
+                sx={{ p: { xs: 0.5, sm: 1 }, cursor: isLast ? 'default' : 'pointer' }}
               >
                 <ArrowDownwardIcon fontSize="small" />
               </IconButton>
               <IconButton
+                component="div"
                 size="small"
                 color="error"
                 onClick={onDelete}
                 title="Delete lesson"
-                sx={{ p: { xs: 0.5, sm: 1 } }}
+                sx={{ p: { xs: 0.5, sm: 1 }, cursor: 'pointer' }}
               >
                 <DeleteIcon fontSize="small" />
               </IconButton>
@@ -194,101 +218,117 @@ const LessonAccordion: React.FC<LessonAccordionProps> = ({
       </AccordionSummary>
       
       <AccordionDetails>
-        <Stack spacing={2}>
-          {/* Lesson Details */}
-          <TextField
-            label="Lesson Name"
-            fullWidth
-            required
-            value={lesson.name}
-            onChange={(e) => onUpdate({ ...lesson, name: e.target.value })}
-            placeholder="e.g., Newton's Laws of Motion"
-            size="small"
-          />
-          
-          <TextField
-            label="Lesson Description"
-            fullWidth
-            multiline
-            rows={2}
-            value={lesson.description}
-            onChange={(e) => onUpdate({ ...lesson, description: e.target.value })}
-            placeholder="Brief description of this lesson..."
-            size="small"
-          />
-
-          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+        {/* Only render content when expanded - performance optimization */}
+        {expanded && (
+          <Stack spacing={2}>
+            {/* Lesson Details */}
             <TextField
-              label="Video Minutes"
-              type="number"
-              value={lesson.estimatedMinutes}
-              size="small"
+              label="Lesson Name"
               fullWidth
-              InputProps={{
-                readOnly: true,
-              }}
-              helperText="Auto-calculated from video durations"
-              sx={{
-                '& .MuiInputBase-input': {
-                  backgroundColor: 'action.hover',
-                  cursor: 'not-allowed'
-                }
-              }}
+              required
+              value={lesson.name}
+              onChange={(e) => onUpdate({ ...lesson, name: e.target.value })}
+              placeholder="e.g., Newton's Laws of Motion"
+              size="small"
             />
             
             <TextField
-              label="Practice Minutes"
-              type="number"
-              value={lesson.practiceMinutes || 60}
-              onChange={(e) => onUpdate({ ...lesson, practiceMinutes: parseInt(e.target.value) || 60 })}
-              size="small"
+              label="Lesson Description"
               fullWidth
-              helperText="Exercise/practice time"
+              multiline
+              rows={2}
+              value={lesson.description}
+              onChange={(e) => onUpdate({ ...lesson, description: e.target.value })}
+              placeholder="Brief description of this lesson..."
+              size="small"
             />
-          </Stack>
 
-          {/* Videos Section */}
-          <Box>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-              <Typography variant="subtitle2" fontWeight="bold">
-                Videos ({lesson.videos.length})
-              </Typography>
-              <Button
-                variant="outlined"
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+              <TextField
+                label="Video Minutes"
+                type="number"
+                value={lesson.estimatedMinutes}
                 size="small"
-                startIcon={<AddIcon />}
-                onClick={handleAddVideo}
-              >
-                Add Video
-              </Button>
+                fullWidth
+                InputProps={{
+                  readOnly: true,
+                }}
+                helperText="Auto-calculated from video durations"
+                sx={{
+                  '& .MuiInputBase-input': {
+                    backgroundColor: 'action.hover',
+                    cursor: 'not-allowed'
+                  }
+                }}
+              />
+              
+              <TextField
+                label="Practice Minutes"
+                type="number"
+                value={lesson.practiceMinutes || 60}
+                onChange={(e) => onUpdate({ ...lesson, practiceMinutes: parseInt(e.target.value) || 60 })}
+                size="small"
+                fullWidth
+                helperText="Exercise/practice time"
+              />
+            </Stack>
+
+            {/* Videos Section */}
+            <Box>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                <Typography variant="subtitle2" fontWeight="bold">
+                  Videos ({lesson.videos.length})
+                </Typography>
+                <Box sx={{ display: 'flex', gap: 1 }}>
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    startIcon={<AddIcon />}
+                    onClick={handleAddVideo}
+                  >
+                    Add Video
+                  </Button>
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    color="secondary"
+                    startIcon={<LanguageIcon />}
+                    onClick={handleAddWebResource}
+                  >
+                    Add URL
+                  </Button>
+                </Box>
+              </Box>
+              
+              {lesson.videos.length === 0 ? (
+                <Typography variant="body2" color="text.secondary" sx={{ fontStyle: 'italic', fontSize: '0.875rem' }}>
+                  No videos yet. Click "Add Video" to create one.
+                </Typography>
+              ) : (
+                <Stack spacing={1}>
+                  {lesson.videos.map((video, index) => (
+                    <VideoEditor
+                      key={video.id}
+                      video={video}
+                      videoIndex={index}
+                      isFirst={index === 0}
+                      isLast={index === lesson.videos.length - 1}
+                      onUpdate={(updatedVideo) => handleUpdateVideo(index, updatedVideo)}
+                      onDelete={() => handleDeleteVideo(index)}
+                      onMove={(direction) => handleMoveVideo(index, direction)}
+                    />
+                  ))}
+                </Stack>
+              )}
             </Box>
-            
-            {lesson.videos.length === 0 ? (
-              <Typography variant="body2" color="text.secondary" sx={{ fontStyle: 'italic', fontSize: '0.875rem' }}>
-                No videos yet. Click "Add Video" to create one.
-              </Typography>
-            ) : (
-              <Stack spacing={1}>
-                {lesson.videos.map((video, index) => (
-                  <VideoEditor
-                    key={video.id}
-                    video={video}
-                    videoIndex={index}
-                    isFirst={index === 0}
-                    isLast={index === lesson.videos.length - 1}
-                    onUpdate={(updatedVideo) => handleUpdateVideo(index, updatedVideo)}
-                    onDelete={() => handleDeleteVideo(index)}
-                    onMove={(direction) => handleMoveVideo(index, direction)}
-                  />
-                ))}
-              </Stack>
-            )}
-          </Box>
-        </Stack>
+          </Stack>
+        )}
       </AccordionDetails>
     </Accordion>
   );
-};
+});
+
+LessonAccordion.displayName = 'LessonAccordion';
 
 export default LessonAccordion;
 

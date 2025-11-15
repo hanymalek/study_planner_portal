@@ -1,0 +1,2545 @@
+{
+  "subjectName": "Physics",
+  "difficulty": "INTERMEDIATE",
+  "id": "igcse_physics_0625_2026_2028",
+  "isDeleted": false,
+  "createdBy": "admin",
+  "updatedAt": 1762939586592,
+  "name": "Cambridge IGCSE Physics (0625) 2026-2028",
+  "chapters": [
+    {
+      "order": 1,
+      "description": "Fundamental concepts of motion, forces, energy, work, power, and pressure. This chapter covers measurement techniques, kinematics, dynamics, momentum, and energy resources.",
+      "name": "Motion, Forces and Energy",
+      "id": "chapter_001",
+      "lessons": [
+        {
+          "order": 1,
+          "practiceMinutes": 25,
+          "name": "Physical Quantities & Measurement Techniques | Measurement",
+          "description": "Using rulers and measuring cylinders to find length and volume, measuring time intervals with clocks and digital timers, determining average values for small distances and short time intervals",
+          "estimatedMinutes": 46,
+          "id": "lesson_001",
+          "videos": [
+            {
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/VxQ75P9FeY4/hqdefault.jpg",
+              "resourceUrl": "VxQ75P9FeY4",
+              "category": "LESSON",
+              "id": "b6584d71-7af8-47df-89f8-062f8aaaa05b",
+              "durationSeconds": 1312,
+              "title": "IGCSE Physics - Measurements (Core)"
+            },
+            {
+              "id": "50891e1e-35da-4fa4-ae7a-60bcdaa20d8d",
+              "resourceUrl": "kPLW7qs6iXY",
+              "durationSeconds": 1415,
+              "thumbnailUrl": "https://i.ytimg.com/vi/kPLW7qs6iXY/hqdefault.jpg",
+              "title": "IGCSE Physics (2025-2027) + PYQ - C1/25: Making Measurement",
+              "type": "YOUTUBE",
+              "category": "LESSON"
+            }
+          ]
+        },
+        {
+          "estimatedMinutes": 9,
+          "videos": [
+            {
+              "type": "YOUTUBE",
+              "resourceUrl": "D0Hkd5TaaTQ",
+              "thumbnailUrl": "https://i.ytimg.com/vi/D0Hkd5TaaTQ/hqdefault.jpg",
+              "durationSeconds": 202,
+              "title": "GCSE Physics - Scalar & Vector Quantities - What They Are | Examples | How to Represent Vectors",
+              "category": "LESSON",
+              "id": "67501fb8-0fdc-44dd-83a1-818ce33429f9"
+            },
+            {
+              "category": "LESSON",
+              "durationSeconds": 320,
+              "title": "Scalar and vector quantities for IGCSE Physics, GCE O level Physics",
+              "thumbnailUrl": "https://i.ytimg.com/vi/Y13jresAtm8/hqdefault.jpg",
+              "type": "YOUTUBE",
+              "id": "772110d8-c5ff-472e-a43d-f0c0e7290cf3",
+              "resourceUrl": "Y13jresAtm8"
+            }
+          ],
+          "id": "lesson_002",
+          "order": 2,
+          "practiceMinutes": 30,
+          "description": "Understanding the difference between scalar quantities (distance, speed, time, mass, energy, temperature) and vector quantities (force, weight, velocity, acceleration, momentum, electric field strength, gravitational field strength)",
+          "name": "Physical Quantities & Measurement Techniques | Scalars & Vectors"
+        },
+        {
+          "order": 3,
+          "id": "lesson_003",
+          "videos": [
+            {
+              "durationSeconds": 254,
+              "category": "LESSON",
+              "thumbnailUrl": "https://i.ytimg.com/vi/GnPqdECh6SY/hqdefault.jpg",
+              "resourceUrl": "GnPqdECh6SY",
+              "id": "ac37ce2c-56b9-4e95-bcab-6c2fb3318d1e",
+              "title": "Scale Vector Diagrams - GCSE Physics",
+              "type": "YOUTUBE"
+            }
+          ],
+          "name": "Physical Quantities & Measurement Techniques | Calculating with Vectors",
+          "practiceMinutes": 40,
+          "estimatedMinutes": 5,
+          "description": "Determining resultant vectors by calculation or graphically for two vectors at right angles, limited to forces or velocities only, practical vector addition problems (Watch Video On Save My Exams)"
+        },
+        {
+          "estimatedMinutes": 14,
+          "id": "lesson_004",
+          "practiceMinutes": 30,
+          "videos": [
+            {
+              "id": "2db0a94d-1c79-4f01-a72f-941b33164f10",
+              "type": "YOUTUBE",
+              "title": "GCSE Physics - Speed, Velocity, Distance & Displacement | Scalar & Vector Quantities (2026/27 exams)",
+              "category": "LESSON",
+              "resourceUrl": "NZvMXcIztuU",
+              "thumbnailUrl": "https://i.ytimg.com/vi/NZvMXcIztuU/hqdefault.jpg",
+              "durationSeconds": 371
+            },
+            {
+              "id": "7ad66dd9-911b-4227-a272-1e1c13111ef7",
+              "resourceUrl": "ArlbO32BHPs",
+              "category": "LESSON",
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/ArlbO32BHPs/hqdefault.jpg",
+              "durationSeconds": 416,
+              "title": "Distance displacement speed velocity acceleration for IGCSE Physics, GCE O level Physics"
+            }
+          ],
+          "order": 4,
+          "name": "Motion | Speed & Velocity",
+          "description": "Defining speed as distance travelled per unit time, defining velocity as speed in a given direction, using equations for speed and average speed"
+        },
+        {
+          "description": "Defining acceleration as change in velocity per unit time, using the equation a = Δv/Δt, understanding deceleration as negative acceleration, performing acceleration calculations",
+          "videos": [
+            {
+              "durationSeconds": 328,
+              "thumbnailUrl": "https://i.ytimg.com/vi/ysda01Y8PgE/hqdefault.jpg",
+              "title": "GCSE Physics - Acceleration - Rate of Change in Velocity | Equations (2026/27 exams)",
+              "id": "ede6c3b4-a72a-46b7-a7c9-7396ea2ebf67",
+              "type": "YOUTUBE",
+              "resourceUrl": "ysda01Y8PgE",
+              "category": "LESSON"
+            },
+            {
+              "type": "YOUTUBE",
+              "resourceUrl": "REUIFp71NTI",
+              "durationSeconds": 356,
+              "title": "Acceleration - GCSE Physics",
+              "category": "LESSON",
+              "id": "e0667982-1086-481e-ad58-25febc3b4b09",
+              "thumbnailUrl": "https://i.ytimg.com/vi/REUIFp71NTI/hqdefault.jpg"
+            }
+          ],
+          "order": 5,
+          "name": "Motion | Acceleration",
+          "practiceMinutes": 35,
+          "estimatedMinutes": 12,
+          "id": "lesson_005"
+        },
+        {
+          "estimatedMinutes": 8,
+          "videos": [
+            {
+              "type": "YOUTUBE",
+              "title": "GCSE Physics - Distance-Time Graphs",
+              "thumbnailUrl": "https://i.ytimg.com/vi/RM02SnuJ0MY/hqdefault.jpg",
+              "durationSeconds": 241,
+              "id": "2d81da4a-c8a5-4860-82d1-cbd11e0a07fe",
+              "category": "LESSON",
+              "resourceUrl": "RM02SnuJ0MY"
+            },
+            {
+              "durationSeconds": 206,
+              "resourceUrl": "0x6pBoY89H8",
+              "type": "YOUTUBE",
+              "title": "Distance-time Graph for IGCSE Physics, GCE O level Physics",
+              "id": "4f0584ff-e2b2-4c08-ad07-f54b08ddc385",
+              "category": "LESSON",
+              "thumbnailUrl": "https://i.ytimg.com/vi/0x6pBoY89H8/hqdefault.jpg"
+            }
+          ],
+          "name": "Motion | Distance-Time Graphs",
+          "description": "Sketching, plotting and interpreting distance-time graphs, determining when an object is at rest or moving with constant speed, calculating speed from the gradient of distance-time graphs",
+          "practiceMinutes": 40,
+          "id": "lesson_006",
+          "order": 6
+        },
+        {
+          "estimatedMinutes": 12,
+          "practiceMinutes": 40,
+          "videos": [
+            {
+              "type": "YOUTUBE",
+              "title": "Speed-time graph for IGCSE Physics, GCE O level Physics",
+              "resourceUrl": "Gu1I_AL7dos",
+              "durationSeconds": 352,
+              "thumbnailUrl": "https://i.ytimg.com/vi/Gu1I_AL7dos/hqdefault.jpg",
+              "id": "391d5bce-9d78-4590-9d78-aeb7594bb026",
+              "category": "LESSON"
+            },
+            {
+              "thumbnailUrl": "https://i.ytimg.com/vi/VJefeYJL3uE/hqdefault.jpg",
+              "resourceUrl": "VJefeYJL3uE",
+              "durationSeconds": 333,
+              "type": "YOUTUBE",
+              "category": "LESSON",
+              "id": "691e8ec6-0213-494f-8a35-502143f367d7",
+              "title": "GCSE Physics - Velocity-Time Graphs - How to Find Acceleration & Distance Travelled (2026/27 exams)"
+            }
+          ],
+          "order": 7,
+          "name": "Motion | Speed-Time Graphs",
+          "description": "Sketching, plotting and interpreting speed-time graphs, determining when an object is accelerating or decelerating, understanding area under the graph represents distance travelled",
+          "id": "lesson_007"
+        },
+        {
+          "id": "lesson_008",
+          "videos": [
+            {
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/YCVSQp428GI/hqdefault.jpg",
+              "id": "69a51bb0-2512-41de-89a1-f1023779b888",
+              "title": "Calculating Acceleration From a Velocity-Time Graph - GCSE Physics | kayscience.com",
+              "durationSeconds": 323,
+              "category": "LESSON",
+              "resourceUrl": "YCVSQp428GI"
+            },
+            {
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/nUb7xfkc0Ac/hqdefault.jpg",
+              "resourceUrl": "nUb7xfkc0Ac",
+              "id": "f0653e0e-6b28-4a30-aab7-932db58a25c8",
+              "durationSeconds": 1861,
+              "title": "Velocity Time Graphs, Acceleration & Position Time Graphs - Physics",
+              "category": "LESSON"
+            }
+          ],
+          "description": "Calculating acceleration from the gradient of speed-time graphs, determining distance from area under speed-time graphs, analyzing motion with constant and changing acceleration",
+          "estimatedMinutes": 37,
+          "practiceMinutes": 45,
+          "order": 8,
+          "name": "Motion | Calculating Acceleration from Speed-Time Graphs"
+        },
+        {
+          "order": 9,
+          "videos": [
+            {
+              "type": "YOUTUBE",
+              "durationSeconds": 260,
+              "resourceUrl": "ND5GV8qf2c8",
+              "thumbnailUrl": "https://i.ytimg.com/vi/ND5GV8qf2c8/hqdefault.jpg",
+              "title": "Free Fall motion for IGCSE Physics, GCE O level Physics",
+              "category": "LESSON",
+              "id": "f07d59cb-1ff4-4a4f-96c0-6fc8f1da1605"
+            },
+            {
+              "thumbnailUrl": "https://i.ytimg.com/vi/BVgemK1Y2wA/hqdefault.jpg",
+              "type": "YOUTUBE",
+              "title": "Free Fall Physics Problems - Acceleration Due To Gravity",
+              "id": "a15d822b-f775-4842-b720-ada853c393af",
+              "resourceUrl": "BVgemK1Y2wA",
+              "category": "LESSON",
+              "durationSeconds": 1423
+            }
+          ],
+          "name": "Motion | Freefall",
+          "estimatedMinutes": 29,
+          "description": "Understanding acceleration due to gravity (g ≈ 9.8 m/s²), motion of falling objects with and without air resistance, concept of terminal velocity, analyzing falling motion",
+          "practiceMinutes": 40,
+          "id": "lesson_009"
+        },
+        {
+          "practiceMinutes": 30,
+          "videos": [
+            {
+              "durationSeconds": 183,
+              "resourceUrl": "m4md4JQYlhM",
+              "id": "a9ac82a8-bfb2-4148-9f6b-a2afa22c5df2",
+              "category": "LESSON",
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/m4md4JQYlhM/hqdefault.jpg",
+              "title": "Mass and Weight for IGCSE Physics, GCE O level Physics"
+            },
+            {
+              "thumbnailUrl": "https://i.ytimg.com/vi/1awO-YoWDCc/hqdefault.jpg",
+              "id": "37440394-763a-40a2-87ae-1344a7ad52c3",
+              "title": "IGCSE Physics [Syllabus 1.3] Mass & Weight",
+              "category": "LESSON",
+              "durationSeconds": 325,
+              "type": "YOUTUBE",
+              "resourceUrl": "1awO-YoWDCc"
+            }
+          ],
+          "order": 10,
+          "estimatedMinutes": 9,
+          "id": "lesson_010",
+          "name": "Effects of Forces | Mass & Weight",
+          "description": "Distinguishing between mass and weight, defining gravitational field strength using g = W/m, comparing weights using balances, understanding weight as gravitational force"
+        },
+        {
+          "order": 11,
+          "name": "Effects of Forces | Density",
+          "estimatedMinutes": 12,
+          "practiceMinutes": 25,
+          "description": "Defining density using ρ = m/V, understanding relationship between mass, volume and density, comparing densities of different materials",
+          "id": "lesson_011",
+          "videos": [
+            {
+              "resourceUrl": "SnKba6aVZTc",
+              "category": "LESSON",
+              "type": "YOUTUBE",
+              "durationSeconds": 390,
+              "thumbnailUrl": "https://i.ytimg.com/vi/SnKba6aVZTc/hqdefault.jpg",
+              "title": "Density for IGCSE Physics, GCE O level Physics",
+              "id": "b411a754-081a-4237-8f75-89636cbb16b9"
+            },
+            {
+              "thumbnailUrl": "https://i.ytimg.com/vi/pgGzVdau1Bw/hqdefault.jpg",
+              "type": "YOUTUBE",
+              "resourceUrl": "pgGzVdau1Bw",
+              "id": "589657be-f135-42ae-947c-1b3a0a61aa86",
+              "category": "LESSON",
+              "durationSeconds": 307,
+              "title": "GCSE Physics - Density"
+            }
+          ]
+        },
+        {
+          "id": "lesson_012",
+          "videos": [
+            {
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/xLr0ElDc48I/hqdefault.jpg",
+              "id": "76beb81a-a2eb-41cf-ab9d-481675ff9d62",
+              "category": "LESSON",
+              "title": "How to find density, mass, and volume",
+              "durationSeconds": 317,
+              "resourceUrl": "xLr0ElDc48I"
+            },
+            {
+              "title": "How to Calculate Density - IGCSE Physics",
+              "thumbnailUrl": "https://i.ytimg.com/vi/juCAYF5Z8pI/hqdefault.jpg",
+              "resourceUrl": "juCAYF5Z8pI",
+              "durationSeconds": 416,
+              "id": "dba397d8-e73e-4420-93d3-a3643c9063c4",
+              "type": "YOUTUBE",
+              "category": "LESSON"
+            }
+          ],
+          "estimatedMinutes": 13,
+          "order": 12,
+          "description": "Determining density of liquids, regularly shaped solids, and irregularly shaped solids using volume by displacement method, performing density calculations from measurements",
+          "practiceMinutes": 40,
+          "name": "Effects of Forces | Measuring Density"
+        },
+        {
+          "name": "Effects of Forces | Floating",
+          "videos": [
+            {
+              "title": "Floating & Sinking - GCSE Physics",
+              "resourceUrl": "GkTtSuNGaz4",
+              "durationSeconds": 467,
+              "thumbnailUrl": "https://i.ytimg.com/vi/GkTtSuNGaz4/hqdefault.jpg",
+              "type": "YOUTUBE",
+              "id": "eeb6c281-16f0-4412-af65-06c88f96dac2",
+              "category": "LESSON"
+            },
+            {
+              "durationSeconds": 297,
+              "id": "8e3a2fb0-03bd-47fc-a680-6ef8bf902e29",
+              "category": "LESSON",
+              "title": "GCSE Physics Revision \"Floating or Sinking\" (Triple)",
+              "resourceUrl": "SVB6CjbTIAI",
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/SVB6CjbTIAI/hqdefault.jpg"
+            }
+          ],
+          "id": "lesson_013",
+          "estimatedMinutes": 13,
+          "practiceMinutes": 30,
+          "description": "Predicting whether objects will float based on density data, understanding buoyancy and upthrust, determining whether one liquid will float on another liquid based on density",
+          "order": 13
+        },
+        {
+          "videos": [
+            {
+              "resourceUrl": "SYU1TKQru1c",
+              "thumbnailUrl": "https://i.ytimg.com/vi/SYU1TKQru1c/hqdefault.jpg",
+              "category": "LESSON",
+              "title": "GCSE Physics - Free Body Diagrams & How to Calculate Resultant Forces (2026/27 exams)",
+              "durationSeconds": 230,
+              "id": "a77d2370-1f0e-4d82-836c-99d22ff55976",
+              "type": "YOUTUBE"
+            },
+            {
+              "title": "GCSE Physics Revision \"Resultant Forces\"",
+              "durationSeconds": 263,
+              "thumbnailUrl": "https://i.ytimg.com/vi/PL8ATKipoB4/hqdefault.jpg",
+              "id": "1fe0c8fe-ee5b-43df-a1bf-8d4c2435cc54",
+              "type": "YOUTUBE",
+              "category": "LESSON",
+              "resourceUrl": "PL8ATKipoB4"
+            }
+          ],
+          "estimatedMinutes": 9,
+          "name": "Effects of Forces | Resultant Forces",
+          "practiceMinutes": 35,
+          "description": "Determining the resultant of two or more forces acting along the same straight line, understanding balanced and unbalanced forces, calculating net force",
+          "order": 14,
+          "id": "lesson_014"
+        },
+        {
+          "order": 15,
+          "description": "Understanding that an object either remains at rest or continues in a straight line at constant speed unless acted on by a resultant force, applications of Newton's First Law",
+          "id": "lesson_015",
+          "videos": [
+            {
+              "durationSeconds": 228,
+              "title": "GCSE Physics Revision \"Newton's First Law of Motion\"",
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/_W3VbonFNcw/hqdefault.jpg",
+              "category": "LESSON",
+              "id": "e6ab6e8c-d562-4d7a-84e7-ee649804a586",
+              "resourceUrl": "_W3VbonFNcw"
+            },
+            {
+              "title": "GCSE Physics - Newton's 1st & 2nd Laws | Circular Motion | Inertia (2026/27 exams)",
+              "id": "a2bca5f9-0aa5-45c7-8610-fe4e62f83cca",
+              "durationSeconds": 397,
+              "resourceUrl": "D8XOm4swxOU",
+              "thumbnailUrl": "https://i.ytimg.com/vi/D8XOm4swxOU/hqdefault.jpg",
+              "category": "LESSON",
+              "type": "YOUTUBE"
+            },
+            {
+              "thumbnailUrl": "https://i.ytimg.com/vi/vOkvZoQZKg8/hqdefault.jpg",
+              "durationSeconds": 400,
+              "category": "LESSON",
+              "type": "YOUTUBE",
+              "resourceUrl": "vOkvZoQZKg8",
+              "title": "Newton’s laws of motion for IGCSE Physics, GCE O level Physics",
+              "id": "13614c96-638f-49ac-b4d0-9a292c2d6f5c"
+            }
+          ],
+          "estimatedMinutes": 18,
+          "name": "Effects of Forces | Newton's First Law",
+          "practiceMinutes": 30
+        },
+        {
+          "id": "lesson_016",
+          "order": 16,
+          "videos": [
+            {
+              "id": "d1541a41-7f94-4b2d-bbbd-c9060388e9a8",
+              "durationSeconds": 329,
+              "category": "LESSON",
+              "resourceUrl": "SqdCCxv9YzI",
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/SqdCCxv9YzI/hqdefault.jpg",
+              "title": "GCSE Physics Revision \"Newton's Second Law of Motion\""
+            },
+            {
+              "durationSeconds": 123,
+              "resourceUrl": "-7JoUUcvaSI",
+              "title": "Force, Mass, and Acceleration: Newton's Second Law",
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/-7JoUUcvaSI/hqdefault.jpg",
+              "category": "LESSON",
+              "id": "af688d89-bd7f-4717-8f39-08f1fd45f8c8"
+            }
+          ],
+          "description": "Understanding the relationship between force, mass and acceleration, applying F = ma, understanding that force and acceleration are in the same direction",
+          "name": "Effects of Forces | Newton's Second Law",
+          "estimatedMinutes": 8,
+          "practiceMinutes": 50
+        },
+        {
+          "videos": [
+            {
+              "category": "LESSON",
+              "thumbnailUrl": "https://i.ytimg.com/vi/abWi5y6bJ9k/hqdefault.jpg",
+              "durationSeconds": 352,
+              "type": "YOUTUBE",
+              "title": "GCSE Physics - Elasticity, Spring Constant & Hooke's Law | Force Extension Graphs (2026/27 exams)",
+              "id": "3aba4926-bdfc-4611-8a3b-4d32394a662b",
+              "resourceUrl": "abWi5y6bJ9k"
+            }
+          ],
+          "name": "Effects of Forces | Investigating Force & Extension",
+          "description": "Experimental procedures to investigate force and extension, sketching, plotting and interpreting load-extension graphs for elastic solids, understanding elastic behavior",
+          "practiceMinutes": 40,
+          "id": "lesson_017",
+          "estimatedMinutes": 6,
+          "order": 17
+        },
+        {
+          "videos": [
+            {
+              "title": "Hooke’s law for IGCSE, GCSE, GCE O level Physics",
+              "id": "150b359a-901f-4948-83aa-643010c3397f",
+              "thumbnailUrl": "https://i.ytimg.com/vi/f3UE7Z8feYc/hqdefault.jpg",
+              "durationSeconds": 149,
+              "resourceUrl": "f3UE7Z8feYc",
+              "type": "YOUTUBE",
+              "category": "LESSON"
+            },
+            {
+              "resourceUrl": "ytWImElzzTc",
+              "title": "Hooke's law - IGCSE Physics",
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/ytWImElzzTc/hqdefault.jpg",
+              "durationSeconds": 154,
+              "id": "c193d077-774b-4787-9a08-c4a18450ff77",
+              "category": "LESSON"
+            }
+          ],
+          "estimatedMinutes": 6,
+          "practiceMinutes": 45,
+          "id": "lesson_018",
+          "name": "Effects of Forces | Hooke's Law",
+          "order": 18,
+          "description": "Understanding spring behavior and Hooke's Law, defining spring constant as k = F/x, understanding limit of proportionality, analyzing load-extension graphs"
+        },
+        {
+          "name": "Effects of Forces | Circular Motion",
+          "description": "Understanding motion in a circular path, force perpendicular to motion, qualitative relationships between force, speed, radius and mass in circular motion",
+          "estimatedMinutes": 16,
+          "id": "lesson_019",
+          "videos": [
+            {
+              "thumbnailUrl": "https://i.ytimg.com/vi/F9zb8hHAm4U/hqdefault.jpg",
+              "resourceUrl": "F9zb8hHAm4U",
+              "id": "edd053f6-bd0a-49e1-96b2-720fd986cb49",
+              "title": "Circle motion for IGCSE, GCSE, GCE O level Physics",
+              "type": "YOUTUBE",
+              "category": "LESSON",
+              "durationSeconds": 264
+            },
+            {
+              "type": "YOUTUBE",
+              "category": "LESSON",
+              "title": "Circular Motion and Centripetal Force- IGCSE Physics",
+              "durationSeconds": 649,
+              "id": "cb9a8608-d718-4ca6-80b8-f1fa09fca611",
+              "resourceUrl": "bIplHQcVYo8",
+              "thumbnailUrl": "https://i.ytimg.com/vi/bIplHQcVYo8/hqdefault.jpg"
+            }
+          ],
+          "order": 19,
+          "practiceMinutes": 45
+        },
+        {
+          "description": "Understanding solid friction between surfaces, friction in liquids (drag), air resistance in gases, effects on motion and heating, friction impeding motion",
+          "practiceMinutes": 30,
+          "id": "lesson_020",
+          "order": 20,
+          "estimatedMinutes": 4,
+          "videos": [
+            {
+              "durationSeconds": 195,
+              "thumbnailUrl": "https://i.ytimg.com/vi/5AJVlt6o6Yc/hqdefault.jpg",
+              "id": "5d46caa2-63a7-478b-943a-534044525f12",
+              "category": "LESSON",
+              "type": "YOUTUBE",
+              "title": "Friction and Drag - GCSE Physics",
+              "resourceUrl": "5AJVlt6o6Yc"
+            }
+          ],
+          "name": "Effects of Forces | Friction"
+        },
+        {
+          "description": "Defining moment of a force, calculating moments using force × perpendicular distance from the pivot, everyday examples of turning effects",
+          "name": "Moments | Moments",
+          "id": "lesson_021",
+          "estimatedMinutes": 20,
+          "videos": [
+            {
+              "title": "GCSE Physics - How Moments Work - Spanners and Seesaws",
+              "category": "LESSON",
+              "durationSeconds": 341,
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/p7QS4cz-Avs/hqdefault.jpg",
+              "resourceUrl": "p7QS4cz-Avs",
+              "id": "87b597ae-9f3a-43ed-84d8-3e8eac9f011c"
+            },
+            {
+              "title": "GCSE Physics - Moments - Seesaws & Gears (2026/27 exams)",
+              "id": "f3dda794-baee-48b9-b6e6-ca4884f162d5",
+              "category": "LESSON",
+              "resourceUrl": "pqbPcLTz-tE",
+              "type": "YOUTUBE",
+              "durationSeconds": 389,
+              "thumbnailUrl": "https://i.ytimg.com/vi/pqbPcLTz-tE/hqdefault.jpg"
+            },
+            {
+              "durationSeconds": 435,
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/b46RBbTCH1E/hqdefault.jpg",
+              "category": "LESSON",
+              "resourceUrl": "b46RBbTCH1E",
+              "id": "d52d02e2-8f8c-406c-bbb3-e50d17f994bd",
+              "title": "IGCSE Physics: Moments Explainer"
+            }
+          ],
+          "practiceMinutes": 40,
+          "order": 21
+        },
+        {
+          "videos": [
+            {
+              "type": "YOUTUBE",
+              "title": "GCSE Physics Revision \"Balanced Moments\" (Triple)",
+              "category": "LESSON",
+              "id": "d1fe77de-e424-42bb-a681-c72f6445e19a",
+              "durationSeconds": 265,
+              "resourceUrl": "RW2N-oPcM9g",
+              "thumbnailUrl": "https://i.ytimg.com/vi/RW2N-oPcM9g/hqdefault.jpg"
+            },
+            {
+              "thumbnailUrl": "https://i.ytimg.com/vi/4nsvZD9bs5U/hqdefault.jpg",
+              "category": "LESSON",
+              "type": "YOUTUBE",
+              "id": "45863466-7a3d-4144-9fd8-6afca56ed672",
+              "resourceUrl": "4nsvZD9bs5U",
+              "durationSeconds": 637,
+              "title": "Moments Past Exam Questions | IGCSE & GCSE PHYSICS"
+            }
+          ],
+          "description": "Applying principle of moments to situations with forces on both sides of pivot, understanding equilibrium when there is no resultant force and no resultant moment",
+          "practiceMinutes": 50,
+          "order": 22,
+          "estimatedMinutes": 16,
+          "id": "lesson_022",
+          "name": "Moments | Equilibrium"
+        },
+        {
+          "practiceMinutes": 30,
+          "estimatedMinutes": 34,
+          "name": "Moments | Centre of Gravity",
+          "videos": [
+            {
+              "category": "LESSON",
+              "durationSeconds": 169,
+              "thumbnailUrl": "https://i.ytimg.com/vi/YTGql3Ilu9E/hqdefault.jpg",
+              "id": "256ae5e3-fc35-4cf4-897f-b12ac24a54fe",
+              "type": "YOUTUBE",
+              "title": "Centre of gravity for IGCSE, GCSE, GCE O level Physics",
+              "resourceUrl": "YTGql3Ilu9E"
+            },
+            {
+              "durationSeconds": 1859,
+              "id": "28ebd753-9013-4ff5-b2b2-dd7b23777228",
+              "category": "LESSON",
+              "thumbnailUrl": "https://i.ytimg.com/vi/RMKUuuUzETE/hqdefault.jpg",
+              "title": "IGCSE Physics (2025-2027) + PYQ - C4/25: Moment, Equilibrium, Turning Effects",
+              "type": "YOUTUBE",
+              "resourceUrl": "RMKUuuUzETE"
+            }
+          ],
+          "id": "lesson_023",
+          "order": 23,
+          "description": "Understanding centre of gravity, effect of centre of gravity position on stability of simple objects, applications in everyday situations"
+        },
+        {
+          "estimatedMinutes": 15,
+          "videos": [
+            {
+              "id": "5adb624a-30b3-4e45-8b20-f2fc3f35f37c",
+              "title": "GCSE Physics - Momentum (Part 1 of 2) | Conservation of Momentum (2026/27 exams)",
+              "type": "YOUTUBE",
+              "durationSeconds": 453,
+              "resourceUrl": "mjeOuh0G-gw",
+              "category": "LESSON",
+              "thumbnailUrl": "https://i.ytimg.com/vi/mjeOuh0G-gw/hqdefault.jpg"
+            },
+            {
+              "resourceUrl": "KjFA2Zvdn6I",
+              "thumbnailUrl": "https://i.ytimg.com/vi/KjFA2Zvdn6I/hqdefault.jpg",
+              "title": "GCSE Physics - Momentum (Part 2 of 2) - Changes in Momentum (2026/27 exams)",
+              "type": "YOUTUBE",
+              "id": "2d796afe-a437-419f-9b57-9c6e1a08e9ba",
+              "durationSeconds": 396,
+              "category": "LESSON"
+            }
+          ],
+          "id": "lesson_025",
+          "order": 24,
+          "description": "Defining momentum as p = mv, understanding momentum as a vector quantity, calculating momentum in various situations, conservation of momentum principle, applying to collisions in one dimension",
+          "name": "Momentum | Momentum",
+          "practiceMinutes": 50
+        },
+        {
+          "estimatedMinutes": 10,
+          "order": 25,
+          "description": "Defining impulse as F∆t = ∆(mv), understanding resultant force as rate of change of momentum using F = ∆p/∆t, applying impulse in problems",
+          "id": "lesson_026",
+          "practiceMinutes": 50,
+          "name": "Momentum | Impulse",
+          "videos": [
+            {
+              "id": "9e582e96-371f-4afd-8693-47f99c1cc6ec",
+              "resourceUrl": "LFMQ7_CQcTs",
+              "type": "YOUTUBE",
+              "category": "LESSON",
+              "durationSeconds": 596,
+              "thumbnailUrl": "https://i.ytimg.com/vi/LFMQ7_CQcTs/hqdefault.jpg",
+              "title": "iGCSE Physics: General physics: Momentum and impulse."
+            }
+          ]
+        },
+        {
+          "practiceMinutes": 35,
+          "id": "lesson_027",
+          "videos": [
+            {
+              "title": "GCSE Physics - Energy Stores, Transferring Energy & Work Done",
+              "type": "YOUTUBE",
+              "category": "LESSON",
+              "durationSeconds": 310,
+              "id": "6643c335-3955-4f4a-b220-62d8e5f3b72a",
+              "resourceUrl": "JGwcDCeYRYo",
+              "thumbnailUrl": "https://i.ytimg.com/vi/JGwcDCeYRYo/hqdefault.jpg"
+            },
+            {
+              "resourceUrl": "IDYT19DqSEQ",
+              "id": "3baefbf9-bae4-4bde-af45-447f56693267",
+              "title": "GCSE Physics: Revision Guide | Energy Stores and Transfers",
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/IDYT19DqSEQ/hqdefault.jpg",
+              "category": "LESSON",
+              "durationSeconds": 451
+            }
+          ],
+          "estimatedMinutes": 13,
+          "name": "Energy, Work & Power | Energy Stores & Transfers",
+          "order": 26,
+          "description": "Understanding different energy stores (kinetic, gravitational potential, chemical, elastic, nuclear, electrostatic, internal), energy transfer by forces, electrical currents, heating, and waves"
+        },
+        {
+          "id": "lesson_028",
+          "order": 27,
+          "estimatedMinutes": 10,
+          "name": "Energy, Work & Power | Kinetic Energy",
+          "videos": [
+            {
+              "durationSeconds": 263,
+              "id": "4ac1826a-5132-400f-8567-ea0704767cb3",
+              "type": "YOUTUBE",
+              "category": "LESSON",
+              "title": "GCSE Physics - Kinetic Energy | How to Calculate it (2026/27 exams)",
+              "resourceUrl": "244-42IQGYU",
+              "thumbnailUrl": "https://i.ytimg.com/vi/244-42IQGYU/hqdefault.jpg"
+            },
+            {
+              "title": "IGCSE Physics | Kinetic Energy | Learn with Attaiin",
+              "id": "63369e1b-96b9-44b5-a0da-562853b979ca",
+              "category": "LESSON",
+              "thumbnailUrl": "https://i.ytimg.com/vi/HQmdzBKKCzo/hqdefault.jpg",
+              "durationSeconds": 80,
+              "resourceUrl": "HQmdzBKKCzo",
+              "type": "YOUTUBE"
+            },
+            {
+              "type": "YOUTUBE",
+              "category": "LESSON",
+              "title": "GCSE Physics Revision \"Kinetic Energy\"",
+              "resourceUrl": "-zy9eWzmGe4",
+              "thumbnailUrl": "https://i.ytimg.com/vi/-zy9eWzmGe4/hqdefault.jpg",
+              "id": "6edeaed4-9d41-42e6-8abd-84870c4f9267",
+              "durationSeconds": 223
+            }
+          ],
+          "description": "Understanding kinetic energy, using Ek = ½mv² for kinetic energy calculations, applying kinetic energy equation to various problems",
+          "practiceMinutes": 45
+        },
+        {
+          "practiceMinutes": 45,
+          "description": "Understanding gravitational potential energy, using ∆Ep = mg∆h for gravitational potential energy calculations, applying to problems",
+          "id": "lesson_029",
+          "order": 28,
+          "estimatedMinutes": 9,
+          "name": "Energy, Work & Power | Gravitational Potential Energy",
+          "videos": [
+            {
+              "resourceUrl": "63OTIdNb-TE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/63OTIdNb-TE/hqdefault.jpg",
+              "id": "0fc77ee0-0dfc-4bc4-95d4-cab417c61358",
+              "title": "GCSE Physics Revision \"Gravitational Potential Energy\"",
+              "durationSeconds": 204,
+              "category": "LESSON",
+              "type": "YOUTUBE"
+            },
+            {
+              "title": "GCSE Physics - Gravity, Weight and GPE",
+              "type": "YOUTUBE",
+              "id": "1396413c-a44a-4d58-b72e-c467f3fecd60",
+              "thumbnailUrl": "https://i.ytimg.com/vi/rNS-W7k0jts/hqdefault.jpg",
+              "resourceUrl": "rNS-W7k0jts",
+              "category": "LESSON",
+              "durationSeconds": 311
+            }
+          ]
+        },
+        {
+          "description": "Understanding and applying the principle of conservation of energy to simple and complex examples, interpreting energy flow diagrams and Sankey diagrams",
+          "practiceMinutes": 50,
+          "order": 29,
+          "videos": [
+            {
+              "title": "GCSE Physics - Conservation of Energy | Open & Closed Systems (2026/27 exams)",
+              "category": "LESSON",
+              "thumbnailUrl": "https://i.ytimg.com/vi/ROBkMqJQLr4/hqdefault.jpg",
+              "id": "20ce2e13-7785-42d8-abe8-cfe921595725",
+              "resourceUrl": "ROBkMqJQLr4",
+              "type": "YOUTUBE",
+              "durationSeconds": 229
+            }
+          ],
+          "name": "Energy, Work & Power | Conservation of Energy",
+          "id": "lesson_030",
+          "estimatedMinutes": 4
+        },
+        {
+          "id": "lesson_031",
+          "practiceMinutes": 40,
+          "name": "Energy, Work & Power | Work Done",
+          "description": "Understanding work as energy transferred, using W = Fd = ∆E for mechanical working, calculating work done in various situations",
+          "estimatedMinutes": 27,
+          "order": 30,
+          "videos": [
+            {
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/Pf5EHVxc4XI/hqdefault.jpg",
+              "category": "LESSON",
+              "id": "914f29ef-6f8a-4e3f-ab73-e396852377c2",
+              "resourceUrl": "Pf5EHVxc4XI",
+              "title": "GCSE Physics - Power & Work Done - Equations | Calculations (2026/27 exams)",
+              "durationSeconds": 269
+            },
+            {
+              "thumbnailUrl": "https://i.ytimg.com/vi/7XkrlUG6848/hqdefault.jpg",
+              "resourceUrl": "7XkrlUG6848",
+              "category": "LESSON",
+              "title": "Energy, Work, Power and efficiency for IGCSE, O level and GCSE Physics",
+              "type": "YOUTUBE",
+              "id": "27019d03-03d8-4d82-baa3-bedfb33a3e6c",
+              "durationSeconds": 1313
+            }
+          ]
+        },
+        {
+          "description": "Defining power as work done per unit time and energy transferred per unit time, using P = W/t and P = ∆E/t, calculating power in various situations",
+          "name": "Energy, Work & Power | Power",
+          "id": "lesson_032",
+          "videos": [
+            {
+              "type": "YOUTUBE",
+              "title": "GCSE Physics Revision \"Calculating Power\"",
+              "category": "LESSON",
+              "id": "9ec1bb62-40ef-4a24-a6b8-962d71090386",
+              "durationSeconds": 241,
+              "resourceUrl": "EDT0DPhaaMY",
+              "thumbnailUrl": "https://i.ytimg.com/vi/EDT0DPhaaMY/hqdefault.jpg"
+            }
+          ],
+          "estimatedMinutes": 5,
+          "order": 31,
+          "practiceMinutes": 40
+        },
+        {
+          "videos": [
+            {
+              "category": "LESSON",
+              "thumbnailUrl": "https://i.ytimg.com/vi/KbrqbW0um0Y/hqdefault.jpg",
+              "durationSeconds": 336,
+              "id": "31668438-67fd-446d-a424-e00f3449538e",
+              "resourceUrl": "KbrqbW0um0Y",
+              "type": "YOUTUBE",
+              "title": "GCSE Physics - Efficiency | Energy & Power (2026/27 exams)"
+            },
+            {
+              "type": "YOUTUBE",
+              "durationSeconds": 328,
+              "title": "GCSE Physics Revision \"Efficiency\"",
+              "id": "b8e07df3-a224-40d1-8b3b-b51b6ffba27c",
+              "resourceUrl": "NI5jaeBrIgQ",
+              "category": "LESSON",
+              "thumbnailUrl": "https://i.ytimg.com/vi/NI5jaeBrIgQ/hqdefault.jpg"
+            }
+          ],
+          "name": "Energy, Work & Power | Efficiency",
+          "estimatedMinutes": 12,
+          "order": 32,
+          "practiceMinutes": 45,
+          "id": "lesson_033",
+          "description": "Understanding qualitative and quantitative concept of efficiency, calculating efficiency using useful energy/power output divided by total energy/power input"
+        },
+        {
+          "description": "Understanding the Sun as the main energy source, nuclear fusion in the Sun, light from the Sun generating electrical power (solar cells), infrared waves heating water (solar panels), source of wind energy",
+          "videos": [
+            {
+              "category": "LESSON",
+              "id": "741c0447-9f91-4088-99c9-28bb1a447c48",
+              "thumbnailUrl": "https://i.ytimg.com/vi/N5mHKqcit9I/hqdefault.jpg",
+              "type": "YOUTUBE",
+              "durationSeconds": 231,
+              "resourceUrl": "N5mHKqcit9I",
+              "title": "GCSE Physics - Energy Resources - Renewables & Non-renewables | Uses | Sources of Electricity"
+            }
+          ],
+          "name": "Energy Sources | Energy from the Sun",
+          "order": 33,
+          "practiceMinutes": 35,
+          "id": "lesson_034",
+          "estimatedMinutes": 4
+        },
+        {
+          "description": "Understanding how energy is obtained from chemical energy stored in fossil fuels and biofuels, advantages and disadvantages in terms of renewability, availability, reliability, scale and environmental impact",
+          "order": 34,
+          "name": "Energy Sources | Energy from Fuels",
+          "id": "lesson_035",
+          "estimatedMinutes": 4,
+          "videos": [
+            {
+              "thumbnailUrl": "https://i.ytimg.com/vi/1dJKvxhGEgA/hqdefault.jpg",
+              "durationSeconds": 199,
+              "type": "YOUTUBE",
+              "category": "LESSON",
+              "id": "90b659f0-2406-4725-a33f-4a7884e555c3",
+              "title": "GCSE Physics Revision \"Energy from Fossil Fuels\"",
+              "resourceUrl": "1dJKvxhGEgA"
+            }
+          ],
+          "practiceMinutes": 35
+        },
+        {
+          "videos": [
+            {
+              "resourceUrl": "mIxhW8JfRrQ",
+              "thumbnailUrl": "https://i.ytimg.com/vi/mIxhW8JfRrQ/hqdefault.jpg",
+              "id": "25669041-f162-4ee4-8158-a33bc11a89b6",
+              "title": "GCSE Physics - Hydroelectricity & Tidal Barrages - How they Work | Pros & Cons (2026/27 exams)",
+              "category": "LESSON",
+              "type": "YOUTUBE",
+              "durationSeconds": 238
+            }
+          ],
+          "estimatedMinutes": 4,
+          "name": "Energy Sources | Energy from Water",
+          "order": 35,
+          "id": "lesson_036",
+          "description": "Understanding how energy is obtained from water including energy stored in waves, tides, and water behind hydroelectric dams, advantages and disadvantages of each method",
+          "practiceMinutes": 35
+        },
+        {
+          "videos": [
+            {
+              "title": "GCSE Physics - Geothermal Power - How it Works | Pros & Cons (2026/27 exams)",
+              "thumbnailUrl": "https://i.ytimg.com/vi/Q5CqN-vbetM/hqdefault.jpg",
+              "type": "YOUTUBE",
+              "category": "LESSON",
+              "durationSeconds": 145,
+              "resourceUrl": "Q5CqN-vbetM",
+              "id": "226c7594-45f1-4e9d-9200-8f2b8b7557d6"
+            }
+          ],
+          "name": "Energy Sources | Geothermal Energy",
+          "practiceMinutes": 30,
+          "description": "Understanding how energy is obtained from geothermal resources, advantages and disadvantages in terms of renewability, availability, reliability, scale and environmental impact",
+          "estimatedMinutes": 3,
+          "order": 36,
+          "id": "lesson_037"
+        },
+        {
+          "name": "Energy Sources | Nuclear Fusion",
+          "order": 37,
+          "description": "Understanding that energy is released by nuclear fusion in the Sun, research being carried out to investigate how energy released by nuclear fusion can be used to produce electrical energy on a large scale",
+          "id": "lesson_038",
+          "practiceMinutes": 40,
+          "estimatedMinutes": 3,
+          "videos": [
+            {
+              "title": "GCSE Physics Revision \"Nuclear Power\"",
+              "category": "LESSON",
+              "thumbnailUrl": "https://i.ytimg.com/vi/ar3-Ps04AJI/hqdefault.jpg",
+              "resourceUrl": "ar3-Ps04AJI",
+              "id": "8b59d97d-ee0b-452c-9bf7-3d75782b803a",
+              "type": "YOUTUBE",
+              "durationSeconds": 139
+            }
+          ]
+        },
+        {
+          "description": "Defining pressure as force per unit area (p = F/A), understanding how pressure varies with force and area, everyday examples of pressure",
+          "name": "Pressure | Pressure & Forces",
+          "videos": [
+            {
+              "title": "GCSE Physics - Pressure - Equation & How it Works (2026/27 exams)",
+              "durationSeconds": 278,
+              "thumbnailUrl": "https://i.ytimg.com/vi/sfnsuS0-o58/hqdefault.jpg",
+              "id": "d60a66b0-2ff0-446c-b843-b98b874db08f",
+              "type": "YOUTUBE",
+              "resourceUrl": "sfnsuS0-o58",
+              "category": "LESSON"
+            },
+            {
+              "resourceUrl": "EnDpamnwb0o",
+              "type": "YOUTUBE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/EnDpamnwb0o/hqdefault.jpg",
+              "category": "LESSON",
+              "id": "e6c7221d-be83-4890-8d09-921650108f4e",
+              "title": "Pressure for IGCSE, GCSE, GCE O level Physics",
+              "durationSeconds": 383
+            }
+          ],
+          "id": "lesson_039",
+          "practiceMinutes": 35,
+          "estimatedMinutes": 12,
+          "order": 38
+        },
+        {
+          "name": "Pressure | Pressure in a Liquid",
+          "practiceMinutes": 45,
+          "order": 39,
+          "id": "lesson_040",
+          "estimatedMinutes": 10,
+          "videos": [
+            {
+              "type": "YOUTUBE",
+              "durationSeconds": 230,
+              "id": "98cfd409-329b-47b3-97c7-97ca093aff37",
+              "thumbnailUrl": "https://i.ytimg.com/vi/P08-lYPy1hI/hqdefault.jpg",
+              "resourceUrl": "P08-lYPy1hI",
+              "title": "GCSE Physics Revision \"Pressure in Fluids\" (Triple)",
+              "category": "LESSON"
+            },
+            {
+              "category": "LESSON",
+              "durationSeconds": 354,
+              "type": "YOUTUBE",
+              "resourceUrl": "OIpvOIb3GAg",
+              "thumbnailUrl": "https://i.ytimg.com/vi/OIpvOIb3GAg/hqdefault.jpg",
+              "id": "a1d53ea9-eeeb-4a6c-bd77-e22ce06e4845",
+              "title": "GCSE Physics - Liquid Pressure & Upthrust - Calculating Liquid Pressure | How it Varies With Depth"
+            }
+          ],
+          "description": "Understanding how pressure beneath a liquid surface changes with depth and density, using ∆p = ρg∆h, calculating pressure in liquids"
+        },
+        {
+          "videos": [
+            {
+              "category": "LESSON",
+              "type": "YOUTUBE",
+              "title": "Energy Resources - IGCSE Physics",
+              "thumbnailUrl": "https://i.ytimg.com/vi/SO-Ds0jlraE/hqdefault.jpg",
+              "id": "2371278c-3b0e-48bb-974a-c7bd218bce00",
+              "resourceUrl": "SO-Ds0jlraE",
+              "durationSeconds": 905
+            }
+          ],
+          "estimatedMinutes": 16,
+          "name": "Energy Sources | Combined Energy Resources Review",
+          "id": "lesson_041",
+          "order": 40,
+          "description": "Comparing all energy resources, understanding references to boilers, turbines and generators where used, comprehensive review of renewability, scale and environmental considerations",
+          "practiceMinutes": 40
+        }
+      ]
+    },
+    {
+      "id": "chapter_002",
+      "lessons": [
+        {
+          "description": "Understanding distinguishing properties of solids, liquids and gases, knowing terms for changes in state (melting, boiling, condensing, freezing, evaporating)",
+          "name": "Kinetic Particle Model of Matter | States of Matter",
+          "practiceMinutes": 25,
+          "estimatedMinutes": 14,
+          "id": "lesson_042",
+          "order": 1,
+          "videos": [
+            {
+              "id": "53952fee-0fb2-4564-a6d8-4d31052b56b5",
+              "title": "States of matter and Particles model for IGCSE, GCSE, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "2EVsfdHMvd4",
+              "thumbnailUrl": "https://i.ytimg.com/vi/2EVsfdHMvd4/hqdefault.jpg",
+              "durationSeconds": 533,
+              "category": "LESSON"
+            },
+            {
+              "id": "be5d0504-0d68-4bbc-8b2f-6cb48770106c",
+              "title": "GCSE Physics - Particle Theory & States of Matter",
+              "type": "YOUTUBE",
+              "resourceUrl": "OTksau0_VoI",
+              "thumbnailUrl": "https://i.ytimg.com/vi/OTksau0_VoI/hqdefault.jpg",
+              "durationSeconds": 274,
+              "category": "LESSON"
+            }
+          ]
+        },
+        {
+          "estimatedMinutes": 5,
+          "id": "lesson_043",
+          "videos": [
+            {
+              "id": "82b6bdf3-109a-47c5-9d55-70b93219517a",
+              "title": "GCSE Physics - Particle Theory & States of Matter",
+              "type": "YOUTUBE",
+              "resourceUrl": "OTksau0_VoI",
+              "thumbnailUrl": "https://i.ytimg.com/vi/OTksau0_VoI/hqdefault.jpg",
+              "durationSeconds": 274,
+              "category": "LESSON"
+            }
+          ],
+          "description": "Understanding particle structure of solids, liquids and gases in terms of arrangement, separation and motion, representing states using simple particle diagrams",
+          "order": 2,
+          "name": "Kinetic Particle Model of Matter | Molecular Matter",
+          "practiceMinutes": 30
+        },
+        {
+          "description": "Understanding pressure in gases in terms of particle motion and collisions, forces exerted by particles, relationship between particle motion and temperature",
+          "videos": [
+            {
+              "id": "a0fb87d7-ed68-4520-b8ae-cd88245e6bea",
+              "title": "GCSE Physics Revision \"Particle Motion in Gases\"",
+              "type": "YOUTUBE",
+              "resourceUrl": "hKO3DpgiISk",
+              "thumbnailUrl": "https://i.ytimg.com/vi/hKO3DpgiISk/hqdefault.jpg",
+              "durationSeconds": 137,
+              "category": "LESSON"
+            },
+            {
+              "id": "685b9d4b-3d0c-456b-812d-481b00ed2d07",
+              "title": "IGCSE Physics (2025-2027) - C9/25: Kinetic Particle Model of Matter",
+              "type": "YOUTUBE",
+              "resourceUrl": "n6K7h-1mqis",
+              "thumbnailUrl": "https://i.ytimg.com/vi/n6K7h-1mqis/hqdefault.jpg",
+              "durationSeconds": 1038,
+              "category": "LESSON"
+            }
+          ],
+          "name": "Kinetic Particle Model of Matter | Particle Model of Gases",
+          "estimatedMinutes": 20,
+          "order": 3,
+          "id": "lesson_044",
+          "practiceMinutes": 40
+        },
+        {
+          "order": 4,
+          "estimatedMinutes": 16,
+          "id": "lesson_045",
+          "description": "Understanding Brownian motion as evidence for kinetic particle model, describing and explaining random motion in terms of collisions between microscopic particles in suspension and gas or liquid particles",
+          "practiceMinutes": 30,
+          "name": "Kinetic Particle Model of Matter | Brownian Motion",
+          "videos": [
+            {
+              "id": "54961f29-4443-4435-a029-8e30b0fbb885",
+              "title": "Brownian motion IGCSE Cambridge Physics (0625) for CIE",
+              "type": "YOUTUBE",
+              "resourceUrl": "hU5k_zu_3-s",
+              "thumbnailUrl": "https://i.ytimg.com/vi/hU5k_zu_3-s/hqdefault.jpg",
+              "durationSeconds": 460,
+              "category": "LESSON"
+            },
+            {
+              "id": "b38b428b-1b56-42de-b25f-88e89f3c061d",
+              "title": "Brownian motion and gas laws for IGCSE, GCSE, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "HWDNC99so9o",
+              "thumbnailUrl": "https://i.ytimg.com/vi/HWDNC99so9o/hqdefault.jpg",
+              "durationSeconds": 464,
+              "category": "LESSON"
+            }
+          ]
+        },
+        {
+          "videos": [
+            {
+              "id": "ec830068-f7ef-47a0-b6ec-de2b80ad2664",
+              "title": "GCSE Physics - Pressure and Volume - How to use the \"PV = Constant\" Equation",
+              "type": "YOUTUBE",
+              "resourceUrl": "-TjKWzZrDGk",
+              "thumbnailUrl": "https://i.ytimg.com/vi/-TjKWzZrDGk/hqdefault.jpg",
+              "durationSeconds": 291,
+              "category": "LESSON"
+            },
+            {
+              "id": "1b821e49-0811-45da-8be2-f6b2f180a768",
+              "title": "IGCSE Physics: Pressure and temperature, Absolute Zero and the Kelvin Scale",
+              "type": "YOUTUBE",
+              "resourceUrl": "gfJjRpT2Ey0",
+              "thumbnailUrl": "https://i.ytimg.com/vi/gfJjRpT2Ey0/hqdefault.jpg",
+              "durationSeconds": 737,
+              "category": "LESSON"
+            }
+          ],
+          "practiceMinutes": 50,
+          "estimatedMinutes": 18,
+          "id": "lesson_046",
+          "order": 5,
+          "description": "Understanding effect of temperature and volume changes on gas pressure, absolute zero (−273°C), converting between Kelvin and Celsius T(K) = θ(°C) + 273, using pV = constant",
+          "name": "Kinetic Particle Model of Matter | Gases & Absolute Temperature"
+        },
+        {
+          "practiceMinutes": 35,
+          "name": "Thermal Properties & Temperature | Thermal Expansion",
+          "estimatedMinutes": 74,
+          "videos": [
+            {
+              "id": "e56f8243-1579-446a-9e12-8e004dc87a54",
+              "title": "Thermal expansion for IGCSE, GCSE, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "3NWZe2XxFmk",
+              "thumbnailUrl": "https://i.ytimg.com/vi/3NWZe2XxFmk/hqdefault.jpg",
+              "durationSeconds": 240,
+              "category": "LESSON"
+            },
+            {
+              "id": "d3e848d5-e42f-478b-a7e6-3927a87a70ae",
+              "title": "IGCSE Physics (2025-2027) - C10/25: Thermal Expansion, Specific Heat Capacity, Evaporation",
+              "type": "YOUTUBE",
+              "resourceUrl": "VO9IKNYejOc",
+              "thumbnailUrl": "https://i.ytimg.com/vi/VO9IKNYejOc/hqdefault.jpg",
+              "durationSeconds": 1101,
+              "category": "LESSON"
+            },
+            {
+              "id": "7461044a-56b8-445c-96d8-ebcb83cef368",
+              "title": "IGCSE Physics Revision: Unit 2 Thermal Physics | for Cambridge IGCSE 2023 Syllabus",
+              "type": "YOUTUBE",
+              "resourceUrl": "Gy_U0wCDFjw",
+              "thumbnailUrl": "https://i.ytimg.com/vi/Gy_U0wCDFjw/hqdefault.jpg",
+              "durationSeconds": 3067,
+              "category": "LESSON"
+            }
+          ],
+          "order": 6,
+          "description": "Understanding thermal expansion of solids, liquids and gases at constant pressure, everyday applications and consequences, explaining expansion in terms of particle motion",
+          "id": "lesson_047"
+        },
+        {
+          "order": 7,
+          "practiceMinutes": 50,
+          "id": "lesson_048",
+          "videos": [
+            {
+              "id": "83c030aa-f7df-45de-9f40-2eb76a3919b3",
+              "title": "GCSE Physics - Specific Heat Capacity | Internal Energy & Temperature (2026/27 exams)",
+              "type": "YOUTUBE",
+              "resourceUrl": "LUHGFLR2p8k",
+              "thumbnailUrl": "https://i.ytimg.com/vi/LUHGFLR2p8k/hqdefault.jpg",
+              "durationSeconds": 302,
+              "category": "LESSON"
+            },
+            {
+              "id": "08350f32-0da8-40a3-b5ff-a4e7fab74019",
+              "title": "IGCSE Physics [Syllabus 2.2] Thermal properties and temperature",
+              "type": "YOUTUBE",
+              "resourceUrl": "hwM4QckWnBY",
+              "thumbnailUrl": "https://i.ytimg.com/vi/hwM4QckWnBY/hqdefault.jpg",
+              "durationSeconds": 1965,
+              "category": "LESSON"
+            }
+          ],
+          "name": "Thermal Properties & Temperature | Specific Heat Capacity",
+          "description": "Understanding that temperature rise increases internal energy and average kinetic energy, defining specific heat capacity c = ∆E/(m∆θ), using the equation in calculations",
+          "estimatedMinutes": 38
+        },
+        {
+          "practiceMinutes": 50,
+          "estimatedMinutes": 25,
+          "name": "Thermal Properties & Temperature | Investigating Specific Heat Capacity",
+          "id": "lesson_049",
+          "videos": [],
+          "description": "Experimental measurement of specific heat capacity for solids and liquids, practical procedures, analyzing results and calculating specific heat capacity from experimental data",
+          "order": 8
+        },
+        {
+          "description": "Understanding melting and boiling as energy input without temperature change, melting and boiling points of water, describing condensation and solidification in terms of particles",
+          "estimatedMinutes": 24,
+          "practiceMinutes": 35,
+          "videos": [
+            {
+              "id": "9c15e795-5ad1-4613-959c-dd5fd5f06595",
+              "title": "melting, boiling and evaporation for IGCSE, GCSE, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "gemkwvju2KY",
+              "thumbnailUrl": "https://i.ytimg.com/vi/gemkwvju2KY/hqdefault.jpg",
+              "durationSeconds": 316,
+              "category": "LESSON"
+            },
+            {
+              "id": "168ae657-5dbe-4f3d-a432-e741f98c3a44",
+              "title": "Melting, Boiling, Evaporation ~ IGCSE Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "ASvyQ3TKlsg",
+              "thumbnailUrl": "https://i.ytimg.com/vi/ASvyQ3TKlsg/hqdefault.jpg",
+              "durationSeconds": 1122,
+              "category": "LESSON"
+            }
+          ],
+          "order": 9,
+          "name": "Thermal Properties & Temperature | Melting & Boiling",
+          "id": "lesson_050"
+        },
+        {
+          "name": "Thermal Properties & Temperature | Evaporation",
+          "videos": [],
+          "estimatedMinutes": 20,
+          "id": "lesson_051",
+          "description": "Understanding evaporation as escape of more-energetic particles from liquid surface, differences between boiling and evaporation, factors affecting evaporation rate, evaporative cooling",
+          "practiceMinutes": 40,
+          "order": 10
+        },
+        {
+          "order": 11,
+          "id": "lesson_052",
+          "name": "Transfer of Thermal Energy | Demonstrating Conduction",
+          "videos": [],
+          "practiceMinutes": 30,
+          "description": "Experiments to demonstrate properties of good thermal conductors and bad thermal conductors (thermal insulators), practical demonstrations and observations",
+          "estimatedMinutes": 15
+        },
+        {
+          "description": "Understanding thermal conduction in terms of lattice vibrations and free electrons in metals, why gases and liquids are poor conductors, range of thermal conductors",
+          "practiceMinutes": 40,
+          "videos": [
+            {
+              "id": "b459a40f-27fd-4d93-8405-d98e05a3cd24",
+              "title": "Conduction of thermal energy for IGCSE, GCSE, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "x2hMbtGrGFY",
+              "thumbnailUrl": "https://i.ytimg.com/vi/x2hMbtGrGFY/hqdefault.jpg",
+              "durationSeconds": 317,
+              "category": "LESSON"
+            },
+            {
+              "id": "290b894c-c0b8-416f-bf5f-60c110df73a9",
+              "title": "IGCSE Physics (2025-2027) - C11/25: Conduction, Convection, Radiation, Insulation",
+              "type": "YOUTUBE",
+              "resourceUrl": "aF2_8_EUAns",
+              "thumbnailUrl": "https://i.ytimg.com/vi/aF2_8_EUAns/hqdefault.jpg",
+              "durationSeconds": 967,
+              "category": "LESSON"
+            }
+          ],
+          "id": "lesson_053",
+          "estimatedMinutes": 22,
+          "order": 12,
+          "name": "Transfer of Thermal Energy | Thermal Conduction"
+        },
+        {
+          "name": "Transfer of Thermal Energy | Convection",
+          "order": 13,
+          "videos": [
+            {
+              "id": "f43406ad-0fe0-4091-8e0d-89437529bd58",
+              "title": "GCSE Physics - Conduction, Convection and Radiation",
+              "type": "YOUTUBE",
+              "resourceUrl": "Eizsm5V8c_c",
+              "thumbnailUrl": "https://i.ytimg.com/vi/Eizsm5V8c_c/hqdefault.jpg",
+              "durationSeconds": 345,
+              "category": "LESSON"
+            },
+            {
+              "id": "b973e1aa-3891-4eae-8b14-88923f13f79f",
+              "title": "iGCSE Physics:Thermal Energy Transfer",
+              "type": "YOUTUBE",
+              "resourceUrl": "IfJj6yhisPE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/IfJj6yhisPE/hqdefault.jpg",
+              "durationSeconds": 641,
+              "category": "LESSON"
+            }
+          ],
+          "description": "Understanding convection as thermal energy transfer in liquids and gases, explaining convection in terms of density changes, experimental demonstration of convection",
+          "id": "lesson_054",
+          "practiceMinutes": 35,
+          "estimatedMinutes": 17
+        },
+        {
+          "estimatedMinutes": 24,
+          "description": "Understanding thermal radiation as infrared radiation, all objects emit infrared, radiation doesn't require a medium, effect of surface color and texture on emission, absorption and reflection",
+          "name": "Transfer of Thermal Energy | Radiation",
+          "id": "lesson_055",
+          "videos": [
+            {
+              "id": "f5b9888b-18bf-4bc8-acd4-258c324f99d5",
+              "title": "IGCSE Physics (2025-2027) - C11/25: Conduction, Convection, Radiation, Insulation",
+              "type": "YOUTUBE",
+              "resourceUrl": "aF2_8_EUAns",
+              "thumbnailUrl": "https://i.ytimg.com/vi/aF2_8_EUAns/hqdefault.jpg",
+              "durationSeconds": 967,
+              "category": "LESSON"
+            },
+            {
+              "id": "f20a270b-4930-46e7-99ee-ab1112e28dee",
+              "title": "Radiation of thermal energy for IGCSE, GCSE, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "4WT8tgNYn8Q",
+              "thumbnailUrl": "https://i.ytimg.com/vi/4WT8tgNYn8Q/hqdefault.jpg",
+              "durationSeconds": 435,
+              "category": "LESSON"
+            }
+          ],
+          "order": 14,
+          "practiceMinutes": 40
+        },
+        {
+          "order": 15,
+          "id": "lesson_056",
+          "description": "Understanding thermal equilibrium when energy received equals energy transferred away, effect on Earth's temperature, how factors control balance between incoming and emitted radiation, rate of emission depends on surface temperature and area",
+          "videos": [
+            {
+              "id": "975bf680-37bd-4ef4-b3ce-4121320e44f5",
+              "title": "Greenhouse effect and greenhouse gases | High school biology | Khan Academy",
+              "type": "YOUTUBE",
+              "resourceUrl": "YpfxiDktSoI",
+              "thumbnailUrl": "https://i.ytimg.com/vi/YpfxiDktSoI/hqdefault.jpg",
+              "durationSeconds": 419,
+              "category": "LESSON"
+            }
+          ],
+          "practiceMinutes": 45,
+          "estimatedMinutes": 7,
+          "name": "Transfer of Thermal Energy | The Greenhouse Effect"
+        },
+        {
+          "id": "lesson_057",
+          "order": 16,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": [],
+          "name": "Transfer of Thermal Energy | Investigating IR Radiation",
+          "description": "Experiments to distinguish between good and bad emitters of infrared radiation, experiments to distinguish between good and bad absorbers of infrared radiation, practical investigations"
+        },
+        {
+          "description": "Explaining everyday applications and consequences of conduction, convection and radiation: heating pans, heating rooms, fires burning fuel, car radiators, where multiple types of thermal energy transfer are significant",
+          "practiceMinutes": 35,
+          "videos": [
+            {
+              "id": "1e629870-5dfd-4bde-943b-17653f189aed",
+              "title": "Consequences of thermal energy transfer for IGCSE, GCSE, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "JHgcJhlvFuE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/JHgcJhlvFuE/hqdefault.jpg",
+              "durationSeconds": 360,
+              "category": "LESSON"
+            },
+            {
+              "id": "cb7774dc-9558-45af-b0c4-3ebcf553aa0b",
+              "title": "GCSE Physics - Reducing Unwanted Energy Transfers - Thermal Insulation | Lubrication (2026/27 exams)",
+              "type": "YOUTUBE",
+              "resourceUrl": "vwZ2u3qn5pM",
+              "thumbnailUrl": "https://i.ytimg.com/vi/vwZ2u3qn5pM/hqdefault.jpg",
+              "durationSeconds": 250,
+              "category": "LESSON"
+            },
+            {
+              "id": "1ec40e1d-2b71-4a1a-b334-fb7f83a170ef",
+              "title": "Cambridge IGCSE Physics 0625 UNIT 2 Thermal Physics Revision #igcsephysics",
+              "type": "YOUTUBE",
+              "resourceUrl": "he1wMnwo2Pc",
+              "thumbnailUrl": "https://i.ytimg.com/vi/he1wMnwo2Pc/hqdefault.jpg",
+              "durationSeconds": 2927,
+              "category": "LESSON"
+            }
+          ],
+          "estimatedMinutes": 59,
+          "name": "Transfer of Thermal Energy | Consequences of Thermal Energy Transfer",
+          "id": "lesson_058",
+          "order": 17
+        }
+      ],
+      "order": 2,
+      "description": "Study of kinetic particle model of matter, states of matter, thermal properties, temperature, and transfer of thermal energy through conduction, convection, and radiation.",
+      "name": "Thermal Physics"
+    },
+    {
+      "lessons": [
+        {
+          "practiceMinutes": 30,
+          "videos": [
+            {
+              "id": "ef00d71b-9eb7-4aa9-ab50-854d229a0149",
+              "title": "Properties of waves for IGCSE, GCSE, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "ufOlTCCeYPs",
+              "thumbnailUrl": "https://i.ytimg.com/vi/ufOlTCCeYPs/hqdefault.jpg",
+              "durationSeconds": 910,
+              "category": "LESSON"
+            },
+            {
+              "id": "fcc8c1b5-7530-42e7-891d-f3069c428c16",
+              "title": "GCSE Physics Revision \"Properties of Waves\"",
+              "type": "YOUTUBE",
+              "resourceUrl": "ITe6snlZBp8",
+              "thumbnailUrl": "https://i.ytimg.com/vi/ITe6snlZBp8/hqdefault.jpg",
+              "durationSeconds": 261,
+              "category": "LESSON"
+            },
+            {
+              "id": "7117064c-25bc-4866-bf9f-e4430253e6f2",
+              "title": "Cambridge IGCSE Physics 0625 UNIT 3 Wave Revision #igcsephysics",
+              "type": "YOUTUBE",
+              "resourceUrl": "_6JjqFqYtxo",
+              "thumbnailUrl": "https://i.ytimg.com/vi/_6JjqFqYtxo/hqdefault.jpg",
+              "durationSeconds": 3628,
+              "category": "LESSON"
+            },
+            {
+              "id": "6406e82e-e9ed-46b9-89c9-d9e7a71b930a",
+              "title": "Unit 3 Part 1 - Waves -  Cambridge IGCSE Physics Revision 2025 to 2028",
+              "type": "YOUTUBE",
+              "resourceUrl": "n6FX-ExU6-I",
+              "thumbnailUrl": "https://i.ytimg.com/vi/n6FX-ExU6-I/hqdefault.jpg",
+              "durationSeconds": 4998,
+              "category": "LESSON"
+            }
+          ],
+          "estimatedMinutes": 164,
+          "id": "lesson_059",
+          "name": "General Properties of Waves | Features of Waves",
+          "order": 1,
+          "description": "Understanding that waves transfer energy without transferring matter, wave features (wavefront, wavelength, frequency, amplitude, wave speed), describing wave motion"
+        },
+        {
+          "name": "General Properties of Waves | The Wave Equation",
+          "description": "Using v = fλ for wave speed calculations, understanding the relationship between speed, frequency and wavelength, applying the equation to various wave problems",
+          "videos": [],
+          "estimatedMinutes": 20,
+          "order": 2,
+          "practiceMinutes": 40,
+          "id": "lesson_060"
+        },
+        {
+          "id": "lesson_061",
+          "practiceMinutes": 35,
+          "order": 3,
+          "name": "General Properties of Waves | Transverse & Longitudinal Waves",
+          "videos": [],
+          "estimatedMinutes": 20,
+          "description": "Understanding transverse waves (electromagnetic radiation, water waves, S-waves) and longitudinal waves (sound, P-waves), direction of vibration vs propagation"
+        },
+        {
+          "practiceMinutes": 45,
+          "id": "lesson_062",
+          "order": 4,
+          "description": "Understanding wave reflection at plane surfaces, refraction due to speed changes, diffraction through gaps and at edges, how wavelength and gap size affect diffraction",
+          "videos": [
+            {
+              "id": "b84904c4-da4c-4cb5-a7e1-a2fa21260e91",
+              "title": "Wave Behaviour | Waves | Physics | FuseSchool",
+              "type": "YOUTUBE",
+              "resourceUrl": "BL2MtP7j-xk",
+              "thumbnailUrl": "https://i.ytimg.com/vi/BL2MtP7j-xk/hqdefault.jpg",
+              "durationSeconds": 255,
+              "category": "LESSON"
+            }
+          ],
+          "name": "General Properties of Waves | Wave Behaviour",
+          "estimatedMinutes": 5
+        },
+        {
+          "estimatedMinutes": 3,
+          "order": 5,
+          "practiceMinutes": 40,
+          "id": "lesson_063",
+          "description": "Using ripple tank to demonstrate reflection at plane surface, refraction due to change in depth, diffraction due to gap and edge, experimental observations and techniques",
+          "name": "General Properties of Waves | Ripple Tank",
+          "videos": [
+            {
+              "id": "26830855-a1c1-4bc9-b1e1-d4df54eb0082",
+              "title": "Ripple Tank and Waves",
+              "type": "YOUTUBE",
+              "resourceUrl": "DiSJspAVFh0",
+              "thumbnailUrl": "https://i.ytimg.com/vi/DiSJspAVFh0/hqdefault.jpg",
+              "durationSeconds": 156,
+              "category": "LESSON"
+            }
+          ]
+        },
+        {
+          "practiceMinutes": 30,
+          "videos": [
+            {
+              "id": "339fa527-cf61-4368-bdca-02b5d8ce94f7",
+              "title": "Unit 3 Part 2 - Waves - Cambridge IGCSE Physics Revision 2025 to 2028",
+              "type": "YOUTUBE",
+              "resourceUrl": "a5BhMSrgSWE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/a5BhMSrgSWE/hqdefault.jpg",
+              "durationSeconds": 5030,
+              "category": "LESSON"
+            },
+            {
+              "id": "befb55a7-c587-4645-8a54-1fc5499e358f",
+              "title": "GCSE Physics - Reflection",
+              "type": "YOUTUBE",
+              "resourceUrl": "WDBtOeXUdWQ",
+              "thumbnailUrl": "https://i.ytimg.com/vi/WDBtOeXUdWQ/hqdefault.jpg",
+              "durationSeconds": 329,
+              "category": "LESSON"
+            },
+            {
+              "id": "cbad06fe-d44e-4ad9-9922-a8150175b2b7",
+              "title": "Reflection of light for IGCSE, GCSE, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "qIl_YIypTzo",
+              "thumbnailUrl": "https://i.ytimg.com/vi/qIl_YIypTzo/hqdefault.jpg",
+              "durationSeconds": 218,
+              "category": "LESSON"
+            }
+          ],
+          "description": "Defining normal, angle of incidence and angle of reflection, law of reflection (angle of incidence = angle of reflection), image formation by plane mirrors",
+          "order": 6,
+          "name": "Light | Reflection of Light",
+          "estimatedMinutes": 93,
+          "id": "lesson_064"
+        },
+        {
+          "videos": [
+            {
+              "id": "3af4b1dc-920d-43dd-ba7b-adab3467a1b9",
+              "title": "IGCSE Physics (2025-2027) + PYQ - C13/25: Light",
+              "type": "YOUTUBE",
+              "resourceUrl": "iVDIK7z-Brg",
+              "thumbnailUrl": "https://i.ytimg.com/vi/iVDIK7z-Brg/hqdefault.jpg",
+              "durationSeconds": 2290,
+              "category": "LESSON"
+            }
+          ],
+          "estimatedMinutes": 39,
+          "name": "Light | Investigating Reflection",
+          "id": "lesson_065",
+          "practiceMinutes": 40,
+          "order": 7,
+          "description": "Simple constructions, measurements and calculations for reflection by plane mirrors, experimental determination of angles, practical investigations"
+        },
+        {
+          "estimatedMinutes": 19,
+          "description": "Understanding refraction at boundaries, passage through transparent materials, experimental demonstration with blocks of different shapes, defining angle of refraction",
+          "id": "lesson_066",
+          "order": 8,
+          "practiceMinutes": 40,
+          "name": "Light | Refraction of Light",
+          "videos": [
+            {
+              "id": "f4a6e888-f2fa-4e87-88ef-004777387775",
+              "title": "Refraction of light for IGCSE Physics, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "rNfxgMixctE",
+              "thumbnailUrl": "https://i.ytimg.com/vi/rNfxgMixctE/hqdefault.jpg",
+              "durationSeconds": 812,
+              "category": "LESSON"
+            },
+            {
+              "id": "c5690970-03a8-45f1-a238-4512355e8f02",
+              "title": "GCSE Physics - Refraction of waves",
+              "type": "YOUTUBE",
+              "resourceUrl": "UUc44Vg5pCI",
+              "thumbnailUrl": "https://i.ytimg.com/vi/UUc44Vg5pCI/hqdefault.jpg",
+              "durationSeconds": 310,
+              "category": "LESSON"
+            }
+          ]
+        },
+        {
+          "videos": [
+            {
+              "id": "7c724250-5ab3-4662-9f83-9ceb59fc73e1",
+              "title": "GCSE Physics - Refraction of waves",
+              "type": "YOUTUBE",
+              "resourceUrl": "UUc44Vg5pCI",
+              "thumbnailUrl": "https://i.ytimg.com/vi/UUc44Vg5pCI/hqdefault.jpg",
+              "durationSeconds": 310,
+              "category": "LESSON"
+            }
+          ],
+          "description": "Defining refractive index as ratio of wave speeds, using n = sin i / sin r, calculating refractive index from experimental data",
+          "order": 9,
+          "practiceMinutes": 50,
+          "id": "lesson_067",
+          "name": "Light | Refractive Index",
+          "estimatedMinutes": 6
+        },
+        {
+          "order": 10,
+          "estimatedMinutes": 7,
+          "id": "lesson_068",
+          "practiceMinutes": 50,
+          "description": "Understanding critical angle, internal and total internal reflection, using n = 1/sin c, applications in optical fibres for telecommunications",
+          "videos": [
+            {
+              "id": "1fe1c4d6-8993-415b-920e-ee1a329e6434",
+              "title": "Total Internal Reflection (GCSE Physics)",
+              "type": "YOUTUBE",
+              "resourceUrl": "bIUbj3Bh2LI",
+              "thumbnailUrl": "https://i.ytimg.com/vi/bIUbj3Bh2LI/hqdefault.jpg",
+              "durationSeconds": 245,
+              "category": "LESSON"
+            },
+            {
+              "id": "a6927c60-2606-4eb2-88d5-37928c3810ec",
+              "title": "Total Internal Reflection - GCSE Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "mbQNAElCWec",
+              "thumbnailUrl": "https://i.ytimg.com/vi/mbQNAElCWec/hqdefault.jpg",
+              "durationSeconds": 144,
+              "category": "LESSON"
+            }
+          ],
+          "name": "Light | Total Internal Reflection"
+        },
+        {
+          "estimatedMinutes": 11,
+          "name": "Light | Ray Diagrams",
+          "videos": [
+            {
+              "id": "57b77097-aecb-45bc-a75b-73bf7fec8752",
+              "title": "GCSE Physics - How to Draw Ray Diagrams - Concave & Convex Lenses (2026/27 exams)",
+              "type": "YOUTUBE",
+              "resourceUrl": "9mF21_QDpxY",
+              "thumbnailUrl": "https://i.ytimg.com/vi/9mF21_QDpxY/hqdefault.jpg",
+              "durationSeconds": 406,
+              "category": "LESSON"
+            },
+            {
+              "id": "0d824783-cde5-4f5b-85c1-d485f81b11e2",
+              "title": "Ray diagrams | Waves | Physics | FuseSchool",
+              "type": "YOUTUBE",
+              "resourceUrl": "CYY_RJgmvAc",
+              "thumbnailUrl": "https://i.ytimg.com/vi/CYY_RJgmvAc/hqdefault.jpg",
+              "durationSeconds": 221,
+              "category": "LESSON"
+            }
+          ],
+          "practiceMinutes": 50,
+          "description": "Drawing ray diagrams for thin converging and diverging lenses, understanding focal length, principal axis and principal focus, ray diagram conventions",
+          "order": 11,
+          "id": "lesson_069"
+        },
+        {
+          "order": 12,
+          "estimatedMinutes": 7,
+          "practiceMinutes": 35,
+          "videos": [
+            {
+              "id": "bab5f579-5e61-4cca-a46c-b22c703ce10f",
+              "title": "GCSE Physics - How Lenses Work - Convex & Concave Lenses | Real & Virtual Images (2026/27 exams)",
+              "type": "YOUTUBE",
+              "resourceUrl": "0O3NdG0uWM4",
+              "thumbnailUrl": "https://i.ytimg.com/vi/0O3NdG0uWM4/hqdefault.jpg",
+              "durationSeconds": 397,
+              "category": "LESSON"
+            }
+          ],
+          "id": "lesson_070",
+          "name": "Light | Real & Virtual Images",
+          "description": "Understanding characteristics of images using terms enlarged/same size/diminished, upright/inverted and real/virtual, knowing virtual image formed when diverging rays are extrapolated backwards"
+        },
+        {
+          "order": 13,
+          "videos": [],
+          "description": "Action of converging lenses on parallel beams, ray diagrams for formation of real images by converging lens, calculating image positions and characteristics",
+          "name": "Light | Real Images",
+          "practiceMinutes": 50,
+          "id": "lesson_071",
+          "estimatedMinutes": 25
+        },
+        {
+          "order": 14,
+          "description": "Action of diverging lenses, virtual image formation with converging lenses, ray diagrams for virtual images, describing use of single lens as magnifying glass",
+          "videos": [],
+          "practiceMinutes": 50,
+          "estimatedMinutes": 25,
+          "id": "lesson_072",
+          "name": "Light | Virtual Images"
+        },
+        {
+          "description": "Using converging and diverging lenses to correct long-sightedness and short-sightedness, understanding how lenses correct vision defects, applications of lenses in corrective eyewear",
+          "estimatedMinutes": 20,
+          "id": "lesson_073",
+          "name": "Light | Correcting Sight",
+          "order": 15,
+          "videos": [],
+          "practiceMinutes": 40
+        },
+        {
+          "practiceMinutes": 30,
+          "name": "Light | Dispersion of Light",
+          "estimatedMinutes": 13,
+          "description": "Understanding dispersion by glass prism, seven colors of visible spectrum in order of frequency and wavelength, monochromatic light",
+          "order": 16,
+          "id": "lesson_074",
+          "videos": [
+            {
+              "id": "222ea4ba-8508-4c8d-aa60-6698877f6e41",
+              "title": "Dispersion of light for IGCSE Physics, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "VvRyz4rhShw",
+              "thumbnailUrl": "https://i.ytimg.com/vi/VvRyz4rhShw/hqdefault.jpg",
+              "durationSeconds": 173,
+              "category": "LESSON"
+            },
+            {
+              "id": "87b45659-b1fb-4e0a-9672-d79773275afd",
+              "title": "Dispersion of light, IGCSE Cambridge Physics (0625) for CIE, P3, Waves",
+              "type": "YOUTUBE",
+              "resourceUrl": "SJW3977W8Qo",
+              "thumbnailUrl": "https://i.ytimg.com/vi/SJW3977W8Qo/hqdefault.jpg",
+              "durationSeconds": 560,
+              "category": "LESSON"
+            }
+          ]
+        },
+        {
+          "estimatedMinutes": 30,
+          "practiceMinutes": 35,
+          "order": 17,
+          "videos": [
+            {
+              "id": "76a4c161-6643-4021-9505-f3bc8e175154",
+              "title": "Electromagnetic spectrum for IGCSE Physics, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "DH4lwPkOxIA",
+              "thumbnailUrl": "https://i.ytimg.com/vi/DH4lwPkOxIA/hqdefault.jpg",
+              "durationSeconds": 820,
+              "category": "LESSON"
+            },
+            {
+              "id": "fce985b4-b713-424c-ae29-ed64864dc097",
+              "title": "GCSE Physics - Electromagnetic Waves - Frequency | Wavelength | Where They Come From (2026/27 exams)",
+              "type": "YOUTUBE",
+              "resourceUrl": "zx0UIMA2-bA",
+              "thumbnailUrl": "https://i.ytimg.com/vi/zx0UIMA2-bA/hqdefault.jpg",
+              "durationSeconds": 311,
+              "category": "LESSON"
+            },
+            {
+              "id": "d0e9a80e-446e-497d-95ec-c973e773d145",
+              "title": "IGCSE Physics (2025-2027) + PYQ - C15/25: Electromagnetic Waves",
+              "type": "YOUTUBE",
+              "resourceUrl": "QKhIwUOlOqI",
+              "thumbnailUrl": "https://i.ytimg.com/vi/QKhIwUOlOqI/hqdefault.jpg",
+              "durationSeconds": 635,
+              "category": "LESSON"
+            }
+          ],
+          "description": "Understanding main regions of electromagnetic spectrum in order of frequency and wavelength, all EM waves travel at same speed in vacuum (3.0 × 10⁸ m/s)",
+          "name": "Electromagnetic Spectrum | Electromagnetic Waves",
+          "id": "lesson_075"
+        },
+        {
+          "description": "Understanding typical uses of radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays in various applications",
+          "order": 18,
+          "estimatedMinutes": 5,
+          "practiceMinutes": 40,
+          "id": "lesson_076",
+          "name": "Electromagnetic Spectrum | Uses of Electromagnetic Waves",
+          "videos": [
+            {
+              "id": "6451b6e6-17f5-4d1f-9f58-1f6cb31fe614",
+              "title": "GCSE Physics Revision \"Uses of EM waves\"",
+              "type": "YOUTUBE",
+              "resourceUrl": "L0iivb-acqU",
+              "thumbnailUrl": "https://i.ytimg.com/vi/L0iivb-acqU/hqdefault.jpg",
+              "durationSeconds": 259,
+              "category": "LESSON"
+            }
+          ]
+        },
+        {
+          "order": 19,
+          "videos": [],
+          "practiceMinutes": 35,
+          "id": "lesson_077",
+          "name": "Electromagnetic Spectrum | Dangers of Electromagnetic Waves",
+          "description": "Understanding harmful effects of excessive exposure to microwaves, infrared, ultraviolet, X-rays and gamma rays on living tissue",
+          "estimatedMinutes": 20
+        },
+        {
+          "videos": [],
+          "name": "Electromagnetic Spectrum | Communications",
+          "order": 20,
+          "id": "lesson_078",
+          "description": "Understanding satellite communications (low orbit and geostationary), mobile phones, wireless internet, Bluetooth, optical fibres, systems of communication relying on electromagnetic radiation",
+          "practiceMinutes": 45,
+          "estimatedMinutes": 0
+        },
+        {
+          "name": "Electromagnetic Spectrum | Digital & Analogue Signals",
+          "id": "lesson_079",
+          "practiceMinutes": 40,
+          "description": "Understanding difference between digital and analogue signals, sound transmitted as digital or analogue signal, benefits of digital signalling including increased rate of transmission and range",
+          "order": 21,
+          "estimatedMinutes": 18,
+          "videos": [
+            {
+              "id": "16858b29-d687-4412-bdba-83ed117132c9",
+              "title": "Physics - Waves - Analogue and Digital Signals",
+              "type": "YOUTUBE",
+              "resourceUrl": "XCu6L4kQF3k",
+              "thumbnailUrl": "https://i.ytimg.com/vi/XCu6L4kQF3k/hqdefault.jpg",
+              "durationSeconds": 174,
+              "category": "LESSON"
+            },
+            {
+              "id": "4bf5d50a-98b8-4de5-acb8-160ddb25e73d",
+              "title": "Analogue vs Digital Signals ~ IGCSE Physics topic",
+              "type": "YOUTUBE",
+              "resourceUrl": "Ogk48vvPi-Y",
+              "thumbnailUrl": "https://i.ytimg.com/vi/Ogk48vvPi-Y/hqdefault.jpg",
+              "durationSeconds": 886,
+              "category": "LESSON"
+            }
+          ]
+        },
+        {
+          "practiceMinutes": 35,
+          "description": "Understanding production of sound by vibrating sources, longitudinal nature of sound, audible frequency range (20 Hz to 20 kHz), sound requires a medium, speed of sound in air (≈330-350 m/s)",
+          "estimatedMinutes": 35,
+          "videos": [
+            {
+              "id": "726ddbec-4079-4231-ada5-b6ce2636b895",
+              "title": "GCSE Physics - Sound Waves and Hearing",
+              "type": "YOUTUBE",
+              "resourceUrl": "s9wZkP64rAc",
+              "thumbnailUrl": "https://i.ytimg.com/vi/s9wZkP64rAc/hqdefault.jpg",
+              "durationSeconds": 308,
+              "category": "LESSON"
+            },
+            {
+              "id": "09f52a9d-d235-42f0-9998-15aad04b4c75",
+              "title": "sound waves for IGCSE, GCSE, GCE O level Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "WWDUxW8N-eM",
+              "thumbnailUrl": "https://i.ytimg.com/vi/WWDUxW8N-eM/hqdefault.jpg",
+              "durationSeconds": 537,
+              "category": "LESSON"
+            },
+            {
+              "id": "5a726817-05c9-4716-8ffb-37e655c88dee",
+              "title": "GCSE Physics Revision \"Sound Waves\" (Triple)",
+              "type": "YOUTUBE",
+              "resourceUrl": "N_07EkzEhVQ",
+              "thumbnailUrl": "https://i.ytimg.com/vi/N_07EkzEhVQ/hqdefault.jpg",
+              "durationSeconds": 251,
+              "category": "LESSON"
+            },
+            {
+              "id": "981bef11-ec60-4c68-914c-9a5f9457080a",
+              "title": "IGCSE Physics (2025-2027) + PYQ - C12/25: Sound",
+              "type": "YOUTUBE",
+              "resourceUrl": "ueBpMHqVgZM",
+              "thumbnailUrl": "https://i.ytimg.com/vi/ueBpMHqVgZM/hqdefault.jpg",
+              "durationSeconds": 981,
+              "category": "LESSON"
+            }
+          ],
+          "order": 22,
+          "id": "lesson_080",
+          "name": "Sound | Sound Waves"
+        },
+        {
+          "id": "lesson_081",
+          "name": "Sound | Measuring the Speed of Sound",
+          "estimatedMinutes": 6,
+          "description": "Understanding compression and rarefaction, methods for determining speed of sound using distance and time measurements, sound travels faster in solids than liquids, faster in liquids than gases",
+          "videos": [
+            {
+              "id": "9050479a-8c63-4617-9a60-f996912150e4",
+              "title": "Measuring Speed of Sound Using Echoes | GCSE Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "1wrD4JLgb1c",
+              "thumbnailUrl": "https://i.ytimg.com/vi/1wrD4JLgb1c/hqdefault.jpg",
+              "durationSeconds": 159,
+              "category": "LESSON"
+            },
+            {
+              "id": "42d3e3a6-f077-4260-ba6f-c20bc42ab07e",
+              "title": "Speed of Sound | GCSE Physics",
+              "type": "YOUTUBE",
+              "resourceUrl": "aw7hSVpx9R0",
+              "thumbnailUrl": "https://i.ytimg.com/vi/aw7hSVpx9R0/hqdefault.jpg",
+              "durationSeconds": 166,
+              "category": "LESSON"
+            }
+          ],
+          "practiceMinutes": 45,
+          "order": 23
+        },
+        {
+          "id": "lesson_082",
+          "estimatedMinutes": 15,
+          "videos": [],
+          "practiceMinutes": 30,
+          "description": "Understanding how amplitude and frequency affect loudness and pitch of sound waves, echoes as reflection of sound",
+          "name": "Sound | Effects of Sound Waves",
+          "order": 24
+        },
+        {
+          "estimatedMinutes": 4,
+          "order": 25,
+          "practiceMinutes": 50,
+          "id": "lesson_083",
+          "description": "Defining ultrasound as sound with frequency higher than 20 kHz, uses in non-destructive testing of materials, medical scanning of soft tissue and sonar including calculations",
+          "videos": [
+            {
+              "id": "2bb55b04-23c5-4d1d-a73a-e21ae716bbaf",
+              "title": "GCSE Physics Revision \"Ultrasound\" (Triple)",
+              "type": "YOUTUBE",
+              "resourceUrl": "l1F6h9skFXU",
+              "thumbnailUrl": "https://i.ytimg.com/vi/l1F6h9skFXU/hqdefault.jpg",
+              "durationSeconds": 194,
+              "category": "LESSON"
+            }
+          ],
+          "name": "Sound | Ultrasound"
+        }
+      ],
+      "description": "General properties of waves, light (reflection, refraction, thin lenses, dispersion), electromagnetic spectrum, and sound waves including their characteristics and applications.",
+      "order": 3,
+      "id": "chapter_003",
+      "name": "Waves"
+    },
+    {
+      "id": "chapter_004",
+      "name": "Electricity and Magnetism",
+      "lessons": [
+        {
+          "practiceMinutes": 25,
+          "videos": [],
+          "name": "Simple Phenomena of Magnetism | Magnetism",
+          "order": 1,
+          "description": "Describing forces between magnetic poles and between magnets and magnetic materials, using terms north pole, south pole, attraction, repulsion, magnetised and unmagnetised",
+          "id": "lesson_084",
+          "estimatedMinutes": 15
+        },
+        {
+          "estimatedMinutes": 15,
+          "name": "Simple Phenomena of Magnetism | Magnets",
+          "description": "Understanding induced magnetism, differences between temporary magnets (soft iron) and permanent magnets (steel), difference between magnetic and non-magnetic materials",
+          "order": 2,
+          "id": "lesson_085",
+          "practiceMinutes": 30,
+          "videos": []
+        },
+        {
+          "order": 3,
+          "description": "Describing magnetic field as region where magnetic pole experiences force, understanding direction of magnetic field at a point, uses of permanent magnets and electromagnets",
+          "estimatedMinutes": 20,
+          "id": "lesson_086",
+          "videos": [],
+          "practiceMinutes": 35,
+          "name": "Simple Phenomena of Magnetism | Magnetic Fields"
+        },
+        {
+          "description": "Drawing pattern and direction of magnetic field lines around bar magnet, plotting with compass and iron filings, using compass to determine direction, field strength represented by spacing",
+          "practiceMinutes": 40,
+          "videos": [],
+          "name": "Simple Phenomena of Magnetism | Plotting Magnetic Fields",
+          "order": 4,
+          "estimatedMinutes": 20,
+          "id": "lesson_087"
+        },
+        {
+          "name": "Electrical Quantities | Electric Charge",
+          "description": "Understanding positive and negative charges, attraction and repulsion, electrostatic charging by friction, detection of charges, charging involves transfer of electrons only",
+          "order": 5,
+          "estimatedMinutes": 15,
+          "videos": [],
+          "practiceMinutes": 30,
+          "id": "lesson_088"
+        },
+        {
+          "videos": [],
+          "estimatedMinutes": 20,
+          "name": "Electrical Quantities | Demonstrating Electric Charges",
+          "practiceMinutes": 35,
+          "id": "lesson_089",
+          "order": 6,
+          "description": "Simple experiments to show production of electrostatic charges by friction, experiments to show detection of electrostatic charges, practical demonstrations"
+        },
+        {
+          "id": "lesson_090",
+          "videos": [],
+          "practiceMinutes": 45,
+          "order": 7,
+          "estimatedMinutes": 25,
+          "description": "Understanding electric field as region where charge experiences force, direction of field on positive charge, field patterns around point charges, charged spheres, and parallel plates, charge measured in coulombs",
+          "name": "Electrical Quantities | Electric Fields"
+        },
+        {
+          "order": 8,
+          "id": "lesson_091",
+          "videos": [],
+          "description": "Experiment to distinguish between electrical conductors and insulators, using electron model to explain difference, giving typical examples of each",
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "name": "Electrical Quantities | Investigating Conductors & Insulators"
+        },
+        {
+          "name": "Electrical Quantities | Current",
+          "practiceMinutes": 40,
+          "description": "Understanding current as flow of charge, defining current I = Q/t, using ammeters (analogue and digital), conduction in metals via free electrons, conventional vs electron flow",
+          "estimatedMinutes": 20,
+          "id": "lesson_092",
+          "videos": [],
+          "order": 9
+        },
+        {
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "videos": [],
+          "order": 10,
+          "name": "Electrical Quantities | Direct & Alternating Current",
+          "id": "lesson_093",
+          "description": "Understanding difference between direct current (d.c.) and alternating current (a.c.), characteristics of each type, applications of DC and AC"
+        },
+        {
+          "videos": [],
+          "order": 11,
+          "id": "lesson_094",
+          "description": "Defining electromotive force (e.m.f.) as electrical work done by source in moving unit charge around complete circuit, measured in volts, using E = W/Q",
+          "name": "Electrical Quantities | Electromotive Force",
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40
+        },
+        {
+          "videos": [],
+          "description": "Defining potential difference (p.d.) as work done by unit charge passing through component, measured in volts, using V = W/Q, using voltmeters with different ranges",
+          "order": 12,
+          "id": "lesson_095",
+          "name": "Electrical Quantities | Potential Difference",
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40
+        },
+        {
+          "videos": [],
+          "order": 13,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "name": "Electrical Quantities | Resistance",
+          "id": "lesson_096",
+          "description": "Using R = V/I, experimental determination of resistance using voltmeter and ammeter, qualitative relationship of resistance to length and cross-sectional area of wire"
+        },
+        {
+          "order": 14,
+          "practiceMinutes": 50,
+          "estimatedMinutes": 25,
+          "id": "lesson_097",
+          "description": "Sketching and explaining current-voltage graphs for resistors, filament lamps and diodes, resistance proportional to length and inversely proportional to cross-sectional area",
+          "videos": [],
+          "name": "Electrical Quantities | Resistance of a Wire"
+        },
+        {
+          "order": 15,
+          "name": "Electrical Quantities | Electrical Energy",
+          "videos": [],
+          "practiceMinutes": 40,
+          "description": "Understanding energy transfer in circuits from source to circuit components to surroundings, using E = IVt for electrical energy, calculating energy transferred",
+          "estimatedMinutes": 20,
+          "id": "lesson_098"
+        },
+        {
+          "practiceMinutes": 45,
+          "description": "Using P = IV for electrical power, defining kilowatt-hour (kW h), calculating cost of using electrical appliances where energy unit is kW h",
+          "videos": [],
+          "id": "lesson_099",
+          "order": 16,
+          "name": "Electrical Quantities | Electrical Power",
+          "estimatedMinutes": 20
+        },
+        {
+          "name": "Electric Circuits & Electrical Safety | Circuit Diagrams & Circuit Components",
+          "videos": [],
+          "id": "lesson_100",
+          "practiceMinutes": 40,
+          "estimatedMinutes": 25,
+          "description": "Drawing and interpreting circuit diagrams with cells, batteries, switches, resistors, thermistors, LDRs, lamps, motors, ammeters, voltmeters, diodes, LEDs, understanding component behavior",
+          "order": 17
+        },
+        {
+          "id": "lesson_101",
+          "description": "Understanding current at every point in series circuit is same, current from source larger than in each branch for parallel circuits, junction rule, constructing and using circuits",
+          "order": 18,
+          "estimatedMinutes": 25,
+          "name": "Electric Circuits & Electrical Safety | Current in Circuits",
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "practiceMinutes": 50,
+          "name": "Electric Circuits & Electrical Safety | EMF & Potential Difference in Circuits",
+          "order": 19,
+          "estimatedMinutes": 25,
+          "id": "lesson_102",
+          "videos": [],
+          "description": "Calculating combined e.m.f. of sources in series, understanding p.d. across components in series and parallel, p.d. across parallel branches, sum of p.d.s equals total e.m.f."
+        },
+        {
+          "practiceMinutes": 55,
+          "videos": [],
+          "name": "Electric Circuits & Electrical Safety | Combined Resistance",
+          "description": "Calculating combined resistance of resistors in series, calculating combined resistance of two resistors in parallel, understanding combined resistance in parallel is less than individual resistors",
+          "id": "lesson_103",
+          "order": 20,
+          "estimatedMinutes": 30
+        },
+        {
+          "videos": [],
+          "practiceMinutes": 55,
+          "name": "Electric Circuits & Electrical Safety | Potential Dividers",
+          "estimatedMinutes": 25,
+          "order": 21,
+          "id": "lesson_104",
+          "description": "Understanding how p.d. increases with resistance for constant current, action of variable potential divider, using R₁/R₂ = V₁/V₂ for potential divider calculations"
+        },
+        {
+          "description": "Understanding hazards of damaged insulation, overheating cables, damp conditions, excess current, live/neutral/earth wires, switches on live wire, fuses and trip switches, earthing vs double insulation",
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "id": "lesson_105",
+          "order": 22,
+          "name": "Electric Circuits & Electrical Safety | Electrical Safety",
+          "videos": []
+        },
+        {
+          "id": "lesson_106",
+          "name": "Electromagnetic Effects | Electromagnetic Induction",
+          "estimatedMinutes": 20,
+          "order": 23,
+          "practiceMinutes": 40,
+          "videos": [],
+          "description": "Understanding that moving conductor across magnetic field or changing field induces e.m.f., factors affecting magnitude of induced e.m.f., direction opposes change (Lenz's law)"
+        },
+        {
+          "order": 24,
+          "practiceMinutes": 40,
+          "videos": [],
+          "estimatedMinutes": 20,
+          "id": "lesson_107",
+          "name": "Electromagnetic Effects | Demonstrating Induction",
+          "description": "Experimental demonstration of electromagnetic induction, practical techniques, observing and analyzing induced e.m.f. in various situations"
+        },
+        {
+          "id": "lesson_108",
+          "order": 25,
+          "practiceMinutes": 50,
+          "name": "Electromagnetic Effects | The A.C. Generator",
+          "videos": [],
+          "description": "Understanding simple AC generator (rotating coil or magnet), slip rings and brushes, sketching e.m.f. vs time graphs, relating coil position to peaks, troughs and zeros",
+          "estimatedMinutes": 25
+        },
+        {
+          "estimatedMinutes": 20,
+          "videos": [],
+          "name": "Electromagnetic Effects | Magnetic Effect of a Current",
+          "order": 26,
+          "practiceMinutes": 40,
+          "description": "Understanding magnetic field patterns around straight wires and solenoids, use in relays and loudspeakers, effect of changing current magnitude and direction",
+          "id": "lesson_109"
+        },
+        {
+          "name": "Electromagnetic Effects | Investigating the Field Around a Wire",
+          "description": "Experiment to identify pattern of magnetic field (including direction) due to currents in straight wires and solenoids, qualitative variation of field strength, practical investigation",
+          "order": 27,
+          "videos": [],
+          "id": "lesson_110",
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40
+        },
+        {
+          "videos": [],
+          "estimatedMinutes": 25,
+          "description": "Understanding force on conductor in magnetic field, effect of reversing current or field direction, relative directions of force, field and current (Fleming's Left Hand Rule), force on charged particle beams",
+          "name": "Electromagnetic Effects | Force on a Current-Carrying Conductor",
+          "order": 28,
+          "practiceMinutes": 50,
+          "id": "lesson_111"
+        },
+        {
+          "order": 29,
+          "practiceMinutes": 50,
+          "estimatedMinutes": 25,
+          "id": "lesson_112",
+          "videos": [],
+          "name": "Electromagnetic Effects | Electric Motors",
+          "description": "Understanding turning effect on current-carrying coil in magnetic field, increasing effect by more turns, higher current, stronger field, operation with split-ring commutator and brushes"
+        },
+        {
+          "estimatedMinutes": 25,
+          "id": "lesson_113",
+          "name": "Electromagnetic Effects | Transformers",
+          "practiceMinutes": 50,
+          "videos": [],
+          "description": "Understanding transformer construction with soft-iron core, primary and secondary coils, step-up and step-down transformers, using Vp/Vs = Np/Ns, principle of operation",
+          "order": 30
+        },
+        {
+          "estimatedMinutes": 25,
+          "order": 31,
+          "name": "Electromagnetic Effects | Transformer Calculations",
+          "practiceMinutes": 55,
+          "videos": [],
+          "id": "lesson_114",
+          "description": "Using transformers in high-voltage transmission, advantages of high-voltage transmission, using IpVp = IsVs for 100% efficiency, using P = I²R to explain reduced power losses"
+        }
+      ],
+      "order": 4,
+      "description": "Comprehensive study of magnetism, electrical quantities, electric circuits, electrical safety, and electromagnetic effects including induction, generators, motors and transformers."
+    },
+    {
+      "id": "chapter_005",
+      "order": 5,
+      "lessons": [
+        {
+          "description": "Understanding atom structure with positively charged nucleus and negatively charged electrons in orbit, how atoms form positive and negative ions by losing or gaining electrons",
+          "practiceMinutes": 30,
+          "order": 1,
+          "name": "The Nuclear Model of the Atom | The Atom",
+          "videos": [],
+          "estimatedMinutes": 15,
+          "id": "lesson_115"
+        },
+        {
+          "order": 2,
+          "name": "The Nuclear Model of the Atom | The Nucleus",
+          "description": "Understanding how alpha particle scattering supports nuclear model: very small nucleus, mostly empty space, nucleus contains most mass, nucleus is positively charged",
+          "practiceMinutes": 40,
+          "id": "lesson_116",
+          "videos": [],
+          "estimatedMinutes": 20
+        },
+        {
+          "name": "The Nuclear Model of the Atom | Protons, Neutrons & Electrons",
+          "practiceMinutes": 50,
+          "description": "Understanding nucleus composition (protons and neutrons), relative charges (+1, 0, -1), defining proton number Z and nucleon number A, calculating neutrons, using nuclide notation, understanding isotopes",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "id": "lesson_117",
+          "videos": []
+        },
+        {
+          "description": "Understanding nuclear fission (splitting) and fusion (joining) processes, nuclide equations, mass and energy changes, qualitative descriptions of energy release",
+          "id": "lesson_118",
+          "estimatedMinutes": 25,
+          "order": 4,
+          "name": "The Nuclear Model of the Atom | Fission & Fusion",
+          "videos": [],
+          "practiceMinutes": 50
+        },
+        {
+          "videos": [],
+          "description": "Understanding background radiation, sources making significant contributions (radon gas, rocks and buildings, food and drink, cosmic rays), measuring with detectors and counters, count rate, corrected count rate",
+          "order": 5,
+          "id": "lesson_119",
+          "name": "Radioactivity | Background Radiation",
+          "practiceMinutes": 40,
+          "estimatedMinutes": 20
+        },
+        {
+          "order": 6,
+          "description": "Understanding emission as spontaneous and random, identifying alpha, beta and gamma emissions by nature, relative ionising effects, relative penetrating abilities, deflection in electric and magnetic fields",
+          "videos": [],
+          "name": "Radioactivity | Types of Radiation",
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "id": "lesson_120"
+        },
+        {
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "description": "Explaining ionising effects with reference to kinetic energy and electric charge of different radiations, understanding deflection patterns in fields",
+          "videos": [],
+          "id": "lesson_121",
+          "name": "Radioactivity | Ionising Power & Deflection",
+          "order": 7
+        },
+        {
+          "description": "Understanding radioactive decay as change in unstable nucleus, spontaneous and random nature, emission of alpha, beta and/or gamma, nucleus changes to different element, why isotopes are radioactive, using decay equations with nuclide notation",
+          "id": "lesson_122",
+          "name": "Radioactivity | Radioactive Decay",
+          "order": 8,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "videos": [],
+          "id": "lesson_123",
+          "practiceMinutes": 60,
+          "order": 9,
+          "description": "Defining half-life as time for half the nuclei to decay, using definition in calculations with tables and decay curves, calculating half-life from data where background radiation has or has not been subtracted",
+          "estimatedMinutes": 30,
+          "name": "Radioactivity | Half-Life"
+        },
+        {
+          "name": "Radioactivity | Uses of Radiation",
+          "description": "Understanding how radiation type and half-life determine applications: smoke alarms, irradiating food, sterilisation, thickness control, cancer diagnosis and treatment, linking penetration and absorption to applications",
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "order": 10,
+          "id": "lesson_124",
+          "videos": []
+        },
+        {
+          "name": "Radioactivity | Dangers of Radiation",
+          "order": 11,
+          "description": "Understanding effects of ionising radiation on living things (cell death, mutations, cancer), how to move, use and store radioactive materials safely, safety precautions (time, distance, shielding)",
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": [],
+          "id": "lesson_125"
+        }
+      ],
+      "description": "Study of atomic structure, the nuclear model, composition of the nucleus, isotopes, radioactivity, detection, types of emissions, decay, half-life, and safety precautions.",
+      "name": "Nuclear Physics"
+    },
+    {
+      "name": "Space Physics",
+      "id": "chapter_006",
+      "description": "Study of Earth and the Solar System, planetary motion, orbital mechanics, the Sun as a star, stellar life cycles, the Universe, galaxies, redshift, and the Big Bang theory.",
+      "order": 6,
+      "lessons": [
+        {
+          "estimatedMinutes": 25,
+          "id": "lesson_126",
+          "videos": [],
+          "description": "Understanding Earth as planet rotating on tilted axis once per ~24 hours (explaining daily Sun motion and day/night cycle), orbiting Sun once per ~365 days (explaining seasons), Moon orbits Earth once per ~1 month explaining Moon phases",
+          "order": 1,
+          "practiceMinutes": 40,
+          "name": "Earth & The Solar System | The Earth, Moon & Sun"
+        },
+        {
+          "practiceMinutes": 40,
+          "name": "Earth & The Solar System | The Solar System",
+          "id": "lesson_127",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "videos": [],
+          "description": "Understanding Solar System contains one star (Sun), eight named planets in order, minor planets (dwarf planets like Pluto, asteroids), moons orbiting planets, smaller bodies (comets, natural satellites), comparing inner rocky planets with outer gaseous planets"
+        },
+        {
+          "order": 3,
+          "description": "Understanding accretion model for Solar System formation (gravity, elements in interstellar clouds, rotating disc formation), explaining why inner planets are rocky and small, outer planets are gaseous and large",
+          "estimatedMinutes": 25,
+          "videos": [],
+          "id": "lesson_128",
+          "name": "Earth & The Solar System | Formation of the Solar System",
+          "practiceMinutes": 50
+        },
+        {
+          "name": "Earth & The Solar System | Light Speed Calculations",
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "description": "Calculating time for light to travel significant distances between Solar System objects, understanding light-speed delays in space communication",
+          "order": 4,
+          "id": "lesson_129",
+          "videos": []
+        },
+        {
+          "description": "Understanding gravitational field strength at planet surface depends on mass, decreases with distance from planet, Sun contains most Solar System mass (explaining why planets orbit Sun), analyzing planetary data about gravitational field",
+          "id": "lesson_130",
+          "estimatedMinutes": 25,
+          "name": "Earth & The Solar System | Gravitational Field Strength",
+          "practiceMinutes": 50,
+          "videos": [],
+          "order": 5
+        },
+        {
+          "order": 6,
+          "description": "Defining average orbital speed using v = 2πr/T where r is average orbit radius and T is orbital period, using equation in calculations, understanding orbital speeds decrease with distance from Sun",
+          "name": "Earth & The Solar System | Orbital Speed Equation",
+          "id": "lesson_131",
+          "videos": [],
+          "estimatedMinutes": 25,
+          "practiceMinutes": 55
+        },
+        {
+          "estimatedMinutes": 25,
+          "videos": [],
+          "practiceMinutes": 50,
+          "id": "lesson_132",
+          "description": "Understanding planets, minor planets and comets have elliptical orbits (Sun not at centre except for circular orbits), objects in elliptical orbits travel faster when closer to Sun (conservation of energy)",
+          "name": "Earth & The Solar System | Elliptical Orbits",
+          "order": 7
+        },
+        {
+          "name": "Stars & The Universe | The Sun as a Star",
+          "id": "lesson_133",
+          "description": "Understanding Sun as medium-sized star consisting mostly of hydrogen and helium, radiates energy in infrared, visible and ultraviolet regions, powered by nuclear fusion (hydrogen → helium) in stable stars",
+          "order": 8,
+          "practiceMinutes": 35,
+          "estimatedMinutes": 20,
+          "videos": []
+        },
+        {
+          "videos": [],
+          "order": 9,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "name": "Stars & The Universe | The Scale of the Universe",
+          "id": "lesson_134",
+          "description": "Understanding galaxies contain many billions of stars, Sun is in Milky Way galaxy, other stars much further from Earth than Sun, astronomical distances measured in light-years (one light-year = 9.5 × 10¹⁵ m), Milky Way diameter approximately 100,000 light-years, Milky Way is one of billions of galaxies in Universe"
+        },
+        {
+          "videos": [],
+          "practiceMinutes": 45,
+          "order": 10,
+          "name": "Stars & The Universe | Star Formation",
+          "estimatedMinutes": 0,
+          "id": "lesson_135",
+          "description": "Understanding star formation from interstellar clouds of gas and dust containing hydrogen, protostar as collapsing cloud increasing in temperature, stable star when gravitational force balanced by outward force from high temperature"
+        },
+        {
+          "order": 11,
+          "estimatedMinutes": 0,
+          "name": "Stars & The Universe | Life Cycle of a Star",
+          "id": "lesson_136",
+          "description": "Understanding stars run out of hydrogen fuel, less massive stars expand to red giants then form planetary nebula with white dwarf, massive stars expand to red supergiants, supernova explosion forms nebula leaving neutron star or black hole, nebula may form new stars with planets",
+          "videos": [],
+          "practiceMinutes": 55
+        },
+        {
+          "estimatedMinutes": 0,
+          "name": "Stars & The Universe | Galactic Redshift",
+          "description": "Understanding redshift as increase in wavelength of EM radiation from receding stars/galaxies, light from distant galaxies appears redshifted compared to Earth, speed v of galaxy from redshift, distance d from supernova brightness",
+          "order": 12,
+          "practiceMinutes": 50,
+          "id": "lesson_137",
+          "videos": []
+        },
+        {
+          "description": "Understanding redshift is evidence Universe is expanding and supports Big Bang theory, CMBR is microwave radiation observed everywhere produced shortly after Universe formed, radiation expanded into microwave region as Universe expanded",
+          "name": "Stars & The Universe | The Big Bang Theory",
+          "practiceMinutes": 50,
+          "order": 13,
+          "id": "lesson_138",
+          "videos": [],
+          "estimatedMinutes": 0
+        },
+        {
+          "estimatedMinutes": 0,
+          "name": "Stars & The Universe | Age of the Universe",
+          "id": "lesson_139",
+          "order": 14,
+          "practiceMinutes": 60,
+          "description": "Defining Hubble constant H₀ = v/d, current estimate H₀ = 2.2 × 10⁻¹⁸ per second, understanding d/v = 1/H₀ estimates age of Universe (evidence for Big Bang), calculating age of Universe",
+          "videos": []
+        }
+      ]
+    }
+  ],
+  "description": "Complete Extended curriculum study plan for Cambridge IGCSE Physics covering all topics from Motion to Space Physics, aligned with the 2026-2028 syllabus specifications and structured for optimal learning progression",
+  "createdAt": 1762715152536,
+  "examBoardId": "IGCSE",
+  "version": 2
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import {
   Paper,
   TextField,
@@ -12,7 +12,8 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogActions
+  DialogActions,
+  SelectChangeEvent
 } from '@mui/material';
 import {
   Delete as DeleteIcon,
@@ -38,7 +39,7 @@ interface VideoEditorProps {
   onMove: (direction: 'up' | 'down') => void;
 }
 
-const VideoEditor: React.FC<VideoEditorProps> = ({
+const VideoEditor: React.FC<VideoEditorProps> = React.memo(({
   video,
   videoIndex,
   isFirst,
@@ -49,12 +50,55 @@ const VideoEditor: React.FC<VideoEditorProps> = ({
 }) => {
   const [loading, setLoading] = useState(false);
 
+  // Memoize category options to ensure they're stable
+  const categoryOptions = useMemo(() => {
+    if (video.type === 'WEB_RESOURCE') {
+      return [
+        { value: 'LESSON', label: 'Study Notes' },
+        { value: 'PRACTICE', label: 'Past Papers' },
+        { value: 'REVIEW', label: 'Classified' }
+      ];
+    }
+    return [
+      { value: 'LESSON', label: 'Lesson' },
+      { value: 'PRACTICE', label: 'Practice' },
+      { value: 'QUIZ', label: 'Quiz' },
+      { value: 'REVIEW', label: 'Review' }
+    ];
+  }, [video.type]);
+  
+  // Get display title based on resource type
+  const getDisplayTitle = () => {
+    if (video.type === 'WEB_RESOURCE') {
+      return video.title ? video.title : `Web Resource ${videoIndex + 1}`;
+    }
+    return video.title ? video.title : `Video ${videoIndex + 1}`;
+  };
+
+  const handleCategoryChange = useCallback((e: SelectChangeEvent<string>) => {
+    onUpdate({ ...video, category: e.target.value as VideoCategory });
+  }, [video, onUpdate]);
+
+  const handleTitleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    onUpdate({ ...video, title: e.target.value });
+  }, [video, onUpdate]);
+
+  const handleDurationChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    onUpdate({ ...video, durationSeconds: parseInt(e.target.value) || 0 });
+  }, [video, onUpdate]);
+
+  const handleThumbnailChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    onUpdate({ ...video, thumbnailUrl: e.target.value || undefined });
+  }, [video, onUpdate]);
+
   const getVideoTypeIcon = (type: VideoType) => {
     switch (type) {
       case 'YOUTUBE':
         return <YouTubeIcon fontSize="small" color="error" />;
       case 'URL':
         return <LinkIcon fontSize="small" color="primary" />;
+      case 'WEB_RESOURCE':
+        return <LinkIcon fontSize="small" color="secondary" />;
       default:
         return <VideoLibraryIcon fontSize="small" />;
     }
@@ -66,18 +110,29 @@ const VideoEditor: React.FC<VideoEditorProps> = ({
         return 'YouTube Video';
       case 'URL':
         return 'Direct Video URL';
+      case 'WEB_RESOURCE':
+        return 'Web Resource';
       default:
         return 'Unknown';
     }
   };
 
   const handleResourceUrlChange = (url: string) => {
-    const detectedType = detectVideoType(url);
-    onUpdate({
-      ...video,
-      resourceUrl: url,
-      type: detectedType as VideoType
-    });
+    // Don't auto-detect type if already a WEB_RESOURCE
+    if (video.type === 'WEB_RESOURCE') {
+      onUpdate({
+        ...video,
+        resourceUrl: url
+        // Don't auto-update title for web resources - let user set it
+      });
+    } else {
+      const detectedType = detectVideoType(url);
+      onUpdate({
+        ...video,
+        resourceUrl: url,
+        type: detectedType as VideoType
+      });
+    }
   };
 
   const handleFetchYouTubeInfo = async () => {
@@ -129,7 +184,7 @@ const VideoEditor: React.FC<VideoEditorProps> = ({
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           {getVideoTypeIcon(video.type)}
           <Typography variant="body2" sx={{ flexGrow: 1 }}>
-            Video {videoIndex + 1}
+            {getDisplayTitle()}
           </Typography>
           <IconButton
             size="small"
@@ -170,10 +225,18 @@ const VideoEditor: React.FC<VideoEditorProps> = ({
               required
               value={video.resourceUrl}
               onChange={(e) => handleResourceUrlChange(e.target.value)}
-              placeholder="YouTube URL, video ID, or direct video URL"
+              placeholder={
+                video.type === 'WEB_RESOURCE' 
+                  ? 'https://example.com/study-notes' 
+                  : video.type === 'YOUTUBE'
+                  ? 'YouTube URL, video ID'
+                  : 'Direct video URL'
+              }
               size="small"
               helperText={
-                video.type === 'YOUTUBE' 
+                video.type === 'WEB_RESOURCE'
+                  ? 'Enter the complete webpage URL (study notes, past papers, etc.)'
+                  : video.type === 'YOUTUBE' 
                   ? 'Paste YouTube URL or video ID, then click "Fetch Info"' 
                   : 'Enter the complete URL to the video file (.mp4, .mkv, etc.)'
               }
@@ -198,15 +261,16 @@ const VideoEditor: React.FC<VideoEditorProps> = ({
           </Stack>
         </Box>
 
-        {/* Video Title */}
+        {/* Title field - different labels for videos vs web resources */}
         <TextField
-          label="Video Title"
+          label={video.type === 'WEB_RESOURCE' ? 'Resource Title' : 'Video Title'}
           fullWidth
           required
           value={video.title}
-          onChange={(e) => onUpdate({ ...video, title: e.target.value })}
-          placeholder="e.g., Introduction to Newton's First Law"
+          onChange={handleTitleChange}
+          placeholder={video.type === 'WEB_RESOURCE' ? 'e.g., Chapter 1 Study Notes' : 'e.g., Introduction to Newton\'s First Law'}
           size="small"
+          helperText={video.type === 'WEB_RESOURCE' ? 'Display name for this resource in the app' : undefined}
         />
 
         {/* Category and Duration */}
@@ -214,37 +278,43 @@ const VideoEditor: React.FC<VideoEditorProps> = ({
           <TextField
             select
             label="Category"
-            value={video.category}
-            onChange={(e) => onUpdate({ ...video, category: e.target.value as VideoCategory })}
+            value={video.category || 'LESSON'}
+            onChange={handleCategoryChange as any}
             size="small"
             fullWidth
           >
-            <MenuItem value="LESSON">Lesson</MenuItem>
-            <MenuItem value="PRACTICE">Practice</MenuItem>
-            <MenuItem value="QUIZ">Quiz</MenuItem>
-            <MenuItem value="REVIEW">Review</MenuItem>
+            {categoryOptions.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
           </TextField>
 
-          <TextField
-            label="Duration (seconds)"
-            type="number"
-            value={video.durationSeconds}
-            onChange={(e) => onUpdate({ ...video, durationSeconds: parseInt(e.target.value) || 0 })}
-            size="small"
-            fullWidth
-          />
+          {/* Duration - Hidden for WEB_RESOURCE */}
+          {video.type !== 'WEB_RESOURCE' && (
+            <TextField
+              label="Duration (seconds)"
+              type="number"
+              value={video.durationSeconds}
+              onChange={handleDurationChange}
+              size="small"
+              fullWidth
+            />
+          )}
         </Stack>
 
-        {/* Thumbnail URL */}
-        <TextField
-          label="Thumbnail URL (optional)"
-          fullWidth
-          value={video.thumbnailUrl || ''}
-          onChange={(e) => onUpdate({ ...video, thumbnailUrl: e.target.value || undefined })}
-          placeholder="https://example.com/thumbnail.jpg"
-          size="small"
-          helperText="Leave empty to use default thumbnail (auto-filled for YouTube)"
-        />
+        {/* Thumbnail URL - Hidden for WEB_RESOURCE */}
+        {video.type !== 'WEB_RESOURCE' && (
+          <TextField
+            label="Thumbnail URL (optional)"
+            fullWidth
+            value={video.thumbnailUrl || ''}
+            onChange={handleThumbnailChange}
+            placeholder="https://example.com/thumbnail.jpg"
+            size="small"
+            helperText="Leave empty to use default thumbnail (auto-filled for YouTube)"
+          />
+        )}
 
         {/* Video Type Info (Read-only) */}
         <Box
@@ -267,7 +337,9 @@ const VideoEditor: React.FC<VideoEditorProps> = ({
       </Stack>
     </Paper>
   );
-};
+});
+
+VideoEditor.displayName = 'VideoEditor';
 
 export default VideoEditor;
 

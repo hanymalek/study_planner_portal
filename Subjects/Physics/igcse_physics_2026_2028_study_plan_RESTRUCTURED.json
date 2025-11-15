@@ -1,0 +1,1860 @@
+{
+  "id": "igcse_physics_0625_2026_2028",
+  "name": "Cambridge IGCSE Physics (0625) 2026-2028",
+  "subjectName": "Physics",
+  "description": "Complete Extended curriculum study plan for Cambridge IGCSE Physics covering all topics from Motion to Space Physics, aligned with the 2026-2028 syllabus specifications and structured for optimal learning progression",
+  "examBoardId": "IGCSE",
+  "difficulty": "INTERMEDIATE",
+  "version": 2,
+  "isDeleted": false,
+  "createdAt": 1731100800000,
+  "updatedAt": 1731100800000,
+  "createdBy": "admin",
+  "chapters": [
+    {
+      "id": "chapter_001",
+      "name": "Motion, Forces and Energy",
+      "description": "Fundamental concepts of motion, forces, energy, work, power, and pressure. This chapter covers measurement techniques, kinematics, dynamics, momentum, and energy resources.",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "lesson_001",
+          "name": "Physical Quantities & Measurement Techniques | Measurement",
+          "description": "Using rulers and measuring cylinders to find length and volume, measuring time intervals with clocks and digital timers, determining average values for small distances and short time intervals",
+          "order": 1,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 25,
+          "difficulty": "BEGINNER",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_002",
+          "name": "Physical Quantities & Measurement Techniques | Scalars & Vectors",
+          "description": "Understanding the difference between scalar quantities (distance, speed, time, mass, energy, temperature) and vector quantities (force, weight, velocity, acceleration, momentum, electric field strength, gravitational field strength)",
+          "order": 2,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_001"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_003",
+          "name": "Physical Quantities & Measurement Techniques | Calculating with Vectors",
+          "description": "Determining resultant vectors by calculation or graphically for two vectors at right angles, limited to forces or velocities only, practical vector addition problems",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_002"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_004",
+          "name": "Motion | Speed & Velocity",
+          "description": "Defining speed as distance travelled per unit time, defining velocity as speed in a given direction, using equations for speed and average speed",
+          "order": 4,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_002"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_005",
+          "name": "Motion | Acceleration",
+          "description": "Defining acceleration as change in velocity per unit time, using the equation a = Δv/Δt, understanding deceleration as negative acceleration, performing acceleration calculations",
+          "order": 5,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_004"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_006",
+          "name": "Motion | Distance-Time Graphs",
+          "description": "Sketching, plotting and interpreting distance-time graphs, determining when an object is at rest or moving with constant speed, calculating speed from the gradient of distance-time graphs",
+          "order": 6,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_004"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_007",
+          "name": "Motion | Speed-Time Graphs",
+          "description": "Sketching, plotting and interpreting speed-time graphs, determining when an object is accelerating or decelerating, understanding area under the graph represents distance travelled",
+          "order": 7,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_005",
+            "lesson_006"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_008",
+          "name": "Motion | Calculating Acceleration from Speed-Time Graphs",
+          "description": "Calculating acceleration from the gradient of speed-time graphs, determining distance from area under speed-time graphs, analyzing motion with constant and changing acceleration",
+          "order": 8,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_007"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_009",
+          "name": "Motion | Freefall",
+          "description": "Understanding acceleration due to gravity (g ≈ 9.8 m/s²), motion of falling objects with and without air resistance, concept of terminal velocity, analyzing falling motion",
+          "order": 9,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_005"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_010",
+          "name": "Effects of Forces | Mass & Weight",
+          "description": "Distinguishing between mass and weight, defining gravitational field strength using g = W/m, comparing weights using balances, understanding weight as gravitational force",
+          "order": 10,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_011",
+          "name": "Effects of Forces | Density",
+          "description": "Defining density using ρ = m/V, understanding relationship between mass, volume and density, comparing densities of different materials",
+          "order": 11,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 25,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_010"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_012",
+          "name": "Effects of Forces | Measuring Density",
+          "description": "Determining density of liquids, regularly shaped solids, and irregularly shaped solids using volume by displacement method, performing density calculations from measurements",
+          "order": 12,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_011"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_013",
+          "name": "Effects of Forces | Floating",
+          "description": "Predicting whether objects will float based on density data, understanding buoyancy and upthrust, determining whether one liquid will float on another liquid based on density",
+          "order": 13,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_011"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_014",
+          "name": "Effects of Forces | Resultant Forces",
+          "description": "Determining the resultant of two or more forces acting along the same straight line, understanding balanced and unbalanced forces, calculating net force",
+          "order": 14,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_002"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_015",
+          "name": "Effects of Forces | Newton's First Law",
+          "description": "Understanding that an object either remains at rest or continues in a straight line at constant speed unless acted on by a resultant force, applications of Newton's First Law",
+          "order": 15,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_014"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_016",
+          "name": "Effects of Forces | Newton's Second Law",
+          "description": "Understanding the relationship between force, mass and acceleration, applying F = ma, understanding that force and acceleration are in the same direction",
+          "order": 16,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_015",
+            "lesson_005"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_017",
+          "name": "Effects of Forces | Investigating Force & Extension",
+          "description": "Experimental procedures to investigate force and extension, sketching, plotting and interpreting load-extension graphs for elastic solids, understanding elastic behavior",
+          "order": 17,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_016"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_018",
+          "name": "Effects of Forces | Hooke's Law",
+          "description": "Understanding spring behavior and Hooke's Law, defining spring constant as k = F/x, understanding limit of proportionality, analyzing load-extension graphs",
+          "order": 18,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_017"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_019",
+          "name": "Effects of Forces | Circular Motion",
+          "description": "Understanding motion in a circular path, force perpendicular to motion, qualitative relationships between force, speed, radius and mass in circular motion",
+          "order": 19,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_016"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_020",
+          "name": "Effects of Forces | Friction",
+          "description": "Understanding solid friction between surfaces, friction in liquids (drag), air resistance in gases, effects on motion and heating, friction impeding motion",
+          "order": 20,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_015"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_021",
+          "name": "Moments | Moments",
+          "description": "Defining moment of a force, calculating moments using force × perpendicular distance from the pivot, everyday examples of turning effects",
+          "order": 21,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_014"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_022",
+          "name": "Moments | Equilibrium",
+          "description": "Applying principle of moments to situations with forces on both sides of pivot, understanding equilibrium when there is no resultant force and no resultant moment",
+          "order": 22,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_021"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_023",
+          "name": "Moments | Centre of Gravity",
+          "description": "Understanding centre of gravity, effect of centre of gravity position on stability of simple objects, applications in everyday situations",
+          "order": 23,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_021"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_024",
+          "name": "Moments | Investigating Centre of Gravity",
+          "description": "Experimental determination of centre of gravity for irregular plane lamina, practical methods and techniques, analyzing results",
+          "order": 24,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_023"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_025",
+          "name": "Momentum | Momentum",
+          "description": "Defining momentum as p = mv, understanding momentum as a vector quantity, calculating momentum in various situations, conservation of momentum principle, applying to collisions in one dimension",
+          "order": 25,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_016"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_026",
+          "name": "Momentum | Impulse",
+          "description": "Defining impulse as F∆t = ∆(mv), understanding resultant force as rate of change of momentum using F = ∆p/∆t, applying impulse in problems",
+          "order": 26,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_025"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_027",
+          "name": "Energy, Work & Power | Energy Stores & Transfers",
+          "description": "Understanding different energy stores (kinetic, gravitational potential, chemical, elastic, nuclear, electrostatic, internal), energy transfer by forces, electrical currents, heating, and waves",
+          "order": 27,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_028",
+          "name": "Energy, Work & Power | Kinetic Energy",
+          "description": "Understanding kinetic energy, using Ek = ½mv² for kinetic energy calculations, applying kinetic energy equation to various problems",
+          "order": 28,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_027"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_029",
+          "name": "Energy, Work & Power | Gravitational Potential Energy",
+          "description": "Understanding gravitational potential energy, using ∆Ep = mg∆h for gravitational potential energy calculations, applying to problems",
+          "order": 29,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_027",
+            "lesson_010"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_030",
+          "name": "Energy, Work & Power | Conservation of Energy",
+          "description": "Understanding and applying the principle of conservation of energy to simple and complex examples, interpreting energy flow diagrams and Sankey diagrams",
+          "order": 30,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_028",
+            "lesson_029"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_031",
+          "name": "Energy, Work & Power | Work Done",
+          "description": "Understanding work as energy transferred, using W = Fd = ∆E for mechanical working, calculating work done in various situations",
+          "order": 31,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_027"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_032",
+          "name": "Energy, Work & Power | Power",
+          "description": "Defining power as work done per unit time and energy transferred per unit time, using P = W/t and P = ∆E/t, calculating power in various situations",
+          "order": 32,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_031"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_033",
+          "name": "Energy, Work & Power | Efficiency",
+          "description": "Understanding qualitative and quantitative concept of efficiency, calculating efficiency using useful energy/power output divided by total energy/power input",
+          "order": 33,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_030",
+            "lesson_032"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_034",
+          "name": "Energy Sources | Energy from the Sun",
+          "description": "Understanding the Sun as the main energy source, nuclear fusion in the Sun, light from the Sun generating electrical power (solar cells), infrared waves heating water (solar panels), source of wind energy",
+          "order": 34,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_027"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_035",
+          "name": "Energy Sources | Energy from Fuels",
+          "description": "Understanding how energy is obtained from chemical energy stored in fossil fuels and biofuels, advantages and disadvantages in terms of renewability, availability, reliability, scale and environmental impact",
+          "order": 35,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_027"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_036",
+          "name": "Energy Sources | Energy from Water",
+          "description": "Understanding how energy is obtained from water including energy stored in waves, tides, and water behind hydroelectric dams, advantages and disadvantages of each method",
+          "order": 36,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_027"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_037",
+          "name": "Energy Sources | Geothermal Energy",
+          "description": "Understanding how energy is obtained from geothermal resources, advantages and disadvantages in terms of renewability, availability, reliability, scale and environmental impact",
+          "order": 37,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_027"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_038",
+          "name": "Energy Sources | Nuclear Fusion",
+          "description": "Understanding that energy is released by nuclear fusion in the Sun, research being carried out to investigate how energy released by nuclear fusion can be used to produce electrical energy on a large scale",
+          "order": 38,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_034"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_039",
+          "name": "Pressure | Pressure & Forces",
+          "description": "Defining pressure as force per unit area (p = F/A), understanding how pressure varies with force and area, everyday examples of pressure",
+          "order": 39,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_040",
+          "name": "Pressure | Pressure in a Liquid",
+          "description": "Understanding how pressure beneath a liquid surface changes with depth and density, using ∆p = ρg∆h, calculating pressure in liquids",
+          "order": 40,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_039",
+            "lesson_011"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_041",
+          "name": "Energy Sources | Combined Energy Resources Review",
+          "description": "Comparing all energy resources, understanding references to boilers, turbines and generators where used, comprehensive review of renewability, scale and environmental considerations",
+          "order": 41,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_034",
+            "lesson_035",
+            "lesson_036",
+            "lesson_037",
+            "lesson_038"
+          ],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_002",
+      "name": "Thermal Physics",
+      "description": "Study of kinetic particle model of matter, states of matter, thermal properties, temperature, and transfer of thermal energy through conduction, convection, and radiation.",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "lesson_042",
+          "name": "Kinetic Particle Model of Matter | States of Matter",
+          "description": "Understanding distinguishing properties of solids, liquids and gases, knowing terms for changes in state (melting, boiling, condensing, freezing, evaporating)",
+          "order": 1,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 25,
+          "difficulty": "BEGINNER",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_043",
+          "name": "Kinetic Particle Model of Matter | Molecular Matter",
+          "description": "Understanding particle structure of solids, liquids and gases in terms of arrangement, separation and motion, representing states using simple particle diagrams",
+          "order": 2,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_042"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_044",
+          "name": "Kinetic Particle Model of Matter | Particle Model of Gases",
+          "description": "Understanding pressure in gases in terms of particle motion and collisions, forces exerted by particles, relationship between particle motion and temperature",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_043"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_045",
+          "name": "Kinetic Particle Model of Matter | Brownian Motion",
+          "description": "Understanding Brownian motion as evidence for kinetic particle model, describing and explaining random motion in terms of collisions between microscopic particles in suspension and gas or liquid particles",
+          "order": 4,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_044"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_046",
+          "name": "Kinetic Particle Model of Matter | Gases & Absolute Temperature",
+          "description": "Understanding effect of temperature and volume changes on gas pressure, absolute zero (−273°C), converting between Kelvin and Celsius T(K) = θ(°C) + 273, using pV = constant",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_044"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_047",
+          "name": "Thermal Properties & Temperature | Thermal Expansion",
+          "description": "Understanding thermal expansion of solids, liquids and gases at constant pressure, everyday applications and consequences, explaining expansion in terms of particle motion",
+          "order": 6,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_043"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_048",
+          "name": "Thermal Properties & Temperature | Specific Heat Capacity",
+          "description": "Understanding that temperature rise increases internal energy and average kinetic energy, defining specific heat capacity c = ∆E/(m∆θ), using the equation in calculations",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_043"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_049",
+          "name": "Thermal Properties & Temperature | Investigating Specific Heat Capacity",
+          "description": "Experimental measurement of specific heat capacity for solids and liquids, practical procedures, analyzing results and calculating specific heat capacity from experimental data",
+          "order": 8,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_048"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_050",
+          "name": "Thermal Properties & Temperature | Melting & Boiling",
+          "description": "Understanding melting and boiling as energy input without temperature change, melting and boiling points of water, describing condensation and solidification in terms of particles",
+          "order": 9,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_042"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_051",
+          "name": "Thermal Properties & Temperature | Evaporation",
+          "description": "Understanding evaporation as escape of more-energetic particles from liquid surface, differences between boiling and evaporation, factors affecting evaporation rate, evaporative cooling",
+          "order": 10,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_050"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_052",
+          "name": "Transfer of Thermal Energy | Demonstrating Conduction",
+          "description": "Experiments to demonstrate properties of good thermal conductors and bad thermal conductors (thermal insulators), practical demonstrations and observations",
+          "order": 11,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_043"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_053",
+          "name": "Transfer of Thermal Energy | Thermal Conduction",
+          "description": "Understanding thermal conduction in terms of lattice vibrations and free electrons in metals, why gases and liquids are poor conductors, range of thermal conductors",
+          "order": 12,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_052"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_054",
+          "name": "Transfer of Thermal Energy | Convection",
+          "description": "Understanding convection as thermal energy transfer in liquids and gases, explaining convection in terms of density changes, experimental demonstration of convection",
+          "order": 13,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_043"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_055",
+          "name": "Transfer of Thermal Energy | Radiation",
+          "description": "Understanding thermal radiation as infrared radiation, all objects emit infrared, radiation doesn't require a medium, effect of surface color and texture on emission, absorption and reflection",
+          "order": 14,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_056",
+          "name": "Transfer of Thermal Energy | The Greenhouse Effect",
+          "description": "Understanding thermal equilibrium when energy received equals energy transferred away, effect on Earth's temperature, how factors control balance between incoming and emitted radiation, rate of emission depends on surface temperature and area",
+          "order": 15,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_055"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_057",
+          "name": "Transfer of Thermal Energy | Investigating IR Radiation",
+          "description": "Experiments to distinguish between good and bad emitters of infrared radiation, experiments to distinguish between good and bad absorbers of infrared radiation, practical investigations",
+          "order": 16,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_055"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_058",
+          "name": "Transfer of Thermal Energy | Consequences of Thermal Energy Transfer",
+          "description": "Explaining everyday applications and consequences of conduction, convection and radiation: heating pans, heating rooms, fires burning fuel, car radiators, where multiple types of thermal energy transfer are significant",
+          "order": 17,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_053",
+            "lesson_054",
+            "lesson_055"
+          ],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_003",
+      "name": "Waves",
+      "description": "General properties of waves, light (reflection, refraction, thin lenses, dispersion), electromagnetic spectrum, and sound waves including their characteristics and applications.",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "lesson_059",
+          "name": "General Properties of Waves | Features of Waves",
+          "description": "Understanding that waves transfer energy without transferring matter, wave features (wavefront, wavelength, frequency, amplitude, wave speed), describing wave motion",
+          "order": 1,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_060",
+          "name": "General Properties of Waves | The Wave Equation",
+          "description": "Using v = fλ for wave speed calculations, understanding the relationship between speed, frequency and wavelength, applying the equation to various wave problems",
+          "order": 2,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_059"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_061",
+          "name": "General Properties of Waves | Transverse & Longitudinal Waves",
+          "description": "Understanding transverse waves (electromagnetic radiation, water waves, S-waves) and longitudinal waves (sound, P-waves), direction of vibration vs propagation",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_059"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_062",
+          "name": "General Properties of Waves | Wave Behaviour",
+          "description": "Understanding wave reflection at plane surfaces, refraction due to speed changes, diffraction through gaps and at edges, how wavelength and gap size affect diffraction",
+          "order": 4,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_059"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_063",
+          "name": "General Properties of Waves | Ripple Tank",
+          "description": "Using ripple tank to demonstrate reflection at plane surface, refraction due to change in depth, diffraction due to gap and edge, experimental observations and techniques",
+          "order": 5,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_062"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_064",
+          "name": "Light | Reflection of Light",
+          "description": "Defining normal, angle of incidence and angle of reflection, law of reflection (angle of incidence = angle of reflection), image formation by plane mirrors",
+          "order": 6,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_062"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_065",
+          "name": "Light | Investigating Reflection",
+          "description": "Simple constructions, measurements and calculations for reflection by plane mirrors, experimental determination of angles, practical investigations",
+          "order": 7,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_064"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_066",
+          "name": "Light | Refraction of Light",
+          "description": "Understanding refraction at boundaries, passage through transparent materials, experimental demonstration with blocks of different shapes, defining angle of refraction",
+          "order": 8,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_062"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_067",
+          "name": "Light | Refractive Index",
+          "description": "Defining refractive index as ratio of wave speeds, using n = sin i / sin r, calculating refractive index from experimental data",
+          "order": 9,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_066"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_068",
+          "name": "Light | Total Internal Reflection",
+          "description": "Understanding critical angle, internal and total internal reflection, using n = 1/sin c, applications in optical fibres for telecommunications",
+          "order": 10,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_067"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_069",
+          "name": "Light | Ray Diagrams",
+          "description": "Drawing ray diagrams for thin converging and diverging lenses, understanding focal length, principal axis and principal focus, ray diagram conventions",
+          "order": 11,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_066"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_070",
+          "name": "Light | Real & Virtual Images",
+          "description": "Understanding characteristics of images using terms enlarged/same size/diminished, upright/inverted and real/virtual, knowing virtual image formed when diverging rays are extrapolated backwards",
+          "order": 12,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_069"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_071",
+          "name": "Light | Real Images",
+          "description": "Action of converging lenses on parallel beams, ray diagrams for formation of real images by converging lens, calculating image positions and characteristics",
+          "order": 13,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_070"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_072",
+          "name": "Light | Virtual Images",
+          "description": "Action of diverging lenses, virtual image formation with converging lenses, ray diagrams for virtual images, describing use of single lens as magnifying glass",
+          "order": 14,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_070"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_073",
+          "name": "Light | Correcting Sight",
+          "description": "Using converging and diverging lenses to correct long-sightedness and short-sightedness, understanding how lenses correct vision defects, applications of lenses in corrective eyewear",
+          "order": 15,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_071",
+            "lesson_072"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_074",
+          "name": "Light | Dispersion of Light",
+          "description": "Understanding dispersion by glass prism, seven colors of visible spectrum in order of frequency and wavelength, monochromatic light",
+          "order": 16,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_066"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_075",
+          "name": "Electromagnetic Spectrum | Electromagnetic Waves",
+          "description": "Understanding main regions of electromagnetic spectrum in order of frequency and wavelength, all EM waves travel at same speed in vacuum (3.0 × 10⁸ m/s)",
+          "order": 17,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_061"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_076",
+          "name": "Electromagnetic Spectrum | Uses of Electromagnetic Waves",
+          "description": "Understanding typical uses of radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays in various applications",
+          "order": 18,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_075"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_077",
+          "name": "Electromagnetic Spectrum | Dangers of Electromagnetic Waves",
+          "description": "Understanding harmful effects of excessive exposure to microwaves, infrared, ultraviolet, X-rays and gamma rays on living tissue",
+          "order": 19,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_075"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_078",
+          "name": "Electromagnetic Spectrum | Communications",
+          "description": "Understanding satellite communications (low orbit and geostationary), mobile phones, wireless internet, Bluetooth, optical fibres, systems of communication relying on electromagnetic radiation",
+          "order": 20,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_076"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_079",
+          "name": "Electromagnetic Spectrum | Digital & Analogue Signals",
+          "description": "Understanding difference between digital and analogue signals, sound transmitted as digital or analogue signal, benefits of digital signalling including increased rate of transmission and range",
+          "order": 21,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_078"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_080",
+          "name": "Sound | Sound Waves",
+          "description": "Understanding production of sound by vibrating sources, longitudinal nature of sound, audible frequency range (20 Hz to 20 kHz), sound requires a medium, speed of sound in air (≈330-350 m/s)",
+          "order": 22,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_061"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_081",
+          "name": "Sound | Measuring the Speed of Sound",
+          "description": "Understanding compression and rarefaction, methods for determining speed of sound using distance and time measurements, sound travels faster in solids than liquids, faster in liquids than gases",
+          "order": 23,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_080"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_082",
+          "name": "Sound | Effects of Sound Waves",
+          "description": "Understanding how amplitude and frequency affect loudness and pitch of sound waves, echoes as reflection of sound",
+          "order": 24,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_080"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_083",
+          "name": "Sound | Ultrasound",
+          "description": "Defining ultrasound as sound with frequency higher than 20 kHz, uses in non-destructive testing of materials, medical scanning of soft tissue and sonar including calculations",
+          "order": 25,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_080"
+          ],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_004",
+      "name": "Electricity and Magnetism",
+      "description": "Comprehensive study of magnetism, electrical quantities, electric circuits, electrical safety, and electromagnetic effects including induction, generators, motors and transformers.",
+      "order": 4,
+      "lessons": [
+        {
+          "id": "lesson_084",
+          "name": "Simple Phenomena of Magnetism | Magnetism",
+          "description": "Describing forces between magnetic poles and between magnets and magnetic materials, using terms north pole, south pole, attraction, repulsion, magnetised and unmagnetised",
+          "order": 1,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 25,
+          "difficulty": "BEGINNER",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_085",
+          "name": "Simple Phenomena of Magnetism | Magnets",
+          "description": "Understanding induced magnetism, differences between temporary magnets (soft iron) and permanent magnets (steel), difference between magnetic and non-magnetic materials",
+          "order": 2,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_084"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_086",
+          "name": "Simple Phenomena of Magnetism | Magnetic Fields",
+          "description": "Describing magnetic field as region where magnetic pole experiences force, understanding direction of magnetic field at a point, uses of permanent magnets and electromagnets",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_085"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_087",
+          "name": "Simple Phenomena of Magnetism | Plotting Magnetic Fields",
+          "description": "Drawing pattern and direction of magnetic field lines around bar magnet, plotting with compass and iron filings, using compass to determine direction, field strength represented by spacing",
+          "order": 4,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_086"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_088",
+          "name": "Electrical Quantities | Electric Charge",
+          "description": "Understanding positive and negative charges, attraction and repulsion, electrostatic charging by friction, detection of charges, charging involves transfer of electrons only",
+          "order": 5,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_089",
+          "name": "Electrical Quantities | Demonstrating Electric Charges",
+          "description": "Simple experiments to show production of electrostatic charges by friction, experiments to show detection of electrostatic charges, practical demonstrations",
+          "order": 6,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_088"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_090",
+          "name": "Electrical Quantities | Electric Fields",
+          "description": "Understanding electric field as region where charge experiences force, direction of field on positive charge, field patterns around point charges, charged spheres, and parallel plates, charge measured in coulombs",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_088"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_091",
+          "name": "Electrical Quantities | Investigating Conductors & Insulators",
+          "description": "Experiment to distinguish between electrical conductors and insulators, using electron model to explain difference, giving typical examples of each",
+          "order": 8,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_088"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_092",
+          "name": "Electrical Quantities | Current",
+          "description": "Understanding current as flow of charge, defining current I = Q/t, using ammeters (analogue and digital), conduction in metals via free electrons, conventional vs electron flow",
+          "order": 9,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_088"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_093",
+          "name": "Electrical Quantities | Direct & Alternating Current",
+          "description": "Understanding difference between direct current (d.c.) and alternating current (a.c.), characteristics of each type, applications of DC and AC",
+          "order": 10,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_092"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_094",
+          "name": "Electrical Quantities | Electromotive Force",
+          "description": "Defining electromotive force (e.m.f.) as electrical work done by source in moving unit charge around complete circuit, measured in volts, using E = W/Q",
+          "order": 11,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_092"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_095",
+          "name": "Electrical Quantities | Potential Difference",
+          "description": "Defining potential difference (p.d.) as work done by unit charge passing through component, measured in volts, using V = W/Q, using voltmeters with different ranges",
+          "order": 12,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_094"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_096",
+          "name": "Electrical Quantities | Resistance",
+          "description": "Using R = V/I, experimental determination of resistance using voltmeter and ammeter, qualitative relationship of resistance to length and cross-sectional area of wire",
+          "order": 13,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_095"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_097",
+          "name": "Electrical Quantities | Resistance of a Wire",
+          "description": "Sketching and explaining current-voltage graphs for resistors, filament lamps and diodes, resistance proportional to length and inversely proportional to cross-sectional area",
+          "order": 14,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_096"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_098",
+          "name": "Electrical Quantities | Electrical Energy",
+          "description": "Understanding energy transfer in circuits from source to circuit components to surroundings, using E = IVt for electrical energy, calculating energy transferred",
+          "order": 15,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_095"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_099",
+          "name": "Electrical Quantities | Electrical Power",
+          "description": "Using P = IV for electrical power, defining kilowatt-hour (kW h), calculating cost of using electrical appliances where energy unit is kW h",
+          "order": 16,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_098"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_100",
+          "name": "Electric Circuits & Electrical Safety | Circuit Diagrams & Circuit Components",
+          "description": "Drawing and interpreting circuit diagrams with cells, batteries, switches, resistors, thermistors, LDRs, lamps, motors, ammeters, voltmeters, diodes, LEDs, understanding component behavior",
+          "order": 17,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_092"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_101",
+          "name": "Electric Circuits & Electrical Safety | Current in Circuits",
+          "description": "Understanding current at every point in series circuit is same, current from source larger than in each branch for parallel circuits, junction rule, constructing and using circuits",
+          "order": 18,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_100"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_102",
+          "name": "Electric Circuits & Electrical Safety | EMF & Potential Difference in Circuits",
+          "description": "Calculating combined e.m.f. of sources in series, understanding p.d. across components in series and parallel, p.d. across parallel branches, sum of p.d.s equals total e.m.f.",
+          "order": 19,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_101"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_103",
+          "name": "Electric Circuits & Electrical Safety | Combined Resistance",
+          "description": "Calculating combined resistance of resistors in series, calculating combined resistance of two resistors in parallel, understanding combined resistance in parallel is less than individual resistors",
+          "order": 20,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_101"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_104",
+          "name": "Electric Circuits & Electrical Safety | Potential Dividers",
+          "description": "Understanding how p.d. increases with resistance for constant current, action of variable potential divider, using R₁/R₂ = V₁/V₂ for potential divider calculations",
+          "order": 21,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 55,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_102"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_105",
+          "name": "Electric Circuits & Electrical Safety | Electrical Safety",
+          "description": "Understanding hazards of damaged insulation, overheating cables, damp conditions, excess current, live/neutral/earth wires, switches on live wire, fuses and trip switches, earthing vs double insulation",
+          "order": 22,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_092"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_106",
+          "name": "Electromagnetic Effects | Electromagnetic Induction",
+          "description": "Understanding that moving conductor across magnetic field or changing field induces e.m.f., factors affecting magnitude of induced e.m.f., direction opposes change (Lenz's law)",
+          "order": 23,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_086"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_107",
+          "name": "Electromagnetic Effects | Demonstrating Induction",
+          "description": "Experimental demonstration of electromagnetic induction, practical techniques, observing and analyzing induced e.m.f. in various situations",
+          "order": 24,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_106"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_108",
+          "name": "Electromagnetic Effects | The A.C. Generator",
+          "description": "Understanding simple AC generator (rotating coil or magnet), slip rings and brushes, sketching e.m.f. vs time graphs, relating coil position to peaks, troughs and zeros",
+          "order": 25,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_106"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_109",
+          "name": "Electromagnetic Effects | Magnetic Effect of a Current",
+          "description": "Understanding magnetic field patterns around straight wires and solenoids, use in relays and loudspeakers, effect of changing current magnitude and direction",
+          "order": 26,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_086",
+            "lesson_092"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_110",
+          "name": "Electromagnetic Effects | Investigating the Field Around a Wire",
+          "description": "Experiment to identify pattern of magnetic field (including direction) due to currents in straight wires and solenoids, qualitative variation of field strength, practical investigation",
+          "order": 27,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_109"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_111",
+          "name": "Electromagnetic Effects | Force on a Current-Carrying Conductor",
+          "description": "Understanding force on conductor in magnetic field, effect of reversing current or field direction, relative directions of force, field and current (Fleming's Left Hand Rule), force on charged particle beams",
+          "order": 28,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_109"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_112",
+          "name": "Electromagnetic Effects | Electric Motors",
+          "description": "Understanding turning effect on current-carrying coil in magnetic field, increasing effect by more turns, higher current, stronger field, operation with split-ring commutator and brushes",
+          "order": 29,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_111"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_113",
+          "name": "Electromagnetic Effects | Transformers",
+          "description": "Understanding transformer construction with soft-iron core, primary and secondary coils, step-up and step-down transformers, using Vp/Vs = Np/Ns, principle of operation",
+          "order": 30,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_106"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_114",
+          "name": "Electromagnetic Effects | Transformer Calculations",
+          "description": "Using transformers in high-voltage transmission, advantages of high-voltage transmission, using IpVp = IsVs for 100% efficiency, using P = I²R to explain reduced power losses",
+          "order": 31,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 55,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_113"
+          ],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_005",
+      "name": "Nuclear Physics",
+      "description": "Study of atomic structure, the nuclear model, composition of the nucleus, isotopes, radioactivity, detection, types of emissions, decay, half-life, and safety precautions.",
+      "order": 5,
+      "lessons": [
+        {
+          "id": "lesson_115",
+          "name": "The Nuclear Model of the Atom | The Atom",
+          "description": "Understanding atom structure with positively charged nucleus and negatively charged electrons in orbit, how atoms form positive and negative ions by losing or gaining electrons",
+          "order": 1,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "difficulty": "BEGINNER",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_116",
+          "name": "The Nuclear Model of the Atom | The Nucleus",
+          "description": "Understanding how alpha particle scattering supports nuclear model: very small nucleus, mostly empty space, nucleus contains most mass, nucleus is positively charged",
+          "order": 2,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_115"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_117",
+          "name": "The Nuclear Model of the Atom | Protons, Neutrons & Electrons",
+          "description": "Understanding nucleus composition (protons and neutrons), relative charges (+1, 0, -1), defining proton number Z and nucleon number A, calculating neutrons, using nuclide notation, understanding isotopes",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_116"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_118",
+          "name": "The Nuclear Model of the Atom | Fission & Fusion",
+          "description": "Understanding nuclear fission (splitting) and fusion (joining) processes, nuclide equations, mass and energy changes, qualitative descriptions of energy release",
+          "order": 4,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_117"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_119",
+          "name": "Radioactivity | Background Radiation",
+          "description": "Understanding background radiation, sources making significant contributions (radon gas, rocks and buildings, food and drink, cosmic rays), measuring with detectors and counters, count rate, corrected count rate",
+          "order": 5,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "difficulty": "BEGINNER",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_120",
+          "name": "Radioactivity | Types of Radiation",
+          "description": "Understanding emission as spontaneous and random, identifying alpha, beta and gamma emissions by nature, relative ionising effects, relative penetrating abilities, deflection in electric and magnetic fields",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_119"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_121",
+          "name": "Radioactivity | Ionising Power & Deflection",
+          "description": "Explaining ionising effects with reference to kinetic energy and electric charge of different radiations, understanding deflection patterns in fields",
+          "order": 7,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_120"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_122",
+          "name": "Radioactivity | Radioactive Decay",
+          "description": "Understanding radioactive decay as change in unstable nucleus, spontaneous and random nature, emission of alpha, beta and/or gamma, nucleus changes to different element, why isotopes are radioactive, using decay equations with nuclide notation",
+          "order": 8,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_120"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_123",
+          "name": "Radioactivity | Half-Life",
+          "description": "Defining half-life as time for half the nuclei to decay, using definition in calculations with tables and decay curves, calculating half-life from data where background radiation has or has not been subtracted",
+          "order": 9,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 60,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_122"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_124",
+          "name": "Radioactivity | Uses of Radiation",
+          "description": "Understanding how radiation type and half-life determine applications: smoke alarms, irradiating food, sterilisation, thickness control, cancer diagnosis and treatment, linking penetration and absorption to applications",
+          "order": 10,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_120",
+            "lesson_123"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_125",
+          "name": "Radioactivity | Dangers of Radiation",
+          "description": "Understanding effects of ionising radiation on living things (cell death, mutations, cancer), how to move, use and store radioactive materials safely, safety precautions (time, distance, shielding)",
+          "order": 11,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_120"
+          ],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_006",
+      "name": "Space Physics",
+      "description": "Study of Earth and the Solar System, planetary motion, orbital mechanics, the Sun as a star, stellar life cycles, the Universe, galaxies, redshift, and the Big Bang theory.",
+      "order": 6,
+      "lessons": [
+        {
+          "id": "lesson_126",
+          "name": "Earth & The Solar System | The Earth, Moon & Sun",
+          "description": "Understanding Earth as planet rotating on tilted axis once per ~24 hours (explaining daily Sun motion and day/night cycle), orbiting Sun once per ~365 days (explaining seasons), Moon orbits Earth once per ~1 month explaining Moon phases",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "difficulty": "BEGINNER",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_127",
+          "name": "Earth & The Solar System | The Solar System",
+          "description": "Understanding Solar System contains one star (Sun), eight named planets in order, minor planets (dwarf planets like Pluto, asteroids), moons orbiting planets, smaller bodies (comets, natural satellites), comparing inner rocky planets with outer gaseous planets",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_126"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_128",
+          "name": "Earth & The Solar System | Formation of the Solar System",
+          "description": "Understanding accretion model for Solar System formation (gravity, elements in interstellar clouds, rotating disc formation), explaining why inner planets are rocky and small, outer planets are gaseous and large",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_127"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_129",
+          "name": "Earth & The Solar System | Light Speed Calculations",
+          "description": "Calculating time for light to travel significant distances between Solar System objects, understanding light-speed delays in space communication",
+          "order": 4,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_127"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_130",
+          "name": "Earth & The Solar System | Gravitational Field Strength",
+          "description": "Understanding gravitational field strength at planet surface depends on mass, decreases with distance from planet, Sun contains most Solar System mass (explaining why planets orbit Sun), analyzing planetary data about gravitational field",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_127"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_131",
+          "name": "Earth & The Solar System | Orbital Speed Equation",
+          "description": "Defining average orbital speed using v = 2πr/T where r is average orbit radius and T is orbital period, using equation in calculations, understanding orbital speeds decrease with distance from Sun",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 55,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_127"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_132",
+          "name": "Earth & The Solar System | Elliptical Orbits",
+          "description": "Understanding planets, minor planets and comets have elliptical orbits (Sun not at centre except for circular orbits), objects in elliptical orbits travel faster when closer to Sun (conservation of energy)",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_131"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_133",
+          "name": "Stars & The Universe | The Sun as a Star",
+          "description": "Understanding Sun as medium-sized star consisting mostly of hydrogen and helium, radiates energy in infrared, visible and ultraviolet regions, powered by nuclear fusion (hydrogen → helium) in stable stars",
+          "order": 8,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "difficulty": "BEGINNER",
+          "prerequisites": [],
+          "videos": []
+        },
+        {
+          "id": "lesson_134",
+          "name": "Stars & The Universe | The Scale of the Universe",
+          "description": "Understanding galaxies contain many billions of stars, Sun is in Milky Way galaxy, other stars much further from Earth than Sun, astronomical distances measured in light-years (one light-year = 9.5 × 10¹⁵ m), Milky Way diameter approximately 100,000 light-years, Milky Way is one of billions of galaxies in Universe",
+          "order": 9,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "difficulty": "BEGINNER",
+          "prerequisites": [
+            "lesson_133"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_135",
+          "name": "Stars & The Universe | Star Formation",
+          "description": "Understanding star formation from interstellar clouds of gas and dust containing hydrogen, protostar as collapsing cloud increasing in temperature, stable star when gravitational force balanced by outward force from high temperature",
+          "order": 10,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_133"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_136",
+          "name": "Stars & The Universe | Life Cycle of a Star",
+          "description": "Understanding stars run out of hydrogen fuel, less massive stars expand to red giants then form planetary nebula with white dwarf, massive stars expand to red supergiants, supernova explosion forms nebula leaving neutron star or black hole, nebula may form new stars with planets",
+          "order": 11,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_135"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_137",
+          "name": "Stars & The Universe | Galactic Redshift",
+          "description": "Understanding redshift as increase in wavelength of EM radiation from receding stars/galaxies, light from distant galaxies appears redshifted compared to Earth, speed v of galaxy from redshift, distance d from supernova brightness",
+          "order": 12,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_134"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_138",
+          "name": "Stars & The Universe | The Big Bang Theory",
+          "description": "Understanding redshift is evidence Universe is expanding and supports Big Bang theory, CMBR is microwave radiation observed everywhere produced shortly after Universe formed, radiation expanded into microwave region as Universe expanded",
+          "order": 13,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "difficulty": "INTERMEDIATE",
+          "prerequisites": [
+            "lesson_137"
+          ],
+          "videos": []
+        },
+        {
+          "id": "lesson_139",
+          "name": "Stars & The Universe | Age of the Universe",
+          "description": "Defining Hubble constant H₀ = v/d, current estimate H₀ = 2.2 × 10⁻¹⁸ per second, understanding d/v = 1/H₀ estimates age of Universe (evidence for Big Bang), calculating age of Universe",
+          "order": 14,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 60,
+          "difficulty": "ADVANCED",
+          "prerequisites": [
+            "lesson_137",
+            "lesson_138"
+          ],
+          "videos": []
+        }
+      ]
+    }
+  ]
+}

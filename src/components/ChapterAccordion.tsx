@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import {
   Accordion,
   AccordionSummary,
@@ -32,7 +32,7 @@ interface ChapterAccordionProps {
   onMove: (direction: 'up' | 'down') => void;
 }
 
-const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
+const ChapterAccordion: React.FC<ChapterAccordionProps> = React.memo(({
   chapter,
   chapterIndex,
   isFirst,
@@ -43,7 +43,7 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
 }) => {
   const [expanded, setExpanded] = useState(false);
 
-  const handleAddLesson = () => {
+  const handleAddLesson = useCallback(() => {
     const newLesson = {
       id: uuidv4(),
       name: `Lesson ${chapter.lessons.length + 1}`,
@@ -58,15 +58,15 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
       ...chapter,
       lessons: [...chapter.lessons, newLesson]
     });
-  };
+  }, [chapter, onUpdate]);
 
-  const handleUpdateLesson = (lessonIndex: number, updatedLesson: any) => {
+  const handleUpdateLesson = useCallback((lessonIndex: number, updatedLesson: any) => {
     const newLessons = [...chapter.lessons];
     newLessons[lessonIndex] = updatedLesson;
     onUpdate({ ...chapter, lessons: newLessons });
-  };
+  }, [chapter, onUpdate]);
 
-  const handleDeleteLesson = (lessonIndex: number) => {
+  const handleDeleteLesson = useCallback((lessonIndex: number) => {
     if (window.confirm('Are you sure you want to delete this lesson?')) {
       const newLessons = chapter.lessons.filter((_, index) => index !== lessonIndex);
       // Reorder remaining lessons
@@ -75,9 +75,9 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
       });
       onUpdate({ ...chapter, lessons: newLessons });
     }
-  };
+  }, [chapter, onUpdate]);
 
-  const handleMoveLesson = (lessonIndex: number, direction: 'up' | 'down') => {
+  const handleMoveLesson = useCallback((lessonIndex: number, direction: 'up' | 'down') => {
     const newLessons = [...chapter.lessons];
     const targetIndex = direction === 'up' ? lessonIndex - 1 : lessonIndex + 1;
     
@@ -93,7 +93,7 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
     });
     
     onUpdate({ ...chapter, lessons: newLessons });
-  };
+  }, [chapter, onUpdate]);
 
   return (
     <Accordion 
@@ -150,29 +150,32 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
             />
             <Box onClick={(e) => e.stopPropagation()} sx={{ display: 'flex', gap: 0.5 }}>
               <IconButton
+                component="div"
                 size="small"
                 onClick={() => onMove('up')}
                 disabled={isFirst}
                 title="Move up"
-                sx={{ p: { xs: 0.5, sm: 1 } }}
+                sx={{ p: { xs: 0.5, sm: 1 }, cursor: isFirst ? 'default' : 'pointer' }}
               >
                 <ArrowUpwardIcon fontSize="small" />
               </IconButton>
               <IconButton
+                component="div"
                 size="small"
                 onClick={() => onMove('down')}
                 disabled={isLast}
                 title="Move down"
-                sx={{ p: { xs: 0.5, sm: 1 } }}
+                sx={{ p: { xs: 0.5, sm: 1 }, cursor: isLast ? 'default' : 'pointer' }}
               >
                 <ArrowDownwardIcon fontSize="small" />
               </IconButton>
               <IconButton
+                component="div"
                 size="small"
                 color="error"
                 onClick={onDelete}
                 title="Delete chapter"
-                sx={{ p: { xs: 0.5, sm: 1 } }}
+                sx={{ p: { xs: 0.5, sm: 1 }, cursor: 'pointer' }}
               >
                 <DeleteIcon fontSize="small" />
               </IconButton>
@@ -182,72 +185,77 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = ({
       </AccordionSummary>
       
       <AccordionDetails sx={{ px: { xs: 1, sm: 2 }, py: { xs: 2, sm: 3 } }}>
-        <Stack spacing={{ xs: 2, sm: 3 }}>
-          {/* Chapter Details */}
-          <TextField
-            label="Chapter Name"
-            fullWidth
-            required
-            value={chapter.name}
-            onChange={(e) => onUpdate({ ...chapter, name: e.target.value })}
-            placeholder="e.g., Introduction to Mechanics"
-            size="small"
-          />
-          
-          <TextField
-            label="Chapter Description"
-            fullWidth
-            multiline
-            rows={2}
-            value={chapter.description}
-            onChange={(e) => onUpdate({ ...chapter, description: e.target.value })}
-            placeholder="Brief description of this chapter..."
-            size="small"
-          />
-
-          {/* Lessons Section */}
-          <Box>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2, flexWrap: 'wrap', gap: 1 }}>
-              <Typography variant="subtitle1" fontWeight="bold" sx={{ fontSize: { xs: '0.9rem', sm: '1rem' } }}>
-                Lessons ({chapter.lessons.length})
-              </Typography>
-              <Button
-                variant="outlined"
-                size="small"
-                startIcon={<AddIcon />}
-                onClick={handleAddLesson}
-              >
-                {chapter.lessons.length === 0 ? 'Add Lesson' : 'Add'}
-              </Button>
-            </Box>
+        {/* Only render content when expanded - performance optimization */}
+        {expanded && (
+          <Stack spacing={{ xs: 2, sm: 3 }}>
+            {/* Chapter Details */}
+            <TextField
+              label="Chapter Name"
+              fullWidth
+              required
+              value={chapter.name}
+              onChange={(e) => onUpdate({ ...chapter, name: e.target.value })}
+              placeholder="e.g., Introduction to Mechanics"
+              size="small"
+            />
             
-            {chapter.lessons.length === 0 ? (
-              <Typography variant="body2" color="text.secondary" sx={{ fontStyle: 'italic' }}>
-                No lessons yet. Click "Add Lesson" to create one.
-              </Typography>
-            ) : (
-              <Stack spacing={1}>
-                {chapter.lessons.map((lesson, index) => (
-                  <LessonAccordion
-                    key={lesson.id}
-                    lesson={lesson}
-                    lessonIndex={index}
-                    chapterIndex={chapterIndex}
-                    isFirst={index === 0}
-                    isLast={index === chapter.lessons.length - 1}
-                    onUpdate={(updatedLesson) => handleUpdateLesson(index, updatedLesson)}
-                    onDelete={() => handleDeleteLesson(index)}
-                    onMove={(direction) => handleMoveLesson(index, direction)}
-                  />
-                ))}
-              </Stack>
-            )}
-          </Box>
-        </Stack>
+            <TextField
+              label="Chapter Description"
+              fullWidth
+              multiline
+              rows={2}
+              value={chapter.description}
+              onChange={(e) => onUpdate({ ...chapter, description: e.target.value })}
+              placeholder="Brief description of this chapter..."
+              size="small"
+            />
+
+            {/* Lessons Section */}
+            <Box>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2, flexWrap: 'wrap', gap: 1 }}>
+                <Typography variant="subtitle1" fontWeight="bold" sx={{ fontSize: { xs: '0.9rem', sm: '1rem' } }}>
+                  Lessons ({chapter.lessons.length})
+                </Typography>
+                <Button
+                  variant="outlined"
+                  size="small"
+                  startIcon={<AddIcon />}
+                  onClick={handleAddLesson}
+                >
+                  {chapter.lessons.length === 0 ? 'Add Lesson' : 'Add'}
+                </Button>
+              </Box>
+              
+              {chapter.lessons.length === 0 ? (
+                <Typography variant="body2" color="text.secondary" sx={{ fontStyle: 'italic' }}>
+                  No lessons yet. Click "Add Lesson" to create one.
+                </Typography>
+              ) : (
+                <Stack spacing={1}>
+                  {chapter.lessons.map((lesson, index) => (
+                    <LessonAccordion
+                      key={lesson.id}
+                      lesson={lesson}
+                      lessonIndex={index}
+                      chapterIndex={chapterIndex}
+                      isFirst={index === 0}
+                      isLast={index === chapter.lessons.length - 1}
+                      onUpdate={(updatedLesson) => handleUpdateLesson(index, updatedLesson)}
+                      onDelete={() => handleDeleteLesson(index)}
+                      onMove={(direction) => handleMoveLesson(index, direction)}
+                    />
+                  ))}
+                </Stack>
+              )}
+            </Box>
+          </Stack>
+        )}
       </AccordionDetails>
     </Accordion>
   );
-};
+});
+
+ChapterAccordion.displayName = 'ChapterAccordion';
 
 export default ChapterAccordion;
 

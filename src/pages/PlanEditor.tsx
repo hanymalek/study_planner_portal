@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
   Container,
@@ -59,7 +59,12 @@ const PlanEditor: React.FC = () => {
       // Load from local storage (instant)
       const fetchedPlan = getStudyPlan(id);
       if (fetchedPlan) {
-        setPlan(fetchedPlan);
+        // Normalize difficulty to uppercase for consistency
+        const normalizedPlan = {
+          ...fetchedPlan,
+          difficulty: fetchedPlan.difficulty.toUpperCase() as Difficulty
+        };
+        setPlan(normalizedPlan);
       } else {
         toast.error('Study plan not found in local storage');
         navigate('/plans');
@@ -118,41 +123,47 @@ const PlanEditor: React.FC = () => {
     });
   };
 
-  const handleUpdateChapter = (chapterIndex: number, updatedChapter: any) => {
-    const newChapters = [...plan.chapters];
-    newChapters[chapterIndex] = updatedChapter;
-    setPlan({ ...plan, chapters: newChapters });
-  };
+  const handleUpdateChapter = useCallback((chapterIndex: number, updatedChapter: any) => {
+    setPlan(prevPlan => {
+      const newChapters = [...prevPlan.chapters];
+      newChapters[chapterIndex] = updatedChapter;
+      return { ...prevPlan, chapters: newChapters };
+    });
+  }, []);
 
-  const handleDeleteChapter = (chapterIndex: number) => {
+  const handleDeleteChapter = useCallback((chapterIndex: number) => {
     if (window.confirm('Are you sure you want to delete this chapter?')) {
-      const newChapters = plan.chapters.filter((_, index) => index !== chapterIndex);
-      // Reorder remaining chapters
+      setPlan(prevPlan => {
+        const newChapters = prevPlan.chapters.filter((_, index) => index !== chapterIndex);
+        // Reorder remaining chapters
+        newChapters.forEach((chapter, index) => {
+          chapter.order = index + 1;
+        });
+        return { ...prevPlan, chapters: newChapters };
+      });
+      toast.success('Chapter deleted');
+    }
+  }, []);
+
+  const handleMoveChapter = useCallback((chapterIndex: number, direction: 'up' | 'down') => {
+    setPlan(prevPlan => {
+      const newChapters = [...prevPlan.chapters];
+      const targetIndex = direction === 'up' ? chapterIndex - 1 : chapterIndex + 1;
+      
+      if (targetIndex < 0 || targetIndex >= newChapters.length) return prevPlan;
+      
+      // Swap chapters
+      [newChapters[chapterIndex], newChapters[targetIndex]] = 
+        [newChapters[targetIndex], newChapters[chapterIndex]];
+      
+      // Update order numbers
       newChapters.forEach((chapter, index) => {
         chapter.order = index + 1;
       });
-      setPlan({ ...plan, chapters: newChapters });
-      toast.success('Chapter deleted');
-    }
-  };
-
-  const handleMoveChapter = (chapterIndex: number, direction: 'up' | 'down') => {
-    const newChapters = [...plan.chapters];
-    const targetIndex = direction === 'up' ? chapterIndex - 1 : chapterIndex + 1;
-    
-    if (targetIndex < 0 || targetIndex >= newChapters.length) return;
-    
-    // Swap chapters
-    [newChapters[chapterIndex], newChapters[targetIndex]] = 
-      [newChapters[targetIndex], newChapters[chapterIndex]];
-    
-    // Update order numbers
-    newChapters.forEach((chapter, index) => {
-      chapter.order = index + 1;
+      
+      return { ...prevPlan, chapters: newChapters };
     });
-    
-    setPlan({ ...plan, chapters: newChapters });
-  };
+  }, []);
 
   if (loading) {
     return (

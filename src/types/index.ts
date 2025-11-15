@@ -3,7 +3,8 @@
 export enum VideoType {
   YOUTUBE = 'YOUTUBE',
   LOCAL = 'LOCAL',
-  URL = 'URL'
+  URL = 'URL',
+  WEB_RESOURCE = 'WEB_RESOURCE'
 }
 
 export enum VideoCategory {

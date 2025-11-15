@@ -23,6 +23,25 @@ const KEYS = {
   STORAGE_VERSION: 'storage_version',
 };
 
+// Generic local storage helpers
+const getFromLocalStorage = <T>(key: string): T | null => {
+  try {
+    const item = localStorage.getItem(key);
+    return item ? JSON.parse(item) : null;
+  } catch (error) {
+    console.error(`Error reading ${key} from localStorage:`, error);
+    return null;
+  }
+};
+
+const saveToLocalStorage = <T>(key: string, data: T): void => {
+  try {
+    localStorage.setItem(key, JSON.stringify(data));
+  } catch (error) {
+    console.error(`Error saving ${key} to localStorage:`, error);
+  }
+};
+
 // Migrate from old dual-storage to new single-storage system
 const migrateFromDualStorage = () => {
   try {
@@ -74,26 +93,8 @@ const initializeStorage = () => {
   migrateFromDualStorage();
 };
 
+// Run initialization on module load
 initializeStorage();
-
-// Generic local storage helpers
-const getFromLocalStorage = <T>(key: string): T | null => {
-  try {
-    const item = localStorage.getItem(key);
-    return item ? JSON.parse(item) : null;
-  } catch (error) {
-    console.error(`Error reading ${key} from localStorage:`, error);
-    return null;
-  }
-};
-
-const saveToLocalStorage = <T>(key: string, data: T): void => {
-  try {
-    localStorage.setItem(key, JSON.stringify(data));
-  } catch (error) {
-    console.error(`Error saving ${key} to localStorage:`, error);
-  }
-};
 
 // ===========================
 // STUDY PLANS - SINGLE STORAGE WITH SYNC STATUS
