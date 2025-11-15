@@ -155,6 +155,7 @@ export const saveStudyPlan = async (plan: StudyPlan, markAsModified = true): Pro
   const now = Date.now();
   const updatedPlan: StudyPlan = {
     ...plan,
+    version: markAsModified ? (plan.version || 1) + 1 : plan.version, // Auto-increment version on modifications
     updatedAt: now,
     _syncStatus: markAsModified ? (plan._syncStatus === 'new' ? 'new' : 'modified') : plan._syncStatus,
   };
@@ -184,8 +185,10 @@ export const batchSaveStudyPlans = async (plans: StudyPlan[]): Promise<void> => 
   plans.forEach(plan => {
     const docRef = doc(db, 'study_plans', plan.id);
     const planData = stripSyncMetadata(plan);
+    // Ensure version is included in Firebase upload
     batch.set(docRef, {
       ...planData,
+      version: plan.version || 1, // Include version in Firebase upload
       updatedAt: now
     });
   });
