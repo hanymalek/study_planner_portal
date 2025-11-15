@@ -16,7 +16,8 @@ import {
   Delete as DeleteIcon,
   ArrowUpward as ArrowUpwardIcon,
   ArrowDownward as ArrowDownwardIcon,
-  Add as AddIcon
+  Add as AddIcon,
+  FiberManualRecord as DotIcon
 } from '@mui/icons-material';
 import type { Chapter } from '../types';
 import LessonAccordion from './LessonAccordion';
@@ -101,14 +102,26 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = React.memo(({
       onChange={() => setExpanded(!expanded)}
       sx={{ 
         '&:before': { display: 'none' },
-        boxShadow: 1,
-        mb: 1
+        boxShadow: expanded ? 3 : 1,
+        mb: 1,
+        border: '2px solid',
+        borderColor: expanded ? 'primary.main' : 'divider',
+        transition: 'all 0.3s ease'
       }}
     >
       <AccordionSummary 
         expandIcon={<ExpandMoreIcon />}
         sx={{ 
           minHeight: { xs: 64, sm: 64 },
+          background: expanded 
+            ? 'linear-gradient(90deg, rgba(25, 118, 210, 0.08) 0%, rgba(25, 118, 210, 0.02) 100%)'
+            : 'transparent',
+          '&:hover': {
+            background: expanded
+              ? 'linear-gradient(90deg, rgba(25, 118, 210, 0.12) 0%, rgba(25, 118, 210, 0.03) 100%)'
+              : 'rgba(0, 0, 0, 0.04)'
+          },
+          transition: 'background 0.3s ease',
           '& .MuiAccordionSummary-content': {
             my: { xs: 1.5, sm: 1.5 }
           }
@@ -122,17 +135,30 @@ const ChapterAccordion: React.FC<ChapterAccordionProps> = React.memo(({
           gap: { xs: 0.5, sm: 2 }
         }}>
           {/* Title - Full width on mobile */}
-          <Typography 
-            variant="h6" 
-            sx={{ 
-              flexGrow: 1, 
-              fontSize: { xs: '0.95rem', sm: '1.1rem' },
-              width: { xs: '100%', sm: 'auto' },
-              mb: { xs: 0.5, sm: 0 }
-            }}
-          >
-            Chapter {chapterIndex + 1}: {chapter.name || 'Untitled Chapter'}
-          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexGrow: 1, mb: { xs: 0.5, sm: 0 } }}>
+            {expanded && (
+              <DotIcon 
+                sx={{ 
+                  fontSize: '0.8rem', 
+                  color: 'primary.main',
+                  animation: 'pulse 2s ease-in-out infinite',
+                  '@keyframes pulse': {
+                    '0%, 100%': { opacity: 1 },
+                    '50%': { opacity: 0.5 }
+                  }
+                }} 
+              />
+            )}
+            <Typography 
+              variant="h6" 
+              sx={{ 
+                fontSize: { xs: '0.95rem', sm: '1.1rem' },
+                fontWeight: expanded ? 600 : 400
+              }}
+            >
+              Chapter {chapterIndex + 1}: {chapter.name || 'Untitled Chapter'}
+            </Typography>
+          </Box>
           
           {/* Second line on mobile: Chip + Actions */}
           <Box sx={{ 

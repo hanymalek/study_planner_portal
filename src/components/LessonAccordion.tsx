@@ -17,7 +17,8 @@ import {
   ArrowUpward as ArrowUpwardIcon,
   ArrowDownward as ArrowDownwardIcon,
   Add as AddIcon,
-  Language as LanguageIcon
+  Language as LanguageIcon,
+  FiberManualRecord as DotIcon
 } from '@mui/icons-material';
 import type { Lesson, VideoResource } from '../types';
 import { VideoType, VideoCategory } from '../types';
@@ -126,15 +127,26 @@ const LessonAccordion: React.FC<LessonAccordionProps> = React.memo(({
       expanded={expanded} 
       onChange={() => setExpanded(!expanded)}
       sx={{ 
-        border: '1px solid',
-        borderColor: 'divider',
-        '&:before': { display: 'none' }
+        border: '2px solid',
+        borderColor: expanded ? 'secondary.main' : 'divider',
+        '&:before': { display: 'none' },
+        boxShadow: expanded ? 2 : 0,
+        transition: 'all 0.3s ease'
       }}
     >
       <AccordionSummary 
         expandIcon={<ExpandMoreIcon />}
         sx={{ 
           minHeight: { xs: 64, sm: 56 },
+          background: expanded 
+            ? 'linear-gradient(90deg, rgba(237, 108, 2, 0.08) 0%, rgba(237, 108, 2, 0.02) 100%)'
+            : 'transparent',
+          '&:hover': {
+            background: expanded
+              ? 'linear-gradient(90deg, rgba(237, 108, 2, 0.12) 0%, rgba(237, 108, 2, 0.03) 100%)'
+              : 'rgba(0, 0, 0, 0.04)'
+          },
+          transition: 'background 0.3s ease',
           '& .MuiAccordionSummary-content': {
             my: { xs: 1.5, sm: 1 }
           }
@@ -148,17 +160,30 @@ const LessonAccordion: React.FC<LessonAccordionProps> = React.memo(({
           gap: { xs: 0.5, sm: 2 }
         }}>
           {/* Title - Full width on mobile */}
-          <Typography 
-            variant="subtitle1" 
-            sx={{ 
-              flexGrow: 1,
-              fontSize: { xs: '0.9rem', sm: '1rem' },
-              width: { xs: '100%', sm: 'auto' },
-              mb: { xs: 0.5, sm: 0 }
-            }}
-          >
-            {chapterIndex + 1}.{lessonIndex + 1} {lesson.name || 'Untitled Lesson'}
-          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexGrow: 1, mb: { xs: 0.5, sm: 0 } }}>
+            {expanded && (
+              <DotIcon 
+                sx={{ 
+                  fontSize: '0.7rem', 
+                  color: 'secondary.main',
+                  animation: 'pulse 2s ease-in-out infinite',
+                  '@keyframes pulse': {
+                    '0%, 100%': { opacity: 1 },
+                    '50%': { opacity: 0.5 }
+                  }
+                }} 
+              />
+            )}
+            <Typography 
+              variant="subtitle1" 
+              sx={{ 
+                fontSize: { xs: '0.9rem', sm: '1rem' },
+                fontWeight: expanded ? 600 : 400
+              }}
+            >
+              {chapterIndex + 1}.{lessonIndex + 1} {lesson.name || 'Untitled Lesson'}
+            </Typography>
+          </Box>
           
           {/* Second line on mobile: Chips + Actions */}
           <Box sx={{ 
@@ -170,7 +195,7 @@ const LessonAccordion: React.FC<LessonAccordionProps> = React.memo(({
           }}>
             <Box sx={{ display: 'flex', gap: 0.5 }}>
               <Chip 
-                label={`${lesson.videos.length} video${lesson.videos.length !== 1 ? 's' : ''}`} 
+                label={`${lesson.videos.length} resource${lesson.videos.length !== 1 ? 's' : ''}`} 
                 size="small" 
                 color="secondary"
                 variant="outlined"
@@ -273,11 +298,11 @@ const LessonAccordion: React.FC<LessonAccordionProps> = React.memo(({
               />
             </Stack>
 
-            {/* Videos Section */}
+            {/* Videos & Resources Section */}
             <Box>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
                 <Typography variant="subtitle2" fontWeight="bold">
-                  Videos ({lesson.videos.length})
+                  Videos & Resources ({lesson.videos.length})
                 </Typography>
                 <Box sx={{ display: 'flex', gap: 1 }}>
                   <Button
@@ -300,11 +325,11 @@ const LessonAccordion: React.FC<LessonAccordionProps> = React.memo(({
                 </Box>
               </Box>
               
-              {lesson.videos.length === 0 ? (
-                <Typography variant="body2" color="text.secondary" sx={{ fontStyle: 'italic', fontSize: '0.875rem' }}>
-                  No videos yet. Click "Add Video" to create one.
-                </Typography>
-              ) : (
+            {lesson.videos.length === 0 ? (
+              <Typography variant="body2" color="text.secondary" sx={{ fontStyle: 'italic', fontSize: '0.875rem' }}>
+                No videos or resources yet. Click "Add Video" or "Add URL" to create one.
+              </Typography>
+            ) : (
                 <Stack spacing={1}>
                   {lesson.videos.map((video, index) => (
                     <VideoEditor

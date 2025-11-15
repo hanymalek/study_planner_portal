@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import {
-  Paper,
   TextField,
   IconButton,
   Stack,
@@ -9,12 +8,12 @@ import {
   Typography,
   Button,
   CircularProgress,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  SelectChangeEvent
+  SelectChangeEvent,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails
 } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {
   Delete as DeleteIcon,
   ArrowUpward as ArrowUpwardIcon,
@@ -22,8 +21,8 @@ import {
   YouTube as YouTubeIcon,
   VideoLibrary as VideoLibraryIcon,
   Link as LinkIcon,
-  Edit as EditIcon,
-  CloudDownload as CloudDownloadIcon
+  CloudDownload as CloudDownloadIcon,
+  FiberManualRecord as DotIcon
 } from '@mui/icons-material';
 import type { VideoResource, VideoType, VideoCategory } from '../types';
 import { fetchYouTubeVideoInfo, formatDuration, detectVideoType } from '../services/youtube';
@@ -49,6 +48,7 @@ const VideoEditor: React.FC<VideoEditorProps> = React.memo(({
   onMove
 }) => {
   const [loading, setLoading] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   // Memoize category options to ensure they're stable
   const categoryOptions = useMemo(() => {
@@ -170,47 +170,107 @@ const VideoEditor: React.FC<VideoEditorProps> = React.memo(({
   };
 
   return (
-    <Paper 
-      variant="outlined" 
+    <Accordion 
+      expanded={expanded} 
+      onChange={() => setExpanded(!expanded)}
       sx={{ 
-        p: 2, 
-        backgroundColor: 'background.default',
-        border: '1px solid',
-        borderColor: 'divider'
+        border: '2px solid',
+        borderColor: expanded ? 'success.main' : 'divider',
+        '&:before': { display: 'none' },
+        boxShadow: expanded ? 2 : 0,
+        transition: 'all 0.3s ease'
       }}
     >
-      <Stack spacing={2}>
-        {/* Header with controls */}
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+      <AccordionSummary 
+        expandIcon={<ExpandMoreIcon />}
+        sx={{ 
+          minHeight: 48,
+          background: expanded 
+            ? 'linear-gradient(90deg, rgba(46, 125, 50, 0.08) 0%, rgba(46, 125, 50, 0.02) 100%)'
+            : 'transparent',
+          '&:hover': {
+            background: expanded
+              ? 'linear-gradient(90deg, rgba(46, 125, 50, 0.12) 0%, rgba(46, 125, 50, 0.03) 100%)'
+              : 'rgba(0, 0, 0, 0.04)'
+          },
+          transition: 'background 0.3s ease',
+          '& .MuiAccordionSummary-content': {
+            my: 1
+          }
+        }}
+      >
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, width: '100%' }}>
+          {expanded && (
+            <DotIcon 
+              sx={{ 
+                fontSize: '0.6rem', 
+                color: 'success.main',
+                animation: 'pulse 2s ease-in-out infinite',
+                '@keyframes pulse': {
+                  '0%, 100%': { opacity: 1 },
+                  '50%': { opacity: 0.5 }
+                }
+              }} 
+            />
+          )}
           {getVideoTypeIcon(video.type)}
-          <Typography variant="body2" sx={{ flexGrow: 1 }}>
+          <Typography variant="body2" sx={{ flexGrow: 1, fontWeight: expanded ? 600 : 500 }}>
             {getDisplayTitle()}
           </Typography>
-          <IconButton
-            size="small"
-            onClick={() => onMove('up')}
-            disabled={isFirst}
-            title="Move up"
-          >
-            <ArrowUpwardIcon fontSize="small" />
-          </IconButton>
-          <IconButton
-            size="small"
-            onClick={() => onMove('down')}
-            disabled={isLast}
-            title="Move down"
-          >
-            <ArrowDownwardIcon fontSize="small" />
-          </IconButton>
-          <IconButton
-            size="small"
-            color="error"
-            onClick={onDelete}
-            title="Delete video"
-          >
-            <DeleteIcon fontSize="small" />
-          </IconButton>
+          {video.type === 'WEB_RESOURCE' && (
+            <Typography 
+              variant="caption" 
+              sx={{ 
+                px: 1, 
+                py: 0.5, 
+                backgroundColor: 'secondary.main', 
+                color: 'secondary.contrastText',
+                borderRadius: 1,
+                fontSize: '0.7rem',
+                mr: 1
+              }}
+            >
+              URL
+            </Typography>
+          )}
+          <Box onClick={(e) => e.stopPropagation()} sx={{ display: 'flex', gap: 0.5 }}>
+            <IconButton
+              component="div"
+              size="small"
+              onClick={() => onMove('up')}
+              disabled={isFirst}
+              title="Move up"
+              sx={{ cursor: isFirst ? 'default' : 'pointer' }}
+            >
+              <ArrowUpwardIcon fontSize="small" />
+            </IconButton>
+            <IconButton
+              component="div"
+              size="small"
+              onClick={() => onMove('down')}
+              disabled={isLast}
+              title="Move down"
+              sx={{ cursor: isLast ? 'default' : 'pointer' }}
+            >
+              <ArrowDownwardIcon fontSize="small" />
+            </IconButton>
+            <IconButton
+              component="div"
+              size="small"
+              color="error"
+              onClick={onDelete}
+              title="Delete resource"
+              sx={{ cursor: 'pointer' }}
+            >
+              <DeleteIcon fontSize="small" />
+            </IconButton>
+          </Box>
         </Box>
+      </AccordionSummary>
+      
+      <AccordionDetails sx={{ pt: 0 }}>
+        {expanded && (
+          <Stack spacing={2}>
 
         {/* Resource URL with Fetch Button */}
         <Box>
@@ -316,26 +376,28 @@ const VideoEditor: React.FC<VideoEditorProps> = React.memo(({
           />
         )}
 
-        {/* Video Type Info (Read-only) */}
-        <Box
-          sx={{
-            p: 1.5,
-            backgroundColor: 'action.hover',
-            borderRadius: 1,
-            border: '1px solid',
-            borderColor: 'divider',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 1
-          }}
-        >
-          {getVideoTypeIcon(video.type)}
-          <Typography variant="body2" color="text.secondary">
-            <strong>Detected Type:</strong> {getVideoTypeLabel(video.type)}
-          </Typography>
-        </Box>
-      </Stack>
-    </Paper>
+            {/* Video Type Info (Read-only) */}
+            <Box
+              sx={{
+                p: 1.5,
+                backgroundColor: 'action.hover',
+                borderRadius: 1,
+                border: '1px solid',
+                borderColor: 'divider',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1
+              }}
+            >
+              {getVideoTypeIcon(video.type)}
+              <Typography variant="body2" color="text.secondary">
+                <strong>Detected Type:</strong> {getVideoTypeLabel(video.type)}
+              </Typography>
+            </Box>
+          </Stack>
+        )}
+      </AccordionDetails>
+    </Accordion>
   );
 });
 
