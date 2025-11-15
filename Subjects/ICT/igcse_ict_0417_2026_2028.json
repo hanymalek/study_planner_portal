@@ -1,0 +1,822 @@
+{
+  "id": "igcse_ict_0417_2026_2028",
+  "name": "Cambridge IGCSE ICT (0417) 2026-2028",
+  "subjectName": "Information and Communication Technology",
+  "description": "Complete curriculum study plan for Cambridge IGCSE Information and Communication Technology covering all topics from computer systems and networks to practical applications including databases, spreadsheets, and website authoring, aligned with the 2026-2028 syllabus specifications",
+  "examBoardId": "IGCSE",
+  "difficulty": "INTERMEDIATE",
+  "version": 1,
+  "isDeleted": false,
+  "createdAt": 1763237500000,
+  "updatedAt": 1763237500000,
+  "createdBy": "admin",
+  "chapters": [
+    {
+      "id": "chapter_001",
+      "name": "Types & Components of Computer Systems",
+      "description": "Understanding hardware and software components, the main components of computer systems including CPU and memory, input/output devices, storage, types of computers, and emerging technologies.",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "lesson_1_1_1",
+          "name": "1.1.1 Hardware & Software | Hardware",
+          "description": "Understanding that hardware consists of the physical components of a computer system. Learning about internal components including Central Processing Unit (CPU), processor, motherboard, internal memory including RAM and ROM. Exploring hardware components including graphics card, sound card, Network Interface Card (NIC), camera, internal/external storage devices, input and output devices.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_1_1_2",
+          "name": "1.1.2 Hardware & Software | Software",
+          "description": "Understanding that software are programs for controlling the operation of a computer or processing of electronic data. Learning about applications software that provides services users require to solve tasks, with examples including word processing, spreadsheet, database management systems, control, measurement, applets and apps, video editing, graphics editing, audio editing, and CAD. Understanding system software that provides services computers require to operate, including compilers, linkers, device drivers, operating systems and utilities.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_1_1_3",
+          "name": "1.1.3 Hardware & Software | Analogue & Digital Data",
+          "description": "Understanding the characteristics of analogue and digital data and the differences between them. Learning why there is a need to convert analogue to digital data so it can be processed by a computer, and digital data to analogue data so it can be used to control devices.",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 30,
+          "videos": []
+        },
+        {
+          "id": "lesson_1_2_1",
+          "name": "1.2.1 Components of Computer Systems | Central Processing Unit (CPU)",
+          "description": "Understanding the role of the CPU in processing instructions entered into the computer in order to produce an output. Learning how the CPU executes instructions and its importance in computer operation.",
+          "order": 4,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 30,
+          "videos": []
+        },
+        {
+          "id": "lesson_1_2_2",
+          "name": "1.2.2 Components of Computer Systems | Internal Memory",
+          "description": "Learning the characteristics of ROM and RAM and understanding the differences between them. Understanding how internal memory is used in computer systems and the distinct roles of different memory types.",
+          "order": 5,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_1_2_3",
+          "name": "1.2.3 Components of Computer Systems | Input Devices",
+          "description": "Understanding characteristics of input devices and differences between input and output devices. Learning about characteristics, uses, advantages and disadvantages of input devices including keyboard, numeric keypad, pointing devices, remote control, joystick/driving wheel, touch screen (as input device), scanners, camera, microphone, sensors, and light pen.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_1_2_4",
+          "name": "1.2.4 Components of Computer Systems | Output Devices",
+          "description": "Understanding characteristics of output devices. Learning about characteristics, uses, advantages and disadvantages of output devices including monitors, touch screen (as output device), multimedia projector, laser printer, inkjet printer, dot matrix printer, plotter, 3D printers, speaker, and actuator.",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_1_2_5",
+          "name": "1.2.5 Components of Computer Systems | Storage",
+          "description": "Understanding characteristics of backing storage and differences between backing storage and internal memory. Learning about characteristics, uses, media, advantages and disadvantages of storage devices including magnetic (fixed and portable hard drives, tape drives), optical (CD, DVD, Blu-ray), and solid-state (SSD, pen drive, flash drive, memory cards).",
+          "order": 8,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_1_3_1",
+          "name": "1.3.1 Types of Computer & Emerging Technologies | Types of Computer",
+          "description": "Understanding characteristics of desktop computers and their uses including office and business management, education, gaming and entertainment. Learning about mobile computers including laptop computers, smartphones, tablet and phablet computers and their uses. Understanding advantages and disadvantages of different types of computer including portability and expandability.",
+          "order": 9,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_1_3_2",
+          "name": "1.3.2 Types of Computer & Emerging Technologies | Emerging Technologies",
+          "description": "Understanding the impact of emerging technologies on everyday life including Artificial Intelligence (AI) and extended reality (virtual and augmented reality). Exploring how these technologies are changing the way we interact with computers and the world around us.",
+          "order": 10,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_002",
+      "name": "Networks",
+      "description": "Understanding network components, wireless technologies, cloud computing, network environments and types, security issues, authentication methods, and electronic conferencing.",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "lesson_2_1_1",
+          "name": "2.1.1 Networks | Network Hardware",
+          "description": "Understanding the operation and purpose of a router including connecting networks and devices to the internet, storing computer addresses in a router, and routing data packets. Learning about common network devices including network interface cards (NIC), hubs, bridges, and switches.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_2_1_2",
+          "name": "2.1.2 Networks | Wireless Networks",
+          "description": "Understanding the uses of wi-fi and Bluetooth. Learning how to connect a device to a network using wi-fi and Bluetooth. Understanding the similarities and differences between Bluetooth and wi-fi technologies.",
+          "order": 2,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_2_1_3",
+          "name": "2.1.3 Networks | Cloud Computing",
+          "description": "Understanding the characteristics, uses and issues relating to cloud computing. Learning how data is stored, managed and shared using cloud computing. Understanding advantages and disadvantages of using cloud storage compared to other methods.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_2_1_4",
+          "name": "2.1.4 Networks | Network Environments",
+          "description": "Understanding characteristics, uses and purpose of an extranet, intranet and the internet. Learning the differences and similarities between an extranet, intranet and the internet.",
+          "order": 4,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_2_1_5",
+          "name": "2.1.5 Networks | Network Types",
+          "description": "Understanding Local Area Network (LAN), Wireless Local Area Network (WLAN), Wide Area Network (WAN) and the differences between these networks. Learning the characteristics and appropriate uses of each network type.",
+          "order": 5,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_2_2_1",
+          "name": "2.2.1 Network Issues | Data Transfer & Passwords",
+          "description": "Understanding security issues regarding data transfer including privacy and confidentiality. Learning about avoiding password interception by using up to date anti-spyware and regularly changing passwords. Understanding the differences between strong and weak passwords.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_2_2_2",
+          "name": "2.2.2 Network Issues | Authentication",
+          "description": "Learning about other authentication methods including zero login, biometric methods, magnetic stripes, smart cards, physical tokens, and electronic tokens. Understanding when each method is appropriate and secure.",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_2_2_3",
+          "name": "2.2.3 Network Issues | Anti-Malware Software",
+          "description": "Understanding the use of anti-malware and anti-virus software. Learning about the operation of removing/quarantining viruses using up to date software. Understanding the importance of scanning storage media used to transfer data and scanning data/software when downloading.",
+          "order": 8,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_2_2_4",
+          "name": "2.2.4 Network Issues | Electronic Conferencing",
+          "description": "Understanding characteristics, uses, advantages and disadvantages of video-conferencing, audio-conferencing, and web-conferencing. Learning about the hardware, software and network connection required to set up each type of electronic conference.",
+          "order": 9,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_003",
+      "name": "Effects of Using IT",
+      "description": "Understanding the positive and negative effects of microprocessor-controlled devices and potential health problems related to prolonged use of IT equipment.",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "lesson_3_1_1",
+          "name": "3.1.1 Effects of Using IT | Microprocessor-Controlled Devices",
+          "description": "Understanding the positive and negative effects of microprocessors/smart devices in monitoring and controlling devices in the home including the impact on lifestyle, leisure time, physical fitness, security of data, and the degree of social interaction. Learning about the positive and negative effects in monitoring and controlling transport including security of data, autonomous vehicles, and transport safety.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_3_1_2",
+          "name": "3.1.2 Effects of Using IT | Health Issues",
+          "description": "Understanding health issues including repetitive strain injury (RSI), back problems, eye problems, and headaches. Learning about the causes of these health issues and strategies for preventing them through proper ergonomics and work practices.",
+          "order": 2,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_004",
+      "name": "ICT Applications",
+      "description": "Comprehensive study of ICT applications including communication, computer modelling, computer controlled systems, school management, booking systems, banking, medical applications, expert systems, retail, recognition systems, and satellite systems.",
+      "order": 4,
+      "lessons": [
+        {
+          "id": "lesson_4_1_1",
+          "name": "4.1.1 ICT Applications | Communication",
+          "description": "Understanding characteristics and uses of communication media including newsletters, posters, websites, multimedia presentations, audio, video, media streaming and ePublications. Learning about the use of mobile devices for communication including SMS messaging, phone calls, VoIP, video calls, and accessing the internet.",
+          "order": 1,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_4_1_2",
+          "name": "4.1.2 ICT Applications | Computer Modelling",
+          "description": "Understanding computer modelling applications including personal finance, bridge and building design, flood water management, traffic management, and weather forecasting. Learning the advantages and disadvantages of using computer modelling rather than humans.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_4_1_3",
+          "name": "4.1.3 ICT Applications | Computer Controlled Systems",
+          "description": "Understanding computer controlled systems including robotics in manufacture, production line control, and autonomous vehicles. Learning the advantages and disadvantages of using computer controlled systems rather than humans.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_4_1_4",
+          "name": "4.1.4 ICT Applications | School Management Systems",
+          "description": "Understanding how systems are used to manage learner registration and attendance. Learning how systems are used to record learner performance including computer aided learning.",
+          "order": 4,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 30,
+          "videos": []
+        },
+        {
+          "id": "lesson_4_1_5",
+          "name": "4.1.5 ICT Applications | Online Booking Systems",
+          "description": "Understanding characteristics, uses, advantages and disadvantages of online booking systems including travel industry, concerts, cinemas, and sporting events.",
+          "order": 5,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_4_1_6",
+          "name": "4.1.6 ICT Applications | Banking Applications",
+          "description": "Understanding characteristics, uses, advantages and disadvantages of Automatic Teller Machines (ATM) including withdrawing cash, depositing cash or cheques, checking account balance, mini statements, bill paying, and money transfers. Learning about Electronic Funds Transfer (EFT), credit/debit card transactions, cheques, and internet banking.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_4_1_7",
+          "name": "4.1.7 ICT Applications | Computers in Medicine",
+          "description": "Understanding characteristics and uses of patient records and pharmacy records. Learning about 3D printers including printing of prosthetics, tissue engineering, artificial blood vessels, and customised medicines.",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_4_1_8",
+          "name": "4.1.8 ICT Applications | Expert Systems",
+          "description": "Understanding characteristics, uses and purpose of expert systems including mineral prospecting, car engine fault diagnosis, medical diagnosis, chess games, financial planning, route scheduling for delivery vehicles, and plant and animal identification. Learning about components of an expert system: user interface, inference engine, knowledge base, rules base, and explanation system. Understanding how an expert system is used to produce possible solutions for different scenarios.",
+          "order": 8,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_4_1_9",
+          "name": "4.1.9 ICT Applications | Computers in Retail Industry",
+          "description": "Understanding characteristics and uses of computers in the retail industry including point of sale (POS) terminals and electronic funds transfer at point of sale (EFTPOS) terminals. Learning about POS terminals updating stock files and ordering new stock automatically. Understanding EFTPOS terminals including checking validity of cards, chip and PIN, contactless cards, NFC payment, and communication between supermarket and bank computers. Understanding characteristics, advantages and disadvantages of internet shopping.",
+          "order": 9,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_4_1_10",
+          "name": "4.1.10 ICT Applications | Recognition Systems",
+          "description": "Understanding characteristics, uses, advantages and disadvantages of recognition systems including Optical Mark Recognition (OMR) for school registers and multiple-choice examination papers, barcode and QR code. Learning about Optical Character Recognition (OCR) including automated number plate recognition (ANPR) systems. Understanding Radio Frequency Identification Device (RFID) for tracking stock, passports, automobiles, and contactless payment. Learning about Near Field Communication (NFC) for payment using smartphones and biometric recognition including face, iris, retina, finger, thumb, hand, and voice.",
+          "order": 10,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_4_1_11",
+          "name": "4.1.11 ICT Applications | Satellite Systems",
+          "description": "Understanding characteristics, uses, advantages and disadvantages of satellite systems including Global Positioning Systems (GPS), satellite navigation, Geographic Information Systems (GIS), and media communication systems (satellite television, satellite phone).",
+          "order": 11,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_005",
+      "name": "The Systems Life Cycle",
+      "description": "Understanding the complete systems development life cycle including analysis, design, development and testing, implementation, documentation, and evaluation stages.",
+      "order": 5,
+      "lessons": [
+        {
+          "id": "lesson_5_1_1",
+          "name": "5.1.1 The Systems Life Cycle | The Systems Life Cycle: Analysis",
+          "description": "Understanding characteristics, uses, advantages and disadvantages of research methods including observation, interviews, questionnaires and examination of existing documents. Learning the need to identify inputs, outputs and processing of the current system, problems with the current system, and user and information requirements for the new system. Understanding how to identify and justify suitable hardware and software for the new system.",
+          "order": 1,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_5_1_2",
+          "name": "5.1.2 The Systems Life Cycle | The Systems Life Cycle: Design",
+          "description": "Learning how to design file/data structures, input formats, output formats and validation routines. Understanding file/data structures including field length, field name, data type, and coding of data. Learning about validation routines including range check, character check, length check, type check, format check, presence check, and check digit. Understanding input formats including data capture forms and output formats including screen layouts and report layouts.",
+          "order": 2,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_5_1_3",
+          "name": "5.1.3 The Systems Life Cycle | The Systems Life Cycle: Testing",
+          "description": "Understanding the need to test the system before implementation. Learning about test designs, test strategies, and test plans including test data, expected outcomes, actual outcomes, and remedial action following testing. Understanding test designs including testing of data structures, file structures, input formats, output formats and validation routines. Learning test strategies including testing each module, each function and the whole system. Understanding the definition, characteristics and use of test data using normal, abnormal and extreme data and the use of live data.",
+          "order": 3,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "id": "lesson_5_1_4",
+          "name": "5.1.4 The Systems Life Cycle | The Systems Life Cycle: System Implementation",
+          "description": "Understanding characteristics, uses, advantages and disadvantages of the four methods of implementation: direct changeover, parallel running, pilot running, and phased implementation. Learning when each method is most appropriate.",
+          "order": 4,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_5_1_5",
+          "name": "5.1.5 The Systems Life Cycle | The Systems Life Cycle: Documentation",
+          "description": "Understanding characteristics, uses and purpose of technical and user documentation. Learning about components of technical documentation including purpose of the system/program, limitations, program listing, program language, flowcharts/algorithms, hardware and software requirements, file structures, list of variables, input/output format, sample runs/test runs, and validation routines. Understanding components of user documentation including purpose, limitations, hardware and software requirements, how to load/run/install software, how to save/print/add/delete/edit, error messages, error handling, troubleshooting guide, FAQs, and glossary of terms.",
+          "order": 5,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_5_1_6",
+          "name": "5.1.6 The Systems Life Cycle | The Systems Life Cycle: Evaluation",
+          "description": "Learning how to evaluate a solution including the efficiency of the solution, the ease of use of the solution, and the appropriateness of the solution. Understanding how to compare the solution with the original task requirements, identify any limitations and necessary improvements to the system, and evaluate users' responses to the results of testing the system.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_006",
+      "name": "Safety & Security",
+      "description": "Understanding physical safety, eSafety including data protection and safe internet use, security threats to data, and methods of protecting data and systems.",
+      "order": 6,
+      "lessons": [
+        {
+          "id": "lesson_6_1_1",
+          "name": "6.1.1 Safety | Physical Safety",
+          "description": "Understanding safety issues including electrocution from spilling drinks near electrical equipment and touching live cables, fire from sockets being overloaded or equipment overheating, tripping over trailing cables, and heavy equipment falling and injuring people. Learning about the causes of these safety issues and strategies for preventing them.",
+          "order": 1,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 30,
+          "videos": []
+        },
+        {
+          "id": "lesson_6_1_2",
+          "name": "6.1.2 Safety | E-Safety: Data",
+          "description": "Understanding the principles of a typical data protection act and why data protection legislation is required. Learning about characteristics of personal and sensitive data including personal name, address, date of birth, photographs in school uniform, and medical history. Understanding the need for personal data to be kept confidential and protected to avoid inappropriate disclosure.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_6_1_3",
+          "name": "6.1.3 Safety | E-Safety: Using IT",
+          "description": "Understanding the need for eSafety when using the internet, email, social media, and online gaming. Learning how to minimise potential dangers including using trusted websites, being aware of email risks, knowing how to block and report unwanted users on social media, avoiding inappropriate content distribution, and not giving out personal or financial data in online gaming.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_6_2_1",
+          "name": "6.2.1 Security | Threats to Data",
+          "description": "Understanding characteristics and effect of threats to data including hacking, phishing, pharming, smishing, vishing, viruses, malware, and card fraud. Learning about hacking and measures to protect data. Understanding phishing, pharming, smishing, vishing and methods to prevent them. Learning about viruses and malware including preventative action. Understanding card fraud including shoulder surfing, card cloning, and key logging.",
+          "order": 4,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_6_2_2",
+          "name": "6.2.2 Security | Protection of Data",
+          "description": "Understanding characteristics and methods of protecting data including biometrics, digital certificate, secure socket layer (SSL), encryption, firewall, two-factor authentication, and user id and password. Learning about the use of biometric data, purpose and contents of digital certificates, encrypted links between server and client, encryption purpose for protection of data on hard discs, email, cloud, and HTTPS websites, firewall purpose, two-factor authentication purpose and function, and how user id and password increase security of data.",
+          "order": 5,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_6_2_3",
+          "name": "6.2.3 Security | Copyright",
+          "description": "Understanding the need for copyright legislation and the principles of copyright relating to computer software including software piracy. Learning about the methods that software producers employ to prevent software copyright legislation being broken.",
+          "order": 6,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_007",
+      "name": "Communication",
+      "description": "Understanding communication with other ICT users using email and effective use of the internet including protocols and safety considerations.",
+      "order": 7,
+      "lessons": [
+        {
+          "id": "lesson_7_1_1",
+          "name": "7.1.1 Communication | Email",
+          "description": "Understanding characteristics, uses and constraints of email communication including acceptable language, guidelines set by an employer, the need for security, netiquette, email groups, carbon copy (cc), blind carbon copy (bcc), forward, and attachments. Learning about characteristics and effects of spam email including methods which can be used to help prevent spam.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_7_1_2",
+          "name": "7.1.2 Communication | The Internet",
+          "description": "Understanding characteristics, uses, advantages and disadvantages of using the internet including the differences between the internet, an intranet, an extranet and the World Wide Web (WWW), blog, forum, wiki, and social networking. Learning about functionality including Internet Service Provider (ISP), structure of a web address, Uniform Resource Locator (URL), hyperlink, and web browser. Understanding use of search engines and evaluating information found on the internet including how up to date, reliable, biased and valid this information is. Learning about risks of using the internet including inappropriate and criminal material, and restricting data through parental, educational and ISP control.",
+          "order": 2,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_7_1_3",
+          "name": "7.1.3 Communication | Internet Protocols",
+          "description": "Understanding internet protocols including HyperText Transfer Protocol (HTTP), HyperText Transfer Protocol secure variant (HTTPS), File Transfer Protocol (FTP), and Secure Socket Layer (SSL). Learning when each protocol is used and why security protocols are important.",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_008",
+      "name": "Managing Files & Compression",
+      "description": "Learning to manage files effectively including understanding file formats and reducing file sizes for storage or transmission through compression.",
+      "order": 8,
+      "lessons": [
+        {
+          "id": "lesson_8_1_1",
+          "name": "8.1.1 Manage Files Effectively | File Formats",
+          "description": "Learning to locate stored files, open and import files of different types, save files in a planned hierarchical directory/folder structure, save files using appropriate file names, and save and print files in various formats. Understanding how to save and export in file formats of application packages (.docx, .doc, .xlsx, .xls, .sdb, .sdc, .accdb, .odb, .rtf, .pptx, .ppt) and in generic file formats (.csv, .txt, .rtf, .pdf, .css, .htm, .jpg, .png). Learning about characteristics and uses of file formats and the need for generic file formats.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_8_2_1",
+          "name": "8.2.1 Compression | Compression",
+          "description": "Learning how to reduce file sizes for storage or transmission where necessary using file compression including .zip and .rar formats. Understanding the need to reduce file sizes for storage or transmission and when compression is appropriate.",
+          "order": 2,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_009",
+      "name": "Working with Documents",
+      "description": "Understanding audience appreciation and copyright, document production techniques including layout and formatting, working with images, and proofing documents.",
+      "order": 9,
+      "lessons": [
+        {
+          "id": "lesson_9_1_1",
+          "name": "9.1.1 Audience & Purpose | Audience & Purpose",
+          "description": "Learning to show a clear sense of audience and purpose. Understanding how to plan ICT solutions that are responsive to and respectful of the needs of an audience. Learning to analyse the needs of an audience when creating ICT solutions.",
+          "order": 1,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 30,
+          "videos": []
+        },
+        {
+          "id": "lesson_9_2_1",
+          "name": "9.2.1 Document Production | Create & Edit a Document",
+          "description": "Learning to create a new document or edit an existing document. Understanding how to enter and modify text and numbers with total accuracy. Learning to use editing techniques to manipulate text and numbers including highlight, delete, move, cut, copy, paste, and drag and drop. Understanding how to place objects into documents from various sources and wrap text around tables, charts or images.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_9_2_2",
+          "name": "9.2.2 Document Production | Layout",
+          "description": "Learning to organise page layout including editing page size, page orientation, page margins, number of columns, column width, spacing between columns, and setting and removing breaks (page, section and column breaks). Understanding the purpose of setting page, section and column breaks, and gutter margins.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_9_2_3",
+          "name": "9.2.3 Document Production | Formatting",
+          "description": "Learning to format text including setting line spacing (single, 1.5 times, double, multiple, spacing before and after paragraphs), setting tabulation (left, right, centred and decimal tabs, indented paragraphs and hanging paragraphs), text enhancement (bold, underline, italic, superscript and subscript, changes in case), and creating or editing lists (bulleted, numbered). Understanding how to find and replace text including matching case and whole words.",
+          "order": 4,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_9_2_4",
+          "name": "9.2.4 Document Production | Headers & Footers",
+          "description": "Learning to create or edit headers and footers and align their contents consistently within a document. Understanding how to place text and automated objects in headers and footers including file information, page numbering, total number of pages, date, and time. Learning the purpose of headers and footers.",
+          "order": 5,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_9_2_5",
+          "name": "9.2.5 Document Production | Corporate House Style",
+          "description": "Learning to create, modify, update and apply styles to ensure consistency of presentation. Understanding font properties (font face, type, point size, colour), text alignment (left, right, centre, fully justified), text enhancement (bold, underline, italic), spacing (paragraph before and after, line spacing), and bullets (shape, alignment, line spacing and indent). Understanding the purpose and uses of a corporate house style.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_9_2_6",
+          "name": "9.2.6 Document Production | Tables",
+          "description": "Learning to work with tables within documents including creating tables with specified number of rows and columns, placing text or objects in tables, editing tables and their contents (insert/delete rows and columns, merge cells), and formatting tables (horizontal and vertical cell alignment, gridlines, wrap text within cells, shading/colouring cells, adjust row height and column width).",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_9_2_7",
+          "name": "9.2.7 Document Production | Navigation",
+          "description": "Learning to add and delete bookmarks and hyperlinks to enable navigation within documents and to external resources.",
+          "order": 8,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "videos": []
+        },
+        {
+          "id": "lesson_9_3_1",
+          "name": "9.3.1 Images | Image Editing",
+          "description": "Learning to place and edit images with precision including resizing to maintain or adjust aspect ratio, cropping, rotating, reflecting (flipping) horizontally or vertically, adjusting brightness and contrast, and grouping and layering images (grouping and ungrouping, moving to front or back).",
+          "order": 9,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_9_3_2",
+          "name": "9.3.2 Images | File Size Reduction",
+          "description": "Understanding that reducing file size can be achieved by reducing the image resolution or colour depth. Learning when and how to reduce image file sizes appropriately.",
+          "order": 10,
+          "estimatedMinutes": 15,
+          "practiceMinutes": 30,
+          "videos": []
+        },
+        {
+          "id": "lesson_9_4_1",
+          "name": "9.4.1 Proofing | Proofing Tools",
+          "description": "Learning to use automated software tools (spell check, grammar check) and make appropriate changes to ensure work contains as few errors as possible. Understanding that automated suggestions given by spell check software do not always give the correct response. Learning to use validation routines to minimise data entry errors. Understanding the importance, characteristics and uses of appropriate validation including range check, character check, length check, type check, format check, and presence check.",
+          "order": 11,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_9_4_2",
+          "name": "9.4.2 Proofing | Proofing Techniques",
+          "description": "Learning to perform visual verification by identifying and correcting data entry errors including transposed numbers, incorrect spelling, inconsistent character spacing, and inconsistent case. Understanding how to proofread by identifying and correcting inconsistent line spacing, removing blank pages/slides, removing widows/orphans, ensuring consistent application of styles, and ensuring tables and lists are not split over columns or pages/slides. Learning about the importance of verification including visual checking and double data entry to reduce errors and understanding the need for validation as well as verification.",
+          "order": 12,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_010",
+      "name": "Databases",
+      "description": "Creating database structures, understanding types of databases, manipulating data through calculations and searches, and presenting data in reports.",
+      "order": 10,
+      "lessons": [
+        {
+          "id": "lesson_10_1_1",
+          "name": "10.1.1 Create a Database Structure | Types of Database",
+          "description": "Understanding characteristics, uses, advantages and disadvantages of a flat file and a relational database. Learning when each type is appropriate and how they differ in structure and functionality.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_10_1_2",
+          "name": "10.1.2 Create a Database Structure | Primary & Foreign Keys",
+          "description": "Learning to create an appropriate database structure by importing data from existing files (.csv, .txt) using specified field names to create tables. Understanding how to set appropriate data types to fields (text, numeric, date/time, Boolean/logical), set sub-types of numeric data, set display formats, and create and edit primary and foreign keys. Understanding characteristics of primary and foreign keys and how to create relationships between tables.",
+          "order": 2,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_10_1_3",
+          "name": "10.1.3 Create a Database Structure | Perform Calculations",
+          "description": "Learning to use arithmetic operations or numeric functions to perform calculations including calculated fields and calculated controls. Understanding how to use formulae and functions to perform calculations at run time including addition, subtraction, multiplication, division, sum, average, maximum, minimum, and count.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_10_1_4",
+          "name": "10.1.4 Create a Database Structure | Sorting & Searching Data",
+          "description": "Learning to sort data using a single criterion or multiple criteria into ascending or descending order. Understanding how to search and select data using a single criterion or multiple criteria to select subsets of data using a query. Learning to perform searches using variety of operators (AND, OR, NOT, LIKE, >, <, =, >=, <=, <>) and perform searches using wildcards. Understanding how to produce reports to display data, use appropriate headers and footers, set report titles, produce different output layouts, and control display format of numeric data.",
+          "order": 4,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "id": "lesson_10_1_5",
+          "name": "10.1.5 Create a Database Structure | Form Design",
+          "description": "Learning to create and use a data entry form including specified fields, appropriate font styles and sizes, appropriate spacing between fields, character spacing of individual fields, use of white space, radio buttons, check boxes, and drop down menus. Understanding characteristics of good form design.",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_011",
+      "name": "Spreadsheets",
+      "description": "Creating and editing spreadsheet models, using formulae and functions, manipulating and presenting data, and understanding order of operations and cell referencing.",
+      "order": 11,
+      "lessons": [
+        {
+          "id": "lesson_11_1_1",
+          "name": "11.1.1 Create a Data Model | Create & Edit a Spreadsheet",
+          "description": "Learning to create and edit a spreadsheet model including inserting and deleting cells, rows and columns, merging cells, creating formulae using cell references, and replicating formulae using absolute and relative cell references. Understanding how to use arithmetic operators in formulae (add, subtract, multiply, divide, indices), use named cells and named ranges, and use functions (sum, average, maximum, minimum, integer, rounding, counting, LOOKUP, VLOOKUP, HLOOKUP, XLOOKUP, IF). Learning to use external data sources within functions and use nested functions.",
+          "order": 1,
+          "estimatedMinutes": 35,
+          "practiceMinutes": 60,
+          "videos": []
+        },
+        {
+          "id": "lesson_11_1_2",
+          "name": "11.1.2 Create a Data Model | Formulae & Functions",
+          "description": "Understanding the difference between a formula and a function. Learning when to use formulae versus functions and how to combine them effectively in spreadsheet models.",
+          "order": 2,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_11_1_3",
+          "name": "11.1.3 Create a Data Model | Order of Operations",
+          "description": "Understanding the order in which mathematical operations are performed including the use of brackets to make sure that formulae work correctly. Learning BODMAS/PEMDAS rules and their application in spreadsheet calculations.",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_11_1_4",
+          "name": "11.1.4 Create a Data Model | Cell Referencing",
+          "description": "Understanding characteristics and use of absolute and relative cell referencing. Learning when to use each type of cell reference and how to apply them correctly in formulae replication.",
+          "order": 4,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_11_1_5",
+          "name": "11.1.5 Create a Data Model | Present Data",
+          "description": "Learning to adjust display features including displaying formulae or values, adjusting row height and column width, wrapping text within cells, and hiding and displaying rows and columns. Understanding how to format a spreadsheet including text colour, cell colour, bold, underline, italic, shading, formatting numeric data (decimal places, currency symbols, percentages), and using conditional formatting. Learning to set page layout (portrait or landscape orientation) and control page layout to print (specified number of pages, print area, display or hide gridlines and row/column headings). Understanding how to create, label and edit graphs and charts including selecting appropriate chart type, labeling elements, adding data series and axes, formatting values, and enhancing appearance.",
+          "order": 5,
+          "estimatedMinutes": 35,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "id": "lesson_11_1_6",
+          "name": "11.1.6 Create a Data Model | Search & Select Data",
+          "description": "Learning to sort data using single or multiple criteria into ascending or descending order. Understanding how to search and select data using single or multiple criteria to select subsets of data. Learning to perform searches using variety of operators (AND, OR, NOT, >, <, =, >=, <=, <>) and perform searches using wildcards.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_012",
+      "name": "Website Authoring",
+      "description": "Understanding web development layers, creating web pages using HTML in the content layer, and using CSS in the presentation layer for styling.",
+      "order": 12,
+      "lessons": [
+        {
+          "id": "lesson_12_1_1",
+          "name": "12.1.1 Web Development Layers | Layers",
+          "description": "Understanding the three web development layers: content layer used to enter content and create structure of a web page, presentation layer used to display and format elements within a web page, and behaviour layer for scripting language to control elements within a web page.",
+          "order": 1,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 30,
+          "videos": []
+        },
+        {
+          "id": "lesson_12_2_1",
+          "name": "12.2.1 HTML in the Content Layer | HTML",
+          "description": "Learning to create the content layer of a web page including placing appropriate elements in the head section (page title, attach external stylesheets, metatags, default target windows) and body section (tables, images, sound clips, video, div tags, text styling tags, classes, bookmarks, hyperlinks). Understanding purpose of head and body sections, reason tables are used to structure elements, function of metatags, hyperlinks, bookmarks, and anchors. Learning about relative and absolute file paths and why absolute paths must not be used for hyperlinks to locally saved web pages/objects.",
+          "order": 2,
+          "estimatedMinutes": 40,
+          "practiceMinutes": 60,
+          "videos": []
+        },
+        {
+          "id": "lesson_12_3_1",
+          "name": "12.3.1 CSS in the Presentation Layer | CSS",
+          "description": "Learning to create the presentation layer of a web page including creating generic external styles and inline style attributes (background properties, font properties, table properties). Understanding how to create classes, create external styles to be tagged in a web page (h1, h2, h3, p, li), specify font properties, attach comments to an external stylesheet, and save styles in cascading stylesheet format. Understanding characteristics of cascading stylesheets including difference between attached stylesheets and inline style attributes, hierarchy of multiple attached stylesheets and inline styles, characteristics of a style and a class, and reason relative file paths must be used for attached stylesheets.",
+          "order": 3,
+          "estimatedMinutes": 40,
+          "practiceMinutes": 60,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_013",
+      "name": "Presentations",
+      "description": "Creating and editing presentations using master slides, working with various objects and media, and outputting presentations in different formats.",
+      "order": 13,
+      "lessons": [
+        {
+          "id": "lesson_13_1_1",
+          "name": "13.1.1 Presentations | Create a Presentation & Master Slides",
+          "description": "Learning to create a new presentation using a text file. Understanding how to use a master slide to insert and edit objects consistently including images, text, shapes, logos, slide headers and footers, placeholder position, and automated slide numbering. Learning to format master slide objects including headings, subheadings, bullets, and background colour.",
+          "order": 1,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_13_1_2",
+          "name": "13.1.2 Presentations | Edit a Presentation",
+          "description": "Learning to edit a presentation including applying slide layout, inserting new slides, moving or deleting slides, inserting and editing objects on slides (text, images, charts, tables, audio clips, symbols, lines, arrows, call out boxes and shapes), adding presenter notes, inserting and editing hyperlinks, inserting action buttons, adding alternative text/screentip to objects, applying consistent transitions between slides, applying consistent animation effects, and hiding slides within a presentation.",
+          "order": 2,
+          "estimatedMinutes": 35,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "id": "lesson_13_1_3",
+          "name": "13.1.3 Presentations | Output Presentations",
+          "description": "Learning to display the presentation for various purposes including looped on-screen carousel and presenter controlled. Understanding how to print the presentation in various layouts including full page slides, presenter notes, and handouts.",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        }
+      ]
+    }
+  ]
+}
+

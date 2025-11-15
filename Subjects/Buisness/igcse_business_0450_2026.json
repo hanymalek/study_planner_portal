@@ -1,0 +1,883 @@
+{
+  "id": "igcse_business_0450_2026",
+  "name": "Cambridge IGCSE Business Studies (0450) 2026",
+  "subjectName": "Business Studies",
+  "description": "Complete curriculum study plan for Cambridge IGCSE Business Studies covering all topics from Understanding Business Activity to External Influences, aligned with the 2026 syllabus specifications and structured for optimal learning progression",
+  "examBoardId": "IGCSE",
+  "difficulty": "INTERMEDIATE",
+  "version": 1,
+  "isDeleted": false,
+  "createdAt": 1763223600000,
+  "updatedAt": 1763223600000,
+  "createdBy": "admin",
+  "chapters": [
+    {
+      "id": "chapter_001",
+      "name": "Understanding Business Activity",
+      "description": "Fundamental concepts of business activity including the purpose and nature of business, classification methods, enterprise and entrepreneurship, business growth, types of business organisation, and business and stakeholder objectives.",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "lesson_001",
+          "name": "1.1.1 Business Activity | The Nature of Business Activity",
+          "description": "Understanding the concepts of needs, wants, scarcity and opportunity cost. Exploring the importance of specialisation and the fundamental purpose of business activity. Learning about the concept of adding value and how businesses can increase the value they add to products and services.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_002",
+          "name": "1.1.2 Business Activity | The Process of Adding Value",
+          "description": "Detailed examination of how businesses add value through various processes. Understanding the relationship between costs, selling price, and added value. Exploring practical examples of value addition in different industries and business contexts.",
+          "order": 2,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_003",
+          "name": "1.2.1 Classification of Businesses | Classification Using the Economic Sector",
+          "description": "Understanding economic sectors in terms of primary, secondary and tertiary sectors. Learning the basis of business classification with examples to illustrate each classification. Exploring reasons for the changing importance of business classification in developed and developing economies.",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_004",
+          "name": "1.2.2 Classification of Businesses | Classification Using the Public & Private Sector",
+          "description": "Learning how to classify business enterprises between private sector and public sector in a mixed economy. Understanding the key differences between public and private sector organizations, their objectives, and their roles in the economy.",
+          "order": 4,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_005",
+          "name": "1.3.1 Enterprise & Business Growth | Characteristics of Successful Entrepreneurs",
+          "description": "Exploring the key characteristics that define successful entrepreneurs including risk-taking, innovation, creativity, determination, and leadership. Understanding what makes entrepreneurs successful in starting and growing businesses.",
+          "order": 5,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 30,
+          "videos": []
+        },
+        {
+          "id": "lesson_006",
+          "name": "1.3.2 Enterprise & Business Growth | Business Plans & Government Support",
+          "description": "Understanding the contents of a business plan and how business plans assist entrepreneurs in starting and managing businesses. Exploring why and how governments support business start-ups through grants, training schemes, and other support mechanisms.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_007",
+          "name": "1.3.3 Enterprise & Business Growth | Measuring Business Size",
+          "description": "Learning the methods and problems of measuring business size including number of people employed, value of output, and capital employed. Understanding that profit is not a method of measuring business size and recognizing the limitations of various measurement methods.",
+          "order": 7,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_008",
+          "name": "1.3.4 Enterprise & Business Growth | Types of Business Growth",
+          "description": "Understanding why business owners may want to expand their businesses. Exploring different ways in which businesses can grow including internal growth and external growth methods such as mergers, takeovers, and joint ventures.",
+          "order": 8,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_009",
+          "name": "1.3.5 Enterprise & Business Growth | Overcoming Business Growth Issues",
+          "description": "Examining the problems linked to business growth including difficulties in managing larger organizations, maintaining quality, and preserving company culture. Learning strategies and methods businesses can use to overcome these growth challenges.",
+          "order": 9,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_010",
+          "name": "1.3.6 Enterprise & Business Growth | Reasons for Businesses to Remain Small",
+          "description": "Understanding why some businesses deliberately remain small or are unable to grow. Exploring factors such as niche markets, personal service, flexibility, limited capital, and owner preferences that contribute to businesses staying small.",
+          "order": 10,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_011",
+          "name": "1.3.7 Enterprise & Business Growth | Why Businesses Fail",
+          "description": "Analyzing the causes of business failure including lack of management skills, changes in the business environment, and liquidity problems. Understanding why new businesses are at greater risk of failing compared to established businesses.",
+          "order": 11,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_012",
+          "name": "1.4.1 Types of Businesses | The Main Types of Ownership",
+          "description": "Learning the main features of different forms of business organisation including sole traders, partnerships, private and public limited companies, franchises and joint ventures. Understanding the differences between unincorporated businesses and limited companies, and the concepts of risk, ownership and limited liability.",
+          "order": 12,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_013",
+          "name": "1.4.2 Types of Businesses | Deciding on the Business Ownership Model",
+          "description": "Learning how to recommend and justify a suitable form of business organisation to owners and management in given situations. Analyzing the advantages and disadvantages of different ownership structures based on specific business circumstances.",
+          "order": 13,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_014",
+          "name": "1.4.3 Types of Businesses | Public Sector Businesses",
+          "description": "Understanding business organisations in the public sector including public corporations. Exploring their objectives, characteristics, and how they differ from private sector businesses in terms of ownership, control, and purpose.",
+          "order": 14,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_015",
+          "name": "1.5.1 Business & Stakeholder Objectives | Business Objectives",
+          "description": "Understanding that businesses can have several objectives and that the importance of these objectives can change over time. Exploring different business objectives including survival, growth, profit, market share, and the specific objectives of social enterprises.",
+          "order": 15,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_016",
+          "name": "1.5.2 Business & Stakeholder Objectives | Stakeholder Objectives",
+          "description": "Learning about the role of stakeholder groups involved in business activity. Understanding main internal and external stakeholder groups, their different objectives, and how these objectives might conflict with each other through practical examples.",
+          "order": 16,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_002",
+      "name": "People in Business (HR)",
+      "description": "Focus on the functional area of human resources including motivation of employees, organizational structures and management, recruitment and training processes, and effective communication methods within businesses.",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "lesson_017",
+          "name": "2.1.1 Motivating Employees | The Benefits of Motivated Employees",
+          "description": "Understanding why people work and what motivation means in a business context. Exploring the benefits of a well-motivated workforce including increased labour productivity, reduced absenteeism and reduced labour turnover. Learning about the concept of human needs using Maslow's hierarchy.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_018",
+          "name": "2.1.2 Motivating Employees | Motivational Theories",
+          "description": "Detailed study of key motivational theories including Taylor's Scientific Management and Herzberg's Two-Factor Theory. Understanding how these theories explain employee motivation and their practical applications in modern business environments.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_019",
+          "name": "2.1.3 Motivating Employees | Financial Methods of Motivation",
+          "description": "Exploring financial rewards as motivational tools including wage, salary, bonus, commission and profit sharing. Understanding the advantages and disadvantages of different financial motivation methods and when each is most appropriate.",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_020",
+          "name": "2.1.4 Motivating Employees | Non-Financial Methods of Motivation",
+          "description": "Learning about non-financial methods of motivation including job enrichment, job rotation, teamworking, training, and opportunities for promotion. Understanding how to recommend and justify appropriate motivation methods in given circumstances.",
+          "order": 4,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_021",
+          "name": "2.2.1 Organisation & People Management | Organisational Charts & Roles",
+          "description": "Learning to draw, interpret and understand simple organisational charts. Understanding simple hierarchical structures including levels of hierarchy, span of control, and chain of command. Exploring roles and responsibilities of directors, managers, supervisors, and other employees.",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_022",
+          "name": "2.2.2 Organisation & People Management | The Role of Management",
+          "description": "Understanding the functions of management including planning, organising, coordinating, commanding and controlling. Exploring the importance of delegation and the balance between trust versus control in effective management.",
+          "order": 6,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_023",
+          "name": "2.2.3 Organisation & People Management | Leadership Styles",
+          "description": "Learning the features of main leadership styles including autocratic, democratic and laissez-faire. Understanding how to recommend and justify an appropriate leadership style in given circumstances based on business situations and workforce characteristics.",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_024",
+          "name": "2.2.4 Organisation & People Management | Trade Unions",
+          "description": "Understanding what a trade union is and the effects of employees being union members. Exploring how trade unions represent workers' interests, negotiate with employers, and impact on business decision-making and employee relations.",
+          "order": 8,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_025",
+          "name": "2.3.1 Recruitment, Selection & Training | Recruitment Methods",
+          "description": "Learning about recruitment and selection methods used by businesses. Understanding the difference between internal recruitment and external recruitment, and the main stages in the recruitment and selection process for employees.",
+          "order": 9,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_026",
+          "name": "2.3.2 Recruitment, Selection & Training | Choosing the Right Employee",
+          "description": "Understanding how to recommend and justify who to employ in given circumstances. Learning about the selection process including job descriptions, person specifications, application forms, interviews, and assessment methods.",
+          "order": 10,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_027",
+          "name": "2.3.3 Recruitment, Selection & Training | Part-Time Versus Full-Time",
+          "description": "Exploring the benefits and limitations of part-time employees and full-time employees for both businesses and workers. Understanding when businesses should use part-time versus full-time contracts and the implications of each.",
+          "order": 11,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_028",
+          "name": "2.3.4 Recruitment, Selection & Training | Types of Training",
+          "description": "Understanding the importance of training to a business and to employees. Exploring the benefits and limitations of induction training, on-the-job training and off-the-job training, and when each type is most appropriate.",
+          "order": 12,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_029",
+          "name": "2.3.5 Recruitment, Selection & Training | Downsizing the Workforce",
+          "description": "Understanding why reducing the size of the workforce might be necessary. Learning the difference between dismissal and redundancy with examples. Understanding situations requiring downsizing such as automation or reduced demand for products.",
+          "order": 13,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_030",
+          "name": "2.3.6 Recruitment, Selection & Training | The Impact of Legislation on Employment",
+          "description": "Learning about legal controls over employment issues and their impact on employers and employees. Understanding legal controls over employment contracts, unfair dismissal, discrimination, health and safety, and legal minimum wage.",
+          "order": 14,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_031",
+          "name": "2.4.1 Internal & External Communication | Types of Communication Methods",
+          "description": "Understanding why effective communication is important and the methods used to achieve it. Exploring the benefits and limitations of different communication methods including those based on information technology. Learning to recommend appropriate communication methods.",
+          "order": 15,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_032",
+          "name": "2.4.2 Internal & External Communication | Communication Barriers",
+          "description": "Demonstrating an awareness of communication barriers. Understanding how communication barriers arise and the problems of ineffective communication. Learning strategies for how communication barriers can be reduced or removed in business contexts.",
+          "order": 16,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_003",
+      "name": "Marketing",
+      "description": "Comprehensive study of marketing including the role of marketing, market research methods, the marketing mix (4 Ps), and marketing strategies for both domestic and international markets.",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "lesson_033",
+          "name": "3.1.1 Customers, Marketing & Competition | The Role of Marketing",
+          "description": "Understanding the fundamental role of marketing in business including identifying customer needs, satisfying customer needs, maintaining customer loyalty, and building strong customer relationships.",
+          "order": 1,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_034",
+          "name": "3.1.2 Customers, Marketing & Competition | The Dynamic Nature of Markets",
+          "description": "Exploring market changes including why customer and consumer spending patterns may change, the importance of changing customer needs, why some markets have become more competitive, and how businesses can respond to changing patterns and increased competition.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_035",
+          "name": "3.1.3 Customers, Marketing & Competition | Niche & Mass Marketing",
+          "description": "Understanding the concepts of niche marketing and mass marketing. Exploring the benefits and limitations of both approaches to marketing and when each strategy is most appropriate for different businesses and products.",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_036",
+          "name": "3.1.4 Customers, Marketing & Competition | The Process of Market Segmentation",
+          "description": "Learning how and why market segmentation is undertaken. Understanding how markets can be segmented according to age, socio-economic grouping, location, and gender. Exploring the potential benefits of segmentation to businesses and how to recommend appropriate segmentation methods.",
+          "order": 4,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_037",
+          "name": "3.2.1 Market Research | The Role of Market Research",
+          "description": "Understanding the role of market research and methods used. Learning about market-orientated businesses and the uses of market research information. Understanding primary research and secondary research including their benefits and limitations.",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_038",
+          "name": "3.2.2 Market Research | Primary Market Research",
+          "description": "Exploring methods of primary research including postal questionnaire, online survey, interviews, and focus groups. Understanding the need for sampling and factors influencing the accuracy of market research data gathered through primary methods.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_039",
+          "name": "3.2.3 Market Research | Secondary Market Research",
+          "description": "Learning about methods of secondary research including online sources, accessing government sources, and paying for commercial market research reports. Understanding the advantages and limitations of secondary research compared to primary research.",
+          "order": 7,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_040",
+          "name": "3.2.4 Market Research | Presenting and Using Market Research Data",
+          "description": "Learning to analyse market research data shown in the form of graphs, charts and diagrams. Understanding how to draw simple conclusions from such data and use research findings to inform business decisions.",
+          "order": 8,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_041",
+          "name": "3.3.1 The Marketing Mix | Product: Products and Brand Image",
+          "description": "Understanding the limitations and benefits of developing new products. Exploring brand image and its impact on sales and customer loyalty. Learning about the role of packaging in product marketing and consumer decision-making.",
+          "order": 9,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_042",
+          "name": "3.3.2 The Marketing Mix | Product: The Product Life Cycle",
+          "description": "Learning about the product life cycle including main stages and extension strategies. Understanding how to draw and interpret product life cycle diagrams. Exploring how stages of the product life cycle influence marketing decisions including promotion and pricing.",
+          "order": 10,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_043",
+          "name": "3.3.3 The Marketing Mix | Price: Types of Pricing Methods",
+          "description": "Understanding pricing methods including cost plus, competitive, penetration, skimming, and promotional pricing. Exploring the benefits and limitations of different methods and learning to recommend and justify appropriate pricing methods in given circumstances.",
+          "order": 11,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_044",
+          "name": "3.3.4 The Marketing Mix | Price: The Significance of Price Elasticity of Demand",
+          "description": "Understanding the significance of price elasticity including the difference between price elastic demand and price inelastic demand. Exploring the importance of the concept in pricing decisions without requiring knowledge of formulas or PED calculations.",
+          "order": 12,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_045",
+          "name": "3.3.5 The Marketing Mix | Place: Types of Distribution Channels",
+          "description": "Learning about distribution channels and understanding the advantages and disadvantages of different channels including use of wholesalers, retailers or selling direct to consumers. Learning to recommend and justify appropriate distribution channels.",
+          "order": 13,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_046",
+          "name": "3.3.6 The Marketing Mix | Promotion",
+          "description": "Understanding the aims of promotion and different forms of promotion including advertising and sales promotion. Exploring how they influence sales and the need for cost-effectiveness in spending the marketing budget on promotion.",
+          "order": 14,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_047",
+          "name": "3.3.7 The Marketing Mix | Technology and the Marketing Mix",
+          "description": "Defining and explaining the concept of e-commerce. Understanding the opportunities and threats of e-commerce to businesses and consumers. Exploring the use of the internet and social media networks for promotion.",
+          "order": 15,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_048",
+          "name": "3.4.1 Marketing Strategy | Developing Appropriate Marketing Strategies",
+          "description": "Learning to justify marketing strategies appropriate to given situations. Understanding the importance of different elements of the marketing mix in influencing consumer decisions and how to recommend and justify appropriate marketing strategies.",
+          "order": 16,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_049",
+          "name": "3.4.2 Marketing Strategy | The Impact of Legislation on Marketing",
+          "description": "Understanding the nature and impact of legal controls related to marketing. Exploring the impact of legal controls on marketing strategy including regulations on misleading promotion, faulty and dangerous goods.",
+          "order": 17,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_050",
+          "name": "3.4.3 Marketing Strategy | Entering Foreign Markets",
+          "description": "Understanding the opportunities and problems of entering new foreign markets. Exploring the growth potential of new markets in other countries and problems such as cultural differences and lack of knowledge.",
+          "order": 18,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_051",
+          "name": "3.4.4 Marketing Strategy | Joint Ventures and Licensing",
+          "description": "Learning about the benefits and limitations of methods to overcome problems of entering foreign markets including joint ventures and licensing agreements. Understanding when each method is most appropriate for international expansion.",
+          "order": 19,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_004",
+      "name": "Operations Management",
+      "description": "Study of production methods, cost management, break-even analysis, quality control and assurance, and location decisions for manufacturing and service businesses.",
+      "order": 4,
+      "lessons": [
+        {
+          "id": "lesson_052",
+          "name": "4.1.1 Production of Goods & Services | The Meaning of Production",
+          "description": "Understanding the meaning of production as managing resources effectively to produce goods and services. Learning the difference between production and productivity and the benefits of increasing efficiency through automation, technology, and improved labour skills.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_053",
+          "name": "4.1.2 Production of Goods & Services | The Concept of Lean Production",
+          "description": "Understanding why businesses hold inventories and the concept of lean production. Learning how to achieve lean production through methods such as just-in-time inventory control and Kaizen. Exploring the benefits of lean production for businesses.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_054",
+          "name": "4.1.3 Production of Goods & Services | The Main Production Methods",
+          "description": "Learning the features, benefits and limitations of job production, batch production and flow production. Understanding how to recommend and justify an appropriate production method for given situations based on product type and business scale.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_055",
+          "name": "4.1.4 Production of Goods & Services | The Impact of Technology on Production",
+          "description": "Understanding how technology has changed and is changing production methods. Exploring the use of computers in design and manufacturing, automation, robotics, and how technology improves productivity and efficiency.",
+          "order": 4,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_056",
+          "name": "4.2.1 Costs, Break-Even & Production Scale | Different Types of Costs",
+          "description": "Learning to identify and classify costs including fixed costs, variable costs, average costs, and total costs. Understanding how to use cost data to help make simple cost-based decisions such as whether to stop production or continue.",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_057",
+          "name": "4.2.2 Costs, Break-Even & Production Scale | Economies of Scale",
+          "description": "Understanding the concept of economies of scale with examples including purchasing economies, marketing economies, financial economies, managerial economies, and technical economies. Exploring how businesses benefit from growing larger.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_058",
+          "name": "4.2.3 Costs, Break-Even & Production Scale | Diseconomies of Scale",
+          "description": "Understanding the concept of diseconomies of scale with examples including poor communication, lack of commitment from employees, and weak coordination. Learning why businesses may become less efficient when they grow too large.",
+          "order": 7,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_059",
+          "name": "4.2.4 Costs, Break-Even & Production Scale | Break-Even Charts",
+          "description": "Understanding the concept of break-even and learning to construct, complete or amend simple break-even charts. Understanding how to interpret given charts and use them to analyse business situations.",
+          "order": 8,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_060",
+          "name": "4.2.5 Costs, Break-Even & Production Scale | Break-Even Calculations",
+          "description": "Learning to calculate break-even output from given data. Understanding how to define, calculate and interpret the margin of safety. Learning to use break-even analysis to help make simple decisions such as the impact of higher prices.",
+          "order": 9,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "id": "lesson_061",
+          "name": "4.2.6 Costs, Break-Even & Production Scale | The Limitations of Break-Even Analysis",
+          "description": "Understanding the limitations of break-even analysis including assumptions made, the difficulty of classifying costs, and how market conditions can change. Learning when break-even analysis is useful and when it may be unreliable.",
+          "order": 10,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_062",
+          "name": "4.3.1 Quality Management | Quality Control and Assurance",
+          "description": "Understanding what quality means and why it is important for all businesses. Learning the concept of quality control and how businesses implement it. Understanding quality assurance and how it can be implemented to ensure consistent quality.",
+          "order": 11,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_063",
+          "name": "4.4.1 Location Decisions | Different Location Needs for Manufacturing and Service Businesses",
+          "description": "Understanding the main factors influencing location decisions for manufacturing businesses and service businesses. Learning about factors relevant to each type of business and how location requirements differ between manufacturing and services.",
+          "order": 12,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_064",
+          "name": "4.4.2 Location Decisions | Influences on the Choice of Production Location",
+          "description": "Learning about factors that a business could consider when deciding which country to locate operations in. Understanding the role of legal controls on location decisions and how to recommend and justify an appropriate location in given circumstances.",
+          "order": 13,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_005",
+      "name": "Financial Information and Decisions",
+      "description": "Comprehensive study of business finance including sources of finance, cash-flow forecasting and working capital, income statements, statements of financial position, and analysis of financial accounts using ratios.",
+      "order": 5,
+      "lessons": [
+        {
+          "id": "lesson_065",
+          "name": "5.1.1 Business Finance | The Need for Business Finance",
+          "description": "Understanding the main reasons why businesses need finance including start-up capital, capital for expansion and additional working capital. Learning to understand the difference between short-term and long-term finance needs.",
+          "order": 1,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_066",
+          "name": "5.1.2 Business Finance | Internal and External Sources of Finance",
+          "description": "Learning about internal sources and external sources of finance with examples of each. Understanding the characteristics, advantages and disadvantages of different sources of finance available to businesses.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_067",
+          "name": "5.1.3 Business Finance | Short-Term and Long-Term Sources of Finance",
+          "description": "Understanding short-term and long-term sources with examples such as overdraft for short-term finance and debt or equity for long-term finance. Exploring the importance of alternative sources of capital including micro-finance and crowd-funding.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_068",
+          "name": "5.1.4 Business Finance | Choosing the Best Type of Finance",
+          "description": "Learning the main factors considered in making the financial choice including size and legal form of business, amount required, length of time, and existing loans. Understanding how to recommend and justify appropriate sources of finance in given circumstances.",
+          "order": 4,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_069",
+          "name": "5.2.1 Cash-Flow Forecasts & Working Capital | Using Cash-Flow Forecasts",
+          "description": "Understanding why cash is important to a business and what a cash-flow forecast is. Learning how a simple cash-flow forecast is constructed and its importance. Understanding how to amend or complete simple cash-flow forecasts and interpret them.",
+          "order": 5,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_070",
+          "name": "5.2.2 Cash-Flow Forecasts & Working Capital | Solving Short-Term Cash-Flow Problems",
+          "description": "Learning how a short-term cash-flow problem might be overcome through methods such as overdraft, delaying supplier payments, and asking debtors to pay more quickly. Understanding when each solution is appropriate.",
+          "order": 6,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_071",
+          "name": "5.2.3 Cash-Flow Forecasts & Working Capital | The Importance of Working Capital",
+          "description": "Understanding the concept and importance of working capital. Learning why businesses need sufficient working capital to operate effectively and the problems that arise from insufficient working capital.",
+          "order": 7,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_072",
+          "name": "5.3.1 Income Statements | The Importance of Profit",
+          "description": "Understanding what profit is and why it is important. Learning how a profit is made and the importance of profit to private sector businesses as a reward for risk-taking and enterprise, and as a source of finance. Understanding the difference between profit and cash.",
+          "order": 8,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_073",
+          "name": "5.3.2 Income Statements | The Main Features of an Income Statement",
+          "description": "Learning the main features of an income statement including revenue, cost of sales, gross profit, profit and retained profit. Understanding the structure and components of income statements without needing to construct them.",
+          "order": 9,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_074",
+          "name": "5.3.3 Income Statements | Using Income Statements to Make Decisions",
+          "description": "Learning to use simple income statements in decision-making based on profit calculations. Understanding how to interpret income statement data to evaluate business performance and make informed business decisions.",
+          "order": 10,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_075",
+          "name": "5.4.1 Statement of Financial Position | The Main Features of a Statement of Financial Position",
+          "description": "Understanding the main elements of a statement of financial position. Learning the main classifications of assets and liabilities with examples of each category.",
+          "order": 11,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_076",
+          "name": "5.4.2 Statement of Financial Position | Using the Statement of Financial Position To Make Decisions",
+          "description": "Learning to interpret a simple statement of financial position and make deductions from it. Understanding how a business is financing its activities and what assets it owns, including analysis of inventory sales to raise finance.",
+          "order": 12,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_077",
+          "name": "5.5.1 Analysing the Accounts | Profitability & Liquidity",
+          "description": "Understanding the concept and importance of profitability to businesses. Learning the concept and importance of liquidity. Understanding the difference between profitability and liquidity and why both are important for business success.",
+          "order": 13,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_078",
+          "name": "5.5.2 Analysing the Accounts | Using Profitability Ratios To Analyse Performance",
+          "description": "Learning how to interpret the financial performance of a business by calculating and analysing profitability ratios including gross profit margin, profit margin, and Return on Capital Employed (ROCE).",
+          "order": 14,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "id": "lesson_079",
+          "name": "5.5.3 Analysing the Accounts | Using Liquidity Ratios To Analyse Performance",
+          "description": "Learning how to interpret the financial performance of a business by calculating and analysing liquidity ratios including current ratio and acid test ratio. Understanding what these ratios reveal about business financial health.",
+          "order": 15,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "id": "lesson_080",
+          "name": "5.5.4 Analysing the Accounts | How Stakeholders Use the Accounts",
+          "description": "Understanding why and how accounts are used by different stakeholders. Learning about the needs of different users of accounts and ratio analysis. Understanding how users might use information to make decisions such as whether to lend to or invest in the business.",
+          "order": 16,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_006",
+      "name": "External Influences on Business Activity",
+      "description": "Study of external factors affecting businesses including economic issues, environmental and ethical considerations, and the impact of globalisation including multinational companies and exchange rates.",
+      "order": 6,
+      "lessons": [
+        {
+          "id": "lesson_081",
+          "name": "6.1.1 Economic Issues | The Business Cycle",
+          "description": "Understanding the main stages of the business cycle including growth, boom, recession, and slump. Learning about the impact on businesses of changes in employment levels, inflation and Gross Domestic Product (GDP).",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_082",
+          "name": "6.1.2 Economic Issues | Government Impact on Business: Economic Objectives",
+          "description": "Learning how government control over the economy affects business activity and how businesses may respond. Understanding how to identify government economic objectives such as increasing Gross Domestic Product (GDP).",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_083",
+          "name": "6.1.3 Economic Issues | Government Impact on Business: Taxes, Spending & Interest Rates",
+          "description": "Understanding the impact of changes in taxes and government spending on businesses. Learning about the impact of changes in interest rates and how businesses might respond to these economic changes.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_084",
+          "name": "6.2.1 Environmental & Ethical Issues | Environmental Concerns: Externalities",
+          "description": "Understanding environmental concerns and ethical issues as both opportunities and constraints for businesses. Learning how business activity can impact on the environment including global warming. Understanding the concept of externalities including possible external costs and external benefits of business decisions.",
+          "order": 4,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_085",
+          "name": "6.2.2 Environmental & Ethical Issues | Environmental Concerns: Pressure Groups",
+          "description": "Understanding sustainable development and how business activity can contribute to this. Learning how and why businesses might respond to environmental pressures and opportunities from pressure groups. Understanding the role of legal controls over business activity affecting the environment.",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_086",
+          "name": "6.2.3 Environmental & Ethical Issues | Ethical Issues To Consider",
+          "description": "Understanding ethical issues a business might face including conflicts between profits and ethics. Learning how businesses might react and respond to ethical issues such as child labour and paying fair prices to suppliers.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_087",
+          "name": "6.3.1 Business & Globalisation | The Importance of Globalisation",
+          "description": "Understanding the concept of globalisation and the reasons for it. Exploring the opportunities and threats of globalisation for businesses and understanding why governments might introduce import tariffs and import quotas.",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_088",
+          "name": "6.3.2 Business & Globalisation | Tariffs & Quotas",
+          "description": "Learning about why governments introduce import tariffs and import quotas as protectionist measures. Understanding the impact of these measures on businesses, consumers, and international trade.",
+          "order": 8,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_089",
+          "name": "6.3.3 Business & Globalisation | The Importance of Multi National Companies (MNCs)",
+          "description": "Understanding reasons for the importance and growth of multinational companies. Learning about the benefits to a business of becoming a multinational and the impact on its stakeholders.",
+          "order": 9,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_090",
+          "name": "6.3.4 Business & Globalisation | Benefits & Drawbacks To Countries of Hosting MNCs",
+          "description": "Understanding potential benefits to a country and economy where a MNC is located including jobs, exports, increased choice, and investment. Learning about potential drawbacks including reduced sales of local businesses and repatriation of profits.",
+          "order": 10,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_091",
+          "name": "6.3.5 Business & Globalisation | The Impact of Exchange Rate Changes",
+          "description": "Understanding the impact of exchange rate changes including depreciation and appreciation. Learning how exchange rate changes can affect businesses as importers and exporters of products affecting prices, competitiveness, and profitability.",
+          "order": 11,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "videos": []
+        }
+      ]
+    }
+  ]
+}
+

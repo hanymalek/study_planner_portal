@@ -1,0 +1,1075 @@
+{
+  "id": "igcse_chemistry_0620_2026_2028",
+  "name": "Cambridge IGCSE Chemistry (0620) 2026-2028",
+  "subjectName": "Chemistry",
+  "description": "Complete curriculum study plan for Cambridge IGCSE Chemistry covering all topics from States of Matter to Experimental Techniques and Chemical Analysis, aligned with the 2026-2028 syllabus specifications and structured for optimal learning progression",
+  "examBoardId": "IGCSE",
+  "difficulty": "INTERMEDIATE",
+  "version": 1,
+  "isDeleted": false,
+  "createdAt": 1763239800000,
+  "updatedAt": 1763239800000,
+  "createdBy": "admin",
+  "chapters": [
+    {
+      "id": "chapter_001",
+      "name": "States of Matter",
+      "description": "Understanding the distinguishing properties of solids, liquids and gases, particle theory, changes of state, diffusion, and the effects of temperature and pressure on gases.",
+      "order": 1,
+      "lessons": [
+        {
+          "id": "lesson_001",
+          "name": "1.1.1 Solids, Liquids & Gases | Kinetic Theory",
+          "description": "Understanding the kinetic particle theory of matter. Learning how particles behave differently in solids, liquids and gases in terms of particle separation, arrangement and motion. Understanding the relationship between particle movement and temperature.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_002",
+          "name": "1.1.2 Solids, Liquids & Gases | States of Matter",
+          "description": "Stating the distinguishing properties of solids, liquids and gases. Describing the structures of solids, liquids and gases in terms of particle separation, arrangement and motion. Describing changes of state in terms of melting, boiling, evaporating, freezing and condensing. Explaining changes of state in terms of kinetic particle theory, including the interpretation of heating and cooling curves.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_003",
+          "name": "1.1.3 Solids, Liquids & Gases | Pressure & Temperature in Gases",
+          "description": "Describing the effects of temperature and pressure on the volume of a gas. Explaining, in terms of kinetic particle theory, the effects of temperature and pressure on the volume of a gas. Understanding gas behavior under different conditions.",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_004",
+          "name": "1.1.4 Solids, Liquids & Gases | Diffusion",
+          "description": "Describing and explaining diffusion in terms of kinetic particle theory. Describing and explaining the effect of relative molecular mass on the rate of diffusion of gases. Understanding practical examples of diffusion in everyday life.",
+          "order": 4,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_002",
+      "name": "Atoms, Elements & Compounds",
+      "description": "Understanding atomic structure, the Periodic Table, isotopes, chemical bonding including ionic and covalent bonds, and the properties of different types of compounds and structures.",
+      "order": 2,
+      "lessons": [
+        {
+          "id": "lesson_005",
+          "name": "2.1.1 Atomic Structure & the Periodic Table | Elements, Compounds & Mixtures",
+          "description": "Describing the differences between elements, compounds and mixtures. Understanding that elements contain only one type of atom, compounds contain atoms of different elements chemically bonded together, and mixtures contain two or more substances that are not chemically bonded.",
+          "order": 1,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 30,
+          "videos": []
+        },
+        {
+          "id": "lesson_006",
+          "name": "2.1.2 Atomic Structure & the Periodic Table | Atomic Structure",
+          "description": "Describing the structure of the atom as a central nucleus containing neutrons and protons surrounded by electrons in shells. Stating the relative charges and relative masses of a proton, a neutron and an electron. Defining proton number/atomic number and mass number/nucleon number. Interpreting and using symbols for atoms and ions.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_007",
+          "name": "2.1.3 Atomic Structure & the Periodic Table | Electronic Configuration",
+          "description": "Determining the electronic configuration of elements and their ions with proton number 1 to 20. Understanding that Group VIII noble gases have a full outer electron shell, the number of outer shell electrons is equal to the group number in Groups I to VII, and the number of occupied electron shells is equal to the period number.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_008",
+          "name": "2.1.4 Atomic Structure & the Periodic Table | Isotopes",
+          "description": "Defining isotopes as different atoms of the same element that have the same number of protons but different numbers of neutrons. Understanding that isotopes of the same element have the same chemical properties because they have the same number of electrons and therefore the same electronic configuration. Calculating the relative atomic mass of an element from the relative masses and abundances of its isotopes.",
+          "order": 4,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_009",
+          "name": "2.2.1 Ions & Ionic Bonds | Ions & Ionic Bonds",
+          "description": "Describing the formation of positive ions, known as cations, and negative ions, known as anions. Stating that an ionic bond is a strong electrostatic attraction between oppositely charged ions. Describing the formation of ionic bonds between elements from Group I and Group VII, and between ions of metallic and non-metallic elements, including the use of dot-and-cross diagrams.",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_010",
+          "name": "2.2.2 Ions & Ionic Bonds | Ionic Bonds & Lattice Structure",
+          "description": "Describing the giant lattice structure of ionic compounds as a regular arrangement of alternating positive and negative ions. Understanding the three-dimensional structure of ionic compounds and how ions are arranged in a repeating pattern.",
+          "order": 6,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_011",
+          "name": "2.2.3 Ions & Ionic Bonds | Properties of Ionic Compounds",
+          "description": "Describing and explaining the properties of ionic compounds: high melting points and boiling points, good electrical conductivity when aqueous or molten and poor when solid. Understanding these properties in terms of structure and bonding, including the strong electrostatic forces between ions and the movement of ions when molten or dissolved.",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_012",
+          "name": "2.3.1 Simple Molecules & Covalent Bonds | Covalent Bonds",
+          "description": "Stating that a covalent bond is formed when a pair of electrons is shared between two atoms leading to noble gas electronic configurations. Describing the formation of covalent bonds in simple molecules including H2, Cl2, H2O, CH4, NH3, HCl, CH3OH, C2H4, O2, CO2 and N2. Using dot-and-cross diagrams to show the electronic configurations in these and similar molecules.",
+          "order": 8,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_013",
+          "name": "2.3.2 Simple Molecules & Covalent Bonds | Molecules & Compounds",
+          "description": "Understanding the difference between molecules and compounds. Describing how atoms share electrons to form covalent bonds and create molecules. Exploring the variety of simple molecular compounds and their molecular structures.",
+          "order": 9,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_014",
+          "name": "2.3.3 Simple Molecules & Covalent Bonds | Properties of Simple Molecular Compounds",
+          "description": "Describing and explaining in terms of structure and bonding the properties of simple molecular compounds: low melting points and boiling points in terms of weak intermolecular forces (specific types of intermolecular forces are not required), and poor electrical conductivity.",
+          "order": 10,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_015",
+          "name": "2.4.1 Giant Structures | Diamond & Graphite",
+          "description": "Describing the giant covalent structures of graphite and diamond. Relating the structures and bonding of graphite and diamond to their uses, limited to: graphite as a lubricant and as an electrode, and diamond in cutting tools. Understanding the differences in their properties based on their structures.",
+          "order": 11,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_016",
+          "name": "2.4.2 Giant Structures | Silicon(IV) Oxide",
+          "description": "Describing the giant covalent structure of silicon(IV) oxide, SiO2. Describing the similarity in properties between diamond and silicon(IV) oxide, related to their structures. Understanding why these materials have high melting points and are very hard.",
+          "order": 12,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_017",
+          "name": "2.4.3 Giant Structures | Metallic Bonding",
+          "description": "Describing metallic bonding as the electrostatic attraction between the positive ions in a giant metallic lattice and a 'sea' of delocalised electrons. Explaining in terms of structure and bonding the properties of metals: good electrical conductivity, and malleability and ductility.",
+          "order": 13,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_003",
+      "name": "Stoichiometry",
+      "description": "Understanding chemical formulae, relative atomic and molecular masses, the mole concept, the Avogadro constant, and stoichiometric calculations including reacting masses, concentrations, and empirical and molecular formulae.",
+      "order": 3,
+      "lessons": [
+        {
+          "id": "lesson_018",
+          "name": "3.1.1 Formulae & Relative Masses | Formulae",
+          "description": "Stating the formulae of the elements and compounds named in the subject content. Defining the molecular formula of a compound as the number and type of different atoms in one molecule. Deducing the formula of a simple compound from the relative numbers of atoms present in a model or a diagrammatic representation. Constructing word equations and symbol equations to show how reactants form products, including state symbols.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_019",
+          "name": "3.1.2 Formulae & Relative Masses | Empirical Formulae & Formulae of Ionic Compounds",
+          "description": "Defining the empirical formula of a compound as the simplest whole number ratio of the different atoms or ions in a compound. Deducing the formula of an ionic compound from the relative numbers of the ions present in a model or a diagrammatic representation or from the charges on the ions.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_020",
+          "name": "3.1.3 Formulae & Relative Masses | Writing Equations",
+          "description": "Constructing symbol equations with state symbols, including ionic equations. Deducing the symbol equation with state symbols for a chemical reaction, given relevant information. Balancing chemical equations and understanding the law of conservation of mass.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_021",
+          "name": "3.1.4 Formulae & Relative Masses | Ar & Mr",
+          "description": "Describing relative atomic mass, Ar, as the average mass of the isotopes of an element compared to 1/12th of the mass of an atom of 12C. Defining relative molecular mass, Mr, as the sum of the relative atomic masses. Relative formula mass, Mr, will be used for ionic compounds. Calculating reacting masses in simple proportions.",
+          "order": 4,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_022",
+          "name": "3.2.1 The Mole & Avogadro Constant | The Mole",
+          "description": "Stating that the mole, mol, is the unit of amount of substance and that one mole contains 6.02 × 10²³ particles, e.g. atoms, ions, molecules; this number is the Avogadro constant. Stating that concentration can be measured in g/dm³ or mol/dm³. Understanding the concept of the mole as a counting unit.",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_023",
+          "name": "3.2.2 The Mole & Avogadro Constant | Linking Moles, Mass & Mr",
+          "description": "Using the relationship: amount of substance (mol) = mass (g) / molar mass (g/mol) to calculate: (a) amount of substance, (b) mass, (c) molar mass, (d) relative atomic mass or relative molecular/formula mass, (e) number of particles, using the value of the Avogadro constant.",
+          "order": 6,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_024",
+          "name": "3.2.3 The Mole & Avogadro Constant | Reacting Masses",
+          "description": "Calculating stoichiometric reacting masses and understanding limiting reactants. Using balanced equations to determine the masses of reactants and products in chemical reactions. Understanding which reactant is in excess and which is the limiting reactant.",
+          "order": 7,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "id": "lesson_025",
+          "name": "3.2.4 The Mole & Avogadro Constant | Calculating Concentration",
+          "description": "Using the molar gas volume, taken as 24 dm³ at room temperature and pressure, r.t.p., in calculations involving gases. Calculating volumes of gases at r.t.p., volumes of solutions and concentrations of solutions expressed in g/dm³ and mol/dm³, including conversion between cm³ and dm³.",
+          "order": 8,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_026",
+          "name": "3.2.5 The Mole & Avogadro Constant | Titration Calculations",
+          "description": "Using experimental data from a titration to calculate the moles of solute, or the concentration or volume of a solution. Understanding the relationship between acids and bases in neutralization reactions and applying this to titration calculations.",
+          "order": 9,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "id": "lesson_027",
+          "name": "3.2.6 The Mole & Avogadro Constant | Empirical & Molecular Formula",
+          "description": "Calculating empirical formulae and molecular formulae, given appropriate data. Using experimental results to determine the empirical formula of a compound and calculating the molecular formula from the empirical formula and relative molecular mass.",
+          "order": 10,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "id": "lesson_028",
+          "name": "3.2.7 The Mole & Avogadro Constant | Percentage Yield & Purity",
+          "description": "Calculating percentage yield, percentage composition by mass and percentage purity, given appropriate data. Understanding why actual yields may be less than theoretical yields and how to calculate the efficiency of chemical processes.",
+          "order": 11,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 50,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_004",
+      "name": "Electrochemistry",
+      "description": "Understanding electrolysis as a process of decomposition, predicting products at electrodes, constructing ionic half-equations, applications of electrolysis including electroplating, and hydrogen-oxygen fuel cells.",
+      "order": 4,
+      "lessons": [
+        {
+          "id": "lesson_029",
+          "name": "4.1.1 Electrolysis | Electrolysis Principles",
+          "description": "Defining electrolysis as the decomposition of an ionic compound, when molten or in aqueous solution, by the passage of an electric current. Identifying in simple electrolytic cells: the anode as the positive electrode, the cathode as the negative electrode, and the electrolyte as the molten or aqueous substance that undergoes electrolysis. Describing the transfer of charge during electrolysis including the movement of electrons in the external circuit, the loss or gain of electrons at the electrodes, and the movement of ions in the electrolyte.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_030",
+          "name": "4.1.2 Electrolysis | Electrolysis of Molten Compounds",
+          "description": "Stating that metals or hydrogen are formed at the cathode and that non-metals (other than hydrogen) are formed at the anode. Predicting the identity of the products at each electrode for the electrolysis of a binary compound in the molten state. Understanding the electrolysis of molten lead(II) bromide and other molten ionic compounds.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_031",
+          "name": "4.1.3 Electrolysis | Electrolysis of Aqueous Sodium Chloride & Dilute Sulfuric Acid",
+          "description": "Identifying the products formed at the electrodes and describing the observations made during the electrolysis of concentrated aqueous sodium chloride and dilute sulfuric acid using inert electrodes made of platinum or carbon/graphite. Understanding the industrial importance of these processes.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_032",
+          "name": "4.1.4 Electrolysis | Electrolysis of Aqueous Solutions",
+          "description": "Identifying the products formed at the electrodes and describing the observations made during the electrolysis of aqueous copper(II) sulfate using inert carbon/graphite electrodes and when using copper electrodes. Predicting the identity of the products at each electrode for the electrolysis of a halide compound in dilute or concentrated aqueous solution.",
+          "order": 4,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_033",
+          "name": "4.1.5 Electrolysis | Ionic Half Equations",
+          "description": "Constructing ionic half-equations for reactions at the anode (to show oxidation) and at the cathode (to show reduction). Understanding electron transfer in electrolysis and representing this using half-equations.",
+          "order": 5,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_034",
+          "name": "4.2.1 Applications of Electrolysis | Electroplating",
+          "description": "Stating that metal objects are electroplated to improve their appearance and resistance to corrosion. Describing how metals are electroplated using electrolysis, including the choice of electrolyte and electrodes.",
+          "order": 6,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_035",
+          "name": "4.2.2 Applications of Electrolysis | Hydrogen Fuel Cells",
+          "description": "Stating that a hydrogen-oxygen fuel cell uses hydrogen and oxygen to produce electricity with water as the only chemical product. Describing the advantages and disadvantages of using hydrogen-oxygen fuel cells in comparison with gasoline/petrol engines in vehicles.",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_005",
+      "name": "Chemical Energetics",
+      "description": "Understanding exothermic and endothermic reactions, enthalpy changes, activation energy, reaction pathway diagrams, and energy changes in terms of bond breaking and bond making.",
+      "order": 5,
+      "lessons": [
+        {
+          "id": "lesson_036",
+          "name": "5.1.1 Exothermic & Endothermic Reactions | Endothermic & Exothermic Reactions",
+          "description": "Stating that an exothermic reaction transfers thermal energy to the surroundings leading to an increase in the temperature of the surroundings. Stating that an endothermic reaction takes in thermal energy from the surroundings leading to a decrease in the temperature of the surroundings. Interpreting reaction pathway diagrams showing exothermic and endothermic reactions.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_037",
+          "name": "5.1.2 Exothermic & Endothermic Reactions | Enthalpy Change & Activation Energy",
+          "description": "Stating that the transfer of thermal energy during a reaction is called the enthalpy change, ∆H, of the reaction. ∆H is negative for exothermic reactions and positive for endothermic reactions. Defining activation energy, Ea, as the minimum energy that colliding particles must have to react. Drawing and labeling reaction pathway diagrams for exothermic and endothermic reactions using information provided.",
+          "order": 2,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_038",
+          "name": "5.1.3 Exothermic & Endothermic Reactions | Bond Breaking & Bond Forming",
+          "description": "Stating that bond breaking is an endothermic process and bond making is an exothermic process and explaining the enthalpy change of a reaction in terms of bond breaking and bond making. Calculating the enthalpy change of a reaction using bond energies.",
+          "order": 3,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_006",
+      "name": "Chemical Reactions",
+      "description": "Understanding physical and chemical changes, factors affecting rates of reaction, collision theory, reversible reactions and equilibrium including the Haber and Contact processes, and redox reactions.",
+      "order": 6,
+      "lessons": [
+        {
+          "id": "lesson_039",
+          "name": "6.1.1 Chemical Change & Rate of Reaction | Physical & Chemical Changes",
+          "description": "Identifying physical and chemical changes, and describing the differences between them. Understanding that physical changes involve changes in state or appearance without forming new substances, while chemical changes involve the formation of new substances with different properties.",
+          "order": 1,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 30,
+          "videos": []
+        },
+        {
+          "id": "lesson_040",
+          "name": "6.1.2 Chemical Change & Rate of Reaction | Rates of Reaction Factors",
+          "description": "Describing the effect on the rate of reaction of: changing the concentration of solutions, changing the pressure of gases, changing the surface area of solids, changing the temperature, and adding or removing a catalyst, including enzymes. Stating that a catalyst increases the rate of a reaction and is unchanged at the end of a reaction.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_041",
+          "name": "6.1.3 Chemical Change & Rate of Reaction | Collision Theory",
+          "description": "Describing collision theory in terms of: number of particles per unit volume, frequency of collisions between particles, kinetic energy of particles, and activation energy, Ea. Understanding that successful collisions require particles to collide with sufficient energy.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_042",
+          "name": "6.1.4 Chemical Change & Rate of Reaction | Explaining Rates Using Collision Theory",
+          "description": "Describing and explaining the effect on the rate of reaction of: changing the concentration of solutions, changing the pressure of gases, changing the surface area of solids, changing the temperature, and adding or removing a catalyst, including enzymes, using collision theory. Stating that a catalyst decreases the activation energy, Ea, of a reaction.",
+          "order": 4,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_043",
+          "name": "6.1.5 Chemical Change & Rate of Reaction | Investigating The Rate of a Reaction",
+          "description": "Describing practical methods for investigating the rate of a reaction including change in mass of a reactant or a product and the formation of a gas. Evaluating practical methods for investigating the rate of a reaction.",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_044",
+          "name": "6.1.6 Chemical Change & Rate of Reaction | Interpreting Data",
+          "description": "Interpreting data, including graphs, from rate of reaction experiments. Understanding how to analyze experimental results to determine the effect of different factors on reaction rates and draw conclusions.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_045",
+          "name": "6.2.1 Reversible Reactions & Equilibrium | Reversible Reactions",
+          "description": "Stating that some chemical reactions are reversible as shown by the symbol ⇌. Describing how changing the conditions can change the direction of a reversible reaction for: the effect of heat on hydrated compounds and the addition of water to anhydrous compounds, limited to copper(II) sulfate and cobalt(II) chloride.",
+          "order": 7,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_046",
+          "name": "6.2.2 Reversible Reactions & Equilibrium | Equilibrium",
+          "description": "Stating that a reversible reaction in a closed system is at equilibrium when: the rate of the forward reaction is equal to the rate of the reverse reaction, and the concentrations of reactants and products are no longer changing. Predicting and explaining, for a reversible reaction, how the position of equilibrium is affected by: changing temperature, changing pressure, changing concentration, and using a catalyst, using information provided.",
+          "order": 8,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_047",
+          "name": "6.2.3 Reversible Reactions & Equilibrium | The Haber Process",
+          "description": "Stating the symbol equation for the production of ammonia in the Haber process: N2(g) + 3H2(g) ⇌ 2NH3(g). Stating the sources of the hydrogen (methane) and nitrogen (air) in the Haber process. Stating the typical conditions in the Haber process as 450 °C, 20 000 kPa / 200 atm and an iron catalyst. Explaining, in terms of rate of reaction and position of equilibrium, why the typical conditions stated are used in the Haber process, including safety considerations and economics.",
+          "order": 9,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_048",
+          "name": "6.2.4 Reversible Reactions & Equilibrium | The Contact Process",
+          "description": "Stating the symbol equation for the conversion of sulfur dioxide to sulfur trioxide in the Contact process: 2SO2(g) + O2(g) ⇌ 2SO3(g). Stating the sources of the sulfur dioxide (burning sulfur or roasting sulfide ores) and oxygen (air) in the Contact process. Stating the typical conditions for the conversion of sulfur dioxide to sulfur trioxide in the Contact process as 450 °C, 200 kPa / 2 atm and a vanadium(V) oxide catalyst. Explaining, in terms of rate of reaction and position of equilibrium, why the typical conditions stated are used in the Contact process, including safety considerations and economics.",
+          "order": 10,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_049",
+          "name": "6.3.1 Redox | Oxidation & Reduction",
+          "description": "Using a Roman numeral to indicate the oxidation number of an element in a compound. Defining redox reactions as involving simultaneous oxidation and reduction. Defining oxidation as gain of oxygen and reduction as loss of oxygen. Identifying redox reactions as reactions involving gain and loss of oxygen. Identifying oxidation and reduction in redox reactions.",
+          "order": 11,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_050",
+          "name": "6.3.2 Redox | Redox & Electron Transfer",
+          "description": "Defining oxidation in terms of: loss of electrons and an increase in oxidation number. Defining reduction in terms of: gain of electrons and a decrease in oxidation number. Identifying redox reactions as reactions involving gain and loss of electrons. Identifying redox reactions by changes in oxidation number. Identifying redox reactions by the colour changes involved when using acidified aqueous potassium manganate(VII) or aqueous potassium iodide. Defining an oxidising agent as a substance that oxidises another substance and is itself reduced. Defining a reducing agent as a substance that reduces another substance and is itself oxidised. Identifying oxidising agents and reducing agents in redox reactions.",
+          "order": 12,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_007",
+      "name": "Acids, Bases & Salts",
+      "description": "Understanding the characteristic properties of acids and bases, neutralization reactions, classification of oxides, and the preparation of salts including solubility rules and hydrated salts.",
+      "order": 7,
+      "lessons": [
+        {
+          "id": "lesson_051",
+          "name": "7.1.1 Properties of Acids & Bases | Properties of Acids & Bases",
+          "description": "Describing the characteristic properties of acids in terms of their reactions with: metals, bases, and carbonates. Describing acids in terms of their effect on: litmus, thymolphthalein, and methyl orange. Stating that bases are oxides or hydroxides of metals and that alkalis are soluble bases. Describing the characteristic properties of bases in terms of their reactions with: acids and ammonium salts. Describing alkalis in terms of their effect on: litmus, thymolphthalein, and methyl orange.",
+          "order": 1,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_052",
+          "name": "7.1.2 Properties of Acids & Bases | The Ions in Acids & Alkalis",
+          "description": "Stating that aqueous solutions of acids contain H+ ions and aqueous solutions of alkalis contain OH– ions. Describing how to compare hydrogen ion concentration, neutrality, relative acidity and relative alkalinity in terms of colour and pH using universal indicator paper. Describing the neutralisation reaction between an acid and an alkali to produce water: H+ (aq) + OH– (aq) → H2O (l).",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_053",
+          "name": "7.1.3 Properties of Acids & Bases | Proton Transfer, Strong & Weak Acids",
+          "description": "Defining acids as proton donors and bases as proton acceptors. Defining a strong acid as an acid that is completely dissociated in aqueous solution and a weak acid as an acid that is partially dissociated in aqueous solution. Stating that hydrochloric acid is a strong acid, as shown by the symbol equation: HCl (aq) → H+(aq) + Cl –(aq). Stating that ethanoic acid is a weak acid, as shown by the symbol equation: CH3COOH(aq) ⇌ H+(aq) + CH3COO–(aq).",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_054",
+          "name": "7.1.4 Properties of Acids & Bases | Classifying Oxides",
+          "description": "Classifying oxides as acidic, including SO2 and CO2, or basic, including CuO and CaO, related to metallic and non-metallic character. Describing amphoteric oxides as oxides that react with acids and with bases to produce a salt and water. Classifying Al2O3 and ZnO as amphoteric oxides.",
+          "order": 4,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_055",
+          "name": "7.2.1 Preparation of Salts | Preparing Soluble Salts",
+          "description": "Describing the preparation, separation and purification of soluble salts by reaction of an acid with: an alkali by titration, excess metal, excess insoluble base, and excess insoluble carbonate. Understanding the practical procedures involved in salt preparation including filtration, crystallization and evaporation.",
+          "order": 5,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_056",
+          "name": "7.2.2 Preparation of Salts | Preparing Insoluble Salts",
+          "description": "Describing the preparation of insoluble salts by precipitation. Understanding how to mix solutions of soluble salts to produce an insoluble salt precipitate, and the procedures for separating and purifying the precipitate.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_057",
+          "name": "7.2.3 Preparation of Salts | Solubility Rules",
+          "description": "Describing the general solubility rules for salts: sodium, potassium and ammonium salts are soluble; nitrates are soluble; chlorides are soluble, except lead and silver; sulfates are soluble, except barium, calcium and lead; carbonates are insoluble, except sodium, potassium and ammonium; hydroxides are insoluble, except sodium, potassium, ammonium and calcium (partially).",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_058",
+          "name": "7.2.4 Preparation of Salts | Hydrated & Anhydrous Salts",
+          "description": "Defining a hydrated substance as a substance that is chemically combined with water and an anhydrous substance as a substance containing no water. Defining the term water of crystallisation as the water molecules present in hydrated crystals, including CuSO4•5H2O and CoCl2•6H2O.",
+          "order": 8,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_008",
+      "name": "The Periodic Table",
+      "description": "Understanding the arrangement of elements in the Periodic Table, trends across periods and down groups, properties of Group I, Group VII, transition elements, and noble gases.",
+      "order": 8,
+      "lessons": [
+        {
+          "id": "lesson_059",
+          "name": "8.1.1 Periodic Table & Trends | The Periodic Table",
+          "description": "Describing the Periodic Table as an arrangement of elements in periods and groups and in order of increasing proton number / atomic number. Describing the relationship between group number and the charge of the ions formed from elements in that group. Explaining similarities in the chemical properties of elements in the same group of the Periodic Table in terms of their electronic configuration.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_060",
+          "name": "8.1.2 Periodic Table & Trends | Periodic Trends",
+          "description": "Describing the change from metallic to non‑metallic character across a period. Explaining how the position of an element in the Periodic Table can be used to predict its properties. Identifying trends in groups, given information about the elements.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_061",
+          "name": "8.2.1 Group Properties & Trends | Group I Properties",
+          "description": "Describing the Group I alkali metals, lithium, sodium and potassium, as relatively soft metals with general trends down the group, limited to: decreasing melting point, increasing density, and increasing reactivity. Predicting the properties of other elements in Group I, given information about the elements.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_062",
+          "name": "8.2.2 Group Properties & Trends | Group VII Properties",
+          "description": "Describing the Group VII halogens, chlorine, bromine and iodine, as diatomic non-metals with general trends down the group, limited to: increasing density and decreasing reactivity. Stating the appearance of the halogens at r.t.p. as: chlorine, a pale yellow-green gas; bromine, a red-brown liquid; iodine, a grey-black solid. Predicting the properties of other elements in Group VII, given information about the elements.",
+          "order": 4,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_063",
+          "name": "8.2.3 Group Properties & Trends | Group VII Displacement Reactions",
+          "description": "Describing and explaining the displacement reactions of halogens with other halide ions. Understanding that a more reactive halogen will displace a less reactive halogen from a solution of its halide.",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_064",
+          "name": "8.2.4 Group Properties & Trends | Transition Elements",
+          "description": "Describing the transition elements as metals that: have high densities, have high melting points, form coloured compounds, and often act as catalysts as elements and in compounds. Describing transition elements as having ions with variable oxidation numbers, including iron(II) and iron(III).",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_065",
+          "name": "8.2.5 Group Properties & Trends | Noble Gases",
+          "description": "Describing the Group VIII noble gases as unreactive, monatomic gases and explaining this in terms of electronic configuration. Understanding that noble gases have full outer electron shells which makes them very stable and unreactive.",
+          "order": 7,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_009",
+      "name": "Metals",
+      "description": "Understanding the properties and uses of metals, alloys, the reactivity series, corrosion and its prevention, and the extraction of metals from their ores.",
+      "order": 9,
+      "lessons": [
+        {
+          "id": "lesson_066",
+          "name": "9.1.1 Properties, Uses & Alloys | Properties of Metals",
+          "description": "Comparing the general physical properties of metals and non-metals, including: thermal conductivity, electrical conductivity, malleability and ductility, and melting points and boiling points. Describing the general chemical properties of metals, limited to their reactions with: dilute acids, cold water and steam, and oxygen.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_067",
+          "name": "9.1.2 Properties, Uses & Alloys | Uses of Metals",
+          "description": "Describing the uses of metals in terms of their physical properties, including: aluminium in the manufacture of aircraft because of its low density; aluminium in the manufacture of overhead electrical cables because of its low density and good electrical conductivity; aluminium in food containers because of its resistance to corrosion; copper in electrical wiring because of its good electrical conductivity and ductility.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_068",
+          "name": "9.1.3 Properties, Uses & Alloys | Alloys",
+          "description": "Describing an alloy as a mixture of a metal with other elements, including: brass as a mixture of copper and zinc, and stainless steel as a mixture of iron and other elements such as chromium, nickel and carbon. Stating that alloys can be harder and stronger than the pure metals and are more useful. Describing the uses of alloys in terms of their physical properties, including stainless steel in cutlery because of its hardness and resistance to rusting. Identifying representations of alloys from diagrams of structure. Explaining in terms of structure how alloys can be harder and stronger than the pure metals because the different sized atoms in alloys mean the layers can no longer slide over each other.",
+          "order": 3,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_069",
+          "name": "9.2.1 Reactivity Series & Corrosion | Reactivity Series",
+          "description": "Stating the order of the reactivity series as: potassium, sodium, calcium, magnesium, aluminium, carbon, zinc, iron, hydrogen, copper, silver, gold. Describing the reactions, if any, of: potassium, sodium and calcium with cold water; magnesium with steam; magnesium, zinc, iron, copper, silver and gold with dilute hydrochloric acid and explaining these reactions in terms of the position of the metals in the reactivity series. Deducing an order of reactivity from a given set of experimental results.",
+          "order": 4,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_070",
+          "name": "9.2.2 Reactivity Series & Corrosion | Explaining Reactivity",
+          "description": "Describing the relative reactivities of metals in terms of their tendency to form positive ions, by displacement reactions, if any, with the aqueous ions of magnesium, zinc, iron, copper and silver. Explaining the apparent unreactivity of aluminium in terms of its oxide layer.",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_071",
+          "name": "9.2.3 Reactivity Series & Corrosion | Rusting of Iron",
+          "description": "Stating the conditions required for the rusting of iron and steel to form hydrated iron(III) oxide. Stating some common barrier methods, including painting, greasing and coating with plastic. Describing how barrier methods prevent rusting by excluding oxygen or water.",
+          "order": 6,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_072",
+          "name": "9.2.4 Reactivity Series & Corrosion | Galvanising & Sacrificial Protection",
+          "description": "Describing the use of zinc in galvanising as an example of a barrier method and sacrificial protection. Explaining sacrificial protection in terms of the reactivity series and in terms of electron loss.",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_073",
+          "name": "9.3.1 Extraction of Metals | Extraction of Metals",
+          "description": "Describing the ease in obtaining metals from their ores, related to the position of the metal in the reactivity series. Understanding that metals more reactive than carbon must be extracted by electrolysis, while metals less reactive than carbon can be extracted by reduction with carbon.",
+          "order": 8,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_074",
+          "name": "9.3.2 Extraction of Metals | Extraction of Iron from Hematite",
+          "description": "Describing the extraction of iron from hematite in the blast furnace, limited to: the burning of carbon (coke) to provide heat and produce carbon dioxide; the reduction of carbon dioxide to carbon monoxide; the reduction of iron(III) oxide by carbon monoxide; the thermal decomposition of calcium carbonate / limestone to produce calcium oxide; and the formation of slag. Stating the symbol equations for the extraction of iron from hematite.",
+          "order": 9,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_075",
+          "name": "9.3.3 Extraction of Metals | Extraction of Aluminium from Bauxite",
+          "description": "Stating that the main ore of aluminium is bauxite and that aluminium is extracted by electrolysis. Describing the extraction of aluminium from purified bauxite / aluminium oxide, including: the role of cryolite, why the carbon anodes need to be regularly replaced, and the reactions at the electrodes, including ionic half-equations.",
+          "order": 10,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_010",
+      "name": "Chemistry of the Environment",
+      "description": "Understanding water purity and treatment, fertilisers, air composition and pollution, greenhouse gases, climate change, and strategies to reduce environmental issues.",
+      "order": 10,
+      "lessons": [
+        {
+          "id": "lesson_076",
+          "name": "10.1.1 Water & Water Pollution | Water: Chemical Tests",
+          "description": "Describing chemical tests for the presence of water using anhydrous cobalt(II) chloride and anhydrous copper(II) sulfate. Describing how to test for the purity of water using melting point and boiling point. Explaining that distilled water is used in practical chemistry rather than tap water because it contains fewer chemical impurities.",
+          "order": 1,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_077",
+          "name": "10.1.2 Water & Water Pollution | Substances in Water from Natural Sources",
+          "description": "Stating that water from natural sources may contain substances, including: dissolved oxygen, metal compounds, plastics, sewage, harmful microbes, nitrates from fertilisers, and phosphates from fertilisers and detergents. Stating that some of these substances are beneficial and some are potentially harmful, with examples of each and their effects on aquatic life and human health.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_078",
+          "name": "10.1.3 Water & Water Pollution | Water Treatment",
+          "description": "Describing the treatment of the domestic water supply in terms of: sedimentation and filtration to remove solids, use of carbon to remove tastes and odours, and chlorination to kill microbes. Understanding the importance of each stage in producing safe drinking water.",
+          "order": 3,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_079",
+          "name": "10.1.4 Water & Water Pollution | Fertilisers",
+          "description": "Stating that ammonium salts and nitrates are used as fertilisers. Describing the use of NPK fertilisers to provide the elements nitrogen, phosphorus and potassium for improved plant growth. Understanding the benefits and potential environmental issues associated with fertiliser use.",
+          "order": 4,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_080",
+          "name": "10.2.1 Air Quality & Climate | Air",
+          "description": "Stating the composition of clean, dry air as approximately 78% nitrogen, N2, 21% oxygen, O2 and the remainder as a mixture of noble gases and carbon dioxide, CO2. Stating the source of air pollutants, including: carbon dioxide from the complete combustion of carbon-containing fuels, carbon monoxide and particulates from the incomplete combustion of carbon-containing fuels, methane from the decomposition of vegetation and waste gases from digestion in animals, oxides of nitrogen from car engines, and sulfur dioxide from the combustion of fossil fuels which contain sulfur compounds.",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_081",
+          "name": "10.2.2 Air Quality & Climate | Effects of Greenhouse Gases",
+          "description": "Stating the adverse effect of air pollutants, including: carbon dioxide leading to increased global warming and climate change, carbon monoxide as a toxic gas, particulates increasing risk of respiratory problems and cancer, methane leading to increased global warming and climate change, oxides of nitrogen causing acid rain, photochemical smog and respiratory problems, and sulfur dioxide causing acid rain. Describing how the greenhouse gases carbon dioxide and methane cause global warming, limited to: the absorption, reflection and emission of thermal energy, and reducing thermal energy loss to space.",
+          "order": 6,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_082",
+          "name": "10.2.3 Air Quality & Climate | Reducing the Effects of Environmental Issues",
+          "description": "Stating and explaining strategies to reduce the effects of environmental issues, limited to: climate change (planting trees, reduction in livestock farming, decreasing use of fossil fuels, increasing use of hydrogen and renewable energy), and acid rain (use of catalytic converters in vehicles, reducing emissions of sulfur dioxide by using low-sulfur fuels and flue gas desulfurisation with calcium oxide). Explaining how oxides of nitrogen form in car engines and describing their removal by catalytic converters.",
+          "order": 7,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_083",
+          "name": "10.2.4 Air Quality & Climate | Photosynthesis",
+          "description": "Describing photosynthesis as the reaction between carbon dioxide and water to produce glucose and oxygen in the presence of chlorophyll and using energy from light. Stating the word equation for photosynthesis: carbon dioxide + water → glucose + oxygen. Stating the symbol equation for photosynthesis: 6CO2 + 6H2O → C6H12O6 + 6O2.",
+          "order": 8,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_011",
+      "name": "Organic Chemistry",
+      "description": "Understanding organic formulae and nomenclature, homologous series, fossil fuels, alkanes, alkenes, alcohols, carboxylic acids, esters, and polymers including their properties and reactions.",
+      "order": 11,
+      "lessons": [
+        {
+          "id": "lesson_084",
+          "name": "11.1.1 Formulae, Functional Groups & Terminology | Organic Formulae",
+          "description": "Drawing and interpreting the displayed formula of a molecule to show all the atoms and all the bonds. Writing and interpreting general formulae of compounds in the same homologous series, limited to: alkanes (CnH2n+2), alkenes (CnH2n), alcohols (CnH2n+1OH), and carboxylic acids (CnH2n+1COOH). Stating that a structural formula is an unambiguous description of the way the atoms in a molecule are arranged. Defining structural isomers as compounds with the same molecular formula, but different structural formulae.",
+          "order": 1,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_085",
+          "name": "11.1.2 Formulae, Functional Groups & Terminology | Homologous Series",
+          "description": "Identifying a functional group as an atom or group of atoms that determine the chemical properties of a homologous series. Stating that a homologous series is a family of similar compounds with similar chemical properties due to the presence of the same functional group. Describing the general characteristics of a homologous series.",
+          "order": 2,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_086",
+          "name": "11.1.3 Formulae, Functional Groups & Terminology | Saturated & Unsaturated Compounds",
+          "description": "Stating that a saturated compound has molecules in which all carbon–carbon bonds are single bonds. Stating that an unsaturated compound has molecules in which one or more carbon–carbon bonds are not single bonds. Understanding the differences in reactivity between saturated and unsaturated compounds.",
+          "order": 3,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_087",
+          "name": "11.1.4 Formulae, Functional Groups & Terminology | Naming Organic Compounds",
+          "description": "Naming and drawing the displayed formulae of: methane and ethane, ethene, ethanol, ethanoic acid, and the products of the reactions stated in the syllabus. Stating the type of compound present, given a chemical name ending in -ane, -ene, -ol, or -oic acid or from a molecular formula or displayed formula. Naming and drawing the structural and displayed formulae of unbranched alkanes, alkenes, alcohols, and carboxylic acids containing up to four carbon atoms per molecule. Naming and drawing the displayed formulae of unbranched esters.",
+          "order": 4,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "id": "lesson_088",
+          "name": "11.2.1 Organic Families | Fossil Fuels",
+          "description": "Naming the fossil fuels: coal, natural gas and petroleum. Naming methane as the main constituent of natural gas. Stating that hydrocarbons are compounds that contain hydrogen and carbon only. Stating that petroleum is a mixture of hydrocarbons. Describing the separation of petroleum into useful fractions by fractional distillation. Describing how the properties of fractions obtained from petroleum change from the bottom to the top of the fractionating column. Naming the uses of the fractions.",
+          "order": 5,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_089",
+          "name": "11.2.2 Organic Families | Alkanes",
+          "description": "Stating that the bonding in alkanes is single covalent and that alkanes are saturated hydrocarbons. Describing the properties of alkanes as being generally unreactive, except in terms of combustion and substitution by chlorine. Stating that in a substitution reaction one atom or group of atoms is replaced by another atom or group of atoms. Describing the substitution reaction of alkanes with chlorine as a photochemical reaction, with ultraviolet light providing the activation energy.",
+          "order": 6,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_090",
+          "name": "11.2.3 Organic Families | Alkenes",
+          "description": "Stating that the bonding in alkenes includes a double carbon–carbon covalent bond and that alkenes are unsaturated hydrocarbons. Describing the manufacture of alkenes and hydrogen by the cracking of larger alkane molecules using a high temperature and a catalyst. Describing the reasons for the cracking of larger alkane molecules. Describing the test to distinguish between saturated and unsaturated hydrocarbons by their reaction with aqueous bromine.",
+          "order": 7,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_091",
+          "name": "11.2.4 Organic Families | Addition Reactions",
+          "description": "Stating that in an addition reaction only one product is formed. Describing the properties of alkenes in terms of addition reactions with: bromine or aqueous bromine, hydrogen in the presence of a nickel catalyst, and steam in the presence of an acid catalyst, and drawing the structural or displayed formulae of the products.",
+          "order": 8,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_092",
+          "name": "11.2.5 Organic Families | Alcohols",
+          "description": "Describing the manufacture of ethanol by: fermentation of aqueous glucose at 25–35 °C in the presence of yeast and in the absence of oxygen, and catalytic addition of steam to ethene at 300 °C and 6000 kPa / 60 atm in the presence of an acid catalyst. Describing the combustion of ethanol. Stating the uses of ethanol as: a solvent and a fuel. Describing the advantages and disadvantages of the manufacture of ethanol by fermentation and by catalytic addition of steam to ethene.",
+          "order": 9,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_093",
+          "name": "11.2.6 Organic Families | Carboxylic Acids",
+          "description": "Describing the reaction of ethanoic acid with: metals, bases, and carbonates including names and formulae of the salts produced. Describing the formation of ethanoic acid by the oxidation of ethanol: with acidified aqueous potassium manganate(VII), and by bacterial oxidation during vinegar production.",
+          "order": 10,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_094",
+          "name": "11.2.7 Organic Families | Ethanoic Acid & Esterification Reactions",
+          "description": "Describing the reaction of a carboxylic acid with an alcohol using an acid catalyst to form an ester. Understanding the general process of esterification and the conditions required. Naming simple esters and recognizing their uses in everyday life.",
+          "order": 11,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_095",
+          "name": "11.3.1 Polymers | Polymers",
+          "description": "Defining polymers as large molecules built up from many smaller molecules called monomers. Describing the formation of poly(ethene) as an example of addition polymerisation using ethene monomers. Stating that plastics are made from polymers. Identifying the repeat units and / or linkages in addition polymers and in condensation polymers. Deducing the structure or repeat unit of an addition polymer from a given alkene and vice versa.",
+          "order": 12,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_096",
+          "name": "11.3.2 Polymers | Addition & Condensation Polymers",
+          "description": "Deducing the structure or repeat unit of a condensation polymer from given monomers and vice versa, limited to: polyamides from a dicarboxylic acid and a diamine, and polyesters from a dicarboxylic acid and a diol. Describing the differences between addition and condensation polymerisation. Describing and drawing the structure of: nylon, a polyamide, and PET, a polyester. Stating that PET can be converted back into monomers and re-polymerised.",
+          "order": 13,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 55,
+          "videos": []
+        },
+        {
+          "id": "lesson_097",
+          "name": "11.3.3 Polymers | Plastics & their Disposal",
+          "description": "Describing how the properties of plastics have implications for their disposal. Describing the environmental challenges caused by plastics, limited to: disposal in landfill sites, accumulation in oceans, and formation of toxic gases from burning. Understanding the importance of recycling and alternative disposal methods.",
+          "order": 14,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_098",
+          "name": "11.3.4 Polymers | Proteins",
+          "description": "Describing proteins as natural polyamides and that they are formed from amino acid monomers with the general structure showing R as different types of side-chain. Describing and drawing the structure of proteins. Understanding the importance of proteins in biological systems.",
+          "order": 15,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        }
+      ]
+    },
+    {
+      "id": "chapter_012",
+      "name": "Experimental Techniques & Chemical Analysis",
+      "description": "Understanding experimental design, measurement apparatus, acid-base titrations, chromatography, separation and purification techniques, and identification tests for ions and gases.",
+      "order": 12,
+      "lessons": [
+        {
+          "id": "lesson_099",
+          "name": "12.1.1 Experimental Techniques | Apparatus for Measurements",
+          "description": "Naming appropriate apparatus for the measurement of time, temperature, mass and volume, including: stop-watches, thermometers, balances, burettes, volumetric pipettes, measuring cylinders, and gas syringes. Suggesting advantages and disadvantages of experimental methods and apparatus. Understanding precision and accuracy in measurements.",
+          "order": 1,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 40,
+          "videos": []
+        },
+        {
+          "id": "lesson_100",
+          "name": "12.1.2 Experimental Techniques | Solutions",
+          "description": "Describing: a solvent as a substance that dissolves a solute, a solute as a substance that is dissolved in a solvent, a solution as a mixture of one or more solutes dissolved in a solvent, a saturated solution as a solution containing the maximum concentration of a solute dissolved in the solvent at a specified temperature, a residue as a substance that remains after evaporation, distillation, filtration or any similar process, and a filtrate as a liquid or solution that has passed through a filter.",
+          "order": 2,
+          "estimatedMinutes": 20,
+          "practiceMinutes": 35,
+          "videos": []
+        },
+        {
+          "id": "lesson_101",
+          "name": "12.1.3 Experimental Techniques | Acid-Base Titrations",
+          "description": "Describing an acid–base titration to include the use of a: burette, volumetric pipette, and suitable indicator. Describing how to identify the end-point of a titration using an indicator. Understanding the practical procedures and calculations involved in titrations.",
+          "order": 3,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_102",
+          "name": "12.2.1 Separation & Purification | Paper Chromatography",
+          "description": "Describing how paper chromatography is used to separate mixtures of soluble coloured substances, using a suitable solvent. Interpreting simple chromatograms to identify: unknown substances by comparison with known substances, and pure and impure substances. Describing how paper chromatography is used to separate mixtures of soluble colourless substances, using a suitable solvent and a locating agent.",
+          "order": 4,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_103",
+          "name": "12.2.2 Separation & Purification | Locating Agents & Rf Values",
+          "description": "Stating and using the equation for Rf: Rf = distance travelled by substance / distance travelled by solvent. Understanding how to calculate and use Rf values to identify substances. Interpreting chromatograms and using Rf values for identification purposes.",
+          "order": 5,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        },
+        {
+          "id": "lesson_104",
+          "name": "12.2.3 Separation & Purification | Separation & Purification Techniques",
+          "description": "Describing and explaining methods of separation and purification using: a suitable solvent, filtration, crystallisation, simple distillation, and fractional distillation. Suggesting suitable separation and purification techniques, given information about the substances involved. Identifying substances and assessing their purity using melting point and boiling point information.",
+          "order": 6,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_105",
+          "name": "12.3.1 Identification of Ions & Gases | Identification of Anions",
+          "description": "Describing tests to identify the anions: carbonate (CO3²–) by reaction with dilute acid and then testing for carbon dioxide gas; chloride (Cl–), bromide (Br–), and iodide (I–) by acidifying with dilute nitric acid then adding aqueous silver nitrate; nitrate (NO3–) reduction with aluminium foil and aqueous sodium hydroxide and then testing for ammonia gas; sulfate (SO4²–) by acidifying with dilute nitric acid and then adding aqueous barium nitrate; sulfite (SO3²–) by reaction with acidified aqueous potassium manganate(VII).",
+          "order": 7,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_106",
+          "name": "12.3.2 Identification of Ions & Gases | Identification of Cations",
+          "description": "Describing tests using aqueous sodium hydroxide and aqueous ammonia to identify the aqueous cations: aluminium (Al³+), ammonium (NH4+), calcium (Ca²+), chromium(III) (Cr³+), copper(II) (Cu²+), iron(II) (Fe²+), iron(III) (Fe³+), and zinc (Zn²+). Describing the use of a flame test to identify the cations: lithium (Li+), sodium (Na+), potassium (K+), calcium (Ca²+), barium (Ba²+), and copper(II) (Cu²+).",
+          "order": 8,
+          "estimatedMinutes": 30,
+          "practiceMinutes": 50,
+          "videos": []
+        },
+        {
+          "id": "lesson_107",
+          "name": "12.3.3 Identification of Ions & Gases | Identification of Gases",
+          "description": "Describing tests to identify the gases: ammonia (NH3) using damp red litmus paper; carbon dioxide (CO2) using limewater; chlorine (Cl2) using damp litmus paper; hydrogen (H2) using a lighted splint; oxygen (O2) using a glowing splint; and sulfur dioxide (SO2) using acidified aqueous potassium manganate(VII). Understanding the observations for each test and the reasoning behind them.",
+          "order": 9,
+          "estimatedMinutes": 25,
+          "practiceMinutes": 45,
+          "videos": []
+        }
+      ]
+    }
+  ]
+}
+

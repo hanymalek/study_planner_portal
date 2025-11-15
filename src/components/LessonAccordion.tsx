@@ -181,7 +181,7 @@ const LessonAccordion: React.FC<LessonAccordionProps> = React.memo(({
                 fontWeight: expanded ? 600 : 400
               }}
             >
-              {chapterIndex + 1}.{lessonIndex + 1} {lesson.name || 'Untitled Lesson'}
+              {lesson.name || 'Untitled Lesson'}
             </Typography>
           </Box>
           
